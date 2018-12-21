@@ -1,0 +1,28 @@
+{
+    "name": "codex/api",
+    "license": "MIT",
+    "type": "codex-addon",
+    "description": "Codex Api Addon",
+    "require": {
+        "codex/core": "~2.1",
+        "nuwave/lighthouse": "~2.6",
+        "deinternetjongens/lighthouse-utils": "~0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codex\\Api\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "laravel": {
+            "dont-discover": [
+                "codex/api",
+                "nuwave/lighthouse",
+                "deinternetjongens/lighthouse-utils"
+            ]
+        }
+    }
+}

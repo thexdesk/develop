@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="php-plantuml" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/php-plantuml.phar" scriptParameters="write codex/core/src">
+    <method v="2" />
+  </configuration>
+</component>

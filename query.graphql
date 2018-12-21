@@ -1,0 +1,9 @@
+query {
+
+    codex {
+        projects {
+            key
+
+        }
+    }
+}

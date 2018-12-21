@@ -1,0 +1,10 @@
+{
+    "codex\/test-addon": {
+        "installed": false,
+        "enabled": false
+    },
+    "codex\/api": {
+        "installed": true,
+        "enabled": true
+    }
+}

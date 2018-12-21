@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="codex:addon install codex/test-addon -vvv" type="PhpLocalRunConfigurationType" factoryName="PHP Console" singleton="true" path="$PROJECT_DIR$/artisan" scriptParameters="codex:addon install codex/test-addon -vvv">
+    <method v="2" />
+  </configuration>
+</component>

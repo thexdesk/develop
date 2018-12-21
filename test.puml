@@ -1,0 +1,338 @@
+@startuml
+scale 0.9
+class Codex.Projects.Commands.MakeProject {
+    #configFilePath : string
+    +handle()
+    +__construct(configFilePath : string)
+}
+class Codex.Projects.Commands.FindProjects {
+    #docsDir : null|string
+    +handle() : array
+    +__construct(docsDir : string = null)
+}
+class Codex.Projects.Project {
+    +{static}CASTS_PATH = "casts"
+    +{static}DEFAULTS_PATH = "defaults"
+    +{static}INHERITS_PATH = "inherits"
+    #children : Codex.Revisions.RevisionCollection
+    #fsm : Illuminate.Contracts.Filesystem.Factory
+    +mergePaths = ["codex.projects.inherits"]
+    #parent : Codex.Codex
+    +getDefaultDiskName() : string
+    +getDefaultRevisionKey()
+    +getDisk() : Illuminate.Contracts.Filesystem.Filesystem
+    +getDiskConfig() : Illuminate.Support.Collection
+    +getDiskName() : array|.Codex.Model.Collection|mixed
+    +getFsm() : Illuminate.Contracts.Filesystem.Factory
+    +getRevision(key) : Codex.Contracts.Revisions.Revision|mixed
+    +getRevisions() : Codex.Revisions.RevisionCollection
+    +hasRevision(key) : bool
+    +newCollection(models : array = []) : Codex.Projects.ProjectCollection|.Illuminate.Database.Eloquent.Collection
+    +revisions()
+    +setDiskName(diskName) : $this
+    +setFsm(fsm : Illuminate.Contracts.Filesystem.Factory) : Codex.Contracts.Projects.Project
+    +setMergedAttributes(attributes)
+    +updateDisk()
+}
+class Codex.Projects.Project extends Codex.Mergable.Model
+class Codex.Projects.Project implements Codex.Contracts.Projects.Project
+class Codex.Projects.Project implements Codex.Contracts.Mergable.ChildInterface
+class Codex.Projects.Project implements Codex.Contracts.Mergable.ParentInterface
+class Codex.Projects.ProjectCollection {
+    +getCodex() : mixed
+    +getDefaultKey() : mixed
+    #makeModel(key) : Codex.Contracts.Projects.Project
+    #resolveLoadable() : array
+    +get($key) : \Codex\Projects\Project
+}
+class Codex.Projects.ProjectCollection extends Codex.Mergable.ModelCollection
+class Codex.Projects.Events.ResolvedProject {
+    #project : Codex.Contracts.Projects.Project
+    +getProject() : Codex.Contracts.Projects.Project
+    +__construct(project : Codex.Contracts.Projects.Project)
+}
+class Codex.Addons.Addon {
+    #enabled : bool = false
+    #extensions : array|string[]
+    #installed : bool = false
+    #path : string
+    #slug : string
+    #vendor : string
+    +getExtensions() : array|string[]
+    +getName()
+    +getPath() : null
+    +getServiceProvider() : string
+    +getSlug() : string
+    +getVendor() : string
+    +isEnabled() : bool
+    +isInstalled() : bool
+    +newServiceProvider() : Illuminate.Support.ServiceProvider
+    +path(parts)
+    +setEnabled(enabled : bool) : Addon
+    +setExtensions(extensions : array|string[]) : Addon
+    +setInstalled(installed : bool) : Addon
+    +setPath(path : null) : Addon
+    +setSlug(slug : string) : Addon
+    +setVendor(vendor : string) : Addon
+    +__toString()
+}
+class Codex.Addons.AddonProvider {
+    #application : Illuminate.Contracts.Foundation.Application
+    #events : Illuminate.Contracts.Events.Dispatcher
+    #instances : array = []
+    #providers : array = []
+    #router : Illuminate.Routing.Router
+    #bindAliases(provider : Codex.Addons.AddonServiceProvider)
+    +register(addon : Codex.Addons.Addon)
+    #registerCommands(provider : Codex.Addons.AddonServiceProvider)
+    #registerConfig(provider : Codex.Addons.AddonServiceProvider)
+    #registerEvents(provider : Codex.Addons.AddonServiceProvider)
+    #registerProviders(provider : Codex.Addons.AddonServiceProvider)
+'    +__construct(application : Illuminate.Contracts.Foundation.Application, router : Illuminate.Routing.Router, events : Illuminate.Contracts.Events.Dispatcher)
+}
+class Codex.Addons.AddonRegistry {
+    #filePath : string
+    #fs : Illuminate.Filesystem.Filesystem
+    #registry : array
+    +create(name : Codex.Addons.string)
+    +delete(name : Codex.Addons.string)
+    +exists(name)
+    #get(name, key, default = null)
+    +isEnabled(name : Codex.Addons.string)
+    +isInstalled(name : Codex.Addons.string)
+    #load(reload = false)
+    #save()
+    #set(name, key, value)
+    +setDisabled(name : Codex.Addons.string)
+    +setEnabled(name : Codex.Addons.string)
+    +setInstalled(name : Codex.Addons.string)
+    +setUninstalled(name : Codex.Addons.string)
+    +__construct(fs : Illuminate.Filesystem.Filesystem)
+}
+class Codex.Addons.AddonLoader {
+    +load(path) : $this
+}
+class Codex.Addons.AddonManager {
+    #addons : Codex.Addons.AddonCollection
+    #config : Illuminate.Contracts.Config.Repository
+    #dispatcher : Illuminate.Contracts.Events.Dispatcher
+    #finder : Codex.Addons.AddonFinder
+    #integrator : Codex.Addons.AddonIntegrator
+    #registry : Codex.Addons.AddonRegistry
+    +disable(addon : Codex.Addons.Addon)
+    +enable(addon : Codex.Addons.Addon)
+    +install(addon : Codex.Addons.Addon)
+    +register()
+    +uninstall(addon : Codex.Addons.Addon)
+'    +__construct(finder : Codex.Addons.AddonFinder, integrator : Codex.Addons.AddonIntegrator, registry : Codex.Addons.AddonRegistry, addons : Codex.Addons.AddonCollection, dispatcher : Illuminate.Contracts.Events.Dispatcher, config : Illuminate.Contracts.Config.Repository)
+}
+class Codex.Addons.AddonIntegrator {
+    #addonProvider : Codex.Addons.AddonProvider
+    #collection : Codex.Addons.AddonCollection
+    #events : Illuminate.Contracts.Events.Dispatcher
+    #extensions : Codex.Addons.Extensions.ExtensionCollection
+    #registry : Codex.Addons.AddonRegistry
+    #getComposerData(path)
+    +register(path)
+'    +__construct(collection : Codex.Addons.AddonCollection, extensions : Codex.Addons.Extensions.ExtensionCollection, registry : Codex.Addons.AddonRegistry, addonProvider : Codex.Addons.AddonProvider, events : Illuminate.Contracts.Events.Dispatcher)
+}
+class Codex.Addons.AddonCollection {
+    +disabled() : AddonCollection
+    +enabled() : AddonCollection
+    +installed() : AddonCollection
+    +uninstalled() : AddonCollection
+}
+class Codex.Addons.AddonCollection extends Illuminate.Support.Collection
+class Codex.Addons.AddonFinder {
+    #baseDir
+    +find()
+    +getBaseDir() : string
+    +setBaseDir(baseDir : string) : AddonFinder
+    +__construct()
+}
+
+class Codex.Addons.Console.AddonCommand {
+    #signature = "codex:addon {operation : install/uninstall/enable/disable/list} {name?}"
+    +handle(addons : Codex.Addons.AddonCollection, manager : Codex.Addons.AddonManager)
+}
+class Codex.Addons.Console.AddonCommand extends Illuminate.Console.Command
+class Codex.Addons.Events.AddonsHaveRegistered {
+    #addons : Codex.Addons.AddonCollection
+    +getAddons() : Codex.Addons.AddonCollection
+    +__construct(addons : Codex.Addons.AddonCollection)
+}
+class Codex.Addons.Events.AddonWasRegistered {
+}
+class Codex.Addons.Events.AddonWasRegistered extends Codex.Addons.Events.AddonEvent
+class Codex.Addons.Events.AddonWasDisabled {
+}
+class Codex.Addons.Events.AddonWasDisabled extends Codex.Addons.Events.AddonEvent
+class Codex.Addons.Events.AddonWasInstalled {
+}
+class Codex.Addons.Events.AddonWasInstalled extends Codex.Addons.Events.AddonEvent
+class Codex.Addons.Events.AddonWasUninstalled {
+}
+class Codex.Addons.Events.AddonWasUninstalled extends Codex.Addons.Events.AddonEvent
+class Codex.Addons.Events.AddonEvent {
+    #addon : Codex.Addons.Addon
+    +getAddon() : Codex.Addons.Addon
+    +__construct(addon : Codex.Addons.Addon)
+}
+class Codex.Addons.Events.AddonWasEnabled {
+}
+class Codex.Addons.Events.AddonWasEnabled extends Codex.Addons.Events.AddonEvent
+class Codex.Addons.Extensions.RegisterExtension {
+    #addon
+    #class : string[]
+    +handle(extensions : Codex.Addons.Extensions.ExtensionCollection)
+    +__construct(class : array|string[]|string, addon : Codex.Addons.Addon = null)
+}
+class Codex.Addons.Extensions.ExtensionCollection {
+'    +addon(addon : Codex.Addons.Addon) : Codex.Addons.Extensions.ExtensionCollection|.Codex.Addons.Extensions.Extension[]
+    +find(key : mixed) : null|Extension
+'    +search(pattern : mixed, strict : bool = false) : ExtensionCollection|.Codex.Addons.Extensions.Extension[]
+}
+class Codex.Addons.Extensions.ExtensionCollection extends Illuminate.Support.Collection
+class Codex.Addons.Extensions.Extension {
+    #addon
+    #provides
+    +getAddon() : mixed
+    +getProvides() : mixed
+    +setAddon(addon : mixed) : Extension
+    +setProvides(provides : mixed) : Extension
+}
+class Codex.Documents.Commands.MakeDocument {
+    #documentPath
+    #revision : Codex.Contracts.Revisions.Revision
+    +handle() : Codex.Contracts.Documents.Document
+    +__construct(revision : Codex.Contracts.Revisions.Revision, documentPath)
+}
+class Codex.Documents.Commands.FindDocuments {
+    #revision : Codex.Contracts.Revisions.Revision
+    +handle() : mixed
+    +__construct(revision : Codex.Contracts.Revisions.Revision)
+}
+class Codex.Documents.Document {
+    +{static}CASTS_PATH = "casts"
+    +{static}DEFAULTS_PATH = "defaults"
+    +{static}INHERITS_PATH = "inherits"
+    #content : string
+    +mergePaths : array = ["codex.documents.inherits"]
+    #parent : Codex.Contracts.Revisions.Revision
+    #postProcessed = false
+    #preProcessed = false
+    +getContent()
+    +{static}getKeyFromPath(path) : string
+    +getLastModified()
+    +getRevision() : mixed
+    +newCollection(models : array = []) : Codex.Documents.DocumentCollection|.Illuminate.Database.Eloquent.Collection
+    +postprocess()
+    +preprocess()
+    +setContent(content) : $this|.Codex.Contracts.Documents.Document
+    +__construct(attributes : array, revision : Codex.Contracts.Revisions.Revision)
+    +getParent() : Revision
+    +getExtension() : string
+    +getKey() : string
+    +getPath() : string
+}
+class Codex.Documents.Document extends Codex.Mergable.Model
+class Codex.Documents.Document implements Codex.Contracts.Documents.Document
+class Codex.Documents.Document implements Codex.Contracts.Mergable.ChildInterface
+class Codex.Documents.DocumentCollection {
+    +getDefaultKey() : mixed
+    +getRevision() : Codex.Contracts.Revisions.Revision
+    #makeModel(key) : mixed
+    #resolveLoadable() : array
+    +get($key) : \Codex\Contracts\Documents\Document
+}
+class Codex.Documents.DocumentCollection extends Codex.Mergable.ModelCollection
+class Codex.Documents.Listeners.ProcessDocument {
+    #extensions : Codex.Addons.Extensions.ExtensionCollection
+    +handle(event : Codex.Documents.Events.ResolvedDocument)
+    +__construct(extensions : Codex.Addons.Extensions.ExtensionCollection)
+}
+class Codex.Documents.Events.ResolvedDocument {
+    #document : Codex.Contracts.Documents.Document
+    +getDocument() : Codex.Contracts.Documents.Document
+    +__construct(document : Codex.Contracts.Documents.Document)
+}
+abstract class Codex.Documents.Processors.ProcessorExtension {
+    #defaultConfig
+    #depends = []
+    #document : Codex.Contracts.Documents.Document
+    #pre = false
+    +config(key = null, default = null, document : Codex.Contracts.Documents.Document = null)
+    +getDefaultConfig() : null
+    +getDependencies()
+    +getHandle()
+    +getName()
+    +getProvides()
+    +handle(document : Codex.Contracts.Documents.Document)
+    +isEnabledForDocument(document : Codex.Contracts.Documents.Document)
+    +isPre()
+    +onRegistered(config : Illuminate.Contracts.Config.Repository)
+    +process(document : Codex.Contracts.Documents.Document)
+    +setDefaultConfig(defaultConfig : null) : ProcessorExtension
+    +setDepends(depends : array) : ProcessorExtension
+    +setPre(pre : Codex.Documents.Processors.bool) : ProcessorExtension
+}
+class Codex.Documents.Processors.ProcessorExtension extends Codex.Addons.Extensions.Extension
+class Codex.Documents.Processors.ProcessorExtension implements Laradic.DependencySorter.Dependable
+class Codex.Documents.Processors.ParserProcessorExtension {
+    #defaultConfig = "codex.processor-defaults.parser"
+    #depends = ["attributes"]
+    #pre = true
+    #getDocumentParser(document : Codex.Contracts.Documents.Document)
+    +getName()
+    +process(document : Codex.Contracts.Documents.Document)
+}
+class Codex.Documents.Processors.ParserProcessorExtension extends Codex.Documents.Processors.ProcessorExtension
+class Codex.Documents.Processors.AttributeProcessorExtension {
+    #defaultConfig = "codex.processor-defaults.attributes"
+    #pre = true
+    +checkHasOpenTag(str : Codex.Documents.Processors.string)
+    #getAttributes(content)
+    +getName()
+    #getTagsPattern()
+    #mapPregQuote(items)
+    +process(document : Codex.Contracts.Documents.Document)
+}
+class Codex.Documents.Processors.AttributeProcessorExtension extends Codex.Documents.Processors.ProcessorExtension
+interface Codex.Documents.Processors.Parser.ParserInterface {
+    +parse(string : string) : string
+    +setOptions(options)
+}
+class Codex.Documents.Processors.Parser.MarkdownParser {
+    #options = []
+    +setOptions(options)
+}
+class Codex.Documents.Processors.Parser.MarkdownParser extends cebe.markdown.GithubMarkdown
+class Codex.Documents.Processors.Parser.MarkdownParser implements Codex.Documents.Processors.Parser.ParserInterface
+interface Codex.Contracts.Projects.Project {
+}
+interface Codex.Contracts.Documents.Document {
+}
+interface Codex.Contracts.Revisions.Revision {
+}
+interface Codex.Contracts.Mergable.MergableDataProviderInterface {
+    +get(key : string, default : null = null) : array
+}
+interface Codex.Contracts.Mergable.ParentInterface {
+    +getChildren()
+}
+interface Codex.Contracts.Mergable.Mergable {
+    +{static}CASTS_PATH = "casts"
+    +{static}DEFAULTS_PATH = "defaults"
+    +{static}INHERITS_PATH = "inherits"
+    +getAttributes()
+    +getDefaultAttributes()
+    +getInheritableKeys()
+    +getMergableAttributesCasts()
+    +getParentAttributes()
+    +setMergedAttributes(attributes)
+}
+interface Codex.Contracts.Mergable.ChildInterface {
+    +getParent() : null
+    +setParent(parent)
+}
+@enduml

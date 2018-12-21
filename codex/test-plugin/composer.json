@@ -1,0 +1,11 @@
+{
+    "name": "codex/test-plugin",
+    "require": {
+        "codex/core": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codex\\TestPlugin\\": "src/"
+        }
+    }
+}
