@@ -26,12 +26,12 @@ class TestCommand extends Command
     public function handle(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeConfigBuilderGenerator $generator)
     {
 //        $this->dispatch(new MergeAttributes(codex()->getProjects()->getDefault()));
-
-        $project  = codex()->getProject('codex');
-        $revision = $project->getRevision('master');
+        $codex     = codex();
+        $project   = $codex->getProject('codex');
+        $revision  = $project->getRevision('master');
         $documents = $revision->getDocuments()->show('content')->makeAll()->toArray();
-        $document = $revision->getDocument('index');
-        $content  = $document->getContent();
+        $document  = $revision->getDocument('index');
+        $content   = $document->getContent();
 
         $result = codex()->getApi()->executeQuery(<<<GRAPHQL
 query Check {
@@ -43,7 +43,7 @@ query Check {
     }
 }
 GRAPHQL
-);
+        );
         if ( ! empty($result->errors)) {
             $b = 'a';
         }
