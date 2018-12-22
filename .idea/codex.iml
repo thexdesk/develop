@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/test-plugin/src" isTestSource="false" packagePrefix="Codex\TestPlugin" />
       <sourceFolder url="file://$MODULE_DIR$/codex/api/src" isTestSource="false" packagePrefix="Codex\Api" />
       <sourceFolder url="file://$MODULE_DIR$/codex/composer-plugin/src" isTestSource="false" packagePrefix="Codex\ComposerPlugin" />
+      <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
       <excludeFolder url="file://$MODULE_DIR$/codex-addons" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/anahkiasen/underscore-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
