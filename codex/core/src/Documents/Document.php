@@ -5,7 +5,6 @@ namespace Codex\Documents;
 use Codex\Concerns;
 use Codex\Contracts\Documents\Document as DocumentContract;
 use Codex\Contracts\Mergable\ChildInterface;
-use Codex\Contracts\Mergable\Mergable;
 use Codex\Contracts\Revisions\Revision;
 use Codex\Mergable\Concerns\HasParent;
 use Codex\Mergable\Model;
@@ -30,12 +29,6 @@ class Document extends Model implements DocumentContract, ChildInterface
     }
 
     const DEFAULTS_PATH = 'codex.documents';
-    /** @var array */
-//    public $mergePaths = [
-//        Mergable::CASTS_PATH    => 'codex.documents.casts',
-//        Mergable::DEFAULTS_PATH => 'codex.documents.defaults',
-//        Mergable::INHERITS_PATH => 'codex.documents.inherits',
-//    ];
 
     /** @var Revision */
     protected $parent;
@@ -44,6 +37,15 @@ class Document extends Model implements DocumentContract, ChildInterface
      * @var string
      */
     protected $content;
+
+    /** @var \Closure */
+    protected $contentResolver;
+
+    /** @var bool */
+    protected $preProcessed = false;
+
+    /** @var bool */
+    protected $postProcessed = false;
 
     /**
      * Document constructor.
@@ -55,15 +57,19 @@ class Document extends Model implements DocumentContract, ChildInterface
     {
         $this->setParent($revision);
         $this->setFiles($revision->getFiles());
-        $definitions = $this->getCodex()->getRegistry()->resolveGroup('documents');
+        $this->contentResolver = function (Document $document) {
+            return $document->getFiles()->get($document->getPath());
+        };
+        $registry              = $this->getCodex()->getRegistry()->resolveGroup('documents');
+        $registry->add($this->primaryKey, $this->keyType)->setApiType('ID!');
         $attributes[ 'extension' ] = path_get_extension($attributes[ 'path' ]);
-        $this->init($attributes, $definitions);
+        $this->init($attributes, $registry);
         $this->addGetMutator('content', 'getContent', true, true);
         $this->addGetMutator('last_modified', 'getLastModified', true, true);
         $this->addGetMutator('attributes', 'getAttributes', true, true);
-        $definitions->add('extension', 'string');
-        $definitions->add('content', 'string');
-        $definitions->add('last_modified', 'integer');
+        $registry->add('extension', 'string');
+        $registry->add('content', 'string');
+        $registry->add('last_modified', 'integer');
     }
 
     /**
@@ -85,7 +91,7 @@ class Document extends Model implements DocumentContract, ChildInterface
      */
     public function newCollection(array $models = [])
     {
-        return new DocumentCollection($this->getParent(), $models);
+        return new DocumentCollection($models, $this->getParent());
     }
 
     /**
@@ -110,10 +116,7 @@ class Document extends Model implements DocumentContract, ChildInterface
         $this->preprocess();
 
         if ($this->content === null) {
-            $this->content = $this->getFiles()->get($this->getPath());
-            if ('' === $this->content) {
-                $this->content = ' ';
-            }
+            $this->content = $this->contentResolver->call($this, $this);
         }
 
         // @todo: find a better way to fix this, This way the  FluentDOM::Query('', 'text/html') does not generate a exception
@@ -151,29 +154,51 @@ class Document extends Model implements DocumentContract, ChildInterface
         $this->content = $dom->find('//body')->first()->html();
     }
 
-    protected $preProcessed = false;
 
-    protected $postProcessed = false;
-
-    public function preprocess()
+    protected function process(string $type)
     {
-        if ($this->preProcessed) {
+        if ( ! in_array($type, [ 'pre', 'post' ], true)) {
+            throw new \Exception("Invalid process type [{$type}]. Should be either 'pre' or 'post'");
+        }
+        $propertyName = $type . 'Processed';
+        if ($this->$propertyName) {
             return $this;
         }
 
-        $this->preProcessed = true;
-        $this->fire('pre_process', [ 'document' => $this ]);
+        $this->$propertyName = true;
+        $this->fire($type . '_process', [ 'document' => $this ]);
         return $this;
+    }
+
+    public function preprocess()
+    {
+        return $this->process('pre');
     }
 
     public function postprocess()
     {
-        if ($this->postProcessed) {
-            return $this;
-        }
+        return $this->process('post');
+    }
 
-        $this->postProcessed = true;
-        $this->fire('post_process', [ 'document' => $this ]);
+
+    /**
+     * @return \Closure
+     */
+    public function getContentResolver()
+    {
+        return $this->contentResolver;
+    }
+
+    /**
+     * Set the contentResolver value
+     *
+     * @param \Closure $contentResolver
+     *
+     * @return Document
+     */
+    public function setContentResolver($contentResolver)
+    {
+        $this->contentResolver = $contentResolver;
         return $this;
     }
 
