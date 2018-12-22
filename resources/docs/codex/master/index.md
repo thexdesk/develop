@@ -16,7 +16,6 @@ processors:
           text: Packagist
           icon: download    
           href: https://packagist.org/packages/codex
-      
 ---          
 
 # Codex Documentation
@@ -40,6 +39,12 @@ Most of it's features are provided by addons. Codex is extenable, themeable, hac
 - Each _Project_ has one or more _Revisions (versions)_
 - Each _Revision_ contains _Documents_.
 - Echo _Document_ is passed trough _Processors_, modifying it's content before displaying.
+
+## Links
+- [getting-started/installation.md](getting-started/installation.md)
+- [getting-started/configuration.md](getting-started/configuration.md)
+- [getting-started/installation](getting-started/installation)
+- [getting-started/configuration](getting-started/configuration)
 
 ## Features
 - Laravel 5

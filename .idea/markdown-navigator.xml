@@ -39,21 +39,21 @@
         <option name="COMMONMARK_LISTS" value="true" />
         <option name="DUMMY" value="false" />
         <option name="EMOJI_SHORTCUTS" value="true" />
-        <option name="ENUMERATED_REFERENCES_EXT" value="false" />
+        <option name="ENUMERATED_REFERENCES_EXT" value="true" />
         <option name="FLEXMARK_FRONT_MATTER" value="false" />
         <option name="GFM_LOOSE_BLANK_LINE_AFTER_ITEM_PARA" value="false" />
         <option name="GFM_TABLE_RENDERING" value="true" />
         <option name="GITBOOK_URL_ENCODING" value="false" />
         <option name="GITHUB_LISTS" value="false" />
-        <option name="GITHUB_WIKI_LINKS" value="true" />
+        <option name="GITHUB_WIKI_LINKS" value="false" />
         <option name="GITLAB_EXT" value="false" />
         <option name="GITLAB_MATH_EXT" value="false" />
         <option name="GITLAB_MERMAID_EXT" value="false" />
         <option name="HEADER_ID_NON_ASCII_TO_LOWERCASE" value="false" />
         <option name="HEADER_ID_NO_DUPED_DASHES" value="false" />
-        <option name="JEKYLL_FRONT_MATTER" value="false" />
+        <option name="JEKYLL_FRONT_MATTER" value="true" />
         <option name="MACROS_EXT" value="false" />
-        <option name="NO_TEXT_ATTRIBUTES" value="false" />
+        <option name="NO_TEXT_ATTRIBUTES" value="true" />
         <option name="PARSE_HTML_ANCHOR_ID" value="false" />
         <option name="SIM_TOC_BLANK_LINE_SPACER" value="true" />
       </ParserOptions>
@@ -164,7 +164,7 @@
     });
 &lt;/script&gt;</bodyBottom>
     </HtmlSettings>
-    <CssSettings previewScheme="UI_SCHEME" cssUri="" isCssUriEnabled="false" isCssUriSerial="false" isCssTextEnabled="false" isDynamicPageWidth="true">
+    <CssSettings previewScheme="UI_SCHEME" cssUri="" isCssUriEnabled="false" isCssUriSerial="true" isCssTextEnabled="false" isDynamicPageWidth="true">
       <StylesheetProvider>
         <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.css" providerName="Default Swing Stylesheet" />
       </StylesheetProvider>
@@ -184,7 +184,7 @@ display:none !important;
 }</cssText>
       <cssUriHistory />
     </CssSettings>
-    <HtmlExportSettings updateOnSave="false" parentDir="" targetDir="" cssDir="" scriptDir="" plainHtml="false" imageDir="" copyLinkedImages="false" imageUniquifyType="0" targetPathType="2" targetExt="" useTargetExt="false" noCssNoScripts="false" useElementStyleAttribute="false" linkToExportedHtml="true" exportOnSettingsChange="true" regenerateOnProjectOpen="false" linkFormatType="HTTP_ABSOLUTE" />
+    <HtmlExportSettings updateOnSave="false" parentDir="" targetDir="" cssDir="" scriptDir="" plainHtml="false" imageDir="img" copyLinkedImages="false" imageUniquifyType="0" targetPathType="2" targetExt="" useTargetExt="false" noCssNoScripts="false" useElementStyleAttribute="false" linkToExportedHtml="true" exportOnSettingsChange="true" regenerateOnProjectOpen="false" linkFormatType="HTTP_ABSOLUTE" />
     <LinkMapSettings>
       <textMaps />
     </LinkMapSettings>
