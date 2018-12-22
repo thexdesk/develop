@@ -2,6 +2,10 @@
 title: Overview
 subtitle: Codex Documentation
 processors:
+    #enabled:
+    #    - cache
+    cache:
+        mode: true
     buttons:
       buttons:    
         github: 

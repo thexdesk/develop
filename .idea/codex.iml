@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/git/src" isTestSource="false" packagePrefix="Codex\Git" />
       <sourceFolder url="file://$MODULE_DIR$/codex/composer-plugin/src" isTestSource="false" packagePrefix="Codex\ComposerPlugin" />
       <sourceFolder url="file://$MODULE_DIR$/codex/auth/src" isTestSource="false" packagePrefix="Codex\Auth" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
       <excludeFolder url="file://$MODULE_DIR$/codex-addons" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/anahkiasen/underscore-php" />
