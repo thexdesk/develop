@@ -1,0 +1,24 @@
+{
+    "name": "codex/auth",
+    "license": "MIT",
+    "type": "codex-addon",
+    "description": "Codex Auth Addon",
+    "require": {
+        "codex/core": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codex\\Auth\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "laravel": {
+            "dont-discover": [
+                "codex/auth"
+            ]
+        }
+    }
+}

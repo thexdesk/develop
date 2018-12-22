@@ -1,0 +1,24 @@
+{
+    "name": "codex/git",
+    "license": "MIT",
+    "type": "codex-addon",
+    "description": "Codex Git Addon",
+    "require": {
+        "codex/core": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codex\\Git\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "laravel": {
+            "dont-discover": [
+                "codex/git"
+            ]
+        }
+    }
+}

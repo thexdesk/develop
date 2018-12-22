@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29dd8ed1352a61a7e07c41983103677e",
+    "content-hash": "69fee58fc8086d20e691ef2beb8f16b2",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -296,6 +296,37 @@
             "time": "2018-01-22T09:00:48+00:00"
         },
         {
+            "name": "codex/auth",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "codex/auth",
+                "reference": "413ad2208b25e71340b026e5c7dd5bd4d2d715c4",
+                "shasum": null
+            },
+            "require": {
+                "codex/core": "~2.1"
+            },
+            "type": "codex-addon",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "laravel": {
+                    "dont-discover": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codex\\Auth\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Codex Auth Addon"
+        },
+        {
             "name": "codex/composer-plugin",
             "version": "dev-master",
             "dist": {
@@ -334,6 +365,37 @@
                 "plugin",
                 "streams"
             ]
+        },
+        {
+            "name": "codex/git",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "codex/git",
+                "reference": "940dcc7d5989b05c30d1d4ffd0f9de3cec1d77ff",
+                "shasum": null
+            },
+            "require": {
+                "codex/core": "~2.1"
+            },
+            "type": "codex-addon",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "laravel": {
+                    "dont-discover": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codex\\Git\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Codex Git Addon"
         },
         {
             "name": "danielstjules/stringy",
