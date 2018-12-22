@@ -29,6 +29,7 @@ class TestCommand extends Command
 
         $project  = codex()->getProject('codex');
         $revision = $project->getRevision('master');
+        $documents = $revision->getDocuments()->show('content')->makeAll()->toArray();
         $document = $revision->getDocument('index');
         $content  = $document->getContent();
 
