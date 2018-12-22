@@ -49,7 +49,7 @@ class MergeAttributes
 
         $this->target->setMergedAttributes($final);
 
-        $parent  = array_dot($parentAttributes);
+        $parent = array_dot($parentAttributes);
 //        $target  = array_dot(array_only($result, $this->getInheritKeys()));
         $target  = array_dot(array_only($final, $this->getInheritKeys()));
         $changes = [];

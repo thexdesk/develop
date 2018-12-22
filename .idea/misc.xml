@@ -21,6 +21,9 @@
       <console-settings />
     </option>
   </component>
+  <component name="TaskProjectConfiguration">
+    <server type="Generic" url="http://api.bitbucket.org/2.0/repositories/codex-project/graph" />
+  </component>
   <component name="ThriftCompiler">
     <compilers />
   </component>

@@ -5,8 +5,6 @@ namespace App;
 use Codex\Addons\AddonCollection;
 use Codex\Attributes\AttributeConfigBuilderGenerator;
 use Codex\Attributes\AttributeDefinitionRegistry;
-use Codex\Attributes\AttributeSchemaGenerator;
-use Codex\Attributes\Commands\MergeAttributes;
 use Codex\Contracts\Projects\Project;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
