@@ -27,38 +27,27 @@ class TestCommand extends Command
     {
 //        $this->dispatch(new MergeAttributes(codex()->getProjects()->getDefault()));
 
-        $codex    = codex();
-        $project  = $codex->getProject('codex');
+        $project  = codex()->getProject('codex');
         $revision = $project->getRevision('master');
         $document = $revision->getDocument('index');
         $content  = $document->getContent();
-//
-//        $generated = $generator->generate();
-//        $this->line($generated);
-//        $wrapperFn = $fs->requireOnce(__DIR__ . '/Attributes/Wrapper/w.php');
 
-//        $attrFn = $fs->getRequire(__DIR__ . '/Attributes/attributes.php');
-//        $attrFn($registry);
-//
-//        $config   = $registry->codex()->buildTree()->finalize([
-//            'layout' => [
-//                'left' => [
-//                    'menu' => [
-//                        [
-//                            'path'     => '/',
-//                            'children' => [
-//                                [ 'path' => '/child' ],
-//                            ],
-//                        ],
-//                    ],
-//                ],
-//            ],
-//        ]);
-//        $projects = $registry->projects()->buildTree()->finalize([]);
-//
-//
-//        $generated = $generator->generate();
-//        $this->line($generated);
+        $result = codex()->getApi()->executeQuery(<<<GRAPHQL
+query Check {
+    codex {
+        default_project       
+    }
+    projects {
+        key
+    }
+}
+GRAPHQL
+);
+        if ( ! empty($result->errors)) {
+            $b = 'a';
+        }
+
+        $this->line(json_encode($result->data, JSON_PRETTY_PRINT));
         $a = 'a';
     }
 
