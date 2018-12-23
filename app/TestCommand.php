@@ -26,11 +26,11 @@ class TestCommand extends Command
     public function handle(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeConfigBuilderGenerator $generator)
     {
 //        $this->dispatch(new MergeAttributes(codex()->getProjects()->getDefault()));
-        $codex         = codex();
-        $project       = $codex->getProject('codex');
-        $revision      = $project->getRevision('master');
-        $documents     = $revision->getDocuments()->show('content')->makeAll()->toArray();
-        $index         = $revision->getDocument('processors/links')->getContent();
+//        $codex         = codex();
+//        $project       = $codex->getProject('codex');
+//        $revision      = $project->getRevision('master');
+//        $documents     = $revision->getDocuments()->show('content')->makeAll()->toArray();
+//        $index         = $revision->getDocument('processors/links')->getContent();
 //        $index         = $revision->getDocument('index')->getContent();
 //        $installation  = $revision->getDocument('getting-started/installation')->getContent();
 //        $configuration = $revision->getDocument('getting-started/configuration')->getContent();
@@ -42,6 +42,10 @@ query Check {
     }
     projects {
         key
+        revisions {
+            key
+            changed
+        }
     }
 }
 GRAPHQL
