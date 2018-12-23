@@ -24,6 +24,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/carica/phpcss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cebe/markdown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cocur/slugify" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/composer-plugin" />
@@ -48,6 +49,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fluentdom/fluentdom" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fluentdom/html5" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fluentdom/selectors-phpcss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/gabrielelana/byte-units" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/flysystem" />
@@ -76,6 +79,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-manipulations" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-schemes" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
@@ -112,6 +116,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/radic/blade-extensions" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
@@ -134,8 +139,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sonata-project/datagrid-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sonata-project/doctrine-extensions" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sonata-project/exporter" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/stackify/logger" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/stackify/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/asset" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/cache" />

@@ -61,8 +61,11 @@ layout  :
                     -   label   : Links
                         document: processors/links
 
-                    -   label: Macros
+                    -   label   : Macros
                         document: processors/macros
+
+                    -   label   : TOC
+                        document: processors/toc
 
 
             -   label   : Getting Started

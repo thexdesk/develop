@@ -30,8 +30,9 @@ class TestCommand extends Command
         $project       = $codex->getProject('codex');
         $revision      = $project->getRevision('master');
         $documents     = $revision->getDocuments()->show('content')->makeAll()->toArray();
-        $index         = $revision->getDocument('index')->getContent();
-        $installation  = $revision->getDocument('getting-started/installation')->getContent();
+        $index         = $revision->getDocument('processors/links')->getContent();
+//        $index         = $revision->getDocument('index')->getContent();
+//        $installation  = $revision->getDocument('getting-started/installation')->getContent();
 //        $configuration = $revision->getDocument('getting-started/configuration')->getContent();
 
         $result = codex()->getApi()->executeQuery(<<<GRAPHQL

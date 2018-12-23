@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71f4f5faac73766f6b11d8998e1db23d",
+    "content-hash": "70f591e387a7ca09a990a9baeb315077",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -171,6 +171,45 @@
             "time": "2018-09-06T13:20:53+00:00"
         },
         {
+            "name": "carica/phpcss",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ThomasWeinert/PhpCss.git",
+                "reference": "1dc6eea0f28676b1c7d9c97d2138be8590dde506"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ThomasWeinert/PhpCss/zipball/1dc6eea0f28676b1c7d9c97d2138be8590dde506",
+                "reference": "1dc6eea0f28676b1c7d9c97d2138be8590dde506",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpCss\\": "src/PhpCss"
+                },
+                "files": [
+                    "src/PhpCss.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Weinert",
+                    "email": "thomas@weinert.info"
+                }
+            ],
+            "description": "An css selector parser and converter",
+            "time": "2018-04-02T15:43:34+00:00"
+        },
+        {
             "name": "cebe/markdown",
             "version": "1.2.1",
             "source": {
@@ -301,7 +340,7 @@
             "dist": {
                 "type": "path",
                 "url": "codex/auth",
-                "reference": "413ad2208b25e71340b026e5c7dd5bd4d2d715c4",
+                "reference": "302cb757d27e004ac8401f56ae7b3ca59550150c",
                 "shasum": null
             },
             "require": {
@@ -313,7 +352,9 @@
                     "dev-master": "1.0.x-dev"
                 },
                 "laravel": {
-                    "dont-discover": []
+                    "dont-discover": [
+                        "codex/auth"
+                    ]
                 }
             },
             "autoload": {
@@ -372,7 +413,7 @@
             "dist": {
                 "type": "path",
                 "url": "codex/git",
-                "reference": "940dcc7d5989b05c30d1d4ffd0f9de3cec1d77ff",
+                "reference": "11919bd85e597ac7b15ed2155e3df755ce6e868b",
                 "shasum": null
             },
             "require": {
@@ -384,7 +425,9 @@
                     "dev-master": "1.0.x-dev"
                 },
                 "laravel": {
-                    "dont-discover": []
+                    "dont-discover": [
+                        "codex/git"
+                    ]
                 }
             },
             "autoload": {
@@ -396,6 +439,68 @@
                 "MIT"
             ],
             "description": "Codex Git Addon"
+        },
+        {
+            "name": "composer/semver",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/semver.git",
+                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/semver/zipball/c7cb9a2095a074d131b65a8a0cd294479d785573",
+                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5 || ^5.0.5",
+                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Semver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
+                }
+            ],
+            "description": "Semver library that offers utilities, version constraint parsing and validation.",
+            "keywords": [
+                "semantic",
+                "semver",
+                "validation",
+                "versioning"
+            ],
+            "time": "2016-08-30T16:08:34+00:00"
         },
         {
             "name": "danielstjules/stringy",
@@ -1530,6 +1635,108 @@
             "time": "2018-11-11T13:47:41+00:00"
         },
         {
+            "name": "fluentdom/html5",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ThomasWeinert/FluentDOM-HTML5.git",
+                "reference": "40fe839a265f9ecc5c1637175e29bbed52a28b46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ThomasWeinert/FluentDOM-HTML5/zipball/40fe839a265f9ecc5c1637175e29bbed52a28b46",
+                "reference": "40fe839a265f9ecc5c1637175e29bbed52a28b46",
+                "shasum": ""
+            },
+            "require": {
+                "fluentdom/fluentdom": "7.x",
+                "masterminds/html5": "~2.2",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "fluentdom/selectors-phpcss": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/plugin.php"
+                ],
+                "psr-4": {
+                    "FluentDOM\\HTML5\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FluentDOM Contributors",
+                    "homepage": "https://github.com/FluentDOM/FluentDOM/contributors"
+                }
+            ],
+            "description": "HTML5 support for FluentDOM",
+            "homepage": "http://fluentdom.org",
+            "keywords": [
+                "HTML5",
+                "dom",
+                "fluentdom",
+                "xml"
+            ],
+            "time": "2018-05-19T13:33:19+00:00"
+        },
+        {
+            "name": "fluentdom/selectors-phpcss",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ThomasWeinert/FluentDOM-Selectors-PHPCss.git",
+                "reference": "4e526608b071bf84771ddd4db737172781b8c437"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ThomasWeinert/FluentDOM-Selectors-PHPCss/zipball/4e526608b071bf84771ddd4db737172781b8c437",
+                "reference": "4e526608b071bf84771ddd4db737172781b8c437",
+                "shasum": ""
+            },
+            "require": {
+                "carica/phpcss": "~0.5",
+                "fluentdom/fluentdom": "7.x"
+            },
+            "provide": {
+                "fluentdom/css-selector": "1.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/plugin.php"
+                ],
+                "psr-4": {
+                    "FluentDOM\\PhpCss\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FluentDOM Contributors",
+                    "homepage": "https://github.com/FluentDOM/FluentDOM/contributors"
+                }
+            ],
+            "description": "Provides CSS selector for FluentDOM using Carica PHPCss.",
+            "homepage": "http://fluentdom.org",
+            "keywords": [
+                "css",
+                "css selectors",
+                "dom",
+                "jquery",
+                "xml"
+            ],
+            "time": "2018-04-02T16:18:25+00:00"
+        },
+        {
             "name": "gabrielelana/byte-units",
             "version": "0.2.0",
             "source": {
@@ -2181,7 +2388,7 @@
             "dist": {
                 "type": "path",
                 "url": "/mnt/fat/php/projects/codex/workbench/laradic/service-provider",
-                "reference": "64c7269384e300e516a5d6d842b0a364ffae5aa0",
+                "reference": "b1428d566b97b3662b405c64ff0cad8a89102033",
                 "shasum": null
             },
             "require": {
@@ -3222,6 +3429,73 @@
                 "wss"
             ],
             "time": "2018-11-26T08:09:30+00:00"
+        },
+        {
+            "name": "masterminds/html5",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Masterminds/html5-php.git",
+                "reference": "cadcfaaa13153e0e8eb92c49a53e140cf1a85dea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/cadcfaaa13153e0e8eb92c49a53e140cf1a85dea",
+                "reference": "cadcfaaa13153e0e8eb92c49a53e140cf1a85dea",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "sami/sami": "~2.0",
+                "satooshi/php-coveralls": "1.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masterminds\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Butcher",
+                    "email": "technosophos@gmail.com"
+                },
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                },
+                {
+                    "name": "Matt Farina",
+                    "email": "matt@mattfarina.com"
+                }
+            ],
+            "description": "An HTML5 parser and serializer.",
+            "homepage": "http://masterminds.github.io/html5-php",
+            "keywords": [
+                "HTML5",
+                "dom",
+                "html",
+                "parser",
+                "querypath",
+                "serializer",
+                "xml"
+            ],
+            "time": "2018-11-17T20:24:36+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4353,6 +4627,74 @@
             "time": "2018-10-13T15:16:03+00:00"
         },
         {
+            "name": "radic/blade-extensions",
+            "version": "7.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobinRadic/blade-extensions.git",
+                "reference": "5af8fcee2475074d9a14d4541c940fb29a62d495"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobinRadic/blade-extensions/zipball/5af8fcee2475074d9a14d4541c940fb29a62d495",
+                "reference": "5af8fcee2475074d9a14d4541c940fb29a62d495",
+                "shasum": ""
+            },
+            "require": {
+                "composer/semver": "~1.4",
+                "illuminate/contracts": "~5.0",
+                "illuminate/filesystem": "~5.0",
+                "illuminate/support": "~5.0",
+                "illuminate/view": "~5.0",
+                "laradic/support": "~1.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "cebe/markdown": "~1.1",
+                "laradic/testing": "~1.0.3",
+                "matthiasmullie/minify": "~1.3",
+                "mockery/mockery": "~0.9|~1.0",
+                "zaininnari/html-minifier": "~0.4"
+            },
+            "suggest": {
+                "cebe/markdown": "Enables the use of @markdown directives (~1.5)",
+                "matthiasmullie/minify": "Enables the use of @minify('css') or @minify('js') directive (~1.3)",
+                "raveren/kint": "Improved @dump output (1.0.*)",
+                "zaininnari/html-minifier": "Improves the @minify('html') directive"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Radic\\BladeExtensions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "robin@radic.nl",
+                    "role": "Package Author/Developer"
+                }
+            ],
+            "description": "Laravel package providing additional Blade extensions: foreach (with $loop data like twig), break, continue, set,array (multiline), etc",
+            "homepage": "https://github.com/RobinRadic/blade-extensions",
+            "keywords": [
+                "blade",
+                "extensions",
+                "laravel",
+                "loop"
+            ],
+            "time": "2018-08-16T03:04:39+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "2.0.5",
             "source": {
@@ -5011,86 +5353,6 @@
                 "xls"
             ],
             "time": "2018-12-11T21:05:21+00:00"
-        },
-        {
-            "name": "stackify/logger",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stackify/stackify-api-php.git",
-                "reference": "73b4e67432dc532d1dd46b90d385feb321f24e0a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stackify/stackify-api-php/zipball/73b4e67432dc532d1dd46b90d385feb321f24e0a",
-                "reference": "73b4e67432dc532d1dd46b90d385feb321f24e0a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Stackify\\": "src/Stackify"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Stackify logs and errors for PHP",
-            "homepage": "https://github.com/stackify/stackify-api-php",
-            "keywords": [
-                "log",
-                "log4php",
-                "logging",
-                "monolog",
-                "psr-3",
-                "stackify"
-            ],
-            "time": "2018-11-28T21:45:13+00:00"
-        },
-        {
-            "name": "stackify/monolog",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stackify/stackify-log-monolog.git",
-                "reference": "37fae4b98c68c4dae292772f20b3e6e46d2397de"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stackify/stackify-log-monolog/zipball/37fae4b98c68c4dae292772f20b3e6e46d2397de",
-                "reference": "37fae4b98c68c4dae292772f20b3e6e46d2397de",
-                "shasum": ""
-            },
-            "require": {
-                "monolog/monolog": "~1.1",
-                "stackify/logger": "~1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Stackify\\Log\\Monolog\\": "src/Stackify/Log/Monolog"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Stackify logs and errors for Monolog",
-            "homepage": "https://github.com/stackify/stackify-log-monolog",
-            "keywords": [
-                "log",
-                "log4php",
-                "logging",
-                "monolog",
-                "psr-3",
-                "stackify"
-            ],
-            "time": "2018-11-28T22:25:34+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -8559,68 +8821,6 @@
                 "package"
             ],
             "time": "2018-12-03T09:31:16+00:00"
-        },
-        {
-            "name": "composer/semver",
-            "version": "1.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/semver.git",
-                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/c7cb9a2095a074d131b65a8a0cd294479d785573",
-                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.2 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.5 || ^5.0.5",
-                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Semver\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nils Adermann",
-                    "email": "naderman@naderman.de",
-                    "homepage": "http://www.naderman.de"
-                },
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                },
-                {
-                    "name": "Rob Bast",
-                    "email": "rob.bast@gmail.com",
-                    "homepage": "http://robbast.nl"
-                }
-            ],
-            "description": "Semver library that offers utilities, version constraint parsing and validation.",
-            "keywords": [
-                "semantic",
-                "semver",
-                "validation",
-                "versioning"
-            ],
-            "time": "2016-08-30T16:08:34+00:00"
         },
         {
             "name": "composer/spdx-licenses",

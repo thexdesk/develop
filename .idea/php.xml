@@ -174,8 +174,11 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
-      <path value="$PROJECT_DIR$/vendor/stackify/monolog" />
-      <path value="$PROJECT_DIR$/vendor/stackify/logger" />
+      <path value="$PROJECT_DIR$/vendor/radic/blade-extensions" />
+      <path value="$PROJECT_DIR$/vendor/fluentdom/html5" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/fluentdom/selectors-phpcss" />
+      <path value="$PROJECT_DIR$/vendor/carica/phpcss" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -10,17 +10,17 @@ links:
 
 <!-- [Relative + Hash](../getting-started/installation.md#codex:doc[Link]) -->
 
-### Transformations
-Links are transformed by the [](#codex:phpdoc(Codex\Processors\LinksProcessor):type:drawer:popover)
+## Transformations
+Links are transformed by the [](#codex:phpdoc[Codex\Processors\LinksProcessor]:type:drawer:popover)
 
-##### URL Path based
+### URL Path based
 any relative file path to a document will be fixed to the right url.
 
-##### URL Hash based 
+### URL Hash based 
 The __Link Processor__ also runs other transformations based on the #hash of a link, 
 these are __Link Actions__ that are configured in Codex.    
 
-###### Anatomy of the URL Hash
+### Anatomy of the URL Hash
 <pre><c-c teal>#codex</c-c>:<c-c deep-orange>type[</c-c><c-c green>parameter</c-c>,<c-c green>parameter</c-c><c-c deep-orange>]</c-c>:<c-c indigo>modifier</c-c>:<c-c indigo>modifier[</c-c><c-c green>parameter</c-c>,<c-c green>parameter</c-c><c-c indigo>]</c-c>:<c-c indigo>modifier</c-c>:<c-c indigo>modifier[</c-c><c-c green>parameter</c-c><c-c indigo>]</c-c></pre>
 
 - <pre><c-c teal>prefix</c-c></pre> The prefix is required as Codex uses it to mark it as a link action 
