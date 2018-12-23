@@ -16,12 +16,12 @@
     },
     "require": {
         "php": "^7.1.3",
+        "codex/auth": "~1.0",
+        "codex/git": "~1.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "sonata-project/admin-bundle": "^3.43",
-        "codex/git": "~1.0",
-        "codex/auth": "~1.0"
+        "sonata-project/admin-bundle": "^3.43"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

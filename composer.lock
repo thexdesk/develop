@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69fee58fc8086d20e691ef2beb8f16b2",
+    "content-hash": "71f4f5faac73766f6b11d8998e1db23d",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -5011,6 +5011,86 @@
                 "xls"
             ],
             "time": "2018-12-11T21:05:21+00:00"
+        },
+        {
+            "name": "stackify/logger",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stackify/stackify-api-php.git",
+                "reference": "73b4e67432dc532d1dd46b90d385feb321f24e0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stackify/stackify-api-php/zipball/73b4e67432dc532d1dd46b90d385feb321f24e0a",
+                "reference": "73b4e67432dc532d1dd46b90d385feb321f24e0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stackify\\": "src/Stackify"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Stackify logs and errors for PHP",
+            "homepage": "https://github.com/stackify/stackify-api-php",
+            "keywords": [
+                "log",
+                "log4php",
+                "logging",
+                "monolog",
+                "psr-3",
+                "stackify"
+            ],
+            "time": "2018-11-28T21:45:13+00:00"
+        },
+        {
+            "name": "stackify/monolog",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stackify/stackify-log-monolog.git",
+                "reference": "37fae4b98c68c4dae292772f20b3e6e46d2397de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stackify/stackify-log-monolog/zipball/37fae4b98c68c4dae292772f20b3e6e46d2397de",
+                "reference": "37fae4b98c68c4dae292772f20b3e6e46d2397de",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "~1.1",
+                "stackify/logger": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stackify\\Log\\Monolog\\": "src/Stackify/Log/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Stackify logs and errors for Monolog",
+            "homepage": "https://github.com/stackify/stackify-log-monolog",
+            "keywords": [
+                "log",
+                "log4php",
+                "logging",
+                "monolog",
+                "psr-3",
+                "stackify"
+            ],
+            "time": "2018-11-28T22:25:34+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
