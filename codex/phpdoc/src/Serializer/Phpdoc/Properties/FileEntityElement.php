@@ -5,12 +5,13 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\Properties;
 
+use Codex\Phpdoc\Annotations\Attr;
 use JMS\Serializer\Annotation as Serializer;
 
 trait FileEntityElement
@@ -19,6 +20,7 @@ trait FileEntityElement
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlElement(cdata=false)
+     * @Attr()
      */
     private $extends;
 
@@ -27,6 +29,7 @@ trait FileEntityElement
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\Property>")
      * @Serializer\XmlList(inline=true, entry="property")
      * @Serializer\SerializedName("property")
+     * @Attr(new=true,array=true)
      */
     private $properties;
 
@@ -35,6 +38,7 @@ trait FileEntityElement
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\Method>")
      * @Serializer\XmlList(inline=true, entry="method")
      * @Serializer\SerializedName("method")
+     * @Attr(new=true,array=true)
      */
     private $methods;
 

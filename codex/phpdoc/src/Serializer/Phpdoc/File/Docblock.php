@@ -5,12 +5,13 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Phpdoc\Annotations\Attr;
 use Illuminate\Support\Collection;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -27,6 +28,7 @@ class Docblock
      * @var int
      * @Serializer\Type("integer")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $line;
 
@@ -34,6 +36,7 @@ class Docblock
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlElement(cdata=false)
+     * @Attr()
      */
     private $description;
 
@@ -43,6 +46,7 @@ class Docblock
      * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("long-description")
      * @Serializer\Accessor(getter="getLongDescription")
+     * @Attr()
      */
     private $longDescription;
 
@@ -51,6 +55,7 @@ class Docblock
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\Tag>")
      * @Serializer\XmlList(inline=true, entry="tag")
      * @Serializer\SerializedName("tag")
+     * @Attr(new=true,array=true)
      */
     private $tags;
 
@@ -154,7 +159,7 @@ class Docblock
 
     public function getTag($name): Tag
     {
-        if (!$this->hasTag($name)) {
+        if ( ! $this->hasTag($name)) {
             return null;
         }
 

@@ -5,12 +5,13 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Phpdoc\Annotations\Attr;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -26,6 +27,7 @@ class NamespaceAlias
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $name;
 
@@ -33,6 +35,7 @@ class NamespaceAlias
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlValue(cdata=false)
+     * @Attr()
      */
     private $value;
 }

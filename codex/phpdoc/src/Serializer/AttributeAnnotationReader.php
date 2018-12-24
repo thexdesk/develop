@@ -2,6 +2,8 @@
 
 namespace Codex\Phpdoc\Serializer;
 
+use Codex\Attributes\AttributeDefinition;
+use Codex\Phpdoc\Annotations\Attr;
 use Doctrine\Common\Annotations\Reader;
 
 class AttributeAnnotationReader
@@ -14,15 +16,40 @@ class AttributeAnnotationReader
         $this->reader = $reader;
     }
 
-    public function handleClassAnnotations($class)
+    public function handleClassAnnotations($class, AttributeDefinition $parentDefinition = null)
     {
-        if(is_object($class)){
+        if (is_object($class)) {
             $class = get_class($class);
         }
-        $reflectionClass = new \ReflectionClass($class);
-        foreach ($this->reader->getClassAnnotations($reflectionClass) as $i => $annotation) {
+        /** @var \Codex\Attributes\AttributeDefinition $classDefinition */
 
-            $a='a';
-        };
+        $reflectionClass = new \ReflectionClass($class);
+        foreach ($this->reader->getClassAnnotations($reflectionClass) as $c => $classAnnotation) {
+            if ($classAnnotation instanceof Attr) {
+                $classAnnotation->setTargetClass($reflectionClass);
+                $parentDefinition = $classAnnotation->getAttributeDefinition();
+                break;
+            }
+        }
+        if ($parentDefinition === null) {
+            return null;
+        }
+        foreach ($reflectionClass->getProperties() as $reflectionProperty) {
+            foreach ($this->reader->getPropertyAnnotations($reflectionProperty) as $p => $propertyAnnotation) {
+                if ($propertyAnnotation instanceof Attr) {
+                    $propertyAnnotation->setTargetProperty($reflectionProperty);
+                    $propertyDefinition = $propertyAnnotation->getAttributeDefinition();
+                    $parentDefinition->addChild($propertyDefinition);
+                    if ($propertyAnnotation->hasChildType()) {
+                        $childType = $propertyAnnotation->getChildType();
+                        if (class_exists($childType)) {
+                            $childDefinition = $this->handleClassAnnotations($childType, $propertyDefinition);
+//                            $propertyDefinition->addChild($childDefinition);
+                        }
+                    }
+                }
+            }
+        }
+        return $parentDefinition;
     }
 }

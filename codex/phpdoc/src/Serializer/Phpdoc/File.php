@@ -5,19 +5,20 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer\Phpdoc;
 
+use Codex\Phpdoc\Annotations\Attr;
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
+use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;
+use Codex\Phpdoc\Serializer\Concerns\WithResponse;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\DocblockProperty;
 use Codex\Phpdoc\Serializer\Phpdoc\Types\FileEntityType;
-use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
-use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
-use Codex\Phpdoc\Serializer\Concerns\WithResponse;
 use Illuminate\Contracts\Support\Responsable;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -33,6 +34,7 @@ class File implements SelfSerializable, Responsable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $path;
 
@@ -41,6 +43,7 @@ class File implements SelfSerializable, Responsable
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
      * @Serializer\SerializedName("generated-path")
+     * @Attr()
      */
     private $generatedPath;
 
@@ -48,6 +51,7 @@ class File implements SelfSerializable, Responsable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $hash;
 
@@ -55,6 +59,7 @@ class File implements SelfSerializable, Responsable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $package;
 
@@ -63,6 +68,7 @@ class File implements SelfSerializable, Responsable
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\NamespaceAlias>")
      * @Serializer\XmlList(inline=true, entry="namespace-alias")
      * @Serializer\SerializedName("namespace-alias")
+     * @Attr(new=true, array=true)
      */
     private $namespaceAlias;
 
@@ -70,6 +76,7 @@ class File implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile>")
      * @Serializer\XmlList(inline=true, entry="class", skipWhenEmpty=true)
+     * @Attr(new=true, array=true)
      */
     private $class;
 
@@ -77,6 +84,7 @@ class File implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile>")
      * @Serializer\XmlList(inline=true, entry="interface", skipWhenEmpty=true)
+     * @Attr(new=true, array=true)
      */
     private $interface;
 
@@ -139,13 +147,13 @@ class File implements SelfSerializable, Responsable
     public function getEntity()
     {
         if ($this->isClass()) {
-            return $this->getClass()[0];
+            return $this->getClass()[ 0 ];
         }
         if ($this->isInterface()) {
-            return $this->getInterface()[0];
+            return $this->getInterface()[ 0 ];
         }
         if ($this->isTrait()) {
-            return $this->getTrait()[0];
+            return $this->getTrait()[ 0 ];
         }
     }
 
@@ -366,7 +374,8 @@ class File implements SelfSerializable, Responsable
     {
         try {
             return gzuncompress(base64_decode($this->source));
-        } catch (\Exception $ex) {
+        }
+        catch (\Exception $ex) {
             return $this->source;
         }
     }

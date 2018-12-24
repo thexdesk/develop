@@ -12,16 +12,15 @@
 namespace Codex\Phpdoc;
 
 use Codex\Addons\AddonServiceProvider;
+use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
+use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Annotations\Reader;
-use Doctrine\Common\Annotations\SimpleAnnotationReader;
 use Illuminate\Contracts\Foundation\Application;
-use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\SerializerBuilder;
-use Symfony\Component\Routing\Loader\AnnotationClassLoader;
 
 class PhpdocAddonServiceProvider extends AddonServiceProvider
 {
@@ -38,7 +37,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public $bindings = [
         AttributeAnnotationReader::class => AttributeAnnotationReader::class,
-        Reader::class => SimpleAnnotationReader::class
+        Reader::class                    => AnnotationReader::class,
     ];
 
     public $aliases = [
@@ -63,10 +62,11 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
         $this->app->alias(\JMS\Serializer\Serializer::class, 'codex.serializer');
     }
 
-    public function boot(AttributeAnnotationReader $reader)
+    public function boot(AttributeDefinitionRegistry $registry, AttributeAnnotationReader $reader)
     {
-        $reader->handleClassAnnotations(PhpdocStructure::class);
-
+        $revisions       = $registry->revisions;
+        $phpdocDefintion = $reader->handleClassAnnotations(PhpdocStructure::class);
+        $revisions->addChild($phpdocDefintion);
     }
 
 }

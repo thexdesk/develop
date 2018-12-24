@@ -30,9 +30,7 @@ use JMS\Serializer\Annotation as Serializer;
  * @author  Robin Radic
  *
  * @Serializer\XmlRoot("project")
- * @Attr
- * @AttrType("dictionary")
- * @AttrApiType("PhpdocStructure", new=true)
+ * @Attr("phpdoc", type="dictionary", new=true)
  *
  */
 class PhpdocStructure implements SelfSerializable, Responsable
@@ -47,7 +45,6 @@ class PhpdocStructure implements SelfSerializable, Responsable
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
      * @Attr()
-     * @AttrType("string")
      */
     private $title;
 
@@ -56,7 +53,6 @@ class PhpdocStructure implements SelfSerializable, Responsable
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
      * @Attr()
-     * @AttrType("string")
      */
     private $version;
 
@@ -65,6 +61,7 @@ class PhpdocStructure implements SelfSerializable, Responsable
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File>")
      * @Serializer\XmlList(inline=true, entry="file")
      * @Serializer\SerializedName("file")
+     * @Attr(new=true, array=true)
      */
     private $files;
 

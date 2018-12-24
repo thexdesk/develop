@@ -8,7 +8,7 @@ use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Contracts\Projects\Project;
 use Codex\Exceptions\Exception;
 use Codex\Git\Commands\SyncGitProject;
-use Codex\Phpdoc\Serializer\Last\PhpdocStructure;
+use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
 use GraphQL\Language\Parser;
