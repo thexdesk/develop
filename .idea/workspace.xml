@@ -2,14 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/codex/core/src/Contracts/Log/Log.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/core/src/Log/ArtisanHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/core/src/Log/Logger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/BranchType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/Ref.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/RefCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/WithZipDownloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/ZipDownloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/ZipDownloaderResult.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/ConnectionManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Console/CodexGitSyncCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Listeners/ResolveBranchTypeDefaultRevision.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Support/GitRevisionCollectionMixin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/Support/Version.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/semver/code_completion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/semver/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/semver/config/codex-semver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/semver/src/SemverAddon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/semver/src/SemverAddonServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/config/codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/config/codex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonRegistry.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonRegistry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/DisableAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/DisableAddon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/EnableAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/EnableAddon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/InstallAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/InstallAddon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/UninstallAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/UninstallAddon.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Document.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/Concerns/HasMergableAttributes.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/Concerns/HasMergableAttributes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/ModelCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/ModelCollection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/core/src/Projects/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Projects/Project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Revisions/RevisionCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Revisions/RevisionCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/git/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/git/config/codex-git.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/config/codex-git.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/codex/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/codex-addons.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/codex-addons.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,31 +70,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Document.php">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-              <folding>
-                <element signature="e#2684#2724#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="1107">
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/Revision.php">
+        <entry file="file://$PROJECT_DIR$/codex/git/config/codex-git.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Concerns/HasMergableAttributes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="189">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -56,85 +90,343 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="1036">
+              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaExtension.php">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="597">
+              <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/routes/schema.graphqls">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/ConnectionManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="351">
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+              <folding>
+                <element signature="e#345#419#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Api/ApiServiceProvider.php">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="405">
+              <caret line="146" selection-start-line="146" selection-end-line="146" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Api/Listeners/AttachSchemaExtensions.php">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+            <state relative-caret-position="423">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php">
+        <entry file="file://$PROJECT_DIR$/storage/logs/codex.log">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="210" column="47" lean-forward="true" selection-start-line="210" selection-start-column="47" selection-end-line="210" selection-end-column="47" />
+            <state relative-caret-position="243">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Projects/Project.php">
+        <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/AbstractManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+              <folding>
+                <element signature="e#33#259#0#PHP" />
+                <element signature="e#296#308#0#PHP" />
+                <element signature="e#1063#1155#0#PHP" />
+                <element signature="e#1699#1890#0#PHP" />
+                <element signature="e#2023#2181#0#PHP" />
+                <element signature="e#2187#2301#0#PHP" expanded="true" />
+                <element signature="e#2488#2954#0#PHP" />
+                <element signature="e#2604#2706#0#PHP" />
+                <element signature="e#2716#2898#0#PHP" />
+                <element signature="e#2774#2888#0#PHP" />
+                <element signature="e#4044#4176#0#PHP" />
+                <element signature="e#4344#4605#0#PHP" />
+                <element signature="e#4415#4599#0#PHP" />
+                <element signature="e#4533#4599#0#PHP" />
+                <element signature="e#4704#4783#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/Ref.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/RefCollection.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="111" column="5" selection-start-line="82" selection-end-line="111" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloaderResult.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1162">
+              <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+              <folding>
+                <element signature="e#4053#4149#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1161">
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Builder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-351">
+              <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/php-http/guzzle6-adapter/src/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Plugin/Authentication.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1026">
-              <caret line="57" column="79" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor>
-                <markdownNavigatorState>
-                  <previewPanelState version="2.7.0" />
-                </markdownNavigatorState>
-              </second_editor>
+        <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Api/Repo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="428" column="20" selection-start-line="428" selection-start-column="20" selection-end-line="428" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Repositories.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/ClientInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="811">
+              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="295" column="23" selection-start-line="295" selection-start-column="23" selection-end-line="295" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs/Tags.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/AbstractApi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/php-http/discovery/src/UriFactoryDiscovery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/AddHostPlugin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/ConnectorInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/RedirectPlugin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/HttpClient/Builder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1376">
+              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
+        <entry file="file://$PROJECT_DIR$/storage/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -172,6 +464,9 @@
       <find>t\]\(#codex:(.*?)\).*</find>
       <find>$link-&gt;setElementUrl(codex()-&gt;url(</find>
       <find>namespace Codex\</find>
+      <find>Git</find>
+      <find>Codex\Addon\</find>
+      <find>parseL</find>
     </findStrings>
     <replaceStrings>
       <replace>codex.</replace>
@@ -183,6 +478,8 @@
       <replace>t](#codex:$1) | `#codex:$1` |</replace>
       <replace>$this-&gt;setUrl($link,</replace>
       <replace>namespace Codex\Documents\</replace>
+      <replace>Semver</replace>
+      <replace>Codex\</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/Attributes/Definition</dir>
@@ -191,6 +488,8 @@
       <dir>$PROJECT_DIR$/vendor/symfony/security-bundle/Resources</dir>
       <dir>$PROJECT_DIR$/codex/core/src/Documents/Processors/Links</dir>
       <dir>$PROJECT_DIR$/codex/core/src/Documents/Processors/Macros</dir>
+      <dir>$PROJECT_DIR$/codex/semver-revisions</dir>
+      <dir>$PROJECT_DIR$/codex/git/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -217,57 +516,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/codex/core/theme/styles/components/metismenu-horizontal.scss" />
-        <option value="$PROJECT_DIR$/codex/core/theme/styles/_layout.scss" />
-        <option value="$PROJECT_DIR$/codex/core/theme/main.ts" />
-        <option value="$PROJECT_DIR$/codex/core/theme/elements/ColorElement.ts" />
-        <option value="$PROJECT_DIR$/codex/core/.gitignore" />
-        <option value="$PROJECT_DIR$/codex/core/theme/styles/prismjs.scss" />
-        <option value="$PROJECT_DIR$/codex/core/theme/styles/_variables.scss" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/processors/links.md" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/CodexLinks.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Macros/Macro.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Macros/Attribute.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacroProcessor.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacroProcessorExtension.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/TocProcessor.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/PostProcessorInterface.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/ProcessorInterface.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/PreProcessorInterface.php" />
-        <option value="$PROJECT_DIR$/codex/core/config/codex.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/ProcessorExtension.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Support/Arr.php" />
-        <option value="$PROJECT_DIR$/public/phpinfo.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Listeners/ProcessDocument.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacrosProcessorExtension.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/ParserProcessorExtension.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/ProcessorSorter.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Support/CollectionMixin.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/codex/core/src/Addons/Extensions/ExtensionCollection.php" />
-        <option value="$PROJECT_DIR$/codex/core/code_completion.php" />
-        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/codex/core/src/Contracts/Mergable/Mergable.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Mergable/Commands/MergeAttributes.php" />
-        <option value="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" />
-        <option value="$PROJECT_DIR$/codex/core/resources/views/processors/toc.blade.php" />
-        <option value="$PROJECT_DIR$/codex/core/resources/views/processors/toc-header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/develop/links.md" />
-        <option value="$PROJECT_DIR$/codex/core/composer.json" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/DOMQueryDecorator.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/TocProcessorExtension.php" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/processors/toc.md" />
-        <option value="$PROJECT_DIR$/codex/core/src/Mergable/Concerns/HasMergableAttributes.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaExtension.php" />
-        <option value="$PROJECT_DIR$/app/TestCommand.php" />
+        <option value="$PROJECT_DIR$/codex/semver/composer.json" />
+        <option value="$PROJECT_DIR$/codex/semver/src/Version.php" />
+        <option value="$PROJECT_DIR$/codex/semver/src/Support/Version.php" />
+        <option value="$PROJECT_DIR$/codex/semver/src/RevisionCollectionSemverMixin.php" />
+        <option value="$PROJECT_DIR$/codex/semver/code_completion.php" />
+        <option value="$PROJECT_DIR$/codex/semver/src/SemverAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/semver/src/Semver.php" />
+        <option value="$PROJECT_DIR$/codex/semver/config/codex-semver.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Git/Support/Version.php" />
+        <option value="$PROJECT_DIR$/codex/semver/src/SemverAddon.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/RevisionCollectionSemverMixin.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Semver.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/BranchType.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/AddonRegistry.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/Commands/UninstallAddon.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/Commands/InstallAddon.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/Commands/EnableAddon.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/Commands/DisableAddon.php" />
+        <option value="$PROJECT_DIR$/storage/codex-addons.json" />
+        <option value="$PROJECT_DIR$/codex/git/src/SemverRevisionCollectionMixin.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Document.php" />
+        <option value="$PROJECT_DIR$/resources/docs/codex/config.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/GitRevisionCollectionMixin.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Revisions/RevisionCollection.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Projects/Project.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Listeners/ResolveBranchTypeDefaultRevision.php" />
+        <option value="$PROJECT_DIR$/.tmp/codex/codex/addon-git/src/Drivers/GithubDriver.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Support/GitRevisionCollectionMixin.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/DeprecatedDrivers/AbstractDriver.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php" />
+        <option value="$PROJECT_DIR$/codex/git/config/codex-git.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Connection/WithZipDownloader.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Contracts/Log/Log.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Log/Writer.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Log/Logger.php" />
+        <option value="$PROJECT_DIR$/codex/core/config/codex.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Console/CodexGitSyncCommand.php" />
+        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" />
+        <option value="$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/ConnectionManager.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/git/composer.json" />
+        <option value="$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php" />
+        <option value="$PROJECT_DIR$/app/TestCommand.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php" />
+        <option value="$PROJECT_DIR$/storage/.gitignore" />
       </list>
     </option>
   </component>
@@ -384,8 +683,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/vendor/laradic/support" />
       <path value="$PROJECT_DIR$/vendor/laradic/dependency-sorter" />
-      <path value="$PROJECT_DIR$/vendor/paquettg/php-html-parser" />
-      <path value="$PROJECT_DIR$/vendor/paquettg/string-encode" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/anahkiasen/underscore-php" />
       <path value="$PROJECT_DIR$/vendor/patchwork/utf8" />
@@ -412,54 +709,32 @@
       <path value="$PROJECT_DIR$/vendor/laradic/service-provider" />
       <path value="$PROJECT_DIR$/vendor/codex/composer-plugin" />
       <path value="$PROJECT_DIR$/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
-      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
-      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
-      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
-      <path value="$PROJECT_DIR$/vendor/symfony/form" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-acl" />
-      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
-      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/cache" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/block-bundle" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/core-bundle" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/datagrid-bundle" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/doctrine-extensions" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/admin-bundle" />
-      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
       <path value="$PROJECT_DIR$/vendor/radic/blade-extensions" />
-      <path value="$PROJECT_DIR$/vendor/fluentdom/html5" />
-      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
       <path value="$PROJECT_DIR$/vendor/fluentdom/selectors-phpcss" />
       <path value="$PROJECT_DIR$/vendor/carica/phpcss" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-client" />
+      <path value="$PROJECT_DIR$/vendor/stevenmaguire/oauth2-bitbucket" />
+      <path value="$PROJECT_DIR$/vendor/kriswallsmith/buzz" />
+      <path value="$PROJECT_DIR$/vendor/bitbucket/client" />
+      <path value="$PROJECT_DIR$/vendor/jacobkiers/oauth" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/github-api" />
+      <path value="$PROJECT_DIR$/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/vendor/gentle/bitbucket-api" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/vendor/php-http/multipart-stream-builder" />
+      <path value="$PROJECT_DIR$/vendor/php-http/cache-plugin" />
+      <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/cache-plugin" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/github" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/bitbucket" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-github" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -476,6 +751,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -486,136 +762,93 @@
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
-              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Attributes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Documents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Revisions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="develop" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="0c7ca723d7166fbe60a155ac02e31e5e" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
-              <item name="processors" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="0c7ca723d7166fbe60a155ac02e31e5e" type="462c0819:PsiDirectoryNode" />
+              <item name="robinradic-blade-extensions-b043c9b14e7b" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="0f7f81a5f874b020e6629ab79ef6ae6c" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="0f7f81a5f874b020e6629ab79ef6ae6c" type="462c0819:PsiDirectoryNode" />
+              <item name="blade-extensions-master" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Constants" value="true" />
+    <property name="Constants" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -636,23 +869,23 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/codex/core/resources/views/processors" />
-      <recent name="$PROJECT_DIR$/codex/core/src/Documents/Processors" />
-      <recent name="$PROJECT_DIR$/codex/core/theme/types" />
-      <recent name="$PROJECT_DIR$/codex/core/theme" />
-      <recent name="$PROJECT_DIR$/codex/core/theme/styles" />
+      <recent name="$PROJECT_DIR$/codex/core/src/Contracts" />
+      <recent name="$PROJECT_DIR$/codex/core/src" />
+      <recent name="$PROJECT_DIR$/codex/git/src/Drivers" />
+      <recent name="$PROJECT_DIR$/codex/git/src" />
+      <recent name="$PROJECT_DIR$/codex/semver" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/codex/git/src" />
       <recent name="$PROJECT_DIR$/codex/core/theme/types" />
       <recent name="$PROJECT_DIR$/codex/core" />
       <recent name="$PROJECT_DIR$/resources/docs/codex/master/processors" />
       <recent name="$PROJECT_DIR$/codex/core/resources/views/partials" />
-      <recent name="$PROJECT_DIR$/codex/core/routes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -762,6 +995,7 @@
       <workItem from="1545476200027" />
       <workItem from="1545497519054" />
       <workItem from="1545573179136" />
+      <workItem from="1545593715547" />
     </task>
     <task id="LOCAL-00003" summary="Implemented AttributeSchemaExtension that appends and extends the schema with types generated from attribute definitions which resolves #3">
       <created>1545470738005</created>
@@ -935,7 +1169,7 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.093305215" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.13415919" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.49868214" weight="0.32722646" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
@@ -1056,7 +1290,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/TestCommand.php</url>
-          <line>53</line>
+          <line>79</line>
           <option name="timeStamp" value="250" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1085,9 +1319,39 @@
           <option name="timeStamp" value="363" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaExtension.php</url>
-          <line>20</line>
-          <option name="timeStamp" value="365" />
+          <url>file://$PROJECT_DIR$/app/TestCommand.php</url>
+          <line>49</line>
+          <option name="timeStamp" value="368" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/core/src/Addons/Console/AddonCommand.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="380" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/semver/src/SemverAddonServiceProvider.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="381" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/core/src/Projects/Project.php</url>
+          <line>64</line>
+          <option name="timeStamp" value="384" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/git/src/ConnectionManager.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="396" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php</url>
+          <line>96</line>
+          <option name="timeStamp" value="406" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php</url>
+          <line>125</line>
+          <option name="timeStamp" value="407" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1116,6 +1380,16 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>get_clas</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>get_called_class()</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>$element</expression-string>
         <language-id>PHP</language-id>
@@ -1156,835 +1430,488 @@
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>urldecode($query-&gt;find('body')-&gt;toString());</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>urldecode($query-&gt;toString())</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/DOM/Node/ParentNode/Properties.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Nodes/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="151" column="7" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="7" />
-          <folding>
-            <element signature="e#249#274#0#PHP" />
-            <element signature="n#__construct#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="n#getOwner#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="n#getNodeList#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#1041#1137#0#PHP" />
-            <element signature="e#1144#1217#0#PHP" />
-            <element signature="e#1224#1320#0#PHP" />
-            <element signature="e#1327#1436#0#PHP" />
-            <element signature="n#getTargetNodes#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#1822#1898#0#PHP" />
-            <element signature="e#1905#2314#0#PHP" />
-            <element signature="e#1952#2107#0#PHP" />
-            <element signature="e#1988#2077#0#PHP" />
-            <element signature="e#2117#2262#0#PHP" />
-            <element signature="n#getContentNodes#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#2927#3179#0#PHP" />
-            <element signature="e#3033#3179#0#PHP" />
-            <element signature="e#3186#3272#0#PHP" />
-            <element signature="e#3390#3560#0#PHP" />
-            <element signature="e#3437#3552#0#PHP" />
-            <element signature="n#getContentElement#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="n#getFragment#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#4581#4701#0#PHP" />
-            <element signature="e#4708#4747#0#PHP" />
-            <element signature="e#4786#4895#0#PHP" />
-            <element signature="e#4903#5376#0#PHP" />
-            <element signature="e#5006#5368#0#PHP" />
-            <element signature="e#5132#5358#0#PHP" />
-            <element signature="n#getContentAsString#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#5609#5776#0#PHP" />
-            <element signature="n#getInnerXml#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#6179#6314#0#PHP" />
-            <element signature="e#6322#6405#0#PHP" />
-            <element signature="n#getWrapperNodes#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#6825#6982#0#PHP" />
-            <element signature="e#6989#7178#0#PHP" />
-            <element signature="e#7090#7178#0#PHP" />
-            <element signature="n#getLimitedArray#0;n#Builder#0;n#!!block;n#Nodes#0;n#!!top" />
-            <element signature="e#7399#7675#0#PHP" />
-            <element signature="e#7425#7509#0#PHP" />
-            <element signature="e#7525#7666#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1647">
-          <caret line="118" column="39" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/codex/codex/core/src/DOM/XMLLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/codex/codex/core/src/Document.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#8724#8791#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Standard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Xml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Supports/Libxml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/html5/src/plugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/html5/src/Loader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#442#504#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Supports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/html5/composer.json">
+    <entry file="file://$PROJECT_DIR$/storage/logs/codex.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
+    <entry file="file://$PROJECT_DIR$/codex/git/src/ConnectionManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3510">
-          <caret line="160" column="13" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
+        <state relative-caret-position="351">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#345#419#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2403">
+        <state relative-caret-position="423">
           <caret line="129" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
-    <entry file="https://schemastore.azurewebsites.net/schemas/json/composer.json">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/html5/src/Serializer.php">
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/RefCollection.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Result.php">
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/Ref.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Query.php">
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="243">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/AbstractManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
-            <element signature="e#243#271#0#PHP" />
-            <element signature="e#351#876#0#PHP" expanded="true" />
-            <element signature="e#1094#1293#0#PHP" />
-            <element signature="e#1146#1250#0#PHP" />
-            <element signature="e#1208#1242#0#PHP" />
-            <element signature="e#1483#1959#0#PHP" />
-            <element signature="e#1527#1918#0#PHP" />
-            <element signature="e#1550#1607#0#PHP" />
-            <element signature="e#1614#1663#0#PHP" />
-            <element signature="e#1670#1910#0#PHP" />
-            <element signature="e#1692#1781#0#PHP" />
-            <element signature="e#2174#2630#0#PHP" />
-            <element signature="e#2226#2588#0#PHP" />
-            <element signature="e#2249#2383#0#PHP" />
-            <element signature="e#2271#2367#0#PHP" />
-            <element signature="e#2390#2445#0#PHP" />
-            <element signature="e#2452#2580#0#PHP" />
-            <element signature="e#2474#2564#0#PHP" />
-            <element signature="e#2862#3126#0#PHP" />
-            <element signature="e#2924#3118#0#PHP" />
-            <element signature="e#2991#3107#1#PHP" />
-            <element signature="e#3484#3672#0#PHP" />
-            <element signature="e#3527#3647#0#PHP" />
-            <element signature="e#3570#3639#0#PHP" />
-            <element signature="e#3968#5098#0#PHP" />
-            <element signature="e#4145#4242#0#PHP" />
-            <element signature="e#4272#5070#0#PHP" />
-            <element signature="e#4321#4563#0#PHP" />
-            <element signature="e#4434#4553#0#PHP" />
-            <element signature="e#4572#5062#0#PHP" />
-            <element signature="e#4760#4854#1#PHP" />
-            <element signature="e#4866#4984#0#PHP" />
-            <element signature="e#5246#5349#0#PHP" />
-            <element signature="e#5400#5575#0#PHP" />
-            <element signature="e#5448#5539#0#PHP" />
-            <element signature="e#6030#6921#0#PHP" />
-            <element signature="e#6164#6344#0#PHP" />
-            <element signature="e#6263#6344#0#PHP" />
-            <element signature="e#6351#6893#0#PHP" />
-            <element signature="e#6403#6649#0#PHP" />
-            <element signature="e#6525#6639#0#PHP" />
-            <element signature="e#6658#6885#0#PHP" />
-            <element signature="e#6754#6875#0#PHP" />
-            <element signature="e#7343#7621#0#PHP" />
-            <element signature="e#7462#7538#0#PHP" />
-            <element signature="e#7546#7593#0#PHP" />
-            <element signature="e#7976#8225#0#PHP" />
-            <element signature="e#8082#8218#0#PHP" />
-            <element signature="e#8737#9280#0#PHP" />
-            <element signature="e#8836#9194#0#PHP" />
-            <element signature="e#8933#9132#0#PHP" />
-            <element signature="e#9133#9194#0#PHP" />
-            <element signature="e#9467#9578#0#PHP" />
-            <element signature="e#10020#10148#0#PHP" />
-            <element signature="e#10600#10881#0#PHP" />
-            <element signature="e#10733#10874#0#PHP" />
-            <element signature="e#11200#11374#0#PHP" />
-            <element signature="e#11248#11367#0#PHP" />
-            <element signature="e#11681#11974#0#PHP" />
-            <element signature="e#11761#11844#0#PHP" />
-            <element signature="e#11851#11946#0#PHP" />
-            <element signature="e#12457#12756#0#PHP" />
-            <element signature="e#12594#12728#0#PHP" />
-            <element signature="e#12647#12720#0#PHP" />
-            <element signature="e#12974#13038#0#PHP" />
-            <element signature="e#13283#13605#0#PHP" />
-            <element signature="e#13333#13396#0#PHP" />
-            <element signature="e#13403#13486#0#PHP" />
-            <element signature="e#13493#13580#0#PHP" />
-            <element signature="e#13915#14405#0#PHP" />
-            <element signature="e#14082#14159#0#PHP" />
-            <element signature="e#14166#14377#0#PHP" />
-            <element signature="e#14209#14369#0#PHP" />
-            <element signature="e#14272#14359#0#PHP" />
-            <element signature="e#14705#14905#0#PHP" />
-            <element signature="e#14756#14879#0#PHP" />
-            <element signature="e#14799#14871#0#PHP" />
-            <element signature="e#15122#15186#0#PHP" />
-            <element signature="e#15673#16202#0#PHP" />
-            <element signature="e#15748#16174#0#PHP" />
-            <element signature="e#15845#15898#0#PHP" />
-            <element signature="e#15907#16166#0#PHP" />
-            <element signature="e#15978#16108#0#PHP" />
-            <element signature="e#16022#16096#0#PHP" />
-            <element signature="e#16119#16166#0#PHP" />
-            <element signature="e#16553#16805#0#PHP" />
-            <element signature="e#16662#16798#0#PHP" />
-            <element signature="e#16685#16790#2#PHP" />
-            <element signature="e#17168#17435#0#PHP" />
-            <element signature="e#17228#17428#0#PHP" />
-            <element signature="e#17763#17956#0#PHP" />
-            <element signature="e#17826#17949#0#PHP" />
-            <element signature="e#18310#18538#0#PHP" />
-            <element signature="e#18391#18531#0#PHP" />
-            <element signature="e#18861#18968#0#PHP" />
-            <element signature="e#19359#19491#0#PHP" />
-            <element signature="e#19874#20031#0#PHP" />
-            <element signature="e#20409#20676#0#PHP" />
-            <element signature="e#20469#20669#0#PHP" />
-            <element signature="e#21010#21249#0#PHP" />
-            <element signature="e#21073#21242#0#PHP" />
-            <element signature="e#21603#21863#0#PHP" />
-            <element signature="e#21684#21856#0#PHP" />
-            <element signature="e#22041#22145#0#PHP" />
-            <element signature="e#22529#22872#0#PHP" />
-            <element signature="e#22593#22865#0#PHP" />
-            <element signature="e#23162#23665#0#PHP" />
-            <element signature="e#23259#23637#0#PHP" />
-            <element signature="e#23348#23441#0#PHP" />
-            <element signature="e#23442#23549#0#PHP" />
-            <element signature="e#23550#23637#0#PHP" />
-            <element signature="e#23993#24257#0#PHP" />
-            <element signature="e#24046#24250#0#PHP" />
-            <element signature="e#24116#24242#1#PHP" />
-            <element signature="e#24683#25407#0#PHP" />
-            <element signature="e#24730#25184#0#PHP" />
-            <element signature="e#24861#25098#0#PHP" />
-            <element signature="e#25012#25098#0#PHP" />
-            <element signature="e#25198#25400#0#PHP" />
-            <element signature="e#25268#25392#1#PHP" />
-            <element signature="e#25720#25981#0#PHP" />
-            <element signature="e#25777#25974#0#PHP" />
-            <element signature="e#25828#25952#1#PHP" />
-            <element signature="e#26224#26490#0#PHP" />
-            <element signature="e#26278#26483#0#PHP" />
-            <element signature="e#26348#26475#1#PHP" />
-            <element signature="e#26739#26961#0#PHP" />
-            <element signature="e#26809#26933#0#PHP" />
-            <element signature="e#27180#27385#0#PHP" />
-            <element signature="e#27218#27317#0#PHP" />
-            <element signature="e#27239#27309#2#PHP" />
-            <element signature="e#27697#28015#0#PHP" />
-            <element signature="e#27757#28008#0#PHP" />
-            <element signature="e#27860#27986#1#PHP" />
-            <element signature="e#28289#28557#0#PHP" />
-            <element signature="e#28350#28550#0#PHP" />
-            <element signature="e#28401#28528#1#PHP" />
-            <element signature="e#28797#29067#0#PHP" />
-            <element signature="e#28852#29060#0#PHP" />
-            <element signature="e#28922#29052#1#PHP" />
-            <element signature="e#29408#29676#0#PHP" />
-            <element signature="e#29466#29669#0#PHP" />
-            <element signature="e#29517#29647#1#PHP" />
-            <element signature="e#29991#30418#0#PHP" />
-            <element signature="e#30053#30320#0#PHP" />
-            <element signature="e#30171#30298#1#PHP" />
-            <element signature="e#30893#31193#0#PHP" />
-            <element signature="e#30945#31143#0#PHP" />
-            <element signature="e#31008#31135#1#PHP" />
-            <element signature="e#31495#31876#0#PHP" />
-            <element signature="e#31589#31848#0#PHP" />
-            <element signature="e#31632#31840#0#PHP" />
-            <element signature="e#32193#32645#0#PHP" />
-            <element signature="e#32236#32509#0#PHP" />
-            <element signature="e#32322#32479#0#PHP" />
-            <element signature="e#32536#32617#0#PHP" />
-            <element signature="e#32960#33074#0#PHP" />
-            <element signature="e#33529#33832#0#PHP" />
-            <element signature="e#33609#33804#0#PHP" />
-            <element signature="e#33659#33795#0#PHP" />
-            <element signature="e#33684#33785#1#PHP" />
-            <element signature="e#33966#34502#0#PHP" />
-            <element signature="e#34072#34444#0#PHP" />
-            <element signature="e#34159#34303#0#PHP" />
-            <element signature="e#34312#34373#0#PHP" />
-            <element signature="e#34642#35387#0#PHP" />
-            <element signature="e#34772#35359#0#PHP" />
-            <element signature="e#34810#35351#0#PHP" />
-            <element signature="e#35004#35091#1#PHP" />
-            <element signature="e#35103#35221#0#PHP" />
-            <element signature="e#35232#35312#0#PHP" />
-            <element signature="e#35682#36033#0#PHP" />
-            <element signature="e#35754#35961#0#PHP" />
-            <element signature="e#35797#35953#0#PHP" />
-            <element signature="e#35851#35943#0#PHP" />
-            <element signature="e#36486#36865#0#PHP" />
-            <element signature="e#36534#36858#0#PHP" />
-            <element signature="e#36572#36652#1#PHP" />
-            <element signature="e#36662#36742#1#PHP" />
-            <element signature="e#36752#36850#1#PHP" />
-            <element signature="e#37240#37521#0#PHP" />
-            <element signature="e#37293#37514#0#PHP" />
-            <element signature="e#37336#37418#1#PHP" />
-            <element signature="e#37428#37506#1#PHP" />
-            <element signature="e#37898#38198#0#PHP" />
-            <element signature="e#37953#38191#0#PHP" />
-            <element signature="e#37997#38080#1#PHP" />
-            <element signature="e#38090#38183#1#PHP" />
-            <element signature="e#38585#39113#0#PHP" />
-            <element signature="e#38635#39106#0#PHP" />
-            <element signature="e#38674#38887#1#PHP" />
-            <element signature="e#38737#38851#0#PHP" />
-            <element signature="e#38897#38990#1#PHP" />
-            <element signature="e#39000#39098#1#PHP" />
-            <element signature="e#39341#40041#0#PHP" />
-            <element signature="e#39438#39931#0#PHP" />
-            <element signature="e#39530#39901#0#PHP" />
-            <element signature="e#39557#39737#0#PHP" />
-            <element signature="e#39748#39901#0#PHP" />
-            <element signature="e#39806#39891#0#PHP" />
-            <element signature="e#39938#40018#0#PHP" />
-            <element signature="e#40238#40523#0#PHP" />
-            <element signature="e#40329#40516#0#PHP" />
-            <element signature="e#40405#40508#1#PHP" />
-            <element signature="e#40753#41115#0#PHP" />
-            <element signature="e#40799#40854#0#PHP" />
-            <element signature="e#40861#40954#0#PHP" />
-            <element signature="e#40961#41090#0#PHP" />
-            <element signature="e#41310#41626#0#PHP" />
-            <element signature="e#41366#41440#0#PHP" />
-            <element signature="e#41447#41533#0#PHP" />
-            <element signature="e#42086#43163#0#PHP" />
-            <element signature="e#42142#42512#0#PHP" />
-            <element signature="e#42376#42483#0#PHP" />
-            <element signature="e#42638#43137#0#PHP" />
-            <element signature="e#42794#43128#0#PHP" />
-            <element signature="e#42817#43102#1#PHP" />
-            <element signature="e#42898#43089#0#PHP" />
-            <element signature="e#43352#43572#0#PHP" />
-            <element signature="e#43397#43546#0#PHP" />
-            <element signature="e#43440#43538#0#PHP" />
-            <element signature="e#43902#44427#0#PHP" />
-            <element signature="e#43993#44400#0#PHP" />
-            <element signature="e#44014#44378#1#PHP" />
-            <element signature="e#44204#44368#0#PHP" />
-            <element signature="e#44254#44356#0#PHP" />
-            <element signature="e#44682#44775#0#PHP" />
-            <element signature="e#44954#45352#0#PHP" />
-            <element signature="e#45008#45326#0#PHP" />
-            <element signature="e#45051#45318#0#PHP" />
-            <element signature="e#45208#45308#0#PHP" />
-            <element signature="e#45566#45668#0#PHP" />
-            <element signature="e#46135#47103#0#PHP" />
-            <element signature="e#46261#47076#0#PHP" />
-            <element signature="e#46282#47054#1#PHP" />
-            <element signature="e#46465#47044#0#PHP" />
-            <element signature="e#46522#46618#0#PHP" />
-            <element signature="e#46631#47044#0#PHP" />
-            <element signature="e#46662#46795#0#PHP" />
-            <element signature="e#46809#47032#0#PHP" />
-            <element signature="e#46850#47018#0#PHP" />
-            <element signature="e#46939#47018#0#PHP" />
-            <element signature="e#47465#48381#0#PHP" />
-            <element signature="e#47620#47716#0#PHP" />
-            <element signature="e#47780#47877#0#PHP" />
-            <element signature="e#47910#48281#0#PHP" />
-            <element signature="e#47955#48273#0#PHP" />
-            <element signature="e#48146#48273#0#PHP" />
-            <element signature="e#48733#49814#0#PHP" />
-            <element signature="e#48787#49046#0#PHP" />
-            <element signature="e#48930#49017#0#PHP" />
-            <element signature="e#49174#49787#0#PHP" />
-            <element signature="e#49195#49765#1#PHP" />
-            <element signature="e#49337#49542#0#PHP" />
-            <element signature="e#49417#49529#0#PHP" />
-            <element signature="e#49553#49755#0#PHP" />
-            <element signature="e#49659#49755#0#PHP" />
-            <element signature="e#50311#50903#0#PHP" />
-            <element signature="e#50362#50550#0#PHP" />
-            <element signature="e#50423#50521#0#PHP" />
-            <element signature="e#50627#50876#0#PHP" />
-            <element signature="e#50648#50854#1#PHP" />
-            <element signature="e#50743#50844#0#PHP" />
-            <element signature="e#51243#51766#0#PHP" />
-            <element signature="e#51341#51739#0#PHP" />
-            <element signature="e#51362#51717#1#PHP" />
-            <element signature="e#51445#51707#0#PHP" />
-            <element signature="e#51482#51566#0#PHP" />
-            <element signature="e#51579#51707#0#PHP" />
-            <element signature="e#51598#51695#0#PHP" />
-            <element signature="e#52018#52251#0#PHP" />
-            <element signature="e#52085#52225#0#PHP" />
+            <element signature="e#33#259#0#PHP" />
+            <element signature="e#296#308#0#PHP" />
+            <element signature="e#1063#1155#0#PHP" />
+            <element signature="e#1699#1890#0#PHP" />
+            <element signature="e#2023#2181#0#PHP" />
+            <element signature="e#2187#2301#0#PHP" expanded="true" />
+            <element signature="e#2488#2954#0#PHP" />
+            <element signature="e#2604#2706#0#PHP" />
+            <element signature="e#2716#2898#0#PHP" />
+            <element signature="e#2774#2888#0#PHP" />
+            <element signature="e#4044#4176#0#PHP" />
+            <element signature="e#4344#4605#0#PHP" />
+            <element signature="e#4415#4599#0#PHP" />
+            <element signature="e#4533#4599#0#PHP" />
+            <element signature="e#4704#4783#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mbstring/mbstring.php">
+    <entry file="file://$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2673">
-          <caret line="582" column="9" selection-start-line="582" selection-start-column="4" selection-end-line="582" selection-end-column="9" />
+        <state relative-caret-position="597">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/libxml/libxml.php">
+    <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="234" column="9" selection-start-line="234" selection-start-column="9" selection-end-line="234" selection-end-column="9" />
-          <folding>
-            <element signature="e#4028#4130#0#PHP" expanded="true" />
-            <element signature="e#4216#4302#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1161">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Loader/Libxml/Errors.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/DOMQueryDecorator.php">
+    <entry file="file://$PROJECT_DIR$/codex/git/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#813#943#0#PHP" />
-          </folding>
+        <state relative-caret-position="351">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Nodes.php">
+    <entry file="file://$PROJECT_DIR$/vendor/php-http/guzzle6-adapter/src/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4563">
-          <caret line="762" selection-start-line="762" selection-end-line="762" />
-          <folding>
-            <element signature="e#243#270#0#PHP" />
-            <element signature="e#2645#2892#0#PHP" />
-            <element signature="e#2725#2886#0#PHP" />
-            <element signature="e#2801#2886#0#PHP" />
-            <element signature="e#3426#4350#0#PHP" />
-            <element signature="e#3685#4270#0#PHP" />
-            <element signature="e#3745#4176#0#PHP" />
-            <element signature="e#3929#4021#0#PHP" />
-            <element signature="e#4032#4176#0#PHP" />
-            <element signature="e#4617#5368#0#PHP" />
-            <element signature="e#4760#5340#0#PHP" />
-            <element signature="e#4841#4918#0#PHP" />
-            <element signature="e#4919#5086#0#PHP" />
-            <element signature="e#5087#5340#0#PHP" />
-            <element signature="e#5247#5331#0#PHP" />
-            <element signature="e#5542#6141#0#PHP" />
-            <element signature="e#5601#6105#0#PHP" />
-            <element signature="e#5634#5994#0#PHP" />
-            <element signature="e#5718#5845#0#PHP" />
-            <element signature="e#5846#5994#0#PHP" />
-            <element signature="e#6003#6105#0#PHP" />
-            <element signature="e#6364#6699#0#PHP" />
-            <element signature="e#6485#6676#0#PHP" />
-            <element signature="e#6897#6987#0#PHP" />
-            <element signature="e#7156#7387#0#PHP" />
-            <element signature="e#7243#7349#0#PHP" />
-            <element signature="e#7461#7844#0#PHP" />
-            <element signature="e#7504#7597#0#PHP" />
-            <element signature="e#7604#7723#0#PHP" />
-            <element signature="e#8022#8413#0#PHP" />
-            <element signature="e#8193#8407#0#PHP" />
-            <element signature="e#8300#8407#0#PHP" />
-            <element signature="e#8541#9002#0#PHP" />
-            <element signature="e#8624#8996#0#PHP" />
-            <element signature="e#8669#8801#0#PHP" />
-            <element signature="e#8810#8996#0#PHP" />
-            <element signature="e#8852#8988#0#PHP" />
-            <element signature="e#9322#9826#0#PHP" />
-            <element signature="e#9393#9474#0#PHP" />
-            <element signature="e#9700#9800#0#PHP" />
-            <element signature="e#10253#10598#0#PHP" />
-            <element signature="e#10381#10591#0#PHP" />
-            <element signature="e#10403#10583#1#PHP" />
-            <element signature="e#10702#11424#0#PHP" />
-            <element signature="e#10768#11032#0#PHP" />
-            <element signature="e#11117#11230#0#PHP" />
-            <element signature="e#11237#11373#0#PHP" />
-            <element signature="e#11586#11792#0#PHP" />
-            <element signature="e#11638#11755#0#PHP" />
-            <element signature="e#11958#12237#0#PHP" />
-            <element signature="e#12042#12207#0#PHP" />
-            <element signature="e#12504#13529#0#PHP" />
-            <element signature="e#12559#12699#0#PHP" />
-            <element signature="e#12706#12866#0#PHP" />
-            <element signature="e#12758#12857#1#PHP" />
-            <element signature="e#12873#13049#0#PHP" />
-            <element signature="e#12937#13040#1#PHP" />
-            <element signature="e#13056#13450#0#PHP" />
-            <element signature="e#13136#13441#1#PHP" />
-            <element signature="e#13189#13407#0#PHP" />
-            <element signature="e#13239#13395#0#PHP" />
-            <element signature="e#13734#14052#0#PHP" />
-            <element signature="e#13828#13931#0#PHP" />
-            <element signature="e#13939#14019#0#PHP" />
-            <element signature="e#14186#14258#0#PHP" />
-            <element signature="e#14351#14442#0#PHP" />
-            <element signature="e#14548#14616#0#PHP" />
-            <element signature="e#14622#14663#0#PHP" />
-            <element signature="e#14865#14960#0#PHP" />
-            <element signature="e#16141#16400#0#PHP" />
-            <element signature="e#16193#16374#0#PHP" />
-            <element signature="e#16265#16300#0#PHP" />
-            <element signature="e#16307#16366#0#PHP" />
-            <element signature="e#16590#17015#0#PHP" />
-            <element signature="e#16634#17009#0#PHP" />
-            <element signature="e#16657#16713#0#PHP" />
-            <element signature="e#16720#16774#0#PHP" />
-            <element signature="e#16781#16834#0#PHP" />
-            <element signature="e#16841#16889#0#PHP" />
-            <element signature="e#16896#16964#0#PHP" />
-            <element signature="e#16971#17001#0#PHP" />
-            <element signature="e#17230#17779#0#PHP" />
-            <element signature="e#17282#17773#0#PHP" />
-            <element signature="e#17305#17379#0#PHP" />
-            <element signature="e#17386#17562#0#PHP" />
-            <element signature="e#17421#17547#0#PHP" />
-            <element signature="e#17615#17703#0#PHP" />
-            <element signature="e#17710#17765#0#PHP" />
-            <element signature="e#17965#18496#0#PHP" />
-            <element signature="e#18011#18310#0#PHP" />
-            <element signature="e#18107#18302#0#PHP" />
-            <element signature="e#18175#18291#1#PHP" />
-            <element signature="e#18360#18481#1#PHP" />
-            <element signature="e#18651#18909#0#PHP" />
-            <element signature="e#18694#18842#0#PHP" />
-            <element signature="e#19014#19223#0#PHP" />
-            <element signature="e#19059#19217#0#PHP" />
-            <element signature="e#19167#19217#0#PHP" />
-            <element signature="e#19625#20006#0#PHP" />
-            <element signature="e#19911#19978#0#PHP" />
-            <element signature="e#20110#20248#0#PHP" />
-            <element signature="e#20146#20222#0#PHP" />
-            <element signature="e#20543#21447#0#PHP" />
-            <element signature="e#20620#21421#0#PHP" />
-            <element signature="e#20688#20856#0#PHP" />
-            <element signature="e#20902#21308#0#PHP" />
-            <element signature="e#21013#21300#0#PHP" />
-            <element signature="e#21061#21255#0#PHP" />
-            <element signature="e#21309#21421#0#PHP" />
-            <element signature="e#21954#22166#0#PHP" />
-            <element signature="e#22004#22078#1#PHP" />
-            <element signature="e#22088#22166#0#PHP" />
-            <element signature="e#23315#24042#0#PHP" />
-            <element signature="e#23568#23770#0#PHP" />
-            <element signature="e#23608#23761#0#PHP" />
-            <element signature="e#23777#23964#0#PHP" />
-            <element signature="e#23817#23955#0#PHP" />
-            <element signature="e#24142#25249#0#PHP" />
-            <element signature="e#24537#24917#0#PHP" />
-            <element signature="e#24740#24917#0#PHP" />
-            <element signature="e#24924#25148#0#PHP" />
-            <element signature="e#25357#25854#0#PHP" />
-            <element signature="e#25517#25727#0#PHP" />
-            <element signature="e#25623#25727#0#PHP" />
-            <element signature="e#25741#25847#1#PHP" />
-            <element signature="e#26099#26691#0#PHP" />
-            <element signature="e#26152#26668#0#PHP" />
-            <element signature="e#26193#26465#0#PHP" />
-            <element signature="e#26236#26454#0#PHP" />
-            <element signature="e#26533#26660#0#PHP" />
-            <element signature="e#26588#26650#0#PHP" />
-            <element signature="e#27016#28213#0#PHP" />
-            <element signature="e#27099#27311#0#PHP" />
-            <element signature="e#27126#27280#0#PHP" />
-            <element signature="e#27156#27269#0#PHP" />
-            <element signature="e#27364#28006#0#PHP" />
-            <element signature="e#27531#27998#0#PHP" />
-            <element signature="e#27730#27811#0#PHP" />
-            <element signature="e#27822#27998#0#PHP" />
-            <element signature="e#27903#27988#0#PHP" />
-            <element signature="e#28330#28708#0#PHP" />
-            <element signature="e#28444#28660#0#PHP" />
-            <element signature="e#28529#28660#0#PHP" />
-          </folding>
+        <state relative-caret-position="351">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/DOM/Element.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Creator.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Query/Css.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5616">
-          <caret line="523" column="6" selection-start-line="523" selection-start-column="6" selection-end-line="523" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
-          <folding>
-            <element signature="e#3049#3501#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Listeners/ProcessDocument.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1593">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/debug/Exception/FatalThrowableError.php">
+    <entry file="file://$PROJECT_DIR$/codex/git/config/codex-git.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/debug/Exception/FatalErrorException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/processors/toc.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="625">
-            <caret line="101" column="75" lean-forward="true" selection-start-line="101" selection-start-column="75" selection-end-line="101" selection-end-column="75" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:0}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/TocProcessorExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3618">
-          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/routes/schema.graphqls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Api/ApiServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Api/SchemaExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Api/Listeners/AttachSchemaExtensions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Concerns/HasMergableAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/Revision.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Document.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#2684#2724#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Projects/Project.php">
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
-          <caret line="57" column="79" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Api/Repo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="210" column="47" lean-forward="true" selection-start-line="210" selection-start-column="47" selection-end-line="210" selection-end-column="47" />
+        <state relative-caret-position="423">
+          <caret line="428" column="20" selection-start-line="428" selection-start-column="20" selection-end-line="428" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/ClientInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Repositories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Log/Logger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Log/Logger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1180">
+          <caret line="272" selection-start-line="272" selection-end-line="272" />
+          <folding>
+            <element signature="e#317#417#0#PHP" expanded="true" />
+            <element signature="e#5780#5887#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="295" column="23" selection-start-line="295" selection-start-column="23" selection-end-line="295" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Log/LogManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="386" column="23" selection-start-line="386" selection-start-column="23" selection-end-line="386" selection-end-column="23" />
+          <folding>
+            <element signature="e#2103#2693#0#PHP" />
+            <element signature="e#2147#2687#0#PHP" />
+            <element signature="e#2198#2383#0#PHP" />
+            <element signature="e#2226#2382#1#PHP" />
+            <element signature="e#2395#2687#0#PHP" />
+            <element signature="e#2437#2676#0#PHP" />
+            <element signature="e#2473#2675#1#PHP" />
+            <element signature="e#2519#2660#0#PHP" />
+            <element signature="e#2601#2659#0#PHP" />
+            <element signature="e#3616#3897#0#PHP" />
+            <element signature="e#3714#3866#0#PHP" />
+            <element signature="e#3737#3865#1#PHP" />
+            <element signature="e#4512#4616#0#PHP" />
+            <element signature="e#4834#4975#0#PHP" />
+            <element signature="e#5529#5659#0#PHP" />
+            <element signature="e#5567#5658#2#PHP" />
+            <element signature="e#6458#6847#0#PHP" />
+            <element signature="e#6573#6839#0#PHP" />
+            <element signature="e#6587#6828#1#PHP" />
+            <element signature="e#6853#6992#0#PHP" expanded="true" />
+            <element signature="e#8117#8262#0#PHP" expanded="true" />
+            <element signature="e#8919#9142#0#PHP" />
+            <element signature="e#9160#9259#0#PHP" />
+            <element signature="e#9558#9771#0#PHP" />
+            <element signature="e#9624#9738#0#PHP" />
+            <element signature="e#10696#10774#0#PHP" expanded="true" />
+            <element signature="e#11042#11161#0#PHP" />
+            <element signature="e#11252#11354#0#PHP" />
+            <element signature="e#11472#11580#0#PHP" />
+            <element signature="e#12049#12173#0#PHP" />
+            <element signature="e#12460#12576#0#PHP" />
+            <element signature="e#12800#12922#0#PHP" />
+            <element signature="e#13150#13266#0#PHP" />
+            <element signature="e#13559#13679#0#PHP" />
+            <element signature="e#13833#13951#0#PHP" />
+            <element signature="e#14141#14255#0#PHP" />
+            <element signature="e#14406#14522#0#PHP" />
+            <element signature="e#14703#14831#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/logging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/SlackWebhookHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/AbstractApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs/Tags.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/DeprecatedDrivers/BitbucketDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/DeprecatedDrivers/GithubDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
+          <folding>
+            <element signature="e#256#293#0#PHP" />
+            <element signature="e#1995#2304#0#PHP" />
+            <element signature="e#3461#3526#0#PHP" />
+            <element signature="e#3635#3756#0#PHP" />
+            <element signature="e#3888#4027#0#PHP" />
+            <element signature="e#4125#4341#0#PHP" />
+            <element signature="e#4168#4289#0#PHP" />
+            <element signature="e#4541#4764#0#PHP" />
+            <element signature="e#4635#4735#0#PHP" />
+            <element signature="e#4820#4893#0#PHP" />
+            <element signature="e#5018#5366#0#PHP" />
+            <element signature="e#5073#5284#0#PHP" />
+            <element signature="e#5484#5708#0#PHP" />
+            <element signature="e#5529#5654#0#PHP" />
+            <element signature="e#5756#5833#0#PHP" />
+            <element signature="e#6436#6550#0#PHP" />
+            <element signature="e#6809#8839#0#PHP" />
+            <element signature="e#6893#7008#0#PHP" />
+            <element signature="e#7226#7472#0#PHP" />
+            <element signature="e#7284#7426#0#PHP" />
+            <element signature="e#7482#7545#0#PHP" />
+            <element signature="e#7555#7679#0#PHP" />
+            <element signature="e#7769#8022#0#PHP" />
+            <element signature="e#7948#8022#0#PHP" />
+            <element signature="e#8087#8354#0#PHP" />
+            <element signature="e#8365#8811#0#PHP" />
+            <element signature="e#8383#8503#0#PHP" />
+            <element signature="e#8517#8719#0#PHP" />
+            <element signature="e#8579#8665#0#PHP" />
+            <element signature="e#8730#8811#0#PHP" />
+            <element signature="e#9349#9543#0#PHP" />
+            <element signature="e#9387#9537#0#PHP" />
+            <element signature="e#9439#9527#0#PHP" />
+            <element signature="e#10074#10450#0#PHP" />
+            <element signature="e#10112#10269#0#PHP" />
+            <element signature="e#10164#10259#0#PHP" />
+            <element signature="e#10279#10444#0#PHP" />
+            <element signature="e#10335#10434#0#PHP" />
+            <element signature="e#10678#10818#0#PHP" />
+            <element signature="e#11045#11183#0#PHP" />
+            <element signature="e#11412#11554#0#PHP" />
+            <element signature="e#11784#11928#0#PHP" />
+            <element signature="e#12156#12296#0#PHP" />
+            <element signature="e#12527#12673#0#PHP" />
+            <element signature="e#12901#13041#0#PHP" />
+            <element signature="e#13273#13421#0#PHP" />
+            <element signature="e#13573#13663#0#PHP" />
+            <element signature="e#14251#14485#0#PHP" />
+            <element signature="e#14311#14455#0#PHP" />
+            <element signature="e#14643#14930#0#PHP" />
+            <element signature="e#14702#14749#0#PHP" />
+            <element signature="e#14760#14901#0#PHP" />
+            <element signature="e#14812#14891#0#PHP" />
+            <element signature="e#15052#15404#0#PHP" />
+            <element signature="e#15113#15330#0#PHP" />
+            <element signature="e#15450#15539#0#PHP" />
+            <element signature="e#15692#15902#0#PHP" />
+            <element signature="e#15770#15833#0#PHP" />
+            <element signature="e#16254#16440#0#PHP" />
+            <element signature="e#16743#16880#0#PHP" />
+            <element signature="e#17182#17317#0#PHP" />
+            <element signature="e#17621#17760#0#PHP" />
+            <element signature="e#18065#18203#0#PHP" />
+            <element signature="e#18508#18649#0#PHP" />
+            <element signature="e#18952#19087#0#PHP" />
+            <element signature="e#19390#19527#0#PHP" />
+            <element signature="e#19833#19972#0#PHP" />
+            <element signature="e#20278#20421#0#PHP" />
+            <element signature="e#20724#20861#0#PHP" />
+            <element signature="e#21168#21309#0#PHP" />
+            <element signature="e#21616#21761#0#PHP" />
+            <element signature="e#21970#22066#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-http/discovery/src/UriFactoryDiscovery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Log/ArtisanHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/AddHostPlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Plugin/Authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Console/CodexGitSyncCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/ConnectorInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/RedirectPlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1162">
+          <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+          <folding>
+            <element signature="e#4053#4149#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="111" column="5" selection-start-line="82" selection-end-line="111" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/HttpClient/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1376">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="1036">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloaderResult.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>

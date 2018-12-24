@@ -1,10 +1,14 @@
 {
-    "codex\/test-addon": {
+    "codex\/auth": {
         "installed": false,
         "enabled": false
     },
-    "codex\/api": {
+    "codex\/git": {
         "installed": true,
         "enabled": true
+    },
+    "codex\/semver": {
+        "installed": false,
+        "enabled": false
     }
 }

@@ -30,6 +30,12 @@ return [
         ],
     ],
 
+    'revision' => [
+        'default' => \Codex\Git\BranchType::LAST_VERSION,
+//        'default' => \Codex\Git\BranchType::PRODUCTION,
+//        'default' => \Codex\Git\BranchType::DEVELOPMENT,
+    ],
+
     'phpdoc' => [
         'enabled'       => true,
         'default_class' => 'Codex\\Codex',

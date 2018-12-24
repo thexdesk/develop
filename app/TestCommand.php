@@ -25,6 +25,32 @@ class TestCommand extends Command
 
     public function handle(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeConfigBuilderGenerator $generator)
     {
+        $project = codex()->getProject('codex');
+        $revisions = $project->getRevisions();
+//
+        $branches       = $revisions->branches()->all();
+        $versions       = $revisions->versions()->all();
+        $sortedVersions = $revisions->getSortedVersions()->all();
+        $latestVersion  = $revisions->getLatestVersion();
+
+        $defaultRevision = $revisions->getDefaultKey();
+
+        $log = app()->make('codex.log');
+        $log->info('hai');
+
+        $git = app()->make('codex.git.manager');
+
+        /** @var \Codex\Git\Drivers\DriverInterface $driver */
+        $driver = $git->connection('github_password');
+        $refs = $driver->getRefs('robinradic', 'blade-extensions');
+        $ref = $refs->get('master');
+        $downloader = $driver->getZipDownloader();
+        $downloader->download($ref->getDownloadUrl());
+
+        $a = 'a';
+
+
+
 //        $this->dispatch(new MergeAttributes(codex()->getProjects()->getDefault()));
 //        $codex         = codex();
 //        $project       = $codex->getProject('codex');
