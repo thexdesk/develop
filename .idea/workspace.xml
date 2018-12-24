@@ -2,60 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Contracts/Log/Log.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Log/ArtisanHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Log/Logger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/BranchType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/Ref.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/RefCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/WithZipDownloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/ZipDownloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Connection/ZipDownloaderResult.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/ConnectionManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Console/CodexGitSyncCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Listeners/ResolveBranchTypeDefaultRevision.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Support/GitRevisionCollectionMixin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/src/Support/Version.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/semver/code_completion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/semver/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/semver/config/codex-semver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/semver/src/SemverAddon.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/semver/src/SemverAddonServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/code_completion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/git/src/ProjectGitConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/config/codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/config/codex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonRegistry.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonRegistry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/DisableAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/DisableAddon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/EnableAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/EnableAddon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/InstallAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/InstallAddon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/Commands/UninstallAddon.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/Commands/UninstallAddon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Codex.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/ModelCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/ModelCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Projects/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Projects/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Revisions/RevisionCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Revisions/RevisionCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/git/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/git/config/codex-git.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/config/codex-git.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/blade-extensions/5.0.0/getting-started/configuration.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/blade-extensions/5.0.0/getting-started/configuration.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/blade-extensions/5.0.0/getting-started/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/blade-extensions/5.0.0/getting-started/installation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/blade-extensions/5.0.0/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/blade-extensions/5.0.0/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/blade-extensions/5.0.0/revision.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/blade-extensions/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/blade-extensions/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/docs/codex/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/codex-addons.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/codex-addons.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,10 +31,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php">
+        <entry file="file://$PROJECT_DIR$/resources/docs/codex/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1107">
-              <caret line="130" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="1029">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -81,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codex/git/config/codex-git.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="426">
+              <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -90,8 +51,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1036">
-              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state relative-caret-position="648">
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/docs/blade-extensions/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -99,136 +69,67 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+            <state relative-caret-position="945">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/ConnectionManager.php">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Codex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-              <folding>
-                <element signature="e#345#419#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="415">
+              <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="146" selection-start-line="146" selection-end-line="146" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/logs/codex.log">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Log/Logger.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php">
+        <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="1971">
+              <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/AbstractManager.php">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Traits/Macroable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-162">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2018-12-24.log">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#33#259#0#PHP" />
-                <element signature="e#296#308#0#PHP" />
-                <element signature="e#1063#1155#0#PHP" />
-                <element signature="e#1699#1890#0#PHP" />
-                <element signature="e#2023#2181#0#PHP" />
-                <element signature="e#2187#2301#0#PHP" expanded="true" />
-                <element signature="e#2488#2954#0#PHP" />
-                <element signature="e#2604#2706#0#PHP" />
-                <element signature="e#2716#2898#0#PHP" />
-                <element signature="e#2774#2888#0#PHP" />
-                <element signature="e#4044#4176#0#PHP" />
-                <element signature="e#4344#4605#0#PHP" />
-                <element signature="e#4415#4599#0#PHP" />
-                <element signature="e#4533#4599#0#PHP" />
-                <element signature="e#4704#4783#0#PHP" />
-              </folding>
+              <caret line="23" column="138" selection-start-line="23" selection-start-column="138" selection-end-line="23" selection-end-column="138" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/Ref.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/RefCollection.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloader.php">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Http/HttpServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="111" column="5" selection-start-line="82" selection-end-line="111" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloaderResult.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1162">
-              <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
-              <folding>
-                <element signature="e#4053#4149#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/Client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1161">
-              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+            <state relative-caret-position="378">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -243,190 +144,109 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Builder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-351">
-              <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/php-http/guzzle6-adapter/src/Client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Plugin/Authentication.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Api/Repo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="428" column="20" selection-start-line="428" selection-start-column="20" selection-end-line="428" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Repositories.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/ClientInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="811">
-              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="295" column="23" selection-start-line="295" selection-start-column="23" selection-end-line="295" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs/Tags.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/AbstractApi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/php-http/discovery/src/UriFactoryDiscovery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/AddHostPlugin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/ConnectorInterface.php">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/ProjectGitConfig.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="243">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/RedirectPlugin.php">
+        <entry file="file://$PROJECT_DIR$/codex/git/code_completion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Console/CodexGitSyncCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="948">
+              <caret line="138" column="81" selection-start-line="138" selection-start-column="81" selection-end-line="138" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCallbacks.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1002">
+              <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Jobs/SyncJob.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Bus/DispatchesJobs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
-              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+              <caret line="164" selection-start-line="164" selection-end-line="164" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/HttpClient/Builder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1376">
-              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+            <state relative-caret-position="423">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/storage/.gitignore">
+        <entry file="file://$PROJECT_DIR$/storage/logs/codex.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state relative-caret-position="813">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -467,6 +287,7 @@
       <find>Git</find>
       <find>Codex\Addon\</find>
       <find>parseL</find>
+      <find>-&gt;config(</find>
     </findStrings>
     <replaceStrings>
       <replace>codex.</replace>
@@ -480,6 +301,7 @@
       <replace>namespace Codex\Documents\</replace>
       <replace>Semver</replace>
       <replace>Codex\</replace>
+      <replace>[</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/Attributes/Definition</dir>
@@ -516,13 +338,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/codex/semver/composer.json" />
-        <option value="$PROJECT_DIR$/codex/semver/src/Version.php" />
-        <option value="$PROJECT_DIR$/codex/semver/src/Support/Version.php" />
-        <option value="$PROJECT_DIR$/codex/semver/src/RevisionCollectionSemverMixin.php" />
-        <option value="$PROJECT_DIR$/codex/semver/code_completion.php" />
-        <option value="$PROJECT_DIR$/codex/semver/src/SemverAddonServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/semver/src/Semver.php" />
         <option value="$PROJECT_DIR$/codex/semver/config/codex-semver.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Git/Support/Version.php" />
@@ -540,7 +355,6 @@
         <option value="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/config.php" />
         <option value="$PROJECT_DIR$/codex/git/src/GitRevisionCollectionMixin.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Revisions/RevisionCollection.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" />
@@ -550,7 +364,6 @@
         <option value="$PROJECT_DIR$/codex/git/src/Support/GitRevisionCollectionMixin.php" />
         <option value="$PROJECT_DIR$/codex/git/src/DeprecatedDrivers/AbstractDriver.php" />
         <option value="$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php" />
-        <option value="$PROJECT_DIR$/codex/git/config/codex-git.php" />
         <option value="$PROJECT_DIR$/codex/git/src/Connection/WithZipDownloader.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Contracts/Log/Log.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Log/Writer.php" />
@@ -558,15 +371,24 @@
         <option value="$PROJECT_DIR$/codex/core/config/codex.php" />
         <option value="$PROJECT_DIR$/codex/git/src/Console/CodexGitSyncCommand.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php" />
         <option value="$PROJECT_DIR$/codex/git/src/ConnectionManager.php" />
-        <option value="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/git/composer.json" />
         <option value="$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php" />
-        <option value="$PROJECT_DIR$/app/TestCommand.php" />
         <option value="$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php" />
         <option value="$PROJECT_DIR$/storage/.gitignore" />
+        <option value="$PROJECT_DIR$/codex/git/src/ProjectGitConfig.php" />
+        <option value="$PROJECT_DIR$/codex/git/config/codex-git.php" />
+        <option value="$PROJECT_DIR$/resources/docs/codex/config.php" />
+        <option value="$PROJECT_DIR$/resources/docs/blade-extensions/config.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" />
+        <option value="$PROJECT_DIR$/storage/logs/laravel-2018-12-24.log" />
+        <option value="$PROJECT_DIR$/codex/core/src/Http/HttpServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Codex.php" />
+        <option value="$PROJECT_DIR$/app/TestCommand.php" />
+        <option value="$PROJECT_DIR$/codex/git/code_completion.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php" />
       </list>
     </option>
   </component>
@@ -762,12 +584,84 @@
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name=".tmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name=".tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name=".tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name=".tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="addon-git" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name=".tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="addon-git" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Mergable" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
@@ -792,6 +686,48 @@
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -811,35 +747,7 @@
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="0c7ca723d7166fbe60a155ac02e31e5e" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="0c7ca723d7166fbe60a155ac02e31e5e" type="462c0819:PsiDirectoryNode" />
-              <item name="robinradic-blade-extensions-b043c9b14e7b" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="0f7f81a5f874b020e6629ab79ef6ae6c" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="0f7f81a5f874b020e6629ab79ef6ae6c" type="462c0819:PsiDirectoryNode" />
-              <item name="blade-extensions-master" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -874,11 +782,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/codex/git" />
+      <recent name="$PROJECT_DIR$/codex/git/src" />
       <recent name="$PROJECT_DIR$/codex/core/src/Contracts" />
       <recent name="$PROJECT_DIR$/codex/core/src" />
       <recent name="$PROJECT_DIR$/codex/git/src/Drivers" />
-      <recent name="$PROJECT_DIR$/codex/git/src" />
-      <recent name="$PROJECT_DIR$/codex/semver" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/codex/git/src" />
@@ -1060,7 +968,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545574052113</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Git addon with both bitbucket and github drivers working">
+      <created>1545616890633</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545616890633</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <option name="searchClosedTasks" value="true" />
@@ -1165,7 +1080,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1599" y="34" width="3842" height="2089" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -1179,8 +1093,8 @@
       <window_info anchor="bottom" id="Docker" order="5" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49973643" weight="0.32977098" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49973643" weight="0.32977098" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49736425" visible="true" weight="0.3541985" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49973643" visible="true" weight="0.32977098" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49736425" weight="0.3541985" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3299389" />
@@ -1283,14 +1197,15 @@
     <MESSAGE value="Changed processor dependency definition properties to before/after and implemented the wildcard as well to resolve #10" />
     <MESSAGE value="Changed keys are now passed on to the mergable childs, resolves #9" />
     <MESSAGE value="Table of content is now generated, but still needs some attention later on. For now it resolves #4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Table of content is now generated, but still needs some attention later on. For now it resolves #4" />
+    <MESSAGE value="Git addon with both bitbucket and github drivers working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Git addon with both bitbucket and github drivers working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/TestCommand.php</url>
-          <line>79</line>
+          <line>85</line>
           <option name="timeStamp" value="250" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1320,7 +1235,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/TestCommand.php</url>
-          <line>49</line>
+          <line>55</line>
           <option name="timeStamp" value="368" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1349,9 +1264,14 @@
           <option name="timeStamp" value="406" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php</url>
-          <line>125</line>
-          <option name="timeStamp" value="407" />
+          <url>file://$PROJECT_DIR$/app/TestCommand.php</url>
+          <line>34</line>
+          <option name="timeStamp" value="409" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php</url>
+          <line>85</line>
+          <option name="timeStamp" value="413" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1380,6 +1300,21 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>$this-&gt;project-&gt;getGit()</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>app(\Codex\Codex::class)</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>app('codex')</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>get_clas</expression-string>
         <language-id>PHP</language-id>
@@ -1410,31 +1345,29 @@
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>$element-&gt;remove()</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>$element-&gt;saveHtml()</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(array) $sel</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>urldecode($query-&gt;find('body')-&gt;html());</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/storage/logs/codex.log">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloaderResult.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codex/git/src/ConnectionManager.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1446,19 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/RefCollection.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/Ref.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/codex/git/src/Contracts/ConnectionManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -1466,10 +1386,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#5806#5826#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/AbstractManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="405">
+          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
           <folding>
             <element signature="e#33#259#0#PHP" />
             <element signature="e#296#308#0#PHP" />
@@ -1490,12 +1419,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/.tmp/codex/codex/addon-git/src/CodexGit.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.tmp/codex/codex/addon-git/src/GitProject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-        </state>
+        <state relative-caret-position="-485" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.tmp/codex/codex/addon-git/src/GitAddon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/Ref.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/RefCollection.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/Client.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1504,24 +1445,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/codex/core/code_completion.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/php-http/guzzle6-adapter/src/Client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/config/codex-git.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1539,13 +1469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/ClientInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Repositories.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1553,21 +1476,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Log/Logger.php">
+    <entry file="file://$PROJECT_DIR$/vendor/gentle/bitbucket-api/lib/Bitbucket/API/Http/ClientInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Log/Logger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1180">
-          <caret line="272" selection-start-line="272" selection-end-line="272" />
-          <folding>
-            <element signature="e#317#417#0#PHP" expanded="true" />
-            <element signature="e#5780#5887#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="324">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1578,10 +1490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="811">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1592,69 +1504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Log/LogManager.php">
+    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs/Tags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="386" column="23" selection-start-line="386" selection-start-column="23" selection-end-line="386" selection-end-column="23" />
-          <folding>
-            <element signature="e#2103#2693#0#PHP" />
-            <element signature="e#2147#2687#0#PHP" />
-            <element signature="e#2198#2383#0#PHP" />
-            <element signature="e#2226#2382#1#PHP" />
-            <element signature="e#2395#2687#0#PHP" />
-            <element signature="e#2437#2676#0#PHP" />
-            <element signature="e#2473#2675#1#PHP" />
-            <element signature="e#2519#2660#0#PHP" />
-            <element signature="e#2601#2659#0#PHP" />
-            <element signature="e#3616#3897#0#PHP" />
-            <element signature="e#3714#3866#0#PHP" />
-            <element signature="e#3737#3865#1#PHP" />
-            <element signature="e#4512#4616#0#PHP" />
-            <element signature="e#4834#4975#0#PHP" />
-            <element signature="e#5529#5659#0#PHP" />
-            <element signature="e#5567#5658#2#PHP" />
-            <element signature="e#6458#6847#0#PHP" />
-            <element signature="e#6573#6839#0#PHP" />
-            <element signature="e#6587#6828#1#PHP" />
-            <element signature="e#6853#6992#0#PHP" expanded="true" />
-            <element signature="e#8117#8262#0#PHP" expanded="true" />
-            <element signature="e#8919#9142#0#PHP" />
-            <element signature="e#9160#9259#0#PHP" />
-            <element signature="e#9558#9771#0#PHP" />
-            <element signature="e#9624#9738#0#PHP" />
-            <element signature="e#10696#10774#0#PHP" expanded="true" />
-            <element signature="e#11042#11161#0#PHP" />
-            <element signature="e#11252#11354#0#PHP" />
-            <element signature="e#11472#11580#0#PHP" />
-            <element signature="e#12049#12173#0#PHP" />
-            <element signature="e#12460#12576#0#PHP" />
-            <element signature="e#12800#12922#0#PHP" />
-            <element signature="e#13150#13266#0#PHP" />
-            <element signature="e#13559#13679#0#PHP" />
-            <element signature="e#13833#13951#0#PHP" />
-            <element signature="e#14141#14255#0#PHP" />
-            <element signature="e#14406#14522#0#PHP" />
-            <element signature="e#14703#14831#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/SlackWebhookHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        <state relative-caret-position="405">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1665,113 +1518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Api/Repositories/Users/Refs/Tags.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/DeprecatedDrivers/BitbucketDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/DeprecatedDrivers/GithubDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
-          <folding>
-            <element signature="e#256#293#0#PHP" />
-            <element signature="e#1995#2304#0#PHP" />
-            <element signature="e#3461#3526#0#PHP" />
-            <element signature="e#3635#3756#0#PHP" />
-            <element signature="e#3888#4027#0#PHP" />
-            <element signature="e#4125#4341#0#PHP" />
-            <element signature="e#4168#4289#0#PHP" />
-            <element signature="e#4541#4764#0#PHP" />
-            <element signature="e#4635#4735#0#PHP" />
-            <element signature="e#4820#4893#0#PHP" />
-            <element signature="e#5018#5366#0#PHP" />
-            <element signature="e#5073#5284#0#PHP" />
-            <element signature="e#5484#5708#0#PHP" />
-            <element signature="e#5529#5654#0#PHP" />
-            <element signature="e#5756#5833#0#PHP" />
-            <element signature="e#6436#6550#0#PHP" />
-            <element signature="e#6809#8839#0#PHP" />
-            <element signature="e#6893#7008#0#PHP" />
-            <element signature="e#7226#7472#0#PHP" />
-            <element signature="e#7284#7426#0#PHP" />
-            <element signature="e#7482#7545#0#PHP" />
-            <element signature="e#7555#7679#0#PHP" />
-            <element signature="e#7769#8022#0#PHP" />
-            <element signature="e#7948#8022#0#PHP" />
-            <element signature="e#8087#8354#0#PHP" />
-            <element signature="e#8365#8811#0#PHP" />
-            <element signature="e#8383#8503#0#PHP" />
-            <element signature="e#8517#8719#0#PHP" />
-            <element signature="e#8579#8665#0#PHP" />
-            <element signature="e#8730#8811#0#PHP" />
-            <element signature="e#9349#9543#0#PHP" />
-            <element signature="e#9387#9537#0#PHP" />
-            <element signature="e#9439#9527#0#PHP" />
-            <element signature="e#10074#10450#0#PHP" />
-            <element signature="e#10112#10269#0#PHP" />
-            <element signature="e#10164#10259#0#PHP" />
-            <element signature="e#10279#10444#0#PHP" />
-            <element signature="e#10335#10434#0#PHP" />
-            <element signature="e#10678#10818#0#PHP" />
-            <element signature="e#11045#11183#0#PHP" />
-            <element signature="e#11412#11554#0#PHP" />
-            <element signature="e#11784#11928#0#PHP" />
-            <element signature="e#12156#12296#0#PHP" />
-            <element signature="e#12527#12673#0#PHP" />
-            <element signature="e#12901#13041#0#PHP" />
-            <element signature="e#13273#13421#0#PHP" />
-            <element signature="e#13573#13663#0#PHP" />
-            <element signature="e#14251#14485#0#PHP" />
-            <element signature="e#14311#14455#0#PHP" />
-            <element signature="e#14643#14930#0#PHP" />
-            <element signature="e#14702#14749#0#PHP" />
-            <element signature="e#14760#14901#0#PHP" />
-            <element signature="e#14812#14891#0#PHP" />
-            <element signature="e#15052#15404#0#PHP" />
-            <element signature="e#15113#15330#0#PHP" />
-            <element signature="e#15450#15539#0#PHP" />
-            <element signature="e#15692#15902#0#PHP" />
-            <element signature="e#15770#15833#0#PHP" />
-            <element signature="e#16254#16440#0#PHP" />
-            <element signature="e#16743#16880#0#PHP" />
-            <element signature="e#17182#17317#0#PHP" />
-            <element signature="e#17621#17760#0#PHP" />
-            <element signature="e#18065#18203#0#PHP" />
-            <element signature="e#18508#18649#0#PHP" />
-            <element signature="e#18952#19087#0#PHP" />
-            <element signature="e#19390#19527#0#PHP" />
-            <element signature="e#19833#19972#0#PHP" />
-            <element signature="e#20278#20421#0#PHP" />
-            <element signature="e#20724#20861#0#PHP" />
-            <element signature="e#21168#21309#0#PHP" />
-            <element signature="e#21616#21761#0#PHP" />
-            <element signature="e#21970#22066#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/php-http/discovery/src/UriFactoryDiscovery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1779,139 +1525,181 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Log/ArtisanHandler.php">
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="1029">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/AddHostPlugin.php">
+    <entry file="file://$PROJECT_DIR$/resources/docs/blade-extensions/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="837">
+          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Plugin/Authentication.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Log/Logger.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        <state relative-caret-position="1971">
+          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Traits/Macroable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2018-12-24.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="23" column="138" selection-start-line="23" selection-start-column="138" selection-end-line="23" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/config/codex-git.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Http/HttpServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCallbacks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1002">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codex/git/src/Console/CodexGitSyncCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="540">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/DriverInterface.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Jobs/SyncJob.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="28">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/codex/git/src/ProjectGitConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="243">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/graham-campbell/manager/src/ConnectorInterface.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Bus/DispatchesJobs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/HttpClient/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-351">
-          <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php-http/client-common/src/Plugin/RedirectPlugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bitbucket/client/src/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1162">
-          <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
-          <folding>
-            <element signature="e#4053#4149#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/BitbucketDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="111" column="5" selection-start-line="82" selection-end-line="111" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/HttpClient/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1376">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/knplabs/github-api/lib/Github/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="405">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1036">
-          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        <state relative-caret-position="648">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloaderResult.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Codex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="415">
+          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/code_completion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Drivers/GithubDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codex/git/src/Connection/ZipDownloader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+        <state relative-caret-position="550">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/.gitignore">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state relative-caret-position="423">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="948">
+          <caret line="138" column="81" selection-start-line="138" selection-start-column="81" selection-end-line="138" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/codex.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>

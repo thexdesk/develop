@@ -11,7 +11,7 @@
 
 namespace Codex\Git\Console;
 
-use Codex\Git\Commands\SyncProject;
+use Codex\Git\Commands\SyncGitProject;
 use Codex\Contracts\Projects\Project;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -47,7 +47,7 @@ class CodexGitSyncCommand extends Command
 
     protected function sync($project, $queue = false, $force = false)
     {
-        $sync = new SyncProject($project, $force);
+        $sync = new SyncGitProject($project, $force);
         if ($queue) {
             $this->dispatch($sync);
         } else {

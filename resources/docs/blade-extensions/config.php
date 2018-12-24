@@ -30,26 +30,34 @@ return [
         ],
     ],
 
+    'git' => [
+        'enabled'    => true, /// local symlink
+        'owner'      => 'robinradic',
+        'repository' => 'blade-extensions',
+        'connection' => 'github_password',
+        'branches'   => [
+            'develop',
+        ],
+        'versions'   => '>=2.0.0',
+        'skip'       => [
+            'patch_versions' => false,
+            'minor_versions' => false,
+        ],
+        'paths'      => [
+            'docs'  => 'docs',
+            'index' => 'docs/index.md',
+        ],
+        'webhook'    => [
+            'enabled' => false,
+            'secret'  => env('CODEX_GIT_GITHUB_WEBHOOK_SECRET', ''),
+        ],
+    ],
+
+
     'phpdoc' => [
         'enabled'       => true,
         'default_class' => 'Codex\\Codex',
     ],
 
-    'git' => [
-        'enabled'    => true, /// local symlink
-        'owner'      => 'codex-project',
-        'repository' => 'core',
-        'connection' => 'bitbucket_oauth',
-        'sync'       => [
-            'branches' => [ 'master' ],
-            'versions' => '>=2.0.0', //1.x || >=2.5.0 || 5.0.0 - 7.2.3'
-            'paths'    => [
-                'docs'  => 'resources/docs',
-                'index' => 'resources/docs/index.md',
-            ],
-        ],
-        'webhook'    => [
-            'enabled' => true,
-        ],
-    ],
+
 ];

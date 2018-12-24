@@ -6,6 +6,7 @@ use Codex\Addons\AddonCollection;
 use Codex\Attributes\AttributeConfigBuilderGenerator;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Contracts\Projects\Project;
+use Codex\Git\Commands\SyncGitProject;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
 use GraphQL\Language\Parser;
@@ -13,6 +14,7 @@ use GraphQL\Language\Visitor;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Queue\Jobs\SyncJob;
 use Nuwave\Lighthouse\Schema\AST\ASTHelper;
 use Nuwave\Lighthouse\Schema\AST\PartialParser;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -25,7 +27,13 @@ class TestCommand extends Command
 
     public function handle(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeConfigBuilderGenerator $generator)
     {
-        $project = codex()->getProject('codex');
+        $project = codex()->getProject('blade-extensions');
+
+        $this->dispatchNow(new SyncGitProject('blade-extensions'));
+
+
+        $a='a';
+
         $revisions = $project->getRevisions();
 //
         $branches       = $revisions->branches()->all();
@@ -35,17 +43,15 @@ class TestCommand extends Command
 
         $defaultRevision = $revisions->getDefaultKey();
 
-        $log = app()->make('codex.log');
-        $log->info('hai');
+        $log = codex()->log('info', 'hai');
 
-        $git = app()->make('codex.git.manager');
-
-        /** @var \Codex\Git\Drivers\DriverInterface $driver */
-        $driver = $git->connection('github_password');
-        $refs = $driver->getRefs('robinradic', 'blade-extensions');
-        $ref = $refs->get('master');
-        $downloader = $driver->getZipDownloader();
-        $downloader->download($ref->getDownloadUrl());
+//        $git = app()->make('codex.git.manager');
+//        /** @var \Codex\Git\Drivers\DriverInterface $driver */
+//        $driver = $git->connection('github_password');
+//        $refs = $driver->getRefs('robinradic', 'blade-extensions');
+//        $ref = $refs->get('master');
+//        $downloader = $driver->getZipDownloader();
+//        $downloader->download($ref->getDownloadUrl());
 
         $a = 'a';
 

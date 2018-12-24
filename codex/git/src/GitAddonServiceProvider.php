@@ -7,6 +7,7 @@ use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Git\Listeners\ResolveBranchTypeDefaultRevision;
 use Codex\Git\Support\GitRevisionCollectionMixin;
 use Codex\Projects\Events\ResolvedProject;
+use Codex\Projects\Project;
 use Codex\Revisions\RevisionCollection;
 use Illuminate\Contracts\Foundation\Application;
 
@@ -25,13 +26,18 @@ class GitAddonServiceProvider extends AddonServiceProvider
     ];
 
     public $commands = [
-        Console\CodexGitSyncCommand::class
+        Console\CodexGitSyncCommand::class,
     ];
 
     public function register()
     {
         RevisionCollection::mixin(new GitRevisionCollectionMixin());
 
+        Project::macro('getGitConfig', function () {
+            /** @var Project $project */
+            $project = $this;
+            return new ProjectGitConfig($project, app('codex.git.manager'));
+        });
 
         $this->app->singleton('codex.git.manager', function (Application $app) {
             $manager = new ConnectionManager($app[ 'config' ]);
@@ -55,5 +61,21 @@ class GitAddonServiceProvider extends AddonServiceProvider
         $semver = $projects->add('branching', 'dictionary')->setApiType('BranchingConfig', [ 'new' ]);
         $semver->add('production', 'string')->setDefault('master');
         $semver->add('development', 'string')->setDefault('develop');
+        $git = $projects->add('git', 'dictionary')->setApiType('GitConfig', [ 'new' ]);
+        $git->add('enabled', 'boolean')->setDefault(false);
+        $git->add('owner', 'string');
+        $git->add('repository', 'string');
+        $git->add('connection', 'string');
+        $git->add('branches', 'array.scalarPrototype');
+        $git->add('versions', 'string');
+        $skip = $git->add('skip', 'dictionary');
+        $skip->add('patch_versions', 'boolean');
+        $skip->add('minor_versions', 'boolean');
+        $paths = $git->add('paths', 'dictionary');
+        $paths->add('docs', 'string');
+        $paths->add('index', 'string');
+        $webhook = $git->add('webhook', 'dictionary');
+        $webhook->add('enabled', 'boolean');
+        $webhook->add('secret', 'string');
     }
 }

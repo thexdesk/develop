@@ -69,15 +69,15 @@ return [
                 'index' => 'docs/index.md' // 'index' => 'README.md',
             ],
 
-        ],
-        'webhook'   => [
-            // Enable webhook support. Configure it in Github/Bitbucket.
-            // This will automaticly sync your project every time a 'push' event occurs
-            // This also requires you to configure queues properly (by using for example, redis with supervisord)
-            'enabled' => false,
+            'webhook' => [
+                // Enable webhook support. Configure it in Github/Bitbucket.
+                // This will automaticly sync your project every time a 'push' event occurs
+                // This also requires you to configure queues properly (by using for example, redis with supervisord)
+                'enabled' => false,
 
-            // Github webhooks allow a 'secret' that has to match. Put it in here
-            'secret'  => env('CODEX_GIT_GITHUB_WEBHOOK_SECRET', ''),
+                // Github webhooks allow a 'secret' that has to match. Put it in here
+                'secret'  => env('CODEX_GIT_GITHUB_WEBHOOK_SECRET', ''),
+            ],
         ],
     ],
 ];

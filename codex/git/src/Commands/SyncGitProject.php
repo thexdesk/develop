@@ -11,21 +11,22 @@
 
 namespace Codex\Git\Commands;
 
+use Codex\Codex;
+use Codex\Concerns\HasCallbacks;
+use Codex\Exceptions\Exception;
 use Codex\Git\Connection\Ref;
 use Codex\Git\Contracts\ConnectionManager;
-use Codex\Codex;
-use Codex\Concerns\Hookable;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Symfony\Component\Finder\SplFileInfo;
 
-class SyncProject implements ShouldQueue
+class SyncGitProject implements ShouldQueue
 {
     use Queueable;
-    use Hookable;
+    use HasCallbacks;
 
-    /** @var \Codex\Contracts\Project */
+    /** @var \Codex\Contracts\Projects\Project */
     protected $project;
 
     /** @var \Codex\Codex */
@@ -52,7 +53,7 @@ class SyncProject implements ShouldQueue
     public function __construct($projectKey, $force = false)
     {
         $this->projectKey = $projectKey;
-        $this->force = $force;
+        $this->force      = $force;
     }
 
     /**
@@ -72,18 +73,18 @@ class SyncProject implements ShouldQueue
 
     public function handle(Codex $codex, ConnectionManager $manager, Repository $cache)
     {
-        $this->codex = $codex;
+        $this->codex   = $codex;
         $this->project = $codex->getProject($this->projectKey);
-        $this->cache = $cache;
-        $this->driver = $this->project->git->getConnection();
+        $this->cache   = $cache;
+        $this->driver  = $this->project->getGitConfig()->getConnection();
         $this->sync();
     }
 
     protected function sync()
     {
-        $git = $this->project->git;
+        $git    = $this->project->getGitConfig();
         $forced = $this->force ? 'forced ' : '';
-        $this->log("Starting {$forced}sync for project [{$this->project}]", $this->project->config('git'));
+        $this->log("Starting {$forced}sync for project [{$this->project}]", $this->project[ 'git' ]);
         $refs = $this->driver->getRefs($git->getOwner(), $git->getRepository());
         if ($git->skipsMinorVersions()) {
             $this->log('Skipping minor versions');
@@ -101,16 +102,18 @@ class SyncProject implements ShouldQueue
                     $this->log("Ref [{$ref->getName()}] skipped, matches the cached hash", $ref->toArray());
                     continue;
                 }
-                if (null !== $this->hookPoint('git:sync:ref', compact('ref'), true)) {
-                    $this->log("Ref [{$ref->getName()}] canceled by hook", $ref->toArray());
-                    continue;
-                }
+                $this->fire('git:sync:ref', compact('ref'));
+//                if (null !== $this->fire('git:sync:ref', compact('ref'), true)) {
+//                    $this->log("Ref [{$ref->getName()}] canceled by hook", $ref->toArray());
+//                    continue;
+//                }
                 try {
                     $this->syncRef($ref);
                     $this->cache->forever($ref->getCacheKey(), $ref->getHash());
                     $this->log("Ref [{$ref->getName()}] synced", $ref->toArray());
-                } catch (\Exception $e) {
-                    $this->codex->getLog()->error($e->getMessage(), (array) $e);
+                }
+                catch (\Exception $e) {
+                    $this->codex->getLog()->error($e->getMessage(), (array)$e);
                 }
             } else {
                 $this->log("Ref [{$ref->getName()}] skipped", $ref->toArray());
@@ -120,7 +123,8 @@ class SyncProject implements ShouldQueue
 
     protected function syncRef(Ref $ref)
     {
-        $project = $this->project;
+        $project  = $this->project;
+        $git      = $project->getGitConfig();
         $download = $this->driver
             ->getZipDownloader()
             ->download($ref->getDownloadUrl());
@@ -128,13 +132,13 @@ class SyncProject implements ShouldQueue
         $pfs = $project->getFiles(); // project filesystem
         $lfs = $download->getFs(); // local filesystem
 
-        $docsPath = $download->getExtractedPath().\DIRECTORY_SEPARATOR.$project->git->getDocsPath();
-        if (!$lfs->exists($docsPath)) {
-            throw new \Exception("Docs path does not exist [{$docsPath}");
+        $docsPath = $download->getExtractedPath() . \DIRECTORY_SEPARATOR . $git->getDocsPath();
+        if ( ! $lfs->exists($docsPath)) {
+            throw Exception::make("Docs path does not exist [{$docsPath}");
         }
-        $indexFilePath = $download->getExtractedPath().\DIRECTORY_SEPARATOR.$project->git->getIndexPath();
-        if (!$lfs->exists($indexFilePath)) {
-            throw new \Exception("Index file path does not exist [{$indexFilePath}");
+        $indexFilePath = $download->getExtractedPath() . \DIRECTORY_SEPARATOR . $git->getIndexPath();
+        if ( ! $lfs->exists($indexFilePath)) {
+            throw Exception::make("Index file path does not exist [{$indexFilePath}");
         }
 
         $pfs->deleteDirectory($ref->getName());
@@ -143,15 +147,15 @@ class SyncProject implements ShouldQueue
         $files = collect($lfs->allFiles($docsPath));
         $files->each(function (SplFileInfo $file) use ($pfs, $lfs, $ref) {
             $dirPath = $file->getRelativePath();
-            $pfs->makeDirectory($ref->getName().\DIRECTORY_SEPARATOR.$dirPath);
+            $pfs->makeDirectory($ref->getName() . \DIRECTORY_SEPARATOR . $dirPath);
             $pfs->put(
-                $ref->getName().\DIRECTORY_SEPARATOR.$file->getRelativePathname(),
+                $ref->getName() . \DIRECTORY_SEPARATOR . $file->getRelativePathname(),
                 $lfs->get($file->getPathname())
             );
         });
 
         $pfs->put(
-            $ref->getName().\DIRECTORY_SEPARATOR.'index.'.$lfs->extension($indexFilePath),
+            $ref->getName() . \DIRECTORY_SEPARATOR . 'index.' . $lfs->extension($indexFilePath),
             $lfs->get($indexFilePath)
         );
 

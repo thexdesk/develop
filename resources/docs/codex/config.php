@@ -32,8 +32,6 @@ return [
 
     'revision' => [
         'default' => \Codex\Git\BranchType::LAST_VERSION,
-//        'default' => \Codex\Git\BranchType::PRODUCTION,
-//        'default' => \Codex\Git\BranchType::DEVELOPMENT,
     ],
 
     'phpdoc' => [
@@ -41,21 +39,4 @@ return [
         'default_class' => 'Codex\\Codex',
     ],
 
-    'git' => [
-        'enabled'    => true, /// local symlink
-        'owner'      => 'codex-project',
-        'repository' => 'core',
-        'connection' => 'bitbucket_oauth',
-        'sync'       => [
-            'branches' => [ 'master' ],
-            'versions' => '>=2.0.0', //1.x || >=2.5.0 || 5.0.0 - 7.2.3'
-            'paths'    => [
-                'docs'  => 'resources/docs',
-                'index' => 'resources/docs/index.md',
-            ],
-        ],
-        'webhook'    => [
-            'enabled' => true,
-        ],
-    ],
 ];
