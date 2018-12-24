@@ -47,7 +47,7 @@ trait SerializesSelf
 
     public function toYaml(): string
     {
-        return $this->serialize('yaml');
+        return $this->serialize('yml');
     }
 
     /**

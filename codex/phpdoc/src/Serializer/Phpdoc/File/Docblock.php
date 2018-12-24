@@ -11,6 +11,7 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Documents\Processors\ParserProcessorExtension;
 use Codex\Phpdoc\Annotations\Attr;
 use Illuminate\Support\Collection;
 use JMS\Serializer\Annotation as Serializer;
@@ -106,10 +107,10 @@ class Docblock
      */
     public function getLongDescription(): string
     {
-        /** @var \Codex\Processors\Parser\MarkdownParser $parser */
-        $parser = app()->make(config('codex.processors.parser.parser'));
-        $parser->setConfig(config('codex.processors.parser.markdown'));
-
+        $parserExtension = app()->make(ParserProcessorExtension::class);
+        $parser          = $parserExtension->makeParser(
+            config($parserExtension->getDefaultConfig() . '.markdown', [])
+        );
         return $parser->parse($this->longDescription);
     }
 

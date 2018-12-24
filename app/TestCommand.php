@@ -43,6 +43,7 @@ class TestCommand extends Command
         $xml = $pfs->get('develop/structure.xml');
         $d = PhpdocStructure::deserialize($xml, 'xml');
 
+        $this->line($d->getFiles()[0]->toYaml());
 
         $a = 'a';
     }
