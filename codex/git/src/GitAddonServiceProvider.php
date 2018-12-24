@@ -38,6 +38,11 @@ class GitAddonServiceProvider extends AddonServiceProvider
             $project = $this;
             return new ProjectGitConfig($project, app('codex.git.manager'));
         });
+        Project::macro('isGitEnabled', function () {
+            /** @var Project $project */
+            $project = $this;
+            return $project->attr('git.enabled', false);
+        });
 
         $this->app->singleton('codex.git.manager', function (Application $app) {
             $manager = new ConnectionManager($app[ 'config' ]);

@@ -20,8 +20,8 @@ return [
      |
      */
 
-    'storage' => [
-        'path' => storage_path('codex/phpdoc'),
+    'paths' => [
+        'generated' => storage_path('codex/phpdoc'),
     ],
 
     'debug' => true, // true, false, null (null takes the app.debug value)

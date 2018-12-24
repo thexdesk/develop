@@ -12,7 +12,7 @@
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
 use Codex\Documents\Processors\ParserProcessorExtension;
-use Codex\Phpdoc\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Illuminate\Support\Collection;
 use JMS\Serializer\Annotation as Serializer;
 

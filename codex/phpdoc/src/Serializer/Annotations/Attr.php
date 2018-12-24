@@ -1,6 +1,6 @@
 <?php
 
-namespace Codex\Phpdoc\Annotations;
+namespace Codex\Phpdoc\Serializer\Annotations;
 
 use Codex\Attributes\AttributeDefinition;
 use Codex\Attributes\AttributeDefinitionType;

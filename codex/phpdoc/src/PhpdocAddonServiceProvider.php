@@ -13,11 +13,14 @@ namespace Codex\Phpdoc;
 
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
+use Codex\Phpdoc\Commands\GetRevisionPhpdoc;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
+use Codex\Revisions\Revision;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Annotations\Reader;
+use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Foundation\Application;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\SerializerBuilder;
@@ -32,7 +35,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public $commands = [
 //        Console\ClearPhpdocCommand::class,
-//        Console\GeneratePhpdocCommand::class,
+        Console\PhpdocGenerateCommand::class,
     ];
 
     public $bindings = [
@@ -43,8 +46,23 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     public $aliases = [
     ];
 
+    public $extensions = [
+        PhpdocSchemaExtension::class,
+    ];
+
     public function register()
     {
+        Revision::macro('hasPhpdoc', function () {
+            /** @var Revision $revision */
+            $revision = $this;
+            return $revision->attr('phpdoc.enabled', false);
+        });
+        Revision::macro('phpdoc', function () {
+            /** @var Revision $revision */
+            $revision = $this;
+            return app()->make(PhpdocRevisionConfig::class, compact('revision'));
+        });
+
         $this->registerSerializer();
     }
 
@@ -64,9 +82,22 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public function boot(AttributeDefinitionRegistry $registry, AttributeAnnotationReader $reader)
     {
-        $revisions       = $registry->revisions;
-        $phpdocDefintion = $reader->handleClassAnnotations(PhpdocStructure::class);
-        $revisions->addChild($phpdocDefintion);
+        $phpdoc = $registry->addGroup('phpdoc');
+        $phpdoc->addChild($reader->handleClassAnnotations(PhpdocStructure::class));
+
+        $projects = $registry->projects;
+        $phpdoc   = $projects->add('phpdoc', 'dictionary')->setApiType('PhpdocConfig', [ 'new' ]);
+        $phpdoc->add('enabled', 'boolean'); // => false,
+        $phpdoc->add('document_slug', 'string'); // => 'phpdoc',
+        $phpdoc->add('title', 'string'); // => 'Api Documentation',
+        $phpdoc->add('xml_path', 'string'); // => 'structure.xml',
+        $phpdoc->add('doc_path', 'string'); // => '_phpdoc',
+        $phpdoc->add('doc_disabled_processors', 'array.scalarPrototype'); // => [ 'header', 'toc' ], //'button',
+        $phpdoc->add('view', 'string'); // => 'codex-phpdoc::document',
+        $phpdoc->add('layout', 'dictionary', 'Layout'); // => require __DIR__ . '/codex-phpdoc.layout.php',
+        $phpdoc->add('default_class', 'string'); // => null,
+
+        $registry->revisions->addInheritKeys('phpdoc');
     }
 
 }

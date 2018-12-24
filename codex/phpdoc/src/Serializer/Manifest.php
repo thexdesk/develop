@@ -5,19 +5,19 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer;
 
-use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
-use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;
-use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
-use Codex\Contracts\Revision;
+use Codex\Contracts\Revisions\Revision;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
+use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
+use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;
 use Codex\Phpdoc\Serializer\Concerns\WithResponse;
+use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use Illuminate\Contracts\Support\Responsable;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -103,7 +103,7 @@ class Manifest implements SelfSerializable, Responsable
      */
     public function getByFullName(string $fullName)
     {
-        return $this->files[str_ensure_left($fullName, '\\')];
+        return $this->files[ str_ensure_left($fullName, '\\') ];
     }
 
     /**
@@ -115,7 +115,7 @@ class Manifest implements SelfSerializable, Responsable
      */
     public function getHashByFullName(string $fullName)
     {
-        return $this->files[str_ensure_left($fullName, '\\')]->getHash();
+        return $this->files[ str_ensure_left($fullName, '\\') ]->getHash();
     }
 
     /**
@@ -128,11 +128,11 @@ class Manifest implements SelfSerializable, Responsable
     public function createPhpdocStructure(array $files)
     {
         return PhpdocStructure::fromArray([
-            'title' => $this->title,
-            'version' => $this->version,
-            'packages' => $this->packages,
+            'title'      => $this->title,
+            'version'    => $this->version,
+            'packages'   => $this->packages,
             'namespaces' => $this->namespaces,
-            'files' => $files,
+            'files'      => $files,
         ])->setManifest($this);
     }
 
@@ -256,15 +256,15 @@ class Manifest implements SelfSerializable, Responsable
      */
     public function setFile(string $key, $value)
     {
-        if (!$value instanceof ManifestFile) {
+        if ( ! $value instanceof ManifestFile) {
             $file = new ManifestFile();
             $file
-                ->setType($value['type'])
-                ->setName($value['name'])
-                ->setHash($value['hash']);
+                ->setType($value[ 'type' ])
+                ->setName($value[ 'name' ])
+                ->setHash($value[ 'hash' ]);
             $value = $file;
         }
-        $this->files[$key] = $value;
+        $this->files[ $key ] = $value;
 
         return $this;
     }
@@ -300,7 +300,7 @@ class Manifest implements SelfSerializable, Responsable
     }
 
     /**
-     * @param \Codex\Contracts\Revision|\Codex\Revision $_revision
+     * @param \Codex\Contracts\Revisions\Revision|\Codex\Revisions\Revision $_revision
      *
      * @return Manifest
      */
@@ -308,7 +308,7 @@ class Manifest implements SelfSerializable, Responsable
     {
         $this->_revision = $_revision;
         $this->setConfig(
-            AddonConfig::fromArray($_revision->config('phpdoc', []))
+            AddonConfig::fromArray($_revision->attr('phpdoc', []))
         );
 
         return $this;

@@ -11,8 +11,8 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc;
 
-use Codex\Phpdoc\Annotations\Attr;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;

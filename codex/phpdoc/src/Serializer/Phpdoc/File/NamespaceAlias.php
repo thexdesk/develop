@@ -11,7 +11,7 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
-use Codex\Phpdoc\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use JMS\Serializer\Annotation as Serializer;
 
 /**

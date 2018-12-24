@@ -2,8 +2,8 @@
 
 namespace Codex\Phpdoc\Serializer;
 
-use Codex\Attributes\AttributeDefinition;
-use Codex\Phpdoc\Annotations\Attr;
+use Codex\Attributes\AttributeDefinitionParent;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Doctrine\Common\Annotations\Reader;
 
 class AttributeAnnotationReader
@@ -16,7 +16,7 @@ class AttributeAnnotationReader
         $this->reader = $reader;
     }
 
-    public function handleClassAnnotations($class, AttributeDefinition $parentDefinition = null)
+    public function handleClassAnnotations($class, AttributeDefinitionParent $parentDefinition = null)
     {
         if (is_object($class)) {
             $class = get_class($class);

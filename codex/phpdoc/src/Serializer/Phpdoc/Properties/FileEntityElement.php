@@ -11,7 +11,7 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\Properties;
 
-use Codex\Phpdoc\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use JMS\Serializer\Annotation as Serializer;
 
 trait FileEntityElement

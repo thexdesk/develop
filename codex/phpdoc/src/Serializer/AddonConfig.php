@@ -67,12 +67,6 @@ class AddonConfig implements SelfSerializable, Responsable
     private $defaultClass;
 
     /**
-     * @var \Codex\Phpdoc\Serializer\Layout\Layout
-     * @Serializer\Type("Codex\Phpdoc\Serializer\Layout\Layout")
-     */
-    private $layout;
-
-    /**
      * @return bool
      */
     public function isEnabled(): bool

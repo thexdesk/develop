@@ -11,10 +11,10 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc;
 
-use Codex\Phpdoc\Annotations\Attr;
-use Codex\Phpdoc\Annotations\AttrApiType;
-use Codex\Phpdoc\Annotations\AttrType;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Annotations\AttrApiType;
+use Codex\Phpdoc\Serializer\Annotations\AttrType;
 use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;

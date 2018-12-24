@@ -2,13 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionParent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Api/PhpdocQuery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Commands/GetRevisionPhpdoc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Console/PhpdocGenerateCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/PhpdocRevisionConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/PhpdocSchemaExtension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Generator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/docs/blade-extensions/master/structure.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codex.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Annotations/Attr.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Annotations/Attr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttrApiType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttrType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinition.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionGroup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionRegistry.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionRegistry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Attributes/WithAttributeDefinitionChildren.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Attributes/WithAttributeDefinitionChildren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Concerns/HasCallbacks.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Concerns/HasCallbacks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Concerns/HasEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Concerns/HasEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Commands/MakeDocument.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Commands/MakeDocument.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Projects/Commands/MakeProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Projects/Commands/MakeProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Revisions/Commands/MakeRevision.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Revisions/Commands/MakeRevision.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/git/code_completion.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/code_completion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/_code-completion.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/_code-completion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Annotations/Attr.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Annotations/Attr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Contracts/Factory.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Contracts/Factory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AddonConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AddonConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AttributeAnnotationReader.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AttributeAnnotationReader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Manifest.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Manifest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Docblock.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Docblock.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/NamespaceAlias.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/NamespaceAlias.php" afterDir="false" />
@@ -17,6 +43,7 @@
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/DocblockProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/DocblockProperty.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/NamedSpacedElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/NamedSpacedElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/blade-extensions/develop/codex.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/blade-extensions/develop/revision.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,29 +61,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/PhpdocStructure.php">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-              <folding>
-                <element signature="e#6#271#0#PHP" expanded="true" />
-                <element signature="e#775#876#0#PHP" expanded="true" />
-                <element signature="e#1047#1145#0#PHP" expanded="true" />
-                <element signature="e#1171#1269#0#PHP" expanded="true" />
-                <element signature="e#1551#1791#0#PHP" expanded="true" />
-                <element signature="e#1820#2064#0#PHP" expanded="true" />
-                <element signature="e#2095#2156#0#PHP" expanded="true" />
-                <element signature="e#3216#3249#0#PHP" expanded="true" />
-                <element signature="e#3335#3412#0#PHP" expanded="true" />
-                <element signature="e#3534#3567#0#PHP" expanded="true" />
-                <element signature="e#3657#3736#0#PHP" expanded="true" />
-                <element signature="e#3866#3931#0#PHP" expanded="true" />
-                <element signature="e#4016#4125#0#PHP" expanded="true" />
-                <element signature="e#4246#4314#0#PHP" expanded="true" />
-                <element signature="e#4405#4520#0#PHP" expanded="true" />
-                <element signature="e#4653#4721#0#PHP" expanded="true" />
-                <element signature="e#4816#4933#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="783">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -64,214 +72,370 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="415">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Annotations/Attr.php">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Commands/GetRevisionPhpdoc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="921">
-              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+            <state relative-caret-position="378">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/AttributeAnnotationReader.php">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1137">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="243">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasFiles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="67" column="66" lean-forward="true" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
+            <state relative-caret-position="324">
+              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File.php">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/Revision.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laradic/support/src/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="174" column="67" selection-start-line="174" selection-start-column="67" selection-end-line="174" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/nikic/php-parser/test/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laradic/support/src/Path.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Generator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="947">
+              <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="459" column="20" selection-start-line="459" selection-start-column="20" selection-end-line="459" selection-end-column="20" />
+              <folding>
+                <element signature="e#9789#9976#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/old/Generator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-756">
+              <caret line="120" selection-start-line="120" selection-end-line="170" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="924" column="9" selection-start-line="924" selection-start-column="9" selection-end-line="924" selection-end-column="9" />
+              <folding>
+                <element signature="e#26605#27525#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Manifest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+              <folding>
+                <element signature="e#6490#6619#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Contracts/Revisions/Revision.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/_code-completion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns/SerializeToFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+              <folding>
+                <element signature="e#3017#3031#0#PHP" expanded="true" />
+                <element signature="e#5196#5212#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasEvents.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCallbacks.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1210">
+              <caret line="554" column="20" selection-start-line="554" selection-start-column="20" selection-end-line="554" selection-end-column="20" />
+              <folding>
+                <element signature="e#6471#6637#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/ContextualBindingBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/Commands/MakeRevision.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Events/Dispatchable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Projects/Commands/MakeProject.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Commands/MakeDocument.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/old/PhpdocRevision.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1596">
+              <caret line="83" selection-start-line="83" selection-end-line="119" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/PhpdocRevisionConfig.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="83" column="56" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
+              <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
               <folding>
-                <element signature="e#6#271#0#PHP" expanded="true" />
-                <element signature="e#1021#1134#0#PHP" expanded="true" />
-                <element signature="e#1159#1309#0#PHP" expanded="true" />
-                <element signature="e#1343#1441#0#PHP" expanded="true" />
-                <element signature="e#1466#1564#0#PHP" expanded="true" />
-                <element signature="e#1642#1957#0#PHP" expanded="true" />
-                <element signature="e#1992#2219#0#PHP" expanded="true" />
-                <element signature="e#2429#2656#0#PHP" expanded="true" />
-                <element signature="e#2682#2837#0#PHP" expanded="true" />
-                <element signature="e#2864#2979#0#PHP" expanded="true" />
-                <element signature="e#3363#3512#0#PHP" expanded="true" />
-                <element signature="e#3619#3908#0#PHP" expanded="true" />
-                <element signature="e#4215#4276#0#PHP" expanded="true" />
-                <element signature="e#4392#4457#0#PHP" expanded="true" />
-                <element signature="e#4585#4646#0#PHP" expanded="true" />
-                <element signature="e#4762#4795#0#PHP" expanded="true" />
-                <element signature="e#4879#4944#0#PHP" expanded="true" />
-                <element signature="e#5062#5095#0#PHP" expanded="true" />
-                <element signature="e#5197#5271#0#PHP" expanded="true" />
-                <element signature="e#5425#5458#0#PHP" expanded="true" />
-                <element signature="e#5542#5607#0#PHP" expanded="true" />
-                <element signature="e#5725#5758#0#PHP" expanded="true" />
-                <element signature="e#5848#5916#0#PHP" expanded="true" />
-                <element signature="e#6046#6118#0#PHP" expanded="true" />
-                <element signature="e#6249#6357#0#PHP" expanded="true" />
-                <element signature="e#6530#6610#0#PHP" expanded="true" />
-                <element signature="e#6713#6835#0#PHP" expanded="true" />
-                <element signature="e#6992#7067#0#PHP" expanded="true" />
-                <element signature="e#7152#7260#0#PHP" expanded="true" />
-                <element signature="e#7381#7460#0#PHP" expanded="true" />
-                <element signature="e#7553#7669#0#PHP" expanded="true" />
-                <element signature="e#7806#7881#0#PHP" expanded="true" />
-                <element signature="e#7966#8074#0#PHP" expanded="true" />
-                <element signature="e#8195#8228#0#PHP" expanded="true" />
-                <element signature="e#8442#8509#0#PHP" expanded="true" />
+                <element signature="e#1001#1062#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/NamespaceAlias.php">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/PhpdocStructure.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+              <folding>
+                <element signature="e#929#1081#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/old/Console/GeneratePhpdocCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" column="90" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Console/PhpdocGenerateCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/AddonConfig.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-708">
+              <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/codex/phpdoc/blade-extensions/develop/manifest.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/codex/phpdoc/blade-extensions/develop/fc13bfe6321c4c2761e4f5f3c5b84508.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="613">
+              <caret line="380" column="35" selection-start-line="380" selection-start-column="35" selection-end-line="380" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/PhpdocSchemaExtension.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="648">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-              <folding>
-                <element signature="e#6#271#0#PHP" expanded="true" />
-                <element signature="e#367#483#0#PHP" expanded="true" />
-                <element signature="e#511#609#0#PHP" expanded="true" />
-                <element signature="e#634#739#0#PHP" expanded="true" />
-              </folding>
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="mock://codex.graphqls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="337" column="22" selection-start-line="337" selection-start-column="22" selection-end-line="340" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Api/PhpdocQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="29" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            <state relative-caret-position="405">
+              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="198" column="22" selection-start-line="198" selection-start-column="22" selection-end-line="198" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Arr.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="370" column="27" selection-start-line="370" selection-start-column="27" selection-end-line="370" selection-end-column="27" />
               <folding>
-                <element signature="e#6#271#0#PHP" expanded="true" />
-                <element signature="e#403#510#0#PHP" expanded="true" />
-                <element signature="e#823#1069#0#PHP" expanded="true" />
-                <element signature="e#1097#1130#0#PHP" expanded="true" />
-                <element signature="e#1220#1301#0#PHP" expanded="true" />
-                <element signature="e#1444#1518#0#PHP" expanded="true" />
-                <element signature="e#1613#1738#0#PHP" expanded="true" />
-                <element signature="e#1892#1964#0#PHP" expanded="true" />
-                <element signature="e#2053#2173#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/XmlCollection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/NamedSpacedElement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding>
-                <element signature="e#6#271#0#PHP" expanded="true" />
-                <element signature="e#453#551#0#PHP" expanded="true" />
-                <element signature="e#581#679#0#PHP" expanded="true" />
-                <element signature="e#707#803#0#PHP" expanded="true" />
-                <element signature="e#828#971#0#PHP" expanded="true" />
-                <element signature="e#1000#1033#0#PHP" expanded="true" />
-                <element signature="e#1127#1211#0#PHP" expanded="true" />
-                <element signature="e#1363#1396#0#PHP" expanded="true" />
-                <element signature="e#1486#1568#0#PHP" expanded="true" />
-                <element signature="e#1712#1745#0#PHP" expanded="true" />
-                <element signature="e#1829#1908#0#PHP" expanded="true" />
-                <element signature="e#2040#2073#0#PHP" expanded="true" />
-                <element signature="e#2157#2240#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/DocblockProperty.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Docblock.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="53" column="51" lean-forward="true" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
-              <folding>
-                <element signature="e#6#271#0#PHP" expanded="true" />
-                <element signature="e#402#505#0#PHP" expanded="true" />
-                <element signature="e#527#623#0#PHP" expanded="true" />
-                <element signature="e#648#755#0#PHP" expanded="true" />
-                <element signature="e#787#1005#0#PHP" expanded="true" />
-                <element signature="e#1300#1330#0#PHP" expanded="true" />
-                <element signature="e#1411#1477#0#PHP" expanded="true" />
-                <element signature="e#1592#1625#0#PHP" expanded="true" />
-                <element signature="e#1723#1799#0#PHP" expanded="true" />
-                <element signature="e#1945#2100#0#PHP" expanded="true" />
-                <element signature="e#2436#2516#0#PHP" expanded="true" />
-                <element signature="e#2678#2747#0#PHP" expanded="true" />
-                <element signature="e#2830#2935#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Tag.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-              <folding>
-                <element signature="e#6#271#0#PHP" expanded="true" />
-                <element signature="e#367#460#0#PHP" expanded="true" />
-                <element signature="e#477#575#0#PHP" expanded="true" />
-                <element signature="e#721#819#0#PHP" expanded="true" />
-                <element signature="e#851#949#0#PHP" expanded="true" />
-                <element signature="e#974#1072#0#PHP" expanded="true" />
-                <element signature="e#1099#1197#0#PHP" expanded="true" />
-                <element signature="e#1222#1320#0#PHP" expanded="true" />
-                <element signature="e#1349#1382#0#PHP" expanded="true" />
-                <element signature="e#1466#1530#0#PHP" expanded="true" />
-                <element signature="e#1648#1678#0#PHP" expanded="true" />
-                <element signature="e#1759#1820#0#PHP" expanded="true" />
-                <element signature="e#1935#1968#0#PHP" expanded="true" />
-                <element signature="e#2066#2137#0#PHP" expanded="true" />
-                <element signature="e#2283#2316#0#PHP" expanded="true" />
-                <element signature="e#2400#2464#0#PHP" expanded="true" />
-                <element signature="e#2582#2615#0#PHP" expanded="true" />
-                <element signature="e#2703#2769#0#PHP" expanded="true" />
-                <element signature="e#2895#2928#0#PHP" expanded="true" />
-                <element signature="e#3012#3076#0#PHP" expanded="true" />
-                <element signature="e#3194#3227#0#PHP" expanded="true" />
-                <element signature="e#3319#3387#0#PHP" expanded="true" />
+                <element signature="e#9011#9201#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -288,8 +452,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fire</find>
-      <find>codex-graph</find>
       <find>/mnt/fat/php/projects/codex-graph</find>
       <find>Symfony\Component\Config\Definition\Builder</find>
       <find>self</find>
@@ -318,6 +480,8 @@
       <find>Codex\Contracts\Serializer\</find>
       <find>public</find>
       <find>classDe</find>
+      <find>@</find>
+      <find>name</find>
     </findStrings>
     <replaceStrings>
       <replace>codex.</replace>
@@ -336,6 +500,8 @@
       <replace>Codex\Phpdoc\Serializer\</replace>
       <replace>Codex\Phpdoc\Contracts\Serializer\</replace>
       <replace>private</replace>
+      <replace>\@</replace>
+      <replace>label</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/Attributes/Definition</dir>
@@ -374,35 +540,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/codex/core/src/Http/HttpServiceProvider.php" />
-        <option value="$PROJECT_DIR$/codex/git/code_completion.php" />
-        <option value="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" />
-        <option value="$PROJECT_DIR$/codex/git/src/Commands/SyncProject.php" />
-        <option value="$PROJECT_DIR$/codex/git/src/Commands/SyncGitProject.php" />
-        <option value="$PROJECT_DIR$/codex/git/src/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="$PROJECT_DIR$/codex/git/src/Http/HttpServiceProvider.php" />
-        <option value="$PROJECT_DIR$/codex/git/src/Http/Controllers/WebhookController.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Log/ArtisanHandler.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Codex.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Log/Logger.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Log/Log.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Contracts/Log/Log.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Entity.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddon.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocLinks.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/composer.json" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns/WithResponse.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns/SerializesSelf.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns/ChangeSetsExternal.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Contracts/Serializer/SelfSerializable.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AddonConfig.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Manifest.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/ManifestFile.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocRevision.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Commands/GenerateRevisionPhpdoc.php" />
         <option value="$PROJECT_DIR$/resources/docs/blade-extensions/develop/structure.xml" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Last/FileElement.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Last/ClassFile.php" />
@@ -410,21 +547,50 @@
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttributeDefiinition.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttributeDefinitionType.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttributeDefinition.php" />
-        <option value="$PROJECT_DIR$/app/TestCommand.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttrType.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttrApiType.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionRegistry.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AttributeAnnotationReader.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/NamespaceAlias.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/PhpdocStructure.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/NamedSpacedElement.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/DocblockProperty.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Docblock.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Tag.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Annotations/Attr.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns/SerializesSelf.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/ParserProcessorExtension.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Docblock.php" />
+        <option value="$PROJECT_DIR$/codex/git/code_completion.php" />
+        <option value="$PROJECT_DIR$/codex/git/src/GitAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Attributes/WithAttributeDefinitionChildren.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionParent.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionGroup.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinition.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionRegistry.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AttributeAnnotationReader.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/PhpdocStructure.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Annotations/Attr.php" />
+        <option value="$PROJECT_DIR$/resources/docs/blade-extensions/develop/revision.yml" />
+        <option value="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Commands/GetRevisionPhpdoc.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Concerns/HasCallbacks.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Revisions/Revision.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Revisions/Commands/MakeRevision.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Projects/Commands/MakeProject.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Commands/MakeDocument.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocRevision.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/_code-completion.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Console/PhpdocGenerateCommand.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Concerns/HasEvents.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocRevisionConfig.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Generator.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Manifest.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/AddonConfig.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocSchemaExtension.php" />
+        <option value="$PROJECT_DIR$/app/TestCommand.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Api/PhpdocQuery.php" />
       </list>
     </option>
   </component>
@@ -437,7 +603,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
     <servers>
       <server host="codex.local" id="a0853433-78da-42d5-a66d-316d3d43631c" name="codex.local" />
@@ -644,6 +810,13 @@
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -652,7 +825,39 @@
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Attributes" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphQL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphQL" type="462c0819:PsiDirectoryNode" />
+              <item name="Queries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
@@ -679,6 +884,21 @@
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -687,7 +907,15 @@
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
@@ -700,63 +928,101 @@
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Serializer" type="462c0819:PsiDirectoryNode" />
-              <item name="Phpdoc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
               <item name="blade-extensions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
               <item name="blade-extensions" type="462c0819:PsiDirectoryNode" />
               <item name="develop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="blade-extensions" type="462c0819:PsiDirectoryNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
+              <item name="lighthouse" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
+              <item name="lighthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
+              <item name="lighthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
+              <item name="lighthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Schema" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
+              <item name="lighthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Schema" type="462c0819:PsiDirectoryNode" />
+              <item name="AST" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
+              <item name="lighthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Schema" type="462c0819:PsiDirectoryNode" />
+              <item name="Conversion" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -791,11 +1057,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/docs/blade-extensions/master" />
+      <recent name="$PROJECT_DIR$/codex/phpdoc/src" />
       <recent name="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Last" />
       <recent name="$PROJECT_DIR$/resources/docs/codex/master" />
       <recent name="$PROJECT_DIR$/codex/phpdoc/src/Contracts" />
-      <recent name="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns" />
-      <recent name="$PROJECT_DIR$/codex/phpdoc/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/codex/phpdoc/old" />
@@ -998,7 +1264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545621224295</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="phpdoc attributes with use of annotation in the serializer definitions.">
+      <created>1545643455274</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1545643455274</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fixed docblock markdown parsing using the parser processor">
+      <created>1545644772354</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1545644772354</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <option name="createChangelist" value="false" />
     <option name="createBranch" value="false" />
     <option name="searchClosedTasks" value="true" />
@@ -1117,8 +1397,8 @@
       <window_info anchor="bottom" id="Docker" order="5" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49973643" weight="0.32977098" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49973643" weight="0.32977098" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.49736425" visible="true" weight="0.3541985" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49973643" visible="true" weight="0.32977098" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49736425" weight="0.3541985" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3299389" />
@@ -1134,26 +1414,26 @@
       <window_info anchor="right" id="Time Tracking" order="6" weight="0.1320506" />
     </layout>
     <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="Favorites" order="0" sideWeight="0.500394" side_tool="true" weight="0.13389562" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.09277807" />
-      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" order="0" />
-      <window_info anchor="bottom" id="GraphQL" order="1" sideWeight="0.49868214" weight="0.32722646" />
-      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4978914" weight="0.24885496" />
-      <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49920928" weight="0.32926208" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5021086" side_tool="true" weight="0.24885496" />
-      <window_info anchor="bottom" id="Docker" order="6" />
-      <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" sideWeight="0.49973643" weight="0.32977098" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49973643" weight="0.32977098" />
-      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.49736425" visible="true" weight="0.3541985" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" weight="0.3299389" />
-      <window_info anchor="bottom" id="Tasks" order="14" weight="0.3299389" />
-      <window_info anchor="bottom" id="TaskBrowser" order="15" sideWeight="0.49947286" weight="0.32977098" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49960598" visible="true" weight="0.13389562" />
+      <window_info id="Structure" order="3" sideWeight="0.500394" side_tool="true" weight="0.13389562" />
+      <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.49868214" weight="0.32722646" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4978914" weight="0.24885496" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49920928" weight="0.32926208" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5021086" side_tool="true" weight="0.24885496" />
+      <window_info anchor="bottom" id="Docker" order="5" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49973643" weight="0.32977098" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49973643" visible="true" weight="0.32977098" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49736425" weight="0.3541985" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3299389" />
+      <window_info anchor="bottom" id="Tasks" order="13" weight="0.3299389" />
+      <window_info anchor="bottom" id="TaskBrowser" order="14" sideWeight="0.49947286" weight="0.32977098" />
+      <window_info anchor="bottom" id="TypeScript" order="15" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Remote Host" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
@@ -1224,7 +1504,9 @@
     <MESSAGE value="Git addon with both bitbucket and github drivers working" />
     <MESSAGE value="Git addon sync command is working now as well" />
     <MESSAGE value="Git addon webhook controller, needs complete revision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Git addon webhook controller, needs complete revision" />
+    <MESSAGE value="phpdoc attributes with use of annotation in the serializer definitions." />
+    <MESSAGE value="fixed docblock markdown parsing using the parser processor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed docblock markdown parsing using the parser processor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1248,11 +1530,6 @@
           <url>file://$PROJECT_DIR$/codex/core/src/Documents/Processors/TocProcessorExtension.php</url>
           <line>120</line>
           <option name="timeStamp" value="362" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/codex/core/src/Documents/Processors/TocProcessorExtension.php</url>
-          <line>188</line>
-          <option name="timeStamp" value="363" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/codex/core/src/Addons/Console/AddonCommand.php</url>
@@ -1294,6 +1571,11 @@
           <line>34</line>
           <option name="timeStamp" value="449" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/TestCommand.php</url>
+          <line>78</line>
+          <option name="timeStamp" value="466" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1322,6 +1604,31 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>$p-&gt;toArray()</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$p</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>\Codex\Api\GraphQL\Utils::transformSelectionToShow($info-&gt;getFieldSelection(2));</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Utils::transformSelectionToShow($info-&gt;getFieldSelection(2));</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>func_get_args()</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>(string) $fqsen</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1341,562 +1648,380 @@
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>$class-&gt;getNamespaceName()</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>$reflectionProperty-&gt;getDocComment()</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>$this-&gt;project-&gt;getGit()</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>app(\Codex\Codex::class)</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>app('codex')</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>get_clas</expression-string>
-        <language-id>PHP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/PreSerialize.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/PostSerialize.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/PostDeserialize.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/MaxDepth.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/Inline.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/HandlerCallback.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/Groups.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationRegistry.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1782">
-          <folding>
-            <element signature="e#3895#4493#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/IndexedReader.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-          <folding>
-            <element signature="e#1029#1089#0#PHP" />
-            <element signature="e#1672#1773#0#PHP" />
-            <element signature="e#2007#3983#0#PHP" />
-            <element signature="e#4390#4501#0#PHP" />
-            <element signature="e#4671#4802#0#PHP" />
-            <element signature="e#5777#5998#0#PHP" />
-            <element signature="e#6008#6166#0#PHP" />
-            <element signature="e#6176#6637#0#PHP" />
-            <element signature="e#6218#6447#0#PHP" />
-            <element signature="e#6461#6627#0#PHP" />
-            <element signature="e#7549#7884#0#PHP" />
-            <element signature="e#7699#7856#0#PHP" />
-            <element signature="e#7751#7846#0#PHP" />
-            <element signature="e#7927#8530#0#PHP" />
-            <element signature="e#8573#8923#0#PHP" />
-            <element signature="e#8738#8895#0#PHP" />
-            <element signature="e#8790#8885#0#PHP" />
-            <element signature="e#8966#9554#0#PHP" />
-            <element signature="e#9597#9937#0#PHP" />
-            <element signature="e#9752#9909#0#PHP" />
-            <element signature="e#9804#9899#0#PHP" />
-            <element signature="e#10092#10433#0#PHP" />
-            <element signature="e#10208#10325#0#PHP" />
-            <element signature="e#10554#10840#0#PHP" />
-            <element signature="e#10660#10747#0#PHP" />
-            <element signature="e#10975#11648#0#PHP" />
-            <element signature="e#11152#11238#0#PHP" />
-            <element signature="e#11282#11583#0#PHP" />
-            <element signature="e#11336#11573#0#PHP" />
-            <element signature="e#11790#12394#0#PHP" />
-            <element signature="e#11975#12061#0#PHP" />
-            <element signature="e#12105#12329#0#PHP" />
-            <element signature="e#12159#12319#0#PHP" />
-            <element signature="e#12513#13340#0#PHP" />
-            <element signature="e#12762#13019#0#PHP" />
-            <element signature="e#12814#13009#0#PHP" />
-            <element signature="e#12877#12995#0#PHP" />
-            <element signature="e#13089#13260#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttrType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="e#98#120#0#PHP" expanded="true" />
-            <element signature="e#148#197#0#PHP" expanded="true" />
-            <element signature="e#307#347#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Annotations/AttrApiType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding>
-            <element signature="e#98#120#0#PHP" expanded="true" />
-            <element signature="e#145#194#0#PHP" expanded="true" />
-            <element signature="e#562#605#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/WithAttributeDefinitionChildren.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionGroup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Reader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-          <folding>
-            <element signature="e#3104#3440#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="1161" column="13" selection-start-line="1161" selection-start-column="13" selection-end-line="1161" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinition.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeDefinitionRegistry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Var_.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/TocProcessorExtension.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        <state relative-caret-position="423">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/type-resolver/src/Type.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="1782">
+          <caret line="192" column="20" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/type-resolver/src/Types/String_.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Events/Dispatcher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="513">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/reflection-common/src/ProjectFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/reflection-common/src/Project.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/codex/core/src/Attributes/AttributeSchemaExtension.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Serializer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        <state relative-caret-position="223">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/src/DocBlockFactory.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="243">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/Reflection.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasFiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="850" column="38" selection-start-line="850" selection-start-column="38" selection-end-line="850" selection-end-column="38" />
-          <folding>
-            <element signature="e#25342#25649#0#PHP" expanded="true" />
-            <element signature="e#27976#28170#0#PHP" expanded="true" />
-            <element signature="e#45904#46090#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="324">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/nikic/php-parser/test/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laradic/support/src/Path.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laradic/support/src/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="174" column="67" selection-start-line="174" selection-start-column="67" selection-end-line="174" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+        <state relative-caret-position="513">
+          <caret line="924" column="9" selection-start-line="924" selection-start-column="9" selection-end-line="924" selection-end-column="9" />
+          <folding>
+            <element signature="e#26605#27525#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/SimpleAnnotationReader.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="459" column="20" selection-start-line="459" selection-start-column="20" selection-end-line="459" selection-end-column="20" />
+          <folding>
+            <element signature="e#9789#9976#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/PhpParser.php">
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Contracts/Revisions/Revision.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/old/Generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-756">
+          <caret line="120" selection-start-line="120" selection-end-line="170" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns/SerializeToFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCallbacks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/ContextualBindingBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="554" column="20" selection-start-line="554" selection-start-column="20" selection-end-line="554" selection-end-column="20" />
+          <folding>
+            <element signature="e#6471#6637#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/RevisionCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Events/Dispatchable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
           <folding>
-            <element signature="e#1049#1218#0#PHP" expanded="true" />
+            <element signature="e#3017#3031#0#PHP" expanded="true" />
+            <element signature="e#5196#5212#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Attribute.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/Revision.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1041#1237#0#PHP" expanded="true" />
-            <element signature="e#1266#1296#0#PHP" expanded="true" />
-            <element signature="e#1320#1350#0#PHP" expanded="true" />
-            <element signature="e#1374#1405#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="27">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Attributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <element signature="e#1041#1255#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Enum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <element signature="e#1041#1402#0#PHP" expanded="true" />
-            <element signature="e#1426#1455#0#PHP" expanded="true" />
-            <element signature="e#1480#1551#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/IgnoreAnnotation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding>
-            <element signature="e#1040#1236#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Required.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1041#1248#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Target.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-647">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="e#1041#1240#0#PHP" expanded="true" />
-            <element signature="e#1921#1994#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="811" column="25" selection-start-line="811" selection-start-column="25" selection-end-line="811" selection-end-column="25" />
-          <folding>
-            <element signature="e#30382#30472#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/AttributeAnnotationReader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1137">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Projects/ProjectCollection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/PhpdocStructure.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/Commands/MakeRevision.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-          <folding>
-            <element signature="e#6#271#0#PHP" expanded="true" />
-            <element signature="e#775#876#0#PHP" expanded="true" />
-            <element signature="e#1047#1145#0#PHP" expanded="true" />
-            <element signature="e#1171#1269#0#PHP" expanded="true" />
-            <element signature="e#1551#1791#0#PHP" expanded="true" />
-            <element signature="e#1820#2064#0#PHP" expanded="true" />
-            <element signature="e#2095#2156#0#PHP" expanded="true" />
-            <element signature="e#3216#3249#0#PHP" expanded="true" />
-            <element signature="e#3335#3412#0#PHP" expanded="true" />
-            <element signature="e#3534#3567#0#PHP" expanded="true" />
-            <element signature="e#3657#3736#0#PHP" expanded="true" />
-            <element signature="e#3866#3931#0#PHP" expanded="true" />
-            <element signature="e#4016#4125#0#PHP" expanded="true" />
-            <element signature="e#4246#4314#0#PHP" expanded="true" />
-            <element signature="e#4405#4520#0#PHP" expanded="true" />
-            <element signature="e#4653#4721#0#PHP" expanded="true" />
-            <element signature="e#4816#4933#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="543">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Projects/Commands/MakeProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/DocumentCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Commands/MakeDocument.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Commands/GetRevisionPhpdoc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/old/PhpdocRevision.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="83" selection-start-line="83" selection-end-line="119" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/old/Console/GeneratePhpdocCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="90" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/_code-completion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Console/PhpdocGenerateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="67" column="66" lean-forward="true" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
+        <state relative-caret-position="783">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/InterfaceFile.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasEvents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="216">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/XmlCollection.php">
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/AddonConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="-708">
+          <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Property.php">
+    <entry file="file://$PROJECT_DIR$/storage/codex/phpdoc/blade-extensions/develop/manifest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/codex/phpdoc/blade-extensions/develop/fc13bfe6321c4c2761e4f5f3c5b84508.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="613">
+          <caret line="380" column="35" selection-start-line="380" selection-start-column="35" selection-end-line="380" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/NamedSpacedElement.php">
+    <entry file="file://$PROJECT_DIR$/query.graphql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="54">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/PhpdocStructure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding>
-            <element signature="e#6#271#0#PHP" expanded="true" />
-            <element signature="e#453#551#0#PHP" expanded="true" />
-            <element signature="e#581#679#0#PHP" expanded="true" />
-            <element signature="e#707#803#0#PHP" expanded="true" />
-            <element signature="e#828#971#0#PHP" expanded="true" />
-            <element signature="e#1000#1033#0#PHP" expanded="true" />
-            <element signature="e#1127#1211#0#PHP" expanded="true" />
-            <element signature="e#1363#1396#0#PHP" expanded="true" />
-            <element signature="e#1486#1568#0#PHP" expanded="true" />
-            <element signature="e#1712#1745#0#PHP" expanded="true" />
-            <element signature="e#1829#1908#0#PHP" expanded="true" />
-            <element signature="e#2040#2073#0#PHP" expanded="true" />
-            <element signature="e#2157#2240#0#PHP" expanded="true" />
+            <element signature="e#929#1081#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/DocblockProperty.php">
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Manifest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Docblock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="53" column="51" lean-forward="true" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+        <state relative-caret-position="137">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding>
-            <element signature="e#6#271#0#PHP" expanded="true" />
-            <element signature="e#402#505#0#PHP" expanded="true" />
-            <element signature="e#527#623#0#PHP" expanded="true" />
-            <element signature="e#648#755#0#PHP" expanded="true" />
-            <element signature="e#787#1005#0#PHP" expanded="true" />
-            <element signature="e#1300#1330#0#PHP" expanded="true" />
-            <element signature="e#1411#1477#0#PHP" expanded="true" />
-            <element signature="e#1592#1625#0#PHP" expanded="true" />
-            <element signature="e#1723#1799#0#PHP" expanded="true" />
-            <element signature="e#1945#2100#0#PHP" expanded="true" />
-            <element signature="e#2436#2516#0#PHP" expanded="true" />
-            <element signature="e#2678#2747#0#PHP" expanded="true" />
-            <element signature="e#2830#2935#0#PHP" expanded="true" />
+            <element signature="e#6490#6619#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Tag.php">
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Generator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-          <folding>
-            <element signature="e#6#271#0#PHP" expanded="true" />
-            <element signature="e#367#460#0#PHP" expanded="true" />
-            <element signature="e#477#575#0#PHP" expanded="true" />
-            <element signature="e#721#819#0#PHP" expanded="true" />
-            <element signature="e#851#949#0#PHP" expanded="true" />
-            <element signature="e#974#1072#0#PHP" expanded="true" />
-            <element signature="e#1099#1197#0#PHP" expanded="true" />
-            <element signature="e#1222#1320#0#PHP" expanded="true" />
-            <element signature="e#1349#1382#0#PHP" expanded="true" />
-            <element signature="e#1466#1530#0#PHP" expanded="true" />
-            <element signature="e#1648#1678#0#PHP" expanded="true" />
-            <element signature="e#1759#1820#0#PHP" expanded="true" />
-            <element signature="e#1935#1968#0#PHP" expanded="true" />
-            <element signature="e#2066#2137#0#PHP" expanded="true" />
-            <element signature="e#2283#2316#0#PHP" expanded="true" />
-            <element signature="e#2400#2464#0#PHP" expanded="true" />
-            <element signature="e#2582#2615#0#PHP" expanded="true" />
-            <element signature="e#2703#2769#0#PHP" expanded="true" />
-            <element signature="e#2895#2928#0#PHP" expanded="true" />
-            <element signature="e#3012#3076#0#PHP" expanded="true" />
-            <element signature="e#3194#3227#0#PHP" expanded="true" />
-            <element signature="e#3319#3387#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="947">
+          <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Annotations/Attr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
-          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File.php">
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/PhpdocRevisionConfig.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="83" column="56" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
           <folding>
-            <element signature="e#6#271#0#PHP" expanded="true" />
-            <element signature="e#1021#1134#0#PHP" expanded="true" />
-            <element signature="e#1159#1309#0#PHP" expanded="true" />
-            <element signature="e#1343#1441#0#PHP" expanded="true" />
-            <element signature="e#1466#1564#0#PHP" expanded="true" />
-            <element signature="e#1642#1957#0#PHP" expanded="true" />
-            <element signature="e#1992#2219#0#PHP" expanded="true" />
-            <element signature="e#2429#2656#0#PHP" expanded="true" />
-            <element signature="e#2682#2837#0#PHP" expanded="true" />
-            <element signature="e#2864#2979#0#PHP" expanded="true" />
-            <element signature="e#3363#3512#0#PHP" expanded="true" />
-            <element signature="e#3619#3908#0#PHP" expanded="true" />
-            <element signature="e#4215#4276#0#PHP" expanded="true" />
-            <element signature="e#4392#4457#0#PHP" expanded="true" />
-            <element signature="e#4585#4646#0#PHP" expanded="true" />
-            <element signature="e#4762#4795#0#PHP" expanded="true" />
-            <element signature="e#4879#4944#0#PHP" expanded="true" />
-            <element signature="e#5062#5095#0#PHP" expanded="true" />
-            <element signature="e#5197#5271#0#PHP" expanded="true" />
-            <element signature="e#5425#5458#0#PHP" expanded="true" />
-            <element signature="e#5542#5607#0#PHP" expanded="true" />
-            <element signature="e#5725#5758#0#PHP" expanded="true" />
-            <element signature="e#5848#5916#0#PHP" expanded="true" />
-            <element signature="e#6046#6118#0#PHP" expanded="true" />
-            <element signature="e#6249#6357#0#PHP" expanded="true" />
-            <element signature="e#6530#6610#0#PHP" expanded="true" />
-            <element signature="e#6713#6835#0#PHP" expanded="true" />
-            <element signature="e#6992#7067#0#PHP" expanded="true" />
-            <element signature="e#7152#7260#0#PHP" expanded="true" />
-            <element signature="e#7381#7460#0#PHP" expanded="true" />
-            <element signature="e#7553#7669#0#PHP" expanded="true" />
-            <element signature="e#7806#7881#0#PHP" expanded="true" />
-            <element signature="e#7966#8074#0#PHP" expanded="true" />
-            <element signature="e#8195#8228#0#PHP" expanded="true" />
-            <element signature="e#8442#8509#0#PHP" expanded="true" />
+            <element signature="e#1001#1062#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/NamespaceAlias.php">
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/PhpdocSchemaExtension.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Arr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="370" column="27" selection-start-line="370" selection-start-column="27" selection-end-line="370" selection-end-column="27" />
           <folding>
-            <element signature="e#6#271#0#PHP" expanded="true" />
-            <element signature="e#367#483#0#PHP" expanded="true" />
-            <element signature="e#511#609#0#PHP" expanded="true" />
-            <element signature="e#634#739#0#PHP" expanded="true" />
+            <element signature="e#9011#9201#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="29" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-          <folding>
-            <element signature="e#6#271#0#PHP" expanded="true" />
-            <element signature="e#403#510#0#PHP" expanded="true" />
-            <element signature="e#823#1069#0#PHP" expanded="true" />
-            <element signature="e#1097#1130#0#PHP" expanded="true" />
-            <element signature="e#1220#1301#0#PHP" expanded="true" />
-            <element signature="e#1444#1518#0#PHP" expanded="true" />
-            <element signature="e#1613#1738#0#PHP" expanded="true" />
-            <element signature="e#1892#1964#0#PHP" expanded="true" />
-            <element signature="e#2053#2173#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="477">
+          <caret line="198" column="22" selection-start-line="198" selection-start-column="22" selection-end-line="198" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Api/PhpdocQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
         </state>
       </provider>
     </entry>

@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/semver/src" isTestSource="false" packagePrefix="Codex\Semver" />
       <sourceFolder url="file://$MODULE_DIR$/codex/phpdoc/src" isTestSource="false" packagePrefix="Codex\Phpdoc" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
       <excludeFolder url="file://$MODULE_DIR$/codex-addons" />
       <excludeFolder url="file://$MODULE_DIR$/codex/core/dev" />

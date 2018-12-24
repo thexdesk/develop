@@ -5,6 +5,7 @@ namespace App;
 use Codex\Addons\AddonCollection;
 use Codex\Attributes\AttributeConfigBuilderGenerator;
 use Codex\Attributes\AttributeDefinitionRegistry;
+use Codex\Attributes\AttributeSchemaGenerator;
 use Codex\Contracts\Projects\Project;
 use Codex\Exceptions\Exception;
 use Codex\Git\Commands\SyncGitProject;
@@ -13,12 +14,14 @@ use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
 use GraphQL\Language\Parser;
 use GraphQL\Language\Visitor;
+use GraphQL\Utils\SchemaPrinter;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Nuwave\Lighthouse\Schema\AST\ASTHelper;
 use Nuwave\Lighthouse\Schema\AST\PartialParser;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Yaml\Yaml;
 
 class TestCommand extends Command
 {
@@ -26,37 +29,90 @@ class TestCommand extends Command
 
     protected $signature = 'test';
 
-    public function handle(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeConfigBuilderGenerator $generator)
+
+    public function handle()
+    {
+        $r = graphql()->executeQuery(<<<GRAPHQL
+query Test {
+    phpdoc(projectKey: "blade-extensions", revisionKey: "develop") {
+        title
+        version      
+        file(fullName: "Radic\\\BladeExtensions\\\BladeExtensionsServiceProvider") {
+            path
+            docblock {
+                description
+                longDescription
+                line
+                tags {
+                    name
+                }
+            }
+            class {
+                fullName
+                extends
+                name
+                namespace
+                properties {
+                    fullName
+                    name
+                    docblock {
+                        tags {
+                            name
+                        }
+                    }
+                }
+                methods {
+                    fullName
+                    name
+                }
+            }
+         
+        }
+    }
+}
+GRAPHQL
+        );
+        if (count($r->errors) > 0) {
+            $this->line($r->errors[ 0 ]->getTraceAsString());
+        }
+        $this->line(Yaml::dump($r->data['phpdoc'], 4, 4));
+        $a = 'a';
+    }
+
+
+    public function handle234234(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeSchemaGenerator $generator)
     {
         codex()->getLog()->useArtisan($this);
         $project = codex()->getProject('blade-extensions');
 
 //        $this->dispatchNow(new SyncGitProject('blade-extensions'));
 
-        $project->getRevision('develop');
-        $pfs = $project->getFiles();
+        $revision = $project->getRevision('develop');
+        $p = $revision->phpdoc();
 
-//        $files = $pfs->allFiles();
-        if(!$pfs->exists('develop/structure.xml')){
-            throw Exception::make('Could not find structure.xml');
-        }
-        $xml = $pfs->get('develop/structure.xml');
-        $d = PhpdocStructure::deserialize($xml, 'xml');
+//        $pfs = $project->getFiles();
+//
+////        $files = $pfs->allFiles();
+//        if(!$pfs->exists('develop/structure.xml')){
+//            throw Exception::make('Could not find structure.xml');
+//        }
+//        $xml = $pfs->get('develop/structure.xml');
+//        $d = PhpdocStructure::deserialize($xml, 'xml');
 
-        $this->line($d->getFiles()[0]->toYaml());
+//        $this->line($d->getFiles()[0]->toYaml());
+
+//        $this->line( SchemaPrinter::doPrint(
+//            graphql()->prepSchema()
+//        ));
+//
+//        $doc = codex()->get('codex/master::index');
+//        $content = $doc->getContent();
 
         $a = 'a';
     }
 
     public function handle234(AddonCollection $addons)
     {
-//        $this->introspect();
-        $codex    = codex();
-        $project  = $codex->getProject('codex');
-        $revision = $project->getRevision('master');
-        $document = $revision->getDocument('index');
-        $content  = $document->getContent();
-
 
         $query = '
 query Fetch {
