@@ -19,6 +19,7 @@
         "codex/auth": "~1.0",
         "codex/git": "~1.0",
         "codex/semver": "~1.0",
+        "codex/phpdoc": "~1.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0"

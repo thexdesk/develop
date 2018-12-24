@@ -27,6 +27,7 @@ class TestCommand extends Command
 
     public function handle(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeConfigBuilderGenerator $generator)
     {
+        codex()->getLog()->useArtisan($this);
         $project = codex()->getProject('blade-extensions');
 
         $this->dispatchNow(new SyncGitProject('blade-extensions'));
