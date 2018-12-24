@@ -6,7 +6,9 @@ use Codex\Addons\AddonCollection;
 use Codex\Attributes\AttributeConfigBuilderGenerator;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Contracts\Projects\Project;
+use Codex\Exceptions\Exception;
 use Codex\Git\Commands\SyncGitProject;
+use Codex\Phpdoc\Serializer\Last\PhpdocStructure;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
 use GraphQL\Language\Parser;
@@ -14,7 +16,6 @@ use GraphQL\Language\Visitor;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Queue\Jobs\SyncJob;
 use Nuwave\Lighthouse\Schema\AST\ASTHelper;
 use Nuwave\Lighthouse\Schema\AST\PartialParser;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -30,64 +31,19 @@ class TestCommand extends Command
         codex()->getLog()->useArtisan($this);
         $project = codex()->getProject('blade-extensions');
 
-        $this->dispatchNow(new SyncGitProject('blade-extensions'));
+//        $this->dispatchNow(new SyncGitProject('blade-extensions'));
 
+        $project->getRevision('develop');
+        $pfs = $project->getFiles();
 
-        $a='a';
-
-        $revisions = $project->getRevisions();
-//
-        $branches       = $revisions->branches()->all();
-        $versions       = $revisions->versions()->all();
-        $sortedVersions = $revisions->getSortedVersions()->all();
-        $latestVersion  = $revisions->getLatestVersion();
-
-        $defaultRevision = $revisions->getDefaultKey();
-
-        $log = codex()->log('info', 'hai');
-
-//        $git = app()->make('codex.git.manager');
-//        /** @var \Codex\Git\Drivers\DriverInterface $driver */
-//        $driver = $git->connection('github_password');
-//        $refs = $driver->getRefs('robinradic', 'blade-extensions');
-//        $ref = $refs->get('master');
-//        $downloader = $driver->getZipDownloader();
-//        $downloader->download($ref->getDownloadUrl());
-
-        $a = 'a';
-
-
-
-//        $this->dispatch(new MergeAttributes(codex()->getProjects()->getDefault()));
-//        $codex         = codex();
-//        $project       = $codex->getProject('codex');
-//        $revision      = $project->getRevision('master');
-//        $documents     = $revision->getDocuments()->show('content')->makeAll()->toArray();
-//        $index         = $revision->getDocument('processors/links')->getContent();
-//        $index         = $revision->getDocument('index')->getContent();
-//        $installation  = $revision->getDocument('getting-started/installation')->getContent();
-//        $configuration = $revision->getDocument('getting-started/configuration')->getContent();
-
-        $result = codex()->getApi()->executeQuery(<<<GRAPHQL
-query Check {
-    codex {
-        default_project       
-    }
-    projects {
-        key
-        revisions {
-            key
-            changed
+//        $files = $pfs->allFiles();
+        if(!$pfs->exists('develop/structure.xml')){
+            throw Exception::make('Could not find structure.xml');
         }
-    }
-}
-GRAPHQL
-        );
-        if ( ! empty($result->errors)) {
-            $b = 'a';
-        }
+        $xml = $pfs->get('develop/structure.xml');
+        $d = PhpdocStructure::deserialize($xml, 'xml');
 
-        $this->line(json_encode($result->data, JSON_PRETTY_PRINT));
+
         $a = 'a';
     }
 

@@ -16,6 +16,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
       <excludeFolder url="file://$MODULE_DIR$/codex-addons" />
       <excludeFolder url="file://$MODULE_DIR$/codex/core/dev" />
+      <excludeFolder url="file://$MODULE_DIR$/codex/phpdoc/old" />
       <excludeFolder url="file://$MODULE_DIR$/public/css" />
       <excludeFolder url="file://$MODULE_DIR$/public/js" />
       <excludeFolder url="file://$MODULE_DIR$/public/svg" />

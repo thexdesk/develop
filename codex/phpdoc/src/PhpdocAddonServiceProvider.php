@@ -12,9 +12,16 @@
 namespace Codex\Phpdoc;
 
 use Codex\Addons\AddonServiceProvider;
+use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
+use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
+use Doctrine\Common\Annotations\AnnotationRegistry;
+use Doctrine\Common\Annotations\Reader;
+use Doctrine\Common\Annotations\SimpleAnnotationReader;
 use Illuminate\Contracts\Foundation\Application;
+use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\SerializerBuilder;
+use Symfony\Component\Routing\Loader\AnnotationClassLoader;
 
 class PhpdocAddonServiceProvider extends AddonServiceProvider
 {
@@ -25,12 +32,13 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     ];
 
     public $commands = [
-        Console\ClearPhpdocCommand::class,
-        Console\GeneratePhpdocCommand::class,
+//        Console\ClearPhpdocCommand::class,
+//        Console\GeneratePhpdocCommand::class,
     ];
 
     public $bindings = [
-
+        AttributeAnnotationReader::class => AttributeAnnotationReader::class,
+        Reader::class => SimpleAnnotationReader::class
     ];
 
     public $aliases = [
@@ -43,6 +51,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     protected function registerSerializer()
     {
+        AnnotationRegistry::registerLoader('class_exists');
         $this->app->bind(\JMS\Serializer\Serializer::class, function (Application $app) {
             return SerializerBuilder::create()
                 ->addDefaultHandlers()
@@ -51,7 +60,13 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
                 ->setPropertyNamingStrategy(new IdenticalPropertyNamingStrategy())
                 ->build();
         });
-        $this->app->alias('codex.serializer', \JMS\Serializer\Serializer::class);
+        $this->app->alias(\JMS\Serializer\Serializer::class, 'codex.serializer');
+    }
+
+    public function boot(AttributeAnnotationReader $reader)
+    {
+        $reader->handleClassAnnotations(PhpdocStructure::class);
+
     }
 
 }

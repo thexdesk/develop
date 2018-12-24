@@ -5,19 +5,22 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer\Phpdoc;
 
+use Codex\Phpdoc\Annotations\Attr;
+use Codex\Phpdoc\Annotations\AttrApiType;
+use Codex\Phpdoc\Annotations\AttrType;
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
+use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;
+use Codex\Phpdoc\Serializer\Concerns\WithResponse;
 use Codex\Phpdoc\Serializer\Manifest;
 use Codex\Phpdoc\Serializer\Phpdoc\Types\FileEntityType;
-use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
-use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
-use Codex\Phpdoc\Serializer\Concerns\WithResponse;
 use Illuminate\Contracts\Support\Responsable;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -27,6 +30,10 @@ use JMS\Serializer\Annotation as Serializer;
  * @author  Robin Radic
  *
  * @Serializer\XmlRoot("project")
+ * @Attr
+ * @AttrType("dictionary")
+ * @AttrApiType("PhpdocStructure", new=true)
+ *
  */
 class PhpdocStructure implements SelfSerializable, Responsable
 {
@@ -39,6 +46,8 @@ class PhpdocStructure implements SelfSerializable, Responsable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
+     * @AttrType("string")
      */
     private $title;
 
@@ -46,6 +55,8 @@ class PhpdocStructure implements SelfSerializable, Responsable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
+     * @AttrType("string")
      */
     private $version;
 
@@ -94,7 +105,7 @@ class PhpdocStructure implements SelfSerializable, Responsable
                     continue;
                 }
                 $entity = $file->getEntity();
-                $key = $entity->getFullName();
+                $key    = $entity->getFullName();
 
                 $this->manifest->setFile($key, [
                     'hash' => $file->getHash(),
