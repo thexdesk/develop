@@ -43,6 +43,7 @@ class Tag
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $description;
 
@@ -50,6 +51,7 @@ class Tag
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $link;
 
@@ -57,6 +59,7 @@ class Tag
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $refers;
 
@@ -64,6 +67,7 @@ class Tag
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $type;
 
@@ -71,6 +75,7 @@ class Tag
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $variable;
 

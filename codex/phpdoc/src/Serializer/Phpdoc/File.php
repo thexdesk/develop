@@ -76,7 +76,8 @@ class File implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile>")
      * @Serializer\XmlList(inline=true, entry="class", skipWhenEmpty=true)
-     * @Attr(new=true, array=true)
+     * @Serializer\Accessor(getter="getEntity")
+     * @Attr(new=true)
      */
     private $class;
 
@@ -84,7 +85,7 @@ class File implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile>")
      * @Serializer\XmlList(inline=true, entry="interface", skipWhenEmpty=true)
-     * @Attr(new=true, array=true)
+     * @Attr(new=true)
      */
     private $interface;
 
@@ -92,6 +93,7 @@ class File implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile>")
      * @Serializer\XmlList(inline=true, entry="trait", skipWhenEmpty=true)
+     * @Attr(new=true)
      */
     private $trait;
 
@@ -100,6 +102,7 @@ class File implements SelfSerializable, Responsable
      * @Serializer\Type("string")
      * @Serializer\XmlElement(cdata=false)
      * @Serializer\Accessor(getter="getSource")
+     * @Attr()
      */
     private $source;
 
@@ -123,27 +126,6 @@ class File implements SelfSerializable, Responsable
         return FileEntityType::GENERICS();
     }
 
-    /**
-     * getType method.
-     *
-     * @Serializer\VirtualProperty()
-     * @Serializer\SerializedName("type")
-     *
-     * @return string
-     */
-    public function getType(): string
-    {
-        return $this->getEntityType()->getValue();
-    }
-
-    /**
-     * getType method.
-     *
-     * @Serializer\VirtualProperty()
-     * @Serializer\SerializedName("entity")
-     *
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile|\Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile|\Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile
-     */
     public function getEntity()
     {
         if ($this->isClass()) {
@@ -155,6 +137,19 @@ class File implements SelfSerializable, Responsable
         if ($this->isTrait()) {
             return $this->getTrait()[ 0 ];
         }
+    }
+
+    /**
+     * getType method.
+     *
+     * @Serializer\VirtualProperty()
+     * @Serializer\SerializedName("type")
+     *
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->getEntityType()->getValue();
     }
 
     /**

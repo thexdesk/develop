@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GET /documentation/codex/1.5.0/links" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" server_name="codex.local" url="/documentation/codex/1.5.0/links">
+    <method v="2" />
+  </configuration>
+</component>

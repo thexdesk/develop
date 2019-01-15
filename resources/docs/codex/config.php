@@ -16,11 +16,30 @@ return [
         ],
     ],
 
+//    'layout' => [
+//        'header' => [
+//            'menu' => [
+//                [
+//                    'label' => 'Projects',
+//                    'projects' => true,
+//                    'type' => 'side-menu',
+//                    'side' => 'right'
+//                ],
+//                [
+//                    'label' => 'Revisions',
+//                    'revisions' => true,
+//                    'type' => 'side-menu',
+//                    'side' => 'right'
+//                ]
+//            ]
+//        ]
+//    ],
     'processors' => [
         'enabled'    => [ 'attributes', 'parser', 'toc', 'header', 'macros', 'buttons', 'links', 'phpdoc' ],
         'attributes' => [
             'tags' => [
                 [ 'open' => '<!--*', 'close' => '--*>' ], // html, markdown
+                [ 'open' => '<!---', 'close' => '-->' ], // html, markdown
                 [ 'open' => '---', 'close' => '---' ], // markdown (frontmatter)
                 [ 'open' => '\*', 'close' => '*/' ], // codex v1 style
             ],
@@ -30,9 +49,7 @@ return [
         ],
     ],
 
-    'revision' => [
-        'default' => \Codex\Git\BranchType::LAST_VERSION,
-    ],
+    'default_revision' => \Codex\Git\BranchType::PRODUCTION,
 
     'phpdoc' => [
         'enabled'       => true,

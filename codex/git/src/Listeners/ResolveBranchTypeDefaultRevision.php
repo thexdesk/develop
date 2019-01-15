@@ -10,13 +10,13 @@ class ResolveBranchTypeDefaultRevision
     public function handle(ResolvedProject $event)
     {
         $project         = $event->getProject();
-        $defaultRevision = $project[ 'revision.default' ];
+        $defaultRevision = $project[ 'default_revision' ];
         if ($defaultRevision === BranchType::LAST_VERSION) {
-            $project[ 'revision.default' ] = $project->getRevisions()->getLatestVersion();
+            $project[ 'default_revision' ] = $project->getRevisions()->getLatestVersion();
         } elseif ($defaultRevision === BranchType::PRODUCTION) {
-            $project[ 'revision.default' ] = $project[ 'branching.production' ];
+            $project[ 'default_revision' ] = $project[ 'branching.production' ];
         } elseif ($defaultRevision === BranchType::DEVELOPMENT) {
-            $project[ 'revision.default' ] = $project[ 'branching.development' ];
+            $project[ 'default_revision' ] = $project[ 'branching.development' ];
         }
     }
 }

@@ -50,6 +50,12 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
         PhpdocSchemaExtension::class,
     ];
 
+//    public $listen = [
+//        \Codex\Revisions\Events\ResolvedRevision::class => [
+//
+//        ]
+//    ]
+
     public function register()
     {
         Revision::macro('hasPhpdoc', function () {
@@ -82,6 +88,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public function boot(AttributeDefinitionRegistry $registry, AttributeAnnotationReader $reader)
     {
+//        $codex = $registry->codex->getChild('urls')->add('phpdoc', '')
         $phpdoc = $registry->addGroup('phpdoc');
         $phpdoc->addChild($reader->handleClassAnnotations(PhpdocStructure::class));
 

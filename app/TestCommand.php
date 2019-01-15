@@ -3,18 +3,14 @@
 namespace App;
 
 use Codex\Addons\AddonCollection;
-use Codex\Attributes\AttributeConfigBuilderGenerator;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\AttributeSchemaGenerator;
 use Codex\Contracts\Projects\Project;
-use Codex\Exceptions\Exception;
-use Codex\Git\Commands\SyncGitProject;
-use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
+use GraphQL\Executor\ExecutionResult;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
 use GraphQL\Language\Parser;
 use GraphQL\Language\Visitor;
-use GraphQL\Utils\SchemaPrinter;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -29,58 +25,111 @@ class TestCommand extends Command
 
     protected $signature = 'test';
 
-
     public function handle()
     {
-        $r = graphql()->executeQuery(<<<GRAPHQL
-query Test {
-    phpdoc(projectKey: "blade-extensions", revisionKey: "develop") {
-        title
-        version      
-        file(fullName: "Radic\\\BladeExtensions\\\BladeExtensionsServiceProvider") {
-            path
-            docblock {
-                description
-                longDescription
-                line
-                tags {
-                    name
-                }
-            }
-            class {
-                fullName
-                extends
-                name
-                namespace
-                properties {
-                    fullName
-                    name
-                    docblock {
-                        tags {
-                            name
-                        }
-                    }
-                }
-                methods {
-                    fullName
-                    name
-                }
-            }
-         
+        $codex     = codex();
+        $projects  = $codex->getProjects();
+        $project   = $projects->get('codex');
+        $revisions = $project->getRevisions();
+//        $revision  = $revisions->get('master');
+        $revision  = $revisions->get('master');
+        $documents = $revision->getDocuments();
+        $document  = $documents->get('processors/toc');
+        $content   = $document->getContent();
+
+$this->handle234234();
+        return $content;
+    }
+
+    public function handle234234()
+    {
+        $changes       = codex()->getChanges();
+        $projectQuery  = '{
+    project(key: "codex") {
+        key
+        changes
+    }
+}';
+        $revisionQuery = '{
+    revision(projectKey: "codex", revisionKey:"master") {
+        key
+        changes
+    }
+}';
+        $documentQuery = '{
+    document(projectKey: "codex", revisionKey:"master", documentKey: "index") {
+        key
+        changes
+        content
+    }
+}';
+        $result        = codex()->getApi()->executeBatchedQueries([
+            [ 'query' => $projectQuery ],
+            [ 'query' => $revisionQuery ],
+            [ 'query' => $documentQuery ],
+        ]);
+        $data          = array_map(function (ExecutionResult $result) {
+            return $result->data;
+        }, $result);
+        $a             = 'a';
+    }
+
+    public function handle345345()
+    {
+        $codex    = codex();
+        $project  = $codex->getProject('codex');
+        $revision = $project->getRevision('master');
+        $document = $revision->getDocument('index');
+        $models   = compact('codex', 'project', 'revision', 'document');
+        $changes  = [
+            'project'  => $project->getChanges(),
+            'revision' => $revision->getChanges(),
+            'document' => $document->getChanges(),
+        ];
+        $result   = [];
+        foreach ($project->getInheritKeys() as $key) {
+            data_set($result, $key, $codex->attr($key));
         }
+        foreach ($changes as $name => $changed) {
+            foreach (array_keys(array_dot($changed)) as $key) {
+                $key = head(preg_split('/\.\d/', $key));
+                if (array_has($result, $key)) {
+                    continue;
+                }
+                data_set($result, $key, $models[ $name ]->attr($key));
+            }
+        }
+        $a = 'a';
+    }
+
+    public function handle5345()
+    {
+        $develop = codex()->get('codex/develop::!');
+        $master  = codex()->get('codex/master::!');
+
+
+//        $this->line( SchemaPrinter::doPrint(
+//            graphql()->prepSchema()
+//        ));
+        $r = graphql()->executeQuery(<<<'EOT'
+query Test {
+    diff(right: "codex/master::!") {
+        attributes
     }
 }
-GRAPHQL
-        );
+EOT
+            , null, []);
         if (count($r->errors) > 0) {
             $this->line($r->errors[ 0 ]->getTraceAsString());
+            $this->line($r->errors[ 0 ]->getMessage());
+            $this->line(count($r->errors) . ' errors in total');
         }
-        $this->line(Yaml::dump($r->data['phpdoc'], 4, 4));
+        $this->line(Yaml::dump($r->data, 10, 4));
         $a = 'a';
     }
 
 
-    public function handle234234(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeSchemaGenerator $generator)
+    public function handle234dd234(AttributeDefinitionRegistry $registry, Filesystem $fs, AttributeSchemaGenerator $generator)
     {
         codex()->getLog()->useArtisan($this);
         $project = codex()->getProject('blade-extensions');
@@ -88,7 +137,7 @@ GRAPHQL
 //        $this->dispatchNow(new SyncGitProject('blade-extensions'));
 
         $revision = $project->getRevision('develop');
-        $p = $revision->phpdoc();
+        $p        = $revision->phpdoc();
 
 //        $pfs = $project->getFiles();
 //

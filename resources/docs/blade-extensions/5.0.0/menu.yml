@@ -1,21 +1,21 @@
 menu:
-  - name: Overview
+  - label: Overview
     icon: fa fa-eye
     page: index
 
-  - name: Preface
+  - label: Preface
     icon: fa fa-eye
     children:
       Download: preface/download
       License: preface/license
 
-  - name: Getting Started
+  - label: Getting Started
     icon: fa fa-coffee
     children:
       Installation: getting-started/installation
       Configuration: getting-started/configuration
 
-  - name: Directives
+  - label: Directives
     icon: fa fa-puzzle-piece
     children:
       Set - Unset: directives/assignment
@@ -25,11 +25,11 @@ menu:
       Debug - breakpoint: directives/debug
       Markdown: directives/markdown
 
-  - name: Miscellaneous
+  - label: Miscellaneous
     icon: fa fa-ellipsis-h
     page: miscellaneous
 
-  - name: Links
+  - label: Links
     icon: fa fa-link
     children:
       Github: https://github.com/robinradic/blade-extensions

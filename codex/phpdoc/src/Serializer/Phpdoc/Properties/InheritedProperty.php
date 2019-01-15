@@ -5,12 +5,13 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\Properties;
 
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use JMS\Serializer\Annotation as Serializer;
 
 trait InheritedProperty
@@ -20,6 +21,7 @@ trait InheritedProperty
      * @Serializer\Type("string")
      * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("inherited_from")
+     * @Attr()
      */
     private $inheritedFrom;
 }

@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\TestCommand::class,
+        \App\CodexBackendDataCommand::class,
         \App\ToolboxCommand::class
     ];
 

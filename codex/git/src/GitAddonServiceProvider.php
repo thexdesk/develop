@@ -81,6 +81,6 @@ class GitAddonServiceProvider extends AddonServiceProvider
         $paths->add('index', 'string');
         $webhook = $git->add('webhook', 'dictionary');
         $webhook->add('enabled', 'boolean');
-        $webhook->add('secret', 'string');
+        $webhook->add('secret', 'string')->noApi();
     }
 }

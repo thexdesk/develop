@@ -5,19 +5,21 @@
  * The license can be found in the package and online at https://codex-project.mit-license.org.
  *
  * @copyright 2018 Codex Project
- * @author Robin Radic
- * @license https://codex-project.mit-license.org MIT License
+ * @author    Robin Radic
+ * @license   https://codex-project.mit-license.org MIT License
  */
 
 namespace Codex\Phpdoc\Serializer;
 
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use JMS\Serializer\Annotation as Serializer;
 
 class ManifestFile implements SelfSerializable
 {
     use SerializesSelf;
+
 //
 //    /**
 //     * @var string
@@ -45,6 +47,7 @@ class ManifestFile implements SelfSerializable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $type;
 
@@ -52,8 +55,10 @@ class ManifestFile implements SelfSerializable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $hash;
+
 //
 //    /**
 //     * @return string

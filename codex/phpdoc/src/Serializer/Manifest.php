@@ -13,6 +13,7 @@ namespace Codex\Phpdoc\Serializer;
 
 use Codex\Contracts\Revisions\Revision;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
+use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;
@@ -32,6 +33,7 @@ class Manifest implements SelfSerializable, Responsable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $title;
 
@@ -39,6 +41,7 @@ class Manifest implements SelfSerializable, Responsable
      * @var string
      * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $version;
 
@@ -46,6 +49,7 @@ class Manifest implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
      * @Serializer\XmlList(inline=true, entry="packages")
+     * @Attr(array=true)
      */
     private $packages;
 
@@ -53,6 +57,7 @@ class Manifest implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
      * @Serializer\XmlList(inline=true, entry="namespaces")
+     * @Attr(array=true)
      */
     private $namespaces;
 
@@ -60,6 +65,7 @@ class Manifest implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\ManifestFile[]
      * @Serializer\Type("array<string,Codex\Phpdoc\Serializer\ManifestFile>")
      * @Serializer\XmlList(inline=true, entry="files")
+     * @Attr(new=true, array=true)
      */
     private $files;
 
@@ -67,6 +73,7 @@ class Manifest implements SelfSerializable, Responsable
      * @var int
      * @Serializer\Type("integer")
      * @Serializer\XmlAttribute()
+     * @Attr()
      */
     private $lastModified;
 

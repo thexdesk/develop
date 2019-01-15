@@ -48,10 +48,39 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'stack' => [
+            'driver'   => 'webdav',
+            'baseUri'  => env('STACK_URI'),
+            'proxy'    => env('STACK_PROXY'),
+            'userName' => env('STACK_USERNAME'),
+            'password' => env('STACK_PASSWORD'),
+            'prefix'   => env('STACK_PREFIX', ''),
+            'root'     => 'test-dav-project'
+//            'encoding' => \Sabre\DAV\Client::ENCODING_DEFLATE,
+//            'authType' => \Sabre\DAV\Client::AUTH_NTLM,
+        ],
+
+        'gcs-radic-server' => [
+            'driver'    => 'google-cloud',
+            'projectId' => 'radic-server',
+            'bucket'    => 'radic-server',
+        ],
+
+        'dropbox-test-project' => [
+            'driver' => 'dropbox',
+            'prefix' => env('DROPBOX_PREFIX', ''),
+            'token'  => env('DROPBOX_TOKEN'),
+        ],
+
+        'test-zip-project' => [
+            'driver' => 'zip',
+            'path'   => resource_path('docs/test-zip-project/test-zip-project.zip'),
+        ],
+
         'public' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'driver'     => 'local',
+            'root'       => storage_path('app/public'),
+            'url'        => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 

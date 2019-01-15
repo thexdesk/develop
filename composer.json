@@ -22,7 +22,12 @@
         "codex/phpdoc": "~1.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "league/flysystem-sftp": "~1.0",
+        "league/flysystem-webdav": "~1.0",
+        "league/flysystem-ziparchive": "~1.0",
+        "spatie/flysystem-dropbox": "~1.0",
+        "superbalist/flysystem-google-storage": "~5.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

@@ -11,8 +11,8 @@
 
 namespace Codex\Git\Console;
 
-use Codex\Git\Commands\SyncGitProject;
 use Codex\Contracts\Projects\Project;
+use Codex\Git\Commands\SyncGitProject;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -32,15 +32,21 @@ class CodexGitSyncCommand extends Command
         $codex = codex();
         if ($this->option('all')) {
             foreach ($codex->git->getProjects() as $project) {
-                $this->comment("Starting sync job for [{$project->getKey()}]".($this->option('queue') ? ' and pushed it onto the queue.' : '. This might take a while.'));
+                $this->comment("Starting sync job for [{$project->getKey()}]" . ($this->option('queue') ? ' and pushed it onto the queue.' : '. This might take a while.'));
                 $this->sync($project, $this->option('queue'), $this->option('force'));
             }
         } else {
-            $projects = codex()->git->getProjects()->transform(function (Project $project) {
-                return $project->getKey();
-            })->all();
-            $project = $this->argument('name') ? $this->argument('name') : $this->choice('Pick the git enabled project you wish to sync', $projects);
-            $this->comment("Starting sync job for [{$project}]".($this->option('queue') ? ' and pushed it onto the queue.' : '. This might take a while.'));
+            $projects = codex()
+                ->getProjects()
+                ->filter(function (Project $project) {
+                    return $project->isGitEnabled();
+                })
+                ->transform(function (Project $project) {
+                    return $project->getKey();
+                })
+                ->all();
+            $project  = $this->argument('name') ? $this->argument('name') : $this->choice('Pick the git enabled project you wish to sync', $projects);
+            $this->comment("Starting sync job for [{$project}]" . ($this->option('queue') ? ' and pushed it onto the queue.' : '. This might take a while.'));
             $this->sync($project, $this->option('queue'), $this->option('force'));
         }
     }
@@ -51,7 +57,7 @@ class CodexGitSyncCommand extends Command
         if ($queue) {
             $this->dispatch($sync);
         } else {
-            codex()->getLog()->useArtisan('debug', $this);
+            codex()->getLog()->useArtisan($this);
             $this->dispatchNow($sync);
         }
     }
