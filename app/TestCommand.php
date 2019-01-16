@@ -11,6 +11,7 @@ use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
 use GraphQL\Language\Parser;
 use GraphQL\Language\Visitor;
+use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -25,7 +26,7 @@ class TestCommand extends Command
 
     protected $signature = 'test';
 
-    public function handle()
+    public function han343434dle()
     {
         $codex     = codex();
         $projects  = $codex->getProjects();
@@ -34,14 +35,15 @@ class TestCommand extends Command
 //        $revision  = $revisions->get('master');
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
-        $document  = $documents->get('processors/toc');
+        $document  = $documents->get('processors/links');
         $content   = $document->getContent();
+
 
 $this->handle234234();
         return $content;
     }
 
-    public function handle234234()
+    public function handle()
     {
         $changes       = codex()->getChanges();
         $projectQuery  = '{
@@ -63,11 +65,27 @@ $this->handle234234();
         content
     }
 }';
+
+
+        $client =new Client([
+            'headers' => ['Content-Type' => 'application/json', 'Cache-Control' => 'max-age=9999', 'If-None-Match' => '"bed7af1f60417d5fda8927c887ef6bb6"'],
+        ]);
+        $res = $client->post(route('codex.api'), [
+            'json'=>[
+                [ 'query' => $projectQuery ],
+                [ 'query' => $revisionQuery ],
+                [ 'query' => $documentQuery ],
+            ]
+        ]);
+
+        $content = $res->getBody()->getContents();
+
         $result        = codex()->getApi()->executeBatchedQueries([
             [ 'query' => $projectQuery ],
             [ 'query' => $revisionQuery ],
             [ 'query' => $documentQuery ],
         ]);
+//        $result        = codex()->getApi()->executeQuery($projectQuery,null,[]);
         $data          = array_map(function (ExecutionResult $result) {
             return $result->data;
         }, $result);
