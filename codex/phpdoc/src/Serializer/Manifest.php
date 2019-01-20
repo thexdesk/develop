@@ -24,6 +24,8 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Manifest implements SelfSerializable, Responsable
 {
+    const FILE_NAME = 'manifest.php';
+
     use SerializesSelf,
         DeserializeFromFile,
         SerializeToFile,

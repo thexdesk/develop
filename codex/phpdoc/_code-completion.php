@@ -13,7 +13,7 @@
 namespace Codex\Revisions {
 
     /**
-     * @method boolean hasPhpdoc()
+     * @method boolean isPhpdocEnabled()
      * @method \Codex\Phpdoc\PhpdocRevisionConfig phpdoc()
      */
     class Revision

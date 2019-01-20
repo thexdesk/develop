@@ -17,6 +17,17 @@ class PhpdocGenerateCommand extends Command
         $all       = $this->option('all');
         $queue     = $this->option('queue');
 
+        $projects = codex()->projects();
+        foreach ($projects as $project) {
+            $revisions = $project->revisions();
+            foreach ($revisions as $revision) {
+                if ( ! $revision->isPhpdocEnabled()) {
+                    continue;
+                }
+                $this->line("{$project}/{$revision}");
+            }
+        }
+
         if ($revisions) {
             collect($revisions)->map(function ($revision) {
                 return codex()->get($revision);

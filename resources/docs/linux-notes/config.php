@@ -30,11 +30,6 @@ return [
         ],
     ],
 
-    'phpdoc' => [
-        'enabled'       => true,
-        'default_class' => 'Codex\\Codex',
-    ],
-
     'git' => [
         'enabled'    => true, /// local symlink
         'owner'      => 'codex-project',

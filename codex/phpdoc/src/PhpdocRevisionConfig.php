@@ -29,8 +29,8 @@ class PhpdocRevisionConfig
 
     public function __construct(Revision $revision)
     {
-        $this->revision  = $revision;
-        if($this->isEnabled()) {
+        $this->revision = $revision;
+        if ($this->isEnabled()) {
             $this->generator = new Generator(config('codex-phpdoc.paths.generated'), $revision, resolve(Filesystem::class));
         }
     }
@@ -40,6 +40,34 @@ class PhpdocRevisionConfig
         return $this->revision->attr('phpdoc.enabled', false);
     }
 
+    public function getTitle()
+    {
+        return $this->revision->attr('phpdoc.title');
+    }
+
+    public function getXmlFilePath()
+    {
+        return $this->revision->attr('phpdoc.xml_path');
+    }
+
+    public function getDefaultClass()
+    {
+        return $this->revision->attr('phpdoc.default_class');
+    }
+
+    public function xmlFileExists()
+    {
+        return $this->revision->getFiles()->exists($this->getXmlFilePath());
+    }
+
+    public function isGenerated()
+    {
+        if(!$this->isEnabled()){
+            return false;
+        }
+        return $this->generator->hasManifest();
+    }
+
     /**
      * @return \Codex\Phpdoc\Serializer\Generator
      */
@@ -47,7 +75,6 @@ class PhpdocRevisionConfig
     {
         return $this->generator;
     }
-
 
 
     public function getManifest()

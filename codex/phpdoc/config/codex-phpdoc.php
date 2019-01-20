@@ -28,6 +28,8 @@ return [
 
 //    'route_path' => 'phpdoc',
 
+    'route_prefix' => 'phpdoc',
+
     /*
     |--------------------------------------------------------------------------
     | Default Project Configuration

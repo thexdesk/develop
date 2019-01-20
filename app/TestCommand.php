@@ -26,7 +26,7 @@ class TestCommand extends Command
 
     protected $signature = 'test';
 
-    public function han343434dle()
+    public function handle()
     {
         $codex     = codex();
         $projects  = $codex->getProjects();
@@ -38,12 +38,12 @@ class TestCommand extends Command
         $document  = $documents->get('processors/links');
         $content   = $document->getContent();
 
+        $phpdoc = $revision->phpdoc();
 
-$this->handle234234();
         return $content;
     }
 
-    public function handle()
+    public function handle24234234()
     {
         $changes       = codex()->getChanges();
         $projectQuery  = '{

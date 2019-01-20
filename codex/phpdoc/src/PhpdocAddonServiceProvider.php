@@ -13,14 +13,12 @@ namespace Codex\Phpdoc;
 
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
-use Codex\Phpdoc\Commands\GetRevisionPhpdoc;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use Codex\Revisions\Revision;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Annotations\Reader;
-use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Foundation\Application;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\SerializerBuilder;
@@ -58,15 +56,15 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public function register()
     {
-        Revision::macro('hasPhpdoc', function () {
-            /** @var Revision $revision */
-            $revision = $this;
-            return $revision->attr('phpdoc.enabled', false);
-        });
         Revision::macro('phpdoc', function () {
             /** @var Revision $revision */
             $revision = $this;
             return app()->make(PhpdocRevisionConfig::class, compact('revision'));
+        });
+        Revision::macro('isPhpdocEnabled', function () {
+            /** @var Revision $revision */
+            $revision = $this;
+            return $revision->attr('phpdoc.enabled', false);
         });
 
         $this->registerSerializer();
