@@ -23,7 +23,10 @@ query Test {
     codex {   
         display_name
         description
-        cache
+        cache {
+            enabled
+            minutes
+        }
         http @assoc
         default_project      
         layout @assoc
