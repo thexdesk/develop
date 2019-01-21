@@ -14,10 +14,15 @@ namespace Codex\Revisions {
 
     /**
      * @method boolean isPhpdocEnabled()
-     * @method \Codex\Phpdoc\PhpdocRevisionConfig phpdoc()
+     * @method \Codex\Phpdoc\RevisionPhpdoc phpdoc()
      */
     class Revision
     {
 
     }
+
+    interface A extends \Serializable, \JsonSerializable {
+
+    }
+
 }

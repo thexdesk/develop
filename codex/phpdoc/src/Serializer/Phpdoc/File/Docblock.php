@@ -12,7 +12,9 @@
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
 use Codex\Documents\Processors\ParserProcessorExtension;
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Illuminate\Support\Collection;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -23,8 +25,10 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @Serializer\XmlRoot("docblock")
  */
-class Docblock
+class Docblock  implements SelfSerializable
 {
+    use SerializesSelf;
+
     /**
      * @var int
      * @Serializer\Type("integer")
@@ -53,9 +57,8 @@ class Docblock
 
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\Tag[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\Tag>")
+     * @Serializer\Type("LaravelCollection<Codex\Phpdoc\Serializer\Phpdoc\File\Tag>")
      * @Serializer\XmlList(inline=true, entry="tag")
-     * @Serializer\SerializedName("tag")
      * @Attr(new=true,array=true)
      */
     private $tags;
@@ -127,9 +130,9 @@ class Docblock
     }
 
     /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\Tag[]
+     * @return \Codex\Phpdoc\Serializer\Handler\LaravelCollection|\Codex\Phpdoc\Serializer\Phpdoc\File\Tag[]
      */
-    public function getTags(): array
+    public function getTags()
     {
         return $this->tags;
     }

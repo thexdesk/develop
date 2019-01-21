@@ -11,10 +11,10 @@
 
 namespace Codex\Phpdoc\Contracts;
 
-use Codex\Phpdoc\PhpdocRevisionConfig;
+use Codex\Phpdoc\RevisionPhpdocConfig;
 use Codex\Contracts\Revision;
 
 interface Factory
 {
-    public function revision(Revision $revision): PhpdocRevisionConfig;
+    public function revision(Revision $revision): RevisionPhpdocConfig;
 }

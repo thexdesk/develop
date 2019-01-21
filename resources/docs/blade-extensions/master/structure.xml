@@ -458,6 +458,8 @@
             <tag name="package" line="0" description="Default"/>
         </docblock>
         <interface namespace="Radic\BladeExtensions\Contracts" line="19" package="Radic\BladeExtensions\Contracts">
+            <extends>\Serializable</extends>
+            <extends>\JsonSerializable</extends>
             <name>MarkdownRenderer</name>
             <full_name>\Radic\BladeExtensions\Contracts\MarkdownRenderer</full_name>
             <docblock line="19">
@@ -500,6 +502,8 @@
             <tag name="package" line="0" description="Default"/>
         </docblock>
         <interface namespace="Radic\BladeExtensions\Contracts" line="12" package="Radic\BladeExtensions">
+            <extends>\Serializable</extends>
+            <extends>\JsonSerializable</extends>
             <name>Stack</name>
             <full_name>\Radic\BladeExtensions\Contracts\Stack</full_name>
             <docblock line="12">

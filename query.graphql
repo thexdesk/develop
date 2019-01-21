@@ -1,8 +1,17 @@
 query {
 
     codex {
+
         projects {
             key
+        }
+
+        phpdoc(projectKey:"blade-extensions", revisionKey:"master"){
+            files {
+                name
+                hash
+                type
+            }
 
         }
     }

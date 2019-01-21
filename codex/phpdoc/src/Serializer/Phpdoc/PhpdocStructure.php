@@ -13,8 +13,6 @@ namespace Codex\Phpdoc\Serializer\Phpdoc;
 
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
-use Codex\Phpdoc\Serializer\Annotations\AttrApiType;
-use Codex\Phpdoc\Serializer\Annotations\AttrType;
 use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;
@@ -58,32 +56,33 @@ class PhpdocStructure implements SelfSerializable, Responsable
 
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File>")
+     * @Serializer\Type("LaravelCollection<Codex\Phpdoc\Serializer\Phpdoc\File>")
      * @Serializer\XmlList(inline=true, entry="file")
      * @Serializer\SerializedName("file")
      * @Attr(new=true, array=true)
      */
     private $files;
+//
+//    /**
+//     * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
+//     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
+//     * @Serializer\XmlList(inline=true, entry="package")
+//     * @Serializer\SerializedName("package")
+//     */
+//    private $packages;
+//
+//    /**
+//     * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
+//     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
+//     * @Serializer\XmlList(inline=true, entry="namespace")
+//     * @Serializer\SerializedName("namespace")
+//     */
+//    private $namespaces;
 
     /**
-     * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
-     * @Serializer\XmlList(inline=true, entry="package")
-     * @Serializer\SerializedName("package")
-     */
-    private $packages;
-
-    /**
-     * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
-     * @Serializer\XmlList(inline=true, entry="namespace")
-     * @Serializer\SerializedName("namespace")
-     */
-    private $namespaces;
-
-    /**
-     * @var Manifest
+     * @var \Codex\Phpdoc\Serializer\Manifest
      * @Serializer\Exclude()
+     * @Attr(new=true)
      */
     protected $manifest;
 
@@ -93,9 +92,7 @@ class PhpdocStructure implements SelfSerializable, Responsable
             $this->manifest = new Manifest();
             $this->manifest
                 ->setTitle($this->title)
-                ->setVersion($this->version)
-                ->setNamespaces($this->namespaces)
-                ->setPackages($this->packages);
+                ->setVersion($this->version);
 
             foreach ($this->getFiles() as $file) {
                 if ($file->getEntityType()->equals(FileEntityType::GENERICS())) {
@@ -163,9 +160,9 @@ class PhpdocStructure implements SelfSerializable, Responsable
     }
 
     /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File[]
+     * @return \Codex\Phpdoc\Serializer\Handler\LaravelCollection|\Codex\Phpdoc\Serializer\Phpdoc\File[]
      */
-    public function getFiles(): array
+    public function getFiles()
     {
         return $this->files;
     }
@@ -181,44 +178,44 @@ class PhpdocStructure implements SelfSerializable, Responsable
 
         return $this;
     }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\Package[]
-     */
-    public function getPackages(): array
-    {
-        return $this->packages;
-    }
-
-    /**
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\Package[] $packages
-     *
-     * @return PhpdocStructure
-     */
-    public function setPackages(array $packages): self
-    {
-        $this->packages = $packages;
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\Package[]
-     */
-    public function getNamespaces(): array
-    {
-        return $this->namespaces;
-    }
-
-    /**
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\Package[] $namespaces
-     *
-     * @return PhpdocStructure
-     */
-    public function setNamespaces(array $namespaces): self
-    {
-        $this->namespaces = $namespaces;
-
-        return $this;
-    }
+//
+//    /**
+//     * @return \Codex\Phpdoc\Serializer\Phpdoc\Package[]
+//     */
+//    public function getPackages(): array
+//    {
+//        return $this->packages;
+//    }
+//
+//    /**
+//     * @param \Codex\Phpdoc\Serializer\Phpdoc\Package[] $packages
+//     *
+//     * @return PhpdocStructure
+//     */
+//    public function setPackages(array $packages): self
+//    {
+//        $this->packages = $packages;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * @return \Codex\Phpdoc\Serializer\Phpdoc\Package[]
+//     */
+//    public function getNamespaces(): array
+//    {
+//        return $this->namespaces;
+//    }
+//
+//    /**
+//     * @param \Codex\Phpdoc\Serializer\Phpdoc\Package[] $namespaces
+//     *
+//     * @return PhpdocStructure
+//     */
+//    public function setNamespaces(array $namespaces): self
+//    {
+//        $this->namespaces = $namespaces;
+//
+//        return $this;
+//    }
 }

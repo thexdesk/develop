@@ -1,3 +1,7 @@
+phpdoc:
+    enabled: false
+
+
 elements:
     blocker: '<q-chip icon="fa-ban" color="red-10" small square class="task-chip">BLOCKER<q-tooltip class="phpdoc-tooltip">Task Priority: <cc red-10>BLOCKER</cc></q-tooltip></q-chip>'
     high: '<q-chip icon="fa-angle-double-up" color="red-8" small square class="task-chip">HIGH<q-tooltip class="phpdoc-tooltip">Task Priority: <cc red-8>HIGH</cc></q-tooltip></q-chip>'

@@ -11,9 +11,12 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
+use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\AccessModifierProperty;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\NamedSpacedElement;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\StaticProperty;
+use Codex\Phpdoc\Serializer\Phpdoc\Properties\TypeProperty;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -23,9 +26,11 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @Serializer\XmlRoot("property")
  */
-class Property
+class Property implements SelfSerializable
 {
-    use NamedSpacedElement,
+    use SerializesSelf,
+        NamedSpacedElement,
         AccessModifierProperty,
-        StaticProperty;
+        StaticProperty,
+        TypeProperty;
 }

@@ -11,16 +11,16 @@
 
 namespace Codex\Phpdoc\Serializer;
 
-use Codex\Contracts\Revisions\Revision;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
+use Codex\Phpdoc\RevisionPhpdoc;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Codex\Phpdoc\Serializer\Concerns\DeserializeFromFile;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Concerns\SerializeToFile;
 use Codex\Phpdoc\Serializer\Concerns\WithResponse;
-use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use Illuminate\Contracts\Support\Responsable;
 use JMS\Serializer\Annotation as Serializer;
+
 
 class Manifest implements SelfSerializable, Responsable
 {
@@ -48,48 +48,74 @@ class Manifest implements SelfSerializable, Responsable
     private $version;
 
     /**
-     * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
-     * @Serializer\XmlList(inline=true, entry="packages")
-     * @Attr(array=true)
+     * @var integer
+     * @Serializer\Accessor(getter="getLastModified")
+     * @Serializer\SerializedName("last_modified")
+     * @Serializer\Type("integer")
+     * @Attr()
      */
-    private $packages;
+    private $last_modified;
 
     /**
-     * @var \Codex\Phpdoc\Serializer\Phpdoc\Package[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\Package>")
-     * @Serializer\XmlList(inline=true, entry="namespaces")
-     * @Attr(array=true)
+     * @var string
+     * @Serializer\Accessor(getter="getDefaultClass")
+     * @Serializer\SerializedName("default_class")
+     * @Serializer\Type("string")
+     * @Attr()
      */
-    private $namespaces;
+    private $default_class;
+
+    /**
+     * @var string
+     * @Serializer\Accessor(getter="getProjectKey")
+     * @Serializer\SerializedName("project")
+     * @Serializer\Type("string")
+     * @Attr()
+     */
+    private $project;
+
+    /**
+     * @var string
+     * @Serializer\Accessor(getter="getRevisionKey")
+     * @Serializer\SerializedName("revision")
+     * @Serializer\Type("string")
+     * @Attr()
+     */
+    private $revision;
 
     /**
      * @var \Codex\Phpdoc\Serializer\ManifestFile[]
-     * @Serializer\Type("array<string,Codex\Phpdoc\Serializer\ManifestFile>")
+     * @Serializer\Type("LaravelCollection<Codex\Phpdoc\Serializer\ManifestFile>")
      * @Serializer\XmlList(inline=true, entry="files")
      * @Attr(new=true, array=true)
      */
     private $files;
 
     /**
-     * @var int
-     * @Serializer\Type("integer")
-     * @Serializer\XmlAttribute()
-     * @Attr()
-     */
-    private $lastModified;
-
-    /**
-     * @var \Codex\Revision|\Codex\Contracts\Revision
+     * @var \Codex\Phpdoc\RevisionPhpdoc
      * @Serializer\Exclude()
      */
-    protected $_revision;
+    protected $phpdoc;
 
-    /**
-     * @var \Codex\Phpdoc\Serializer\AddonConfig
-     * @Serializer\Type("Codex\Phpdoc\Serializer\AddonConfig")
-     */
-    private $config;
+    public function getLastModified()
+    {
+        return $this->phpdoc->getXmlLastModified() ?? 0;
+    }
+
+    public function getDefaultClass()
+    {
+        return str_ensure_left($this->phpdoc->getDefaultClass(), '\\');
+    }
+
+    public function getProjectKey()
+    {
+        return $this->phpdoc->getRevision()->getProject()->getKey();
+    }
+
+    public function getRevisionKey()
+    {
+        return $this->phpdoc->getRevision()->getKey();
+    }
 
     /**
      * hasFullName method.
@@ -100,7 +126,14 @@ class Manifest implements SelfSerializable, Responsable
      */
     public function hasFullName(string $fullName)
     {
-        return array_key_exists(str_ensure_left($fullName, '\\'), $this->files);
+        $fullName = str_ensure_left($fullName, '\\');
+        foreach ($this->files as $file) {
+            if ($file->getName() === $fullName) {
+                return true;
+            }
+        }
+        return false;
+//        return array_key_exists(str_ensure_left($fullName, '\\'), $this->files);
     }
 
     /**
@@ -112,7 +145,14 @@ class Manifest implements SelfSerializable, Responsable
      */
     public function getByFullName(string $fullName)
     {
-        return $this->files[ str_ensure_left($fullName, '\\') ];
+        $fullName = str_ensure_left($fullName, '\\');
+        foreach ($this->files as $file) {
+            if ($file->getName() === $fullName) {
+                return $file;
+            }
+        }
+        return null;
+//        return $this->files[ str_ensure_left($fullName, '\\') ];
     }
 
     /**
@@ -124,25 +164,8 @@ class Manifest implements SelfSerializable, Responsable
      */
     public function getHashByFullName(string $fullName)
     {
-        return $this->files[ str_ensure_left($fullName, '\\') ]->getHash();
-    }
-
-    /**
-     * getProject method.
-     *
-     * @param \Codex\Phpdoc\Structure\File[] $files
-     *
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure
-     */
-    public function createPhpdocStructure(array $files)
-    {
-        return PhpdocStructure::fromArray([
-            'title'      => $this->title,
-            'version'    => $this->version,
-            'packages'   => $this->packages,
-            'namespaces' => $this->namespaces,
-            'files'      => $files,
-        ])->setManifest($this);
+        return $this->getByFullName($fullName)->getHash();
+//        return $this->files[ str_ensure_left($fullName, '\\') ]->getHash();
     }
 
     /**
@@ -190,53 +213,9 @@ class Manifest implements SelfSerializable, Responsable
     }
 
     /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\Package[]
+     * @return \Codex\Phpdoc\Serializer\Handler\LaravelCollection|\Codex\Phpdoc\Serializer\ManifestFile[]
      */
-    public function getPackages(): array
-    {
-        return $this->packages;
-    }
-
-    /**
-     * Set the packages value.
-     *
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\Package[] $packages
-     *
-     * @return Manifest
-     */
-    public function setPackages($packages)
-    {
-        $this->packages = $packages;
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\Package[]
-     */
-    public function getNamespaces(): array
-    {
-        return $this->namespaces;
-    }
-
-    /**
-     * Set the namespaces value.
-     *
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\Package[] $namespaces
-     *
-     * @return Manifest
-     */
-    public function setNamespaces($namespaces)
-    {
-        $this->namespaces = $namespaces;
-
-        return $this;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getFiles(): array
+    public function getFiles()
     {
         return $this->files;
     }
@@ -269,101 +248,20 @@ class Manifest implements SelfSerializable, Responsable
             $file = new ManifestFile();
             $file
                 ->setType($value[ 'type' ])
-                ->setName($value[ 'name' ])
+                ->setName($key)
                 ->setHash($value[ 'hash' ]);
             $value = $file;
         }
-        $this->files[ $key ] = $value;
+
+        $this->files[] = $value;
 
         return $this;
     }
 
-    /**
-     * @return int
-     */
-    public function getLastModified(): int
+    public function setPhpdoc(RevisionPhpdoc $phpdoc)
     {
-        return $this->lastModified ?? 0;
-    }
-
-    /**
-     * Set the lastModified value.
-     *
-     * @param int $lastModified
-     *
-     * @return Manifest
-     */
-    public function setLastModified($lastModified)
-    {
-        $this->lastModified = $lastModified;
-
+        $this->phpdoc = $phpdoc;
         return $this;
     }
 
-    /**
-     * @return \Codex\Contracts\Revision|\Codex\Revision
-     */
-    public function getRevision()
-    {
-        return $this->_revision;
-    }
-
-    /**
-     * @param \Codex\Contracts\Revisions\Revision|\Codex\Revisions\Revision $_revision
-     *
-     * @return Manifest
-     */
-    public function setRevision(Revision $_revision)
-    {
-        $this->_revision = $_revision;
-        $this->setConfig(
-            AddonConfig::fromArray($_revision->attr('phpdoc', []))
-        );
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\AddonConfig
-     */
-    public function getConfig(): \Codex\Phpdoc\Serializer\AddonConfig
-    {
-        return $this->config;
-    }
-
-    /**
-     * Set the config value.
-     *
-     * @param \Codex\Phpdoc\Serializer\AddonConfig $config
-     *
-     * @return Manifest
-     */
-    public function setConfig(AddonConfig $config)
-    {
-        $this->config = $config;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     * @Serializer\VirtualProperty
-     * @Serializer\SerializedName("project")
-     * @Serializer\Type("string")
-     */
-    public function getProjectKey(): string
-    {
-        return $this->getRevision()->getProject()->getKey();
-    }
-
-    /**
-     * @return string
-     * @Serializer\VirtualProperty
-     * @Serializer\SerializedName("revision")
-     * @Serializer\Type("string")
-     */
-    public function getRevisionKey(): string
-    {
-        return $this->getRevision()->getKey();
-    }
 }

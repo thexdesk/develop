@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "139e5c09e5df8acb7e5a9f09be46b2ed",
+    "content-hash": "d8a400dac99f079071a13e947b634786",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -1098,6 +1098,57 @@
                 "schedule"
             ],
             "time": "2018-06-06T03:12:17+00:00"
+        },
+        {
+            "name": "eddiriarte/console-select",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eddiriarte/console-select.git",
+                "reference": "76a6818c128571dfed8f0546a6ac5dd15e64f1ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eddiriarte/console-select/zipball/76a6818c128571dfed8f0546a6ac5dd15e64f1ad",
+                "reference": "76a6818c128571dfed8f0546a6ac5dd15e64f1ad",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.5",
+                "php": ">=7.1",
+                "symfony/console": "^4.0"
+            },
+            "require-dev": {
+                "php-mock/php-mock-phpunit": "^2.0",
+                "phpunit/phpunit": "6.4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EddIriarte\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "eddiriarte",
+                    "email": "eddiriarte@gmail.com"
+                }
+            ],
+            "description": "A fancy selection interface for symfony's console component.",
+            "keywords": [
+                "checkbox",
+                "cli",
+                "console",
+                "library",
+                "radio",
+                "select",
+                "symfony"
+            ],
+            "time": "2018-08-23T19:58:06+00:00"
         },
         {
             "name": "egulias/email-validator",

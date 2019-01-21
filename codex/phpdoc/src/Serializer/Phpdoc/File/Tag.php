@@ -11,7 +11,11 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
+use Codex\Phpdoc\Serializer\Phpdoc\Properties\LineProperty;
+use Codex\Phpdoc\Serializer\Phpdoc\Properties\TypeProperty;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -21,8 +25,12 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @Serializer\XmlRoot("tag")
  */
-class Tag
+class Tag implements SelfSerializable
 {
+    use SerializesSelf,
+        TypeProperty,
+        LineProperty;
+
     /**
      * @var string
      * @Serializer\Type("string")
@@ -30,14 +38,6 @@ class Tag
      * @Attr()
      */
     private $name;
-
-    /**
-     * @var int
-     * @Serializer\Type("integer")
-     * @Serializer\XmlAttribute()
-     * @Attr()
-     */
-    private $line;
 
     /**
      * @var string
@@ -69,15 +69,8 @@ class Tag
      * @Serializer\XmlAttribute()
      * @Attr()
      */
-    private $type;
-
-    /**
-     * @var string
-     * @Serializer\Type("string")
-     * @Serializer\XmlAttribute()
-     * @Attr()
-     */
     private $variable;
+
 
     /**
      * @return string
@@ -182,26 +175,6 @@ class Tag
     /**
      * @return string
      */
-    public function getType(): string
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return Tag
-     */
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
     public function getVariable(): string
     {
         return $this->variable;
@@ -218,4 +191,6 @@ class Tag
 
         return $this;
     }
+
+
 }

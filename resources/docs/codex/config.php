@@ -35,7 +35,7 @@ return [
 //        ]
 //    ],
     'processors' => [
-        'enabled'    => [ 'attributes', 'parser', 'toc', 'header', 'macros', 'buttons', 'links', 'phpdoc' ],
+        'enabled'    => [ 'attributes', 'parser', 'toc', 'header', 'macros', 'buttons', 'links', 'phpdoc', 'cache' ],
         'attributes' => [
             'tags' => [
                 [ 'open' => '<!--*', 'close' => '--*>' ], // html, markdown

@@ -23,5 +23,5 @@ trait InheritedProperty
      * @Serializer\SerializedName("inherited_from")
      * @Attr()
      */
-    private $inheritedFrom;
+    private $inherited_from;
 }

@@ -11,6 +11,7 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\FileEntityElement;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\NamedSpacedElement;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
@@ -23,7 +24,7 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @Serializer\XmlRoot("interface")
  */
-class InterfaceFile
+class InterfaceFile  implements SelfSerializable
 {
     use SerializesSelf,
         NamedSpacedElement,

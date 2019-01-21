@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="xdebug profile" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="codex:phpdoc:generate -vvv">
+    <CommandLine parameters="-dxdebug.profiler_enable=1 -dxdebug.profiler_output_dir=$PROJECT_DIR$/.xdebug-profile" />
+    <method v="2" />
+  </configuration>
+</component>

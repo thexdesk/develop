@@ -20,28 +20,13 @@ class ManifestFile implements SelfSerializable
 {
     use SerializesSelf;
 
-//
-//    /**
-//     * @var string
-//     * @Serializer\Type("string")
-//     * @Serializer\XmlAttribute()
-//     */
-//    private $namespace;
-
-//    /**
-//     * @var string
-//     * @Serializer\Type("string")
-//     * @Serializer\XmlElement()
-//     */
-//    private $name;
-//
-//    /**
-//     * @var string
-//     * @Serializer\Type("string")
-//     * @Serializer\XmlElement()
-//     * @Serializer\SerializedName("full_name")
-//     */
-//    private $fullName;
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     * @Serializer\XmlAttribute()
+     * @Attr()
+     */
+    private $name;
 
     /**
      * @var string
@@ -59,34 +44,6 @@ class ManifestFile implements SelfSerializable
      */
     private $hash;
 
-//
-//    /**
-//     * @return string
-//     */
-//    public function getNamespace(): string
-//    {
-//        return $this->namespace;
-//    }
-//
-//    /**
-//     * @param string $namespace
-//     *
-//     * @return ManifestFile
-//     */
-//    public function setNamespace(string $namespace): ManifestFile
-//    {
-//        $this->namespace = $namespace;
-//        return $this;
-//    }
-
-//    /**
-//     * @return string
-//     */
-//    public function getName(): string
-//    {
-//        return $this->name;
-//    }
-
     /**
      * @param string $name
      *
@@ -99,25 +56,13 @@ class ManifestFile implements SelfSerializable
         return $this;
     }
 
-//
-//    /**
-//     * @return string
-//     */
-//    public function getFullName(): string
-//    {
-//        return $this->fullName;
-//    }
-//
-//    /**
-//     * @param string $fullName
-//     *
-//     * @return ManifestFile
-//     */
-//    public function setFullName(string $fullName): ManifestFile
-//    {
-//        $this->fullName = $fullName;
-//        return $this;
-//    }
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
 
     /**
      * @return string

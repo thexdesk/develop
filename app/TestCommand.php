@@ -32,13 +32,41 @@ class TestCommand extends Command
         $projects  = $codex->getProjects();
         $project   = $projects->get('codex');
         $revisions = $project->getRevisions();
-//        $revision  = $revisions->get('master');
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
         $document  = $documents->get('processors/links');
         $content   = $document->getContent();
 
-        $phpdoc = $revision->phpdoc();
+        $phpdoc = $codex->get('blade-extensions/master')->phpdoc();
+        $file = $phpdoc->getFileByFullName('Radic\\BladeExtensions\\Compilers\\MarkdownCompiler');
+
+
+        $r = graphql()->executeQuery(<<<'EOT'
+query Test {
+    phpdoc(projectKey:"blade-extensions", revisionKey: "master") {
+        
+        file(fullName: "Radic\\BladeExtensions\\Traits\\SectionsTrait"){
+            type
+            uses {
+                value
+            }
+            hash           
+            docblock @assoc
+            class @assoc 
+            interface @assoc 
+            trait @assoc 
+          
+        }
+    }
+}
+EOT
+            , null, []);
+        if (count($r->errors) > 0) {
+            $this->line($r->errors[ 0 ]->getTraceAsString());
+            $this->line($r->errors[ 0 ]->getMessage());
+            $this->line(count($r->errors) . ' errors in total');
+        }
+        $this->line(Yaml::dump($r->data, 10, 4));
 
         return $content;
     }
@@ -67,29 +95,29 @@ class TestCommand extends Command
 }';
 
 
-        $client =new Client([
-            'headers' => ['Content-Type' => 'application/json', 'Cache-Control' => 'max-age=9999', 'If-None-Match' => '"bed7af1f60417d5fda8927c887ef6bb6"'],
+        $client = new Client([
+            'headers' => [ 'Content-Type' => 'application/json', 'Cache-Control' => 'max-age=9999', 'If-None-Match' => '"bed7af1f60417d5fda8927c887ef6bb6"' ],
         ]);
-        $res = $client->post(route('codex.api'), [
-            'json'=>[
+        $res    = $client->post(route('codex.api'), [
+            'json' => [
                 [ 'query' => $projectQuery ],
                 [ 'query' => $revisionQuery ],
                 [ 'query' => $documentQuery ],
-            ]
+            ],
         ]);
 
         $content = $res->getBody()->getContents();
 
-        $result        = codex()->getApi()->executeBatchedQueries([
+        $result = codex()->getApi()->executeBatchedQueries([
             [ 'query' => $projectQuery ],
             [ 'query' => $revisionQuery ],
             [ 'query' => $documentQuery ],
         ]);
 //        $result        = codex()->getApi()->executeQuery($projectQuery,null,[]);
-        $data          = array_map(function (ExecutionResult $result) {
+        $data = array_map(function (ExecutionResult $result) {
             return $result->data;
         }, $result);
-        $a             = 'a';
+        $a    = 'a';
     }
 
     public function handle345345()

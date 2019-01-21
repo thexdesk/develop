@@ -17,27 +17,26 @@ use JMS\Serializer\Annotation as Serializer;
 trait FileEntityElement
 {
     /**
-     * @var string
-     * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false)
-     * @Attr()
+     * @var string[]
+     * @Serializer\Type("array<string>")
+     * @Serializer\XmlList(inline=true, entry="extends")
+     * @Serializer\Accessor(setter="setExtends")
+     * @Attr(type="string", array=true)
      */
     private $extends;
 
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\Property[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\Property>")
+     * @Serializer\Type("LaravelCollection<Codex\Phpdoc\Serializer\Phpdoc\File\Property>")
      * @Serializer\XmlList(inline=true, entry="property")
-     * @Serializer\SerializedName("property")
      * @Attr(new=true,array=true)
      */
     private $properties;
 
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\Method[]
-     * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\Method>")
+     * @Serializer\Type("LaravelCollection<Codex\Phpdoc\Serializer\Phpdoc\File\Method>")
      * @Serializer\XmlList(inline=true, entry="method")
-     * @Serializer\SerializedName("method")
      * @Attr(new=true,array=true)
      */
     private $methods;
@@ -55,17 +54,18 @@ trait FileEntityElement
      *
      * @return FileEntityElement
      */
-    public function setExtends(string $extends): FileEntityElement
+    public function setExtends(array $extends)
     {
+        $extends = array_filter($extends, 'strlen');
         $this->extends = $extends;
 
         return $this;
     }
 
     /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\Property[]
+     * @return \Codex\Phpdoc\Serializer\Handler\LaravelCollection|\Codex\Phpdoc\Serializer\Phpdoc\File\Property[]
      */
-    public function getProperties(): array
+    public function getProperties()
     {
         return $this->properties;
     }
@@ -83,9 +83,9 @@ trait FileEntityElement
     }
 
     /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\Method[]
+     * @return \Codex\Phpdoc\Serializer\Handler\LaravelCollection|\Codex\Phpdoc\Serializer\Phpdoc\File\Method[]
      */
-    public function getMethods(): array
+    public function getMethods()
     {
         return $this->methods;
     }

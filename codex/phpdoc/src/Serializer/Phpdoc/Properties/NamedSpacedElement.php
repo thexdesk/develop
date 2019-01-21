@@ -50,7 +50,7 @@ trait NamedSpacedElement
      * @Serializer\SerializedName("full_name")
      * @Attr()
      */
-    private $fullName;
+    private $full_name;
 
     /**
      * @return string
@@ -117,17 +117,17 @@ trait NamedSpacedElement
      */
     public function getFullName()
     {
-        return $this->fullName;
+        return $this->full_name;
     }
 
     /**
-     * @param string $fullName
+     * @param string $full_name
      *
      * @return NamedSpacedElement
      */
-    public function setFullName(string $fullName): NamedSpacedElement
+    public function setFullName(string $full_name): NamedSpacedElement
     {
-        $this->fullName = $fullName;
+        $this->full_name = $full_name;
 
         return $this;
     }

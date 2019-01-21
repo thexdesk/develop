@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        EddIriarte\Console\Providers\SelectServiceProvider::class,
+
+
         \Codex\CodexServiceProvider::class
 
     ],

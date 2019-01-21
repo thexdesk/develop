@@ -13,14 +13,8 @@ namespace Codex\Phpdoc\Contracts\Serializer;
 
 use Illuminate\Contracts\Support\Arrayable;
 
-interface SelfSerializable extends Arrayable
+interface SelfSerializable extends Arrayable, \ArrayAccess
 {
-    /**
-     * toArray method.
-     *
-     * @return array|mixed
-     */
-    public function toArray();
 
     /**
      * serialize method.

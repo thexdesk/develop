@@ -50,6 +50,33 @@ trait SerializesSelf
         return $this->serialize('yml');
     }
 
+
+
+    public function offsetExists($offset)
+    {
+        return method_exists($this, camel_case('get_' . $offset)) || property_exists($this, $offset);
+    }
+
+    public function offsetGet($offset)
+    {
+        if (method_exists($this, $methodName = camel_case('get_' . $offset))) {
+            return $this->$methodName();
+        }
+        if (property_exists($this, $offset)) {
+            return $this->$offset;
+        }
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        // TODO: Implement offsetSet() method.
+    }
+
+    public function offsetUnset($offset)
+    {
+        // TODO: Implement offsetUnset() method.
+    }
+
     /**
      * fromArray method.
      *

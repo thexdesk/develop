@@ -11,6 +11,7 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\FileEntityElement;
@@ -24,7 +25,7 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @Serializer\XmlRoot("class")
  */
-class ClassFile
+class ClassFile  implements SelfSerializable
 {
     use SerializesSelf,
         NamedSpacedElement,
@@ -32,16 +33,16 @@ class ClassFile
 
     /**
      * @var string[]
-     * @Serializer\Type("array<string>")
+     * @Serializer\Type("LaravelCollection<string>")
      * @Serializer\XmlList(inline=true, entry="implements")
      * @Attr(type="array.scalarPrototype", array=true)
      */
     private $implements;
 
     /**
-     * @return string[]
+     * @return string[]|\Codex\Phpdoc\Serializer\Handler\LaravelCollection
      */
-    public function getImplements(): array
+    public function getImplements()
     {
         return $this->implements;
     }

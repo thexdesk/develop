@@ -33,6 +33,15 @@ class File implements SelfSerializable, Responsable
     /**
      * @var string
      * @Serializer\Type("string")
+     * @Serializer\Accessor(getter="getType")
+     * @Serializer\SerializedName("type")
+     * @Attr()
+     */
+    private $type;
+
+    /**
+     * @var string
+     * @Serializer\Type("string")
      * @Serializer\XmlAttribute()
      * @Attr()
      */
@@ -45,7 +54,7 @@ class File implements SelfSerializable, Responsable
      * @Serializer\SerializedName("generated-path")
      * @Attr()
      */
-    private $generatedPath;
+    private $generated_path;
 
     /**
      * @var string
@@ -67,16 +76,21 @@ class File implements SelfSerializable, Responsable
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\NamespaceAlias[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\NamespaceAlias>")
      * @Serializer\XmlList(inline=true, entry="namespace-alias")
-     * @Serializer\SerializedName("namespace-alias")
+     * @Serializer\SerializedName("uses")
      * @Attr(new=true, array=true)
      */
-    private $namespaceAlias;
+    private $uses;
 
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile>")
-     * @Serializer\XmlList(inline=true, entry="class", skipWhenEmpty=true)
-     * @Serializer\Accessor(getter="getEntity")
+     * @Serializer\Accessor(setter="setClasses")
+     */
+    private $classes;
+
+    /**
+     * @var \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile
+     * @Serializer\Type("Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile")
      * @Attr(new=true)
      */
     private $class;
@@ -84,7 +98,13 @@ class File implements SelfSerializable, Responsable
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile>")
-     * @Serializer\XmlList(inline=true, entry="interface", skipWhenEmpty=true)
+     * @Serializer\Accessor(setter="setInterfaces")
+     */
+    private $interfaces;
+
+    /**
+     * @var \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile
+     * @Serializer\Type("Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile")
      * @Attr(new=true)
      */
     private $interface;
@@ -92,7 +112,13 @@ class File implements SelfSerializable, Responsable
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile[]
      * @Serializer\Type("array<Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile>")
-     * @Serializer\XmlList(inline=true, entry="trait", skipWhenEmpty=true)
+     * @Serializer\Accessor(setter="setTraits")
+     */
+    private $traits;
+
+    /**
+     * @var \Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile
+     * @Serializer\Type("Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile")
      * @Attr(new=true)
      */
     private $trait;
@@ -105,6 +131,112 @@ class File implements SelfSerializable, Responsable
      * @Attr()
      */
     private $source;
+
+
+    /**
+     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\Docblock
+     */
+    public function getDocblock(): \Codex\Phpdoc\Serializer\Phpdoc\File\Docblock
+    {
+        return $this->docblock;
+    }
+
+    /**
+     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\Docblock $docblock
+     *
+     * @return File
+     */
+    public function setDocblock(\Codex\Phpdoc\Serializer\Phpdoc\File\Docblock $docblock): self
+    {
+        $this->docblock = $docblock;
+
+        return $this;
+    }
+
+    /**
+     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\NamespaceAlias[]
+     */
+    public function getUses(): array
+    {
+        return $this->uses;
+    }
+
+    /**
+     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\NamespaceAlias[] $uses
+     *
+     * @return File
+     */
+    public function setUses(array $uses): self
+    {
+        $this->uses = $uses;
+
+        return $this;
+    }
+
+    /**
+     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile
+     */
+    public function getClass()
+    {
+        return $this->class;
+    }
+
+    /**
+     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile[] $classes
+     *
+     * @return File
+     */
+    public function setClasses(array $classes): self
+    {
+        if ( ! empty($classes)) {
+            $this->class = $classes[ 0 ];
+        }
+        return $this;
+    }
+
+    /**
+     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile
+     */
+    public function getInterface()
+    {
+        return $this->interface;
+    }
+
+    /**
+     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile[] $interfaces
+     *
+     * @return File
+     */
+    public function setInterfaces(array $interfaces): self
+    {
+        if ( ! empty($interfaces)) {
+            $this->interface = $interfaces[ 0 ];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile
+     */
+    public function getTrait()
+    {
+        return $this->trait;
+    }
+
+    /**
+     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile[] $traits
+     *
+     * @return File
+     */
+    public function setTraits(array $traits): self
+    {
+        if ( ! empty($traits)) {
+            $this->trait = $traits[ 0 ];
+        }
+
+        return $this;
+    }
 
     /**
      * getEntityType method.
@@ -129,25 +261,17 @@ class File implements SelfSerializable, Responsable
     public function getEntity()
     {
         if ($this->isClass()) {
-            return $this->getClass()[ 0 ];
+            return $this->getClass();
         }
         if ($this->isInterface()) {
-            return $this->getInterface()[ 0 ];
+            return $this->getInterface();
         }
         if ($this->isTrait()) {
-            return $this->getTrait()[ 0 ];
+            return $this->getTrait();
         }
     }
 
-    /**
-     * getType method.
-     *
-     * @Serializer\VirtualProperty()
-     * @Serializer\SerializedName("type")
-     *
-     * @return string
-     */
-    public function getType(): string
+    public function getType()
     {
         return $this->getEntityType()->getValue();
     }
@@ -159,7 +283,7 @@ class File implements SelfSerializable, Responsable
      */
     public function isClass()
     {
-        return null !== $this->class && 0 !== \count($this->class);
+        return null !== $this->class;
     }
 
     /**
@@ -169,7 +293,7 @@ class File implements SelfSerializable, Responsable
      */
     public function isInterface()
     {
-        return null !== $this->interface && 0 !== \count($this->interface);
+        return null !== $this->interface;
     }
 
     /**
@@ -179,7 +303,7 @@ class File implements SelfSerializable, Responsable
      */
     public function isTrait()
     {
-        return null !== $this->trait && 0 !== \count($this->trait);
+        return null !== $this->trait;
     }
 
     /**
@@ -207,17 +331,17 @@ class File implements SelfSerializable, Responsable
      */
     public function getGeneratedPath(): string
     {
-        return $this->generatedPath;
+        return $this->generated_path;
     }
 
     /**
-     * @param string $generatedPath
+     * @param string $generated_path
      *
      * @return File
      */
-    public function setGeneratedPath(string $generatedPath): self
+    public function setGeneratedPath(string $generated_path): self
     {
-        $this->generatedPath = $generatedPath;
+        $this->generated_path = $generated_path;
 
         return $this;
     }
@@ -258,106 +382,6 @@ class File implements SelfSerializable, Responsable
     public function setPackage(string $package): self
     {
         $this->package = $package;
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\Docblock
-     */
-    public function getDocblock(): \Codex\Phpdoc\Serializer\Phpdoc\File\Docblock
-    {
-        return $this->docblock;
-    }
-
-    /**
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\Docblock $docblock
-     *
-     * @return File
-     */
-    public function setDocblock(\Codex\Phpdoc\Serializer\Phpdoc\File\Docblock $docblock): self
-    {
-        $this->docblock = $docblock;
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\NamespaceAlias[]
-     */
-    public function getNamespaceAlias(): array
-    {
-        return $this->namespaceAlias;
-    }
-
-    /**
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\NamespaceAlias[] $namespaceAlias
-     *
-     * @return File
-     */
-    public function setNamespaceAlias(array $namespaceAlias): self
-    {
-        $this->namespaceAlias = $namespaceAlias;
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile[]
-     */
-    public function getClass(): array
-    {
-        return $this->class;
-    }
-
-    /**
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\ClassFile[] $class
-     *
-     * @return File
-     */
-    public function setClass(array $class): self
-    {
-        $this->class = $class;
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile[]
-     */
-    public function getInterface(): array
-    {
-        return $this->interface;
-    }
-
-    /**
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\InterfaceFile[] $interface
-     *
-     * @return File
-     */
-    public function setInterface(array $interface): self
-    {
-        $this->interface = $interface;
-
-        return $this;
-    }
-
-    /**
-     * @return \Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile[]
-     */
-    public function getTrait(): array
-    {
-        return $this->trait;
-    }
-
-    /**
-     * @param \Codex\Phpdoc\Serializer\Phpdoc\File\TraitFile[] $trait
-     *
-     * @return File
-     */
-    public function setTrait(array $trait): self
-    {
-        $this->trait = $trait;
 
         return $this;
     }

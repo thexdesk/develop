@@ -2,7 +2,7 @@
 
 namespace Codex\Phpdoc\Api;
 
-use Codex\Api\GraphQL\Utils;
+use GraphQL\Error\Error;
 use GraphQL\Type\Definition\ResolveInfo;
 
 class PhpdocQuery
@@ -14,9 +14,15 @@ class PhpdocQuery
         $project     = $codex->getProject($projectKey);
         $revisionKey = data_get($args, 'revisionKey', $project->getRevisions()->getDefaultKey());
         $revision    = $project->getRevision($revisionKey);
-        $show        = Utils::transformSelectionToShow($info->getFieldSelection(2));
         $phpdoc      = $revision->phpdoc();
-        return array_merge($phpdoc->getManifest()->toArray(), compact('phpdoc', 'revision'));
+        $manifest    = $phpdoc->getManifest();
+        $result      = array_merge($phpdoc->getManifest()->toArray(), compact('manifest', 'phpdoc', 'revision'));
+        return $result;
+    }
+
+    public function revisionPhpdoc($rootValue, array $args, $context, ResolveInfo $info)
+    {
+        return [];
     }
 
     public function file($rootValue, array $args, $context, ResolveInfo $info)
@@ -27,13 +33,15 @@ class PhpdocQuery
 
         if (array_has($args, 'fullName')) {
             $file = $phpdoc->getFileByFullName($args[ 'fullName' ]);
-            $fileData = $file->toArray();
-            $show = Utils::transformSelectionToShow($info->getFieldSelection(50));
-            $filtered = [];
-            foreach($show as $key){
-                data_set($filtered, $key, data_get($fileData, $key));
+        } else {
+            if (array_has($args, 'hash')) {
+                $phpdoc->getFile($args[ 'hash' ]);
+            } else {
+                throw new Error('Require either fullName or hash arg');
             }
-            return $filtered;
         }
+
+        $fileData = $file->toArray();
+        return $fileData;
     }
 }

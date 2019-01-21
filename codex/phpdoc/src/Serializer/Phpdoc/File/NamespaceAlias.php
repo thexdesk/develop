@@ -11,7 +11,9 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
+use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -21,8 +23,10 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @Serializer\XmlRoot("namespace-alias")
  */
-class NamespaceAlias
+class NamespaceAlias  implements SelfSerializable
 {
+    use SerializesSelf;
+
     /**
      * @var string
      * @Serializer\Type("string")

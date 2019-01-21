@@ -13,6 +13,7 @@ namespace Codex\Phpdoc;
 
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
+use Codex\Phpdoc\Api\PhpdocSchemaExtension;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use Codex\Revisions\Revision;
@@ -20,8 +21,12 @@ use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Annotations\Reader;
 use Illuminate\Contracts\Foundation\Application;
+use JMS\Serializer\Handler\HandlerRegistryInterface;
+use JMS\Serializer\Naming\CamelCaseNamingStrategy;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
+use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
+use JMS\Serializer\XmlDeserializationVisitor;
 
 class PhpdocAddonServiceProvider extends AddonServiceProvider
 {
@@ -56,18 +61,26 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public function register()
     {
-        Revision::macro('phpdoc', function () {
+        $this->registerRevisionMacros();
+        $this->registerSerializer();
+    }
+
+    protected function registerRevisionMacros()
+    {
+        Revision::macro('phpdoc', function ($remake = false) {
             /** @var Revision $revision */
             $revision = $this;
-            return app()->make(PhpdocRevisionConfig::class, compact('revision'));
+            $storage  = $revision->getStorage();
+            if ($remake || ! $storage->has('phpdoc')) {
+                $storage->put('phpdoc', app()->make(RevisionPhpdoc::class, compact('revision')));
+            }
+            return $storage->get('phpdoc');
         });
         Revision::macro('isPhpdocEnabled', function () {
             /** @var Revision $revision */
             $revision = $this;
             return $revision->attr('phpdoc.enabled', false);
         });
-
-        $this->registerSerializer();
     }
 
     protected function registerSerializer()
@@ -76,9 +89,13 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
         $this->app->bind(\JMS\Serializer\Serializer::class, function (Application $app) {
             return SerializerBuilder::create()
                 ->addDefaultHandlers()
+                ->configureHandlers(function (HandlerRegistryInterface $registry) {
+                    $registry->registerSubscribingHandler(new Serializer\Handler\LaravelCollectionHandler());
+                })
+                ->setPropertyNamingStrategy(new CamelCaseNamingStrategy())
                 ->addDefaultDeserializationVisitors()
                 ->addDefaultSerializationVisitors()
-                ->setPropertyNamingStrategy(new IdenticalPropertyNamingStrategy())
+                ->setDeserializationVisitor('xml', new XmlDeserializationVisitor(new SerializedNameAnnotationStrategy(new IdenticalPropertyNamingStrategy())))
                 ->build();
         });
         $this->app->alias(\JMS\Serializer\Serializer::class, 'codex.serializer');
@@ -88,6 +105,9 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     {
 //        $codex = $registry->codex->getChild('urls')->add('phpdoc', '')
         $phpdoc = $registry->addGroup('phpdoc');
+//        $reader->handleClassAnnotations(Serializer\Phpdoc::class, $phpdoc);
+//        $phpdoc->addChild($reader->handleClassAnnotations(Serializer\Phpdoc::class));
+//        $reader->handleClassAnnotations(Manifest::class,$phpdoc);
         $phpdoc->addChild($reader->handleClassAnnotations(PhpdocStructure::class));
 
         $projects = $registry->projects;
