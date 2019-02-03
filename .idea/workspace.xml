@@ -2,61 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/GET__backend_data_js.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/GET__documentation_codex_master_processors_links.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocLinks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocMacros.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocProcessorExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Http/Controllers/PhpdocController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/phpdoc/src/Http/HttpServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/config/codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/config/codex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/routes/schema.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/routes/schema.graphqls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Codex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Macros/Macro.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Macros/Macro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacrosProcessorExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacrosProcessorExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/config/codex-phpdoc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/phpdoc.app_phpdoc.app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/phpdoc.entity_phpdoc.entity.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/phpdoc.member-list_phpdoc.member-list.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/phpdoc.method-signature_phpdoc.method-signature.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/phpdoc.method_phpdoc.method.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/phpdoc.tree_phpdoc.tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/phpdoc_phpdoc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/vendors~phpdoc.app~phpdoc.member-list~phpdoc.method-signature~phpdoc.tree~views.phpdoc_vendors~phpdoc.app~phpdoc.member-list~phpdoc.method-signature~phpdoc.tree~views.phpdoc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/vendors~phpdoc.member-list_vendors~phpdoc.member-list.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/vendors~phpdoc.member-list~phpdoc.method-signature~views.welcome_vendors~phpdoc.member-list~phpdoc.method-signature~views.welcome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/vendors~phpdoc.member-list~phpdoc.method-signature~welcome.view_vendors~phpdoc.member-list~phpdoc.method-signature~welcome.view.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/vendors~phpdoc.tree_vendors~phpdoc.tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/css/views.phpdoc_views.phpdoc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/phpdoc.app.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/phpdoc.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/phpdoc.entity.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/phpdoc.member-list.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/phpdoc.method-signature.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/phpdoc.method.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/phpdoc.tree.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/runtime~phpdoc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/vendors~phpdoc.app~phpdoc.member-list~phpdoc.method-signature~phpdoc.tree~views.phpdoc.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/vendors~phpdoc.app~phpdoc.tree~views.phpdoc.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/vendors~phpdoc.app~views.phpdoc.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/vendors~phpdoc.member-list.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/vendors~phpdoc.member-list~phpdoc.method-signature~views.welcome.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/vendors~phpdoc.member-list~phpdoc.method-signature~welcome.view.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/vendors~phpdoc.tree.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/resources/assets/js/views.phpdoc.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/package-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/processors/links.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/processors/links.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/processors/macros.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/processors/macros.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="359">
@@ -268,6 +214,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codex/core/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -375,7 +330,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Metadata/PropertyMetadata.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Handler/LaravelCollectionHandler.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Concerns/SerializesSelf.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Contracts/Serializer/SelfSerializable.php" />
@@ -426,6 +380,7 @@
         <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Macros/Macro.php" />
         <option value="$PROJECT_DIR$/app/TestCommand.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacrosProcessorExtension.php" />
+        <option value="$PROJECT_DIR$/codex/core/.gitignore" />
       </list>
     </option>
   </component>
@@ -1472,18 +1427,18 @@
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.500394" side_tool="true" weight="0.13389562" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49960598" visible="true" weight="0.1473379" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49960598" visible="true" weight="0.1473379" />
       <window_info id="Structure" order="3" sideWeight="0.500394" side_tool="true" weight="0.13389562" />
       <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.4978914" weight="0.16351558" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49736425" weight="0.24680634" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49736425" visible="true" weight="0.24680634" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49920928" weight="0.32926208" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50395364" side_tool="true" weight="0.3541985" />
       <window_info anchor="bottom" id="Docker" order="5" weight="0.32943568" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49973643" weight="0.32977098" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49947286" weight="0.32977098" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.4960464" visible="true" weight="0.35411343" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.4960464" weight="0.35411343" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3299389" />
@@ -1714,9 +1669,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/HeaderProcessorExtension.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/ProcessorSorter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-162" />
@@ -2064,6 +2016,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
