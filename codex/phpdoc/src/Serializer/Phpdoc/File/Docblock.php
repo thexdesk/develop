@@ -14,6 +14,7 @@ namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 use Codex\Documents\Processors\ParserProcessorExtension;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Annotations\Markdown;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Illuminate\Support\Collection;
 use JMS\Serializer\Annotation as Serializer;
@@ -50,10 +51,11 @@ class Docblock  implements SelfSerializable
      * @Serializer\Type("string")
      * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("long-description")
-     * @Serializer\Accessor(getter="getLongDescription")
+     * @Serializer\Accessor(getter="getLongDescription",setter="setLongDescription")
+     * @Markdown()
      * @Attr()
      */
-    private $longDescription;
+    private $long_description;
 
     /**
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\Tag[]
@@ -110,21 +112,17 @@ class Docblock  implements SelfSerializable
      */
     public function getLongDescription(): string
     {
-        $parserExtension = app()->make(ParserProcessorExtension::class);
-        $parser          = $parserExtension->makeParser(
-            config($parserExtension->getDefaultConfig() . '.markdown', [])
-        );
-        return $parser->parse($this->longDescription);
+        return $this->long_description;
     }
 
     /**
-     * @param string $longDescription
+     * @param string $long_description
      *
      * @return Docblock
      */
-    public function setLongDescription(string $longDescription): self
+    public function setLongDescription( $long_description): self
     {
-        $this->longDescription = $longDescription;
+        $this->long_description = $long_description;
 
         return $this;
     }

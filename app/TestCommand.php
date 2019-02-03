@@ -32,20 +32,20 @@ class TestCommand extends Command
         $projects  = $codex->getProjects();
         $project   = $projects->get('codex');
         $revisions = $project->getRevisions();
-        $revision  = $revisions->get('master');
+        $revision  = $revisions->get('2.0.0-alpha');
         $documents = $revision->getDocuments();
-        $document  = $documents->get('processors/links');
+        $document  = $documents->get('index');
         $content   = $document->getContent();
 
-        $phpdoc = $codex->get('blade-extensions/master')->phpdoc();
-        $file = $phpdoc->getFileByFullName('Radic\\BladeExtensions\\Compilers\\MarkdownCompiler');
+//        $phpdoc = $codex->get('blade-extensions/master')->phpdoc();
+//        $file = $phpdoc->getFileByFullName('Radic\\BladeExtensions\\Compilers\\MarkdownCompiler');
 
 
         $r = graphql()->executeQuery(<<<'EOT'
 query Test {
-    phpdoc(projectKey:"blade-extensions", revisionKey: "master") {
+    phpdoc(projectKey:"codex", revisionKey: "2.0.0-alpha") {
         
-        file(fullName: "Radic\\BladeExtensions\\Traits\\SectionsTrait"){
+        file(fullName: "\\Codex\\Codex"){
             type
             uses {
                 value

@@ -20,11 +20,6 @@ class PhpdocQuery
         return $result;
     }
 
-    public function revisionPhpdoc($rootValue, array $args, $context, ResolveInfo $info)
-    {
-        return [];
-    }
-
     public function file($rootValue, array $args, $context, ResolveInfo $info)
     {
         /** @var \Codex\Contracts\Revisions\Revision $revision */

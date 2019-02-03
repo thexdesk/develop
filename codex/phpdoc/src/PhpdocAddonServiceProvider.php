@@ -16,12 +16,14 @@ use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Phpdoc\Api\PhpdocSchemaExtension;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
+use Codex\Phpdoc\Serializer\XmlAccessorStrategy;
 use Codex\Revisions\Revision;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Annotations\Reader;
 use Illuminate\Contracts\Foundation\Application;
 use JMS\Serializer\Handler\HandlerRegistryInterface;
+use JMS\Serializer\Metadata\PropertyMetadata;
 use JMS\Serializer\Naming\CamelCaseNamingStrategy;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
@@ -87,6 +89,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     {
         AnnotationRegistry::registerLoader('class_exists');
         $this->app->bind(\JMS\Serializer\Serializer::class, function (Application $app) {
+            $xmlDesVis = new XmlDeserializationVisitor(new SerializedNameAnnotationStrategy(new IdenticalPropertyNamingStrategy()), new XmlAccessorStrategy());
             return SerializerBuilder::create()
                 ->addDefaultHandlers()
                 ->configureHandlers(function (HandlerRegistryInterface $registry) {
@@ -95,7 +98,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
                 ->setPropertyNamingStrategy(new CamelCaseNamingStrategy())
                 ->addDefaultDeserializationVisitors()
                 ->addDefaultSerializationVisitors()
-                ->setDeserializationVisitor('xml', new XmlDeserializationVisitor(new SerializedNameAnnotationStrategy(new IdenticalPropertyNamingStrategy())))
+                ->setDeserializationVisitor('xml', $xmlDesVis)
                 ->build();
         });
         $this->app->alias(\JMS\Serializer\Serializer::class, 'codex.serializer');

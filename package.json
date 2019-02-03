@@ -12,6 +12,9 @@
     },
     "devDependencies": {
         "graphql": "^14.1.1",
-        "graphql-tools": "^4.0.3"
+        "graphql-tools": "^4.0.3",
+        "nps": "^5.9.3",
+        "nps-utils": "^1.7.0",
+        "@types/node": "^10.12.21"
     }
 }

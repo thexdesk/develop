@@ -39398,8 +39398,8 @@ codex()-&gt;projects-&gt;get('codex')-&gt;documents-&gt;get('index')-&gt;render(
 {project?}/{$ref?}::{documentPath?}
 
 **Modifiers:**
-* = The collection (projects, refs or documents)
-! = The default of the collection (project, def or document)
+- \* = The collection (projects, refs or documents)
+- ! = The default of the collection (project, def or document)
 
 **Syntax examples:**
 `codex/master::getting-started/installation`
@@ -39412,7 +39412,7 @@ $refs        = codex()-&gt;get('codex/*'); # Codex\Projects\Refs
 $ref         = codex()-&gt;get('codex/!'); # Codex\Projects\Ref (default ref)
 $ref         = codex()-&gt;get('codex/master'); # Codex\Projects\Ref
 $ref         = codex()-&gt;get('codex/1.0.0'); # Codex\Projects\Ref
-$documents   = codex()-&gt;get('codex::index); # Codex\Documents\Document (from default ref)
+$documents   = codex()-&gt;get('codex::index'); # Codex\Documents\Document (from default ref)
 $documents   = codex()-&gt;get('codex/master::*'); # Codex\Documents\Documents
 $document    = codex()-&gt;get('codex/master::!'); # Codex\Documents\Document (default document)
 $document    = codex()-&gt;get('codex/master::index'); # Codex\Documents\Document

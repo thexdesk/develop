@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="codex:phpdoc:generate codex/2.0.0-alpha -f" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="codex:phpdoc:generate codex/2.0.0-alpha --force -vvv">
+    <method v="2" />
+  </configuration>
+</component>
