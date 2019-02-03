@@ -5,6 +5,7 @@ namespace App;
 use Codex\Addons\AddonCollection;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\AttributeSchemaGenerator;
+use Codex\Commands\GetBackendData;
 use Codex\Contracts\Projects\Project;
 use GraphQL\Executor\ExecutionResult;
 use GraphQL\Language\AST\FieldDefinitionNode;
@@ -28,12 +29,16 @@ class TestCommand extends Command
 
     public function handle()
     {
+//        $bd = $this->dispatch(new GetBackendData());
+
         $codex     = codex();
+        $actions = $codex->attr('processors.links.actions');
         $projects  = $codex->getProjects();
         $project   = $projects->get('codex');
         $revisions = $project->getRevisions();
-        $revision  = $revisions->get('2.0.0-alpha');
+        $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
+//        $document  = $documents->get('processors/macros');
         $document  = $documents->get('index');
         $content   = $document->getContent();
 
@@ -43,20 +48,10 @@ class TestCommand extends Command
 
         $r = graphql()->executeQuery(<<<'EOT'
 query Test {
-    phpdoc(projectKey:"codex", revisionKey: "2.0.0-alpha") {
-        
-        file(fullName: "\\Codex\\Codex"){
-            type
-            uses {
-                value
-            }
-            hash           
-            docblock @assoc
-            class @assoc 
-            interface @assoc 
-            trait @assoc 
-          
-        }
+    document(projectKey: "codex", revisionKey:"master", documentKey: "index") {
+        key
+        changes
+        content
     }
 }
 EOT

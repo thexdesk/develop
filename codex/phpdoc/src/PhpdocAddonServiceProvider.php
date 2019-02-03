@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection StaticInvocationViaThisInspection */
+
 /**
  * Copyright (c) 2018. Codex Project.
  *
@@ -13,7 +14,8 @@ namespace Codex\Phpdoc;
 
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
-use Codex\Phpdoc\Api\PhpdocSchemaExtension;
+use Codex\Phpdoc\Documents\PhpdocLinks;
+use Codex\Phpdoc\Documents\PhpdocMacros;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use Codex\Phpdoc\Serializer\XmlAccessorStrategy;
@@ -23,7 +25,6 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Annotations\Reader;
 use Illuminate\Contracts\Foundation\Application;
 use JMS\Serializer\Handler\HandlerRegistryInterface;
-use JMS\Serializer\Metadata\PropertyMetadata;
 use JMS\Serializer\Naming\CamelCaseNamingStrategy;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
@@ -38,6 +39,8 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
         'codex-phpdoc.default_project_config' => 'codex.projects',
     ];
 
+    protected $assetDirs = [ 'assets' => 'codex_phpdoc' ];
+
     public $commands = [
 //        Console\ClearPhpdocCommand::class,
         Console\PhpdocGenerateCommand::class,
@@ -48,11 +51,15 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
         Reader::class                    => AnnotationReader::class,
     ];
 
-    public $aliases = [
-    ];
+    public $aliases = [];
 
     public $extensions = [
-        PhpdocSchemaExtension::class,
+        Api\PhpdocSchemaExtension::class,
+        Documents\PhpdocProcessorExtension::class,
+    ];
+
+    public $providers = [
+        Http\HttpServiceProvider::class,
     ];
 
 //    public $listen = [
@@ -63,6 +70,12 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public function register()
     {
+        $config = $this->app->make('config');
+        $config->set('codex.routeMap.phpdoc', 'codex.phpdoc');
+        $config->set('codex.processor-defaults.links.actions.phpdoc', PhpdocLinks::class . '@handle');
+        $config->set('codex.processor-defaults.macros.phpdoc:method', PhpdocMacros::class . '@method');
+        $config->set('codex.processor-defaults.macros.phpdoc:method:signature', PhpdocMacros::class . '@methodSignature');
+        $config->set('codex.processor-defaults.macros.phpdoc:entity', PhpdocMacros::class . '@entity');
         $this->registerRevisionMacros();
         $this->registerSerializer();
     }
@@ -106,11 +119,8 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public function boot(AttributeDefinitionRegistry $registry, AttributeAnnotationReader $reader)
     {
-//        $codex = $registry->codex->getChild('urls')->add('phpdoc', '')
+        $registry->codex->getChild('urls')->add('phpdoc', 'string');
         $phpdoc = $registry->addGroup('phpdoc');
-//        $reader->handleClassAnnotations(Serializer\Phpdoc::class, $phpdoc);
-//        $phpdoc->addChild($reader->handleClassAnnotations(Serializer\Phpdoc::class));
-//        $reader->handleClassAnnotations(Manifest::class,$phpdoc);
         $phpdoc->addChild($reader->handleClassAnnotations(PhpdocStructure::class));
 
         $projects = $registry->projects;
@@ -129,49 +139,3 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     }
 
 }
-//{
-//    protected const KEY = 'phpdoc';
-//    protected const PREFIX = 'codex.'.self::KEY;
-//
-//    protected $project = 'codex-phpdoc.default_project_config';
-//
-//    protected $revisionInherits = [self::KEY];
-//
-//    protected $configFiles = ['codex-'.self::KEY];
-//
-//    protected $assetDirs = ['assets' => 'codex_'.self::KEY];
-//
-//    protected $providers = [Http\HttpServiceProvider::class];
-//
-//    protected $findCommands = ['Console'];
-//
-//    protected $extend = [
-//        \Codex\Codex::class => [self::KEY => Contracts\Phpdoc::class],
-//        \Codex\Revision::class => [self::KEY => Contracts\PhpdocRevision::class],
-//        \Codex\Project::class => [self::KEY => Contracts\PhpdocProject::class],
-//    ];
-//
-//    public $bindings = [
-//        self::PREFIX => Phpdoc::class,
-//        self::PREFIX.'.generator' => Generator::class,
-//        self::PREFIX.'.project' => PhpdocProject::class,
-//        self::PREFIX.'.revision' => PhpdocRevision::class,
-//    ];
-//
-//    protected $aliases = [
-//        self::PREFIX => Contracts\Phpdoc::class,
-//        self::PREFIX.'.generator' => Contracts\Generator::class,
-//        self::PREFIX.'.project' => Contracts\PhpdocProject::class,
-//        self::PREFIX.'.revision' => Contracts\PhpdocRevision::class,
-//    ];
-//
-//    public function booted()
-//    {
-//        // no route, just add assets
-//        $this->hook('controller:spa:assets', function (CodexSPAController $controller, Theme $theme) {
-//            $theme
-//                ->addJavascript('phpdoc', 'vendor/codex_phpdoc/js/phpdoc.chunk.js', ['core'])
-//                ->addJavascript('phpdoc.runtime', 'vendor/codex_phpdoc/js/runtime~phpdoc.js', ['phpdoc'])
-//                ->addStylesheet('phpdoc', 'vendor/codex_phpdoc/css/phpdoc_phpdoc.css', ['core']);
-//        });
-//    }

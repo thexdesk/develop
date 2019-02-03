@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GET /backend_data.js" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" server_name="codex.local" url="/backend_data.js">
+    <method v="2" />
+  </configuration>
+</component>

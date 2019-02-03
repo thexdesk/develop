@@ -9,3 +9,9 @@
  * @license http://codex-project.ninja/license The MIT License
  */
 
+
+
+Route::get('{projectKey?}/{revisionKey?}')
+    ->name('codex.phpdoc')
+    ->prefix(config('codex-phpdoc.route_prefix'))
+    ->uses('PhpdocController@getDocument');

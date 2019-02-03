@@ -30,6 +30,14 @@ return [
 
     'route_prefix' => 'phpdoc',
 
+    'default_processor_config' => [],
+    'processors' => [
+        'links' => [
+            'actions' => [
+                'phpdoc' => \Codex\Phpdoc\Documents\PhpdocLinks::class . '@handle'
+            ]
+        ]
+    ],
     /*
     |--------------------------------------------------------------------------
     | Default Project Configuration

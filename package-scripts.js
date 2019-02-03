@@ -1,4 +1,4 @@
-const {rimraf, series, copy} = require('nps-utils');
+const {rimraf, series, copy, mkdirp} = require('nps-utils');
 const {resolve} = require('path');
 
 const _themePath = resolve(__dirname, '../theme');
@@ -8,16 +8,26 @@ const path = (...parts) => resolve(__dirname, ...parts);
 module.exports = {
 
     scripts: {
-        copy: {
+        copy       : {
             script: series(
                 rimraf(path('public/vendor')),
                 `cp -r ${themePath('app/dist/vendor')} ${path('public/vendor')}`
             )
         },
-        link: {
+        link       : {
             script: series(
                 rimraf(path('public/vendor')),
                 `ln -s ${themePath('app/dist/vendor')} ${path('public/vendor')}`
+            )
+        },
+        'copy:assets': {
+            script: series(
+                rimraf(path('codex/core/resources/assets')),
+                mkdirp(path('codex/core/resources/assets')),
+                mkdirp(path('codex/phpdoc/resources/assets')),
+                `cp -r ${themePath('app/dist/vendor/codex_core/')} ${path('codex/core/resources/assets/core')}`,
+                `cp -r ${themePath('app/dist/vendor/codex_documents/')} ${path('codex/core/resources/assets/documents')}`,
+                `cp -r ${themePath('app/dist/vendor/codex_phpdoc')} ${path('codex/phpdoc/resources/assets/')}`,
             )
         }
     }
