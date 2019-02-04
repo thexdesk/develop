@@ -38,8 +38,8 @@ class TestCommand extends Command
         $revisions = $project->getRevisions();
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
-//        $document  = $documents->get('processors/macros');
-        $document  = $documents->get('index');
+        $document  = $documents->get('processors/macros');
+//        $document  = $documents->get('index');
         $content   = $document->getContent();
 
 //        $phpdoc = $codex->get('blade-extensions/master')->phpdoc();

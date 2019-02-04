@@ -20,9 +20,10 @@ title: Macros
 ```php
 <!--*codex:phpdoc:method:signature('Codex\Codex::get()', true, 'namespace,tags')*-->
 ````
-<!--*codex:phpdoc:method('Codex\Addon\Phpdoc\PhpdocMacros::methodSignature()', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method:signature('Codex\Phpdoc\Documents\PhpdocMacros::methodSignature()', true, true, 'namespace,tags')*-->
 
 **Result**
+
 <!--*codex:phpdoc:method:signature('Codex\Codex::get()', true, 'namespace,tags')*-->
 
 
@@ -32,7 +33,8 @@ title: Macros
 ```php
 <!--*codex:phpdoc:method('Codex\Codex::get()', true, true, 'namespace,tags')*-->
 ````
-<!--*codex:phpdoc:method('Codex\Addon\Phpdoc\PhpdocMacros::method()', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', true, true, 'namespace,tags')*-->
 
 **Result**
+
 <!--*codex:phpdoc:method('Codex\Codex::get()', true, true, 'namespace,tags')*-->
