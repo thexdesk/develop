@@ -19,7 +19,7 @@ return [
                 // any or all of these can be used
                 'groups'    => [],
                 'emails'    => [],
-                'usernames' => ['robinradic'],
+                'usernames' => ['RobinRadic'],
             ],
         ]
     ]

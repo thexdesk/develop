@@ -10,7 +10,6 @@ use Codex\Codex;
 use Codex\Exceptions\NotFoundException;
 use Codex\Hooks;
 use Codex\Projects\Project;
-use Gate;
 
 class AuthAddonServiceProvider extends AddonServiceProvider
 {
@@ -127,7 +126,7 @@ class AuthAddonServiceProvider extends AddonServiceProvider
             'children' => [],
         ]);
 
-        Hooks::register('GetBackendData', function ($data) use ($menuId) {
+        Hooks::register('GetBackendData::response', function ($data) use ($menuId) {
             $index = null;
             foreach (data_get($data, 'codex.layout.header.menu', []) as $i => $item) {
                 if ($item[ 'id' ] === $menuId) {
@@ -141,8 +140,8 @@ class AuthAddonServiceProvider extends AddonServiceProvider
             $children = [];
             foreach (config('codex-auth.services', []) as $service => $config) {
                 $loggedIn = codex()->auth()->isLoggedIn($service);
-//                codex()->auth()->getProvider($service)->stateless()
                 if ($loggedIn) {
+                    data_set($data, "codex.layout.header.menu.{$index}.sublabel", $service);
                     $user       = codex()->auth()->user($service);
                     $children[] = [
                         'label' => "Logout {$user['nickname']} from {$service}",

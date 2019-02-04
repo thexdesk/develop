@@ -2,61 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/GET__documentation_auth_test_master_index.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/_code-completion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/resources/views/callback.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/src/Api/AuthQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/src/Api/AuthSchemaExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/src/CodexAuth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/src/Http/Controllers/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/src/Http/HttpServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/src/ProjectAuth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/src/ProjectPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Concerns/Hookable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Concerns/Macroable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Hooks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/examples/layout/example1.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/getting-started/configuration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/getting-started/installation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/processors/links.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/processors/macros.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/processors/toc.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/revision.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/auth-test/master/structure.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/auth/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/auth/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/auth/config/codex-git.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/auth/config/codex-auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Api/GraphQL/CodexQueries.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Api/GraphQL/CodexQueries.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Codex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/Commands/ProcessAttributes.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/Commands/ProcessAttributes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Projects/Commands/FindProjects.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Projects/Commands/FindProjects.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/package-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-toolbox/ide-toolbox.metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/php-toolbox/ide-toolbox.metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/auth-test/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/auth-test/config.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,11 +58,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+            <state relative-caret-position="617">
+              <caret line="143" column="90" selection-start-line="143" selection-start-column="90" selection-end-line="143" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/nuwave/lighthouse/src/GraphQL.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+              <folding>
+                <element signature="e#1851#2131#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1063">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="871" selection-start-line="871" selection-end-line="871" />
             </state>
           </provider>
         </entry>
@@ -122,99 +100,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codex/auth/src/ProjectAuth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="675">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCodex.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codex/auth/src/CodexAuth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="91" column="58" lean-forward="true" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+            <state relative-caret-position="1026">
+              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/socialite/src/Two/AbstractProvider.php">
+        <entry file="file://$PROJECT_DIR$/resources/docs/auth-test/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="139" column="32" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
-              <folding>
-                <element signature="e#41#63#0#PHP" />
-                <element signature="e#1949#2253#0#PHP" />
-                <element signature="e#3132#3384#0#PHP" />
-                <element signature="e#3197#3313#0#PHP" />
-                <element signature="e#3545#3712#0#PHP" />
-                <element signature="e#3849#4300#0#PHP" />
-                <element signature="e#3921#4152#0#PHP" />
-                <element signature="e#4163#4237#0#PHP" />
-                <element signature="e#4452#4577#0#PHP" />
-                <element signature="e#4620#5138#0#PHP" />
-                <element signature="e#4657#4743#0#PHP" />
-                <element signature="e#4831#4944#0#PHP" />
-                <element signature="e#4854#4943#1#PHP" />
-                <element signature="e#4962#5061#0#PHP" />
-                <element signature="e#4962#5131#0#PHP" />
-                <element signature="e#5588#5853#0#PHP" />
-                <element signature="e#5639#5702#0#PHP" />
-                <element signature="e#5989#6402#0#PHP" />
-                <element signature="e#6162#6338#0#PHP" />
-                <element signature="e#6213#6337#0#PHP" />
-                <element signature="e#6531#6786#0#PHP" />
-                <element signature="e#6593#6779#0#PHP" />
-                <element signature="e#6875#6961#0#PHP" />
-                <element signature="e#7097#7246#0#PHP" />
-                <element signature="e#7380#7504#0#PHP" />
-                <element signature="e#7585#7654#0#PHP" />
-                <element signature="e#7761#7864#0#PHP" />
-                <element signature="e#7976#8168#0#PHP" />
-                <element signature="e#8025#8127#0#PHP" />
-                <element signature="e#8305#8422#0#PHP" />
-                <element signature="e#8555#8669#0#PHP" />
-                <element signature="e#8776#8853#0#PHP" />
-                <element signature="e#8962#9039#0#PHP" />
-                <element signature="e#9153#9248#0#PHP" />
-                <element signature="e#9345#9418#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1161">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Hooks.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Api/GraphQL/CodexQueries.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/socialite/src/Two/GithubProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+            <state relative-caret-position="513">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -352,11 +266,9 @@
         <option value="$PROJECT_DIR$/codex/auth/src/Http/HttpServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/auth/routes/web.php" />
         <option value="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" />
-        <option value="$PROJECT_DIR$/resources/docs/auth-test/config.php" />
         <option value="$PROJECT_DIR$/codex/auth/_code-completion.php" />
         <option value="$PROJECT_DIR$/codex/auth/src/ProjectAuth.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Hooks.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Concerns/Macroable.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Api/GraphQL/CodexQueries.php" />
@@ -378,8 +290,10 @@
         <option value="$PROJECT_DIR$/codex/auth/src/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/codex/auth/database/migrations/2019_02_04_214631_codex_add_user_fields.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php" />
         <option value="$PROJECT_DIR$/codex/auth/src/CodexAuth.php" />
+        <option value="$PROJECT_DIR$/resources/docs/auth-test/config.php" />
+        <option value="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -698,6 +612,21 @@
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -729,161 +658,20 @@
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Foundation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="Events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Session" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Session" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Session" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="socialite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="socialite" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="nuwave" type="462c0819:PsiDirectoryNode" />
-              <item name="lighthouse" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="auth-test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1559,38 +1347,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Session/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/Store.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3753">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="124" column="41" selection-start-line="124" selection-start-column="41" selection-end-line="124" selection-end-column="41" />
-          <folding>
-            <element signature="e#3405#3563#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/ResponseTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1381" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Concerns/InteractsWithFlashData.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1642,13 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1837,20 +1586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/ProjectAuth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1161">
@@ -1923,10 +1658,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Api/GraphQL/GraphQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/nuwave/lighthouse/src/GraphQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+          <folding>
+            <element signature="e#1851#2131#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1063">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="871" selection-start-line="871" selection-end-line="871" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/auth/src/ProjectAuth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCodex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/docs/auth-test/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codex/auth/src/CodexAuth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="91" column="58" lean-forward="true" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+        <state relative-caret-position="1026">
+          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="143" column="90" selection-start-line="143" selection-start-column="90" selection-end-line="143" selection-end-column="90" />
         </state>
       </provider>
     </entry>
