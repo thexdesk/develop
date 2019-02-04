@@ -16,8 +16,15 @@ module.exports = {
         },
         link       : {
             script: series(
-                rimraf(path('public/vendor')),
-                `ln -s ${themePath('app/dist/vendor')} ${path('public/vendor')}`
+                mkdirp(path('public/vendor')),
+                rimraf(path('public/vendor/codex_core')),
+                rimraf(path('public/vendor/codex_documents')),
+                rimraf(path('public/vendor/codex_phpdoc')),
+                rimraf(path('public/vendor/codex_auth')),
+                `ln -s ${themePath('app/dist/vendor/codex_core')} ${path('public/vendor/codex_core')}`,
+                `ln -s ${themePath('app/dist/vendor/codex_documents')} ${path('public/vendor/codex_documents')}`,
+                `ln -s ${themePath('app/dist/vendor/codex_phpdoc')} ${path('public/vendor/codex_phpdoc')}`,
+                `ln -s ${themePath('app/dist/vendor/codex_auth')} ${path('public/vendor/codex_auth')}`
             )
         },
         'copy:assets': {

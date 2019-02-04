@@ -5,8 +5,8 @@ namespace App;
 use Codex\Addons\AddonCollection;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\AttributeSchemaGenerator;
-use Codex\Commands\GetBackendData;
 use Codex\Contracts\Projects\Project;
+use Codex\Hooks;
 use GraphQL\Executor\ExecutionResult;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
@@ -31,8 +31,16 @@ class TestCommand extends Command
     {
 //        $bd = $this->dispatch(new GetBackendData());
 
+//        Hooks::register('projects:found', function ($paths, $next, $args) {
+//            $paths[ 'asdf' ] = 'a';
+//            return $paths;
+//        });
+
+        $user = auth()->loginUsingId(1);
+
+
         $codex     = codex();
-        $actions = $codex->attr('processors.links.actions');
+        $actions   = $codex->attr('processors.links.actions');
         $projects  = $codex->getProjects();
         $project   = $projects->get('codex');
         $revisions = $project->getRevisions();
@@ -40,7 +48,7 @@ class TestCommand extends Command
         $documents = $revision->getDocuments();
         $document  = $documents->get('processors/macros');
 //        $document  = $documents->get('index');
-        $content   = $document->getContent();
+        $content = $document->getContent();
 
 //        $phpdoc = $codex->get('blade-extensions/master')->phpdoc();
 //        $file = $phpdoc->getFileByFullName('Radic\\BladeExtensions\\Compilers\\MarkdownCompiler');

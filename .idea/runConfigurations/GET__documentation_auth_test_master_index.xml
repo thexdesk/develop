@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GET /documentation/auth-test/master/index" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" server_name="codex.local" url="/documentation/auth-test/master/index">
+    <method v="2" />
+  </configuration>
+</component>
