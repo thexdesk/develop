@@ -11,3 +11,5 @@ npm-debug.log
 yarn-error.log
 /codex-addons
 /.tmp
+/phpDocumentor.phar
+/php-plantuml.phar

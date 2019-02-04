@@ -44,6 +44,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     public $commands = [
 //        Console\ClearPhpdocCommand::class,
         Console\PhpdocGenerateCommand::class,
+        Console\PhpdocStatusCommand::class,
     ];
 
     public $bindings = [

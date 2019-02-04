@@ -195,4 +195,5 @@ class RevisionPhpdoc
 
         return $this->getFile($this->getManifest()->getHashByFullName($fullName));
     }
+
 }
