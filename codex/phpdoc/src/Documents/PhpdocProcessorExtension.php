@@ -17,6 +17,9 @@ class PhpdocProcessorExtension extends ProcessorExtension implements ProcessorIn
 
     public function process(Document $document)
     {
+        if ( ! $document->getRevision()->isPhpdocEnabled()) {
+            return;
+        }
         $content = $document->getContent();
         $document->setContent("<phpdoc-manifest-provider  project='{$document->getProject()}' revision='{$document->getRevision()}'>{$content}</phpdoc-manifest-provider>");
     }

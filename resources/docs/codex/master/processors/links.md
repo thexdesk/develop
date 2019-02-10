@@ -7,7 +7,7 @@ title: Links
 <!-- [Relative + Hash](../getting-started/installation.md#codex:doc[Link]) -->
 
 ### Transformations
-Links are transformed by the [](../../develop/links.md#codex:phpdoc(Codex/Processors/LinksProcessor):type:drawer:popover)
+Links are transformed by the [](../../develop/links.md#codex:phpdoc(Codex\Processors\LinksProcessor):type:drawer:popover)
 
 ##### URL Path based
 any relative file path to a document will be fixed to the right url.
