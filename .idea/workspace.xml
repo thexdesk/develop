@@ -2,9 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/auth-test/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/auth-test/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/codex_algolia_index__vvv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/algolia-search/code_completion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/algolia-search/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/algolia-search/config/codex-algolia-search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/algolia-search/src/AlgoliaSearchAddon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/algolia-search/src/AlgoliaSearchAddonServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/algolia-search/src/Console/IndexCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/algolia-search/src/Indexer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TestCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/MarkdownParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/MarkdownParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocLinks.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocLinks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocMacros.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocMacros.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Entity.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/FQSEN.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Property.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/structure.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/structure.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/phpdoc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/phpdoc.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,32 +79,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="143" column="90" selection-start-line="143" selection-start-column="90" selection-end-line="143" selection-end-column="90" />
+            <state relative-caret-position="351">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/nuwave/lighthouse/src/GraphQL.php">
+        <entry file="file://$PROJECT_DIR$/codex/algolia-search/src/AlgoliaSearchAddonServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-              <folding>
-                <element signature="e#1851#2131#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="351">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php">
+        <entry file="file://$PROJECT_DIR$/config/algolia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1063">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="872">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -91,44 +109,416 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="871" selection-start-line="871" selection-end-line="871" />
+            <state relative-caret-position="27">
+              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+              <folding>
+                <element signature="e#6258#6278#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/auth/src/ProjectAuth.php">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="1002">
+              <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCodex.php">
+        <entry file="file://$PROJECT_DIR$/codex/algolia-search/src/Console/IndexCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="645">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codex/auth/src/CodexAuth.php">
+        <entry file="file://$PROJECT_DIR$/vendor/vinkla/algolia/src/AlgoliaManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+            <state relative-caret-position="351">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <folding>
+                <element signature="e#399#493#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/docs/auth-test/config.php">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/XmlAccessorStrategy.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/GithubMarkdown.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="162">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/Markdown.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/Parser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+              <folding>
+                <element signature="e#877#1094#0#PHP" expanded="true" />
+                <element signature="e#1425#1588#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/MarkdownParser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/Macroable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/block/QuoteTrait.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1031">
+              <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/ParserProcessorExtension.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1188">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Document.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
+              <folding>
+                <element signature="e#266#479#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/block/HeadlineTrait.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-345">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/block/ListTrait.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1884">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/DOMQueryDecorator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Nodes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="486" column="20" selection-start-line="486" selection-start-column="20" selection-end-line="486" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/algolia-search/src/Indexer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="449" column="13" selection-start-line="449" selection-start-column="13" selection-end-line="449" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="972">
+              <caret line="1843" column="7" lean-forward="true" selection-start-line="1843" selection-start-column="7" selection-end-line="1843" selection-end-column="7" />
+              <folding>
+                <element signature="e#1180#1221#0#PHP" />
+                <element signature="e#1268#1395#0#PHP" />
+                <element signature="e#1889#2140#0#PHP" />
+                <element signature="e#2732#3942#0#PHP" />
+                <element signature="e#3001#3176#0#PHP" />
+                <element signature="e#3187#3857#0#PHP" />
+                <element signature="e#3288#3464#0#PHP" />
+                <element signature="e#3693#3814#0#PHP" />
+                <element signature="e#4400#5377#0#PHP" />
+                <element signature="e#4575#5000#0#PHP" />
+                <element signature="e#4620#4989#0#PHP" />
+                <element signature="e#5017#5370#0#PHP" />
+                <element signature="e#5602#6171#0#PHP" />
+                <element signature="e#5722#5815#0#PHP" />
+                <element signature="e#5895#6024#0#PHP" />
+                <element signature="e#6509#7692#0#PHP" />
+                <element signature="e#6733#7169#0#PHP" />
+                <element signature="e#6790#7158#0#PHP" />
+                <element signature="e#7179#7300#0#PHP" />
+                <element signature="e#7317#7685#0#PHP" />
+                <element signature="e#8072#9211#0#PHP" />
+                <element signature="e#8260#8361#0#PHP" />
+                <element signature="e#8400#8848#0#PHP" />
+                <element signature="e#8529#8796#0#PHP" />
+                <element signature="e#8574#8711#0#PHP" />
+                <element signature="e#8865#9204#0#PHP" />
+                <element signature="e#9594#10287#0#PHP" />
+                <element signature="e#9879#10280#0#PHP" />
+                <element signature="e#10662#11712#0#PHP" />
+                <element signature="e#10808#11177#0#PHP" />
+                <element signature="e#10983#11177#0#PHP" />
+                <element signature="e#11257#11386#0#PHP" />
+                <element signature="e#11396#11648#0#PHP" />
+                <element signature="e#11528#11648#0#PHP" />
+                <element signature="e#12106#12914#0#PHP" />
+                <element signature="e#12224#12317#0#PHP" />
+                <element signature="e#12397#12526#0#PHP" />
+                <element signature="e#12543#12907#0#PHP" />
+                <element signature="e#13231#13803#0#PHP" />
+                <element signature="e#13351#13444#0#PHP" />
+                <element signature="e#13524#13653#0#PHP" />
+                <element signature="e#14042#14698#0#PHP" />
+                <element signature="e#14203#14325#0#PHP" />
+                <element signature="e#14342#14691#0#PHP" />
+                <element signature="e#14892#15322#0#PHP" />
+                <element signature="e#15083#15185#0#PHP" />
+                <element signature="e#15328#15911#0#PHP" />
+                <element signature="e#15506#15904#0#PHP" />
+                <element signature="e#16587#17618#0#PHP" />
+                <element signature="e#17003#17581#0#PHP" />
+                <element signature="e#17083#17191#0#PHP" />
+                <element signature="e#17322#17434#0#PHP" />
+                <element signature="e#25706#26587#0#PHP" />
+                <element signature="e#25884#25968#0#PHP" />
+                <element signature="e#26023#26169#0#PHP" />
+                <element signature="e#26186#26580#0#PHP" />
+                <element signature="e#26703#29367#0#PHP" />
+                <element signature="e#26886#27084#0#PHP" />
+                <element signature="e#27094#27249#0#PHP" />
+                <element signature="e#27519#27753#0#PHP" />
+                <element signature="e#28344#28505#0#PHP" />
+                <element signature="e#28915#29019#0#PHP" />
+                <element signature="e#29029#29330#0#PHP" />
+                <element signature="e#29085#29320#0#PHP" />
+                <element signature="e#29145#29306#0#PHP" />
+                <element signature="e#29437#30593#0#PHP" />
+                <element signature="e#29539#30555#0#PHP" />
+                <element signature="e#29915#30190#0#PHP" />
+                <element signature="e#30681#31615#0#PHP" />
+                <element signature="e#30894#31583#0#PHP" />
+                <element signature="e#30949#31573#0#PHP" />
+                <element signature="e#30995#31316#0#PHP" />
+                <element signature="e#31051#31298#0#PHP" />
+                <element signature="e#31331#31573#0#PHP" />
+                <element signature="e#31354#31559#0#PHP" />
+                <element signature="e#31836#32534#0#PHP" />
+                <element signature="e#32111#32527#0#PHP" />
+                <element signature="e#33374#37012#0#PHP" />
+                <element signature="e#33502#33704#0#PHP" />
+                <element signature="e#33714#33854#0#PHP" />
+                <element signature="e#33864#33990#0#PHP" />
+                <element signature="e#34044#34222#0#PHP" />
+                <element signature="e#34099#34212#0#PHP" />
+                <element signature="e#34288#34703#0#PHP" />
+                <element signature="e#34348#34501#0#PHP" />
+                <element signature="e#34375#34463#1#PHP" />
+                <element signature="e#34516#34693#0#PHP" />
+                <element signature="e#34631#34693#0#PHP" />
+                <element signature="e#34879#36077#0#PHP" />
+                <element signature="e#34977#35552#0#PHP" />
+                <element signature="e#35036#35538#0#PHP" />
+                <element signature="e#35095#35288#0#PHP" />
+                <element signature="e#35130#35234#1#PHP" />
+                <element signature="e#35311#35520#0#PHP" />
+                <element signature="e#35442#35520#0#PHP" />
+                <element signature="e#36260#36970#0#PHP" />
+                <element signature="e#36326#36414#0#PHP" />
+                <element signature="e#36428#36960#0#PHP" />
+                <element signature="e#36580#36676#0#PHP" />
+                <element signature="e#36693#36946#0#PHP" />
+                <element signature="e#36762#36928#0#PHP" />
+                <element signature="e#37470#37908#0#PHP" />
+                <element signature="e#37551#37901#0#PHP" />
+                <element signature="e#38291#38569#0#PHP" />
+                <element signature="e#38850#39096#0#PHP" />
+                <element signature="e#39378#39723#0#PHP" />
+                <element signature="e#39924#40419#0#PHP" />
+                <element signature="e#40081#40412#0#PHP" />
+                <element signature="e#47345#48006#0#PHP" />
+                <element signature="e#47596#47682#0#PHP" />
+                <element signature="e#47699#47999#0#PHP" />
+                <element signature="e#48379#48872#0#PHP" />
+                <element signature="e#48537#48865#0#PHP" />
+                <element signature="e#48958#49037#0#PHP" />
+                <element signature="e#49135#49221#0#PHP" />
+                <element signature="e#49594#50095#0#PHP" />
+                <element signature="e#49754#50088#0#PHP" />
+                <element signature="e#50546#51054#0#PHP" />
+                <element signature="e#50709#51047#0#PHP" />
+                <element signature="e#51160#51249#0#PHP" />
+                <element signature="e#53740#55122#0#PHP" />
+                <element signature="e#53959#54762#0#PHP" />
+                <element signature="e#54114#54198#0#PHP" />
+                <element signature="e#54211#54337#0#PHP" />
+                <element signature="e#54350#54455#0#PHP" />
+                <element signature="e#54466#54762#0#PHP" />
+                <element signature="e#54495#54751#0#PHP" />
+                <element signature="e#54779#55115#0#PHP" />
+                <element signature="e#55420#55623#0#PHP" />
+                <element signature="e#58163#59559#0#PHP" />
+                <element signature="e#58391#59194#0#PHP" />
+                <element signature="e#58546#58630#0#PHP" />
+                <element signature="e#58643#58769#0#PHP" />
+                <element signature="e#58782#58887#0#PHP" />
+                <element signature="e#58898#59194#0#PHP" />
+                <element signature="e#58927#59183#0#PHP" />
+                <element signature="e#59211#59552#0#PHP" />
+                <element signature="e#59789#60010#0#PHP" />
+                <element signature="e#60258#60769#0#PHP" />
+                <element signature="e#60421#60762#0#PHP" />
+                <element signature="e#61078#61557#0#PHP" />
+                <element signature="e#61210#61503#0#PHP" />
+                <element signature="e#61314#61452#0#PHP" />
+                <element signature="e#61679#61847#0#PHP" />
+                <element signature="e#62025#62994#0#PHP" />
+                <element signature="e#62213#62277#0#PHP" />
+                <element signature="e#62286#62447#0#PHP" />
+                <element signature="e#62336#62437#0#PHP" />
+                <element signature="e#62456#62527#0#PHP" />
+                <element signature="e#62537#62611#0#PHP" />
+                <element signature="e#62628#62987#0#PHP" />
+                <element signature="e#63188#64441#0#PHP" />
+                <element signature="e#63437#63508#0#PHP" />
+                <element signature="e#63518#63897#0#PHP" />
+                <element signature="e#63592#63835#0#PHP" />
+                <element signature="e#63642#63821#0#PHP" />
+                <element signature="e#63759#63821#0#PHP" />
+                <element signature="e#63907#63975#0#PHP" />
+                <element signature="e#63985#64074#0#PHP" />
+                <element signature="e#64091#64434#0#PHP" />
+                <element signature="e#64554#65081#0#PHP" />
+                <element signature="e#64720#65074#0#PHP" />
+                <element signature="e#65227#65851#0#PHP" />
+                <element signature="e#65424#65844#0#PHP" />
+                <element signature="e#65978#66570#0#PHP" />
+                <element signature="e#66164#66563#0#PHP" />
+                <element signature="e#66764#67495#0#PHP" />
+                <element signature="e#66994#67488#0#PHP" />
+                <element signature="e#67669#68302#0#PHP" />
+                <element signature="e#67874#68295#0#PHP" />
+                <element signature="e#68391#68512#0#PHP" />
+                <element signature="e#68692#68851#0#PHP" />
+                <element signature="e#68962#69354#0#PHP" />
+                <element signature="e#69036#69347#0#PHP" />
+                <element signature="e#69467#69852#0#PHP" />
+                <element signature="e#69523#69845#0#PHP" />
+                <element signature="e#69998#70480#0#PHP" />
+                <element signature="e#70085#70473#0#PHP" />
+                <element signature="e#70607#71057#0#PHP" />
+                <element signature="e#70683#71050#0#PHP" />
+                <element signature="e#71244#71810#0#PHP" />
+                <element signature="e#71357#71803#0#PHP" />
+                <element signature="e#71984#72735#0#PHP" />
+                <element signature="e#72072#72163#0#PHP" />
+                <element signature="e#72173#72322#0#PHP" />
+                <element signature="e#72339#72728#0#PHP" />
+                <element signature="e#72821#72935#0#PHP" />
+                <element signature="e#73044#73483#0#PHP" />
+                <element signature="e#73100#73384#0#PHP" />
+                <element signature="e#73138#73292#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="146" selection-start-line="146" selection-end-line="146" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HidesAttributes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="601">
+              <caret line="741" column="24" selection-start-line="741" selection-start-column="24" selection-end-line="741" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/ClientContext.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -144,8 +534,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>t\]\(#codex:(.*?)\).*</find>
-      <find>$link-&gt;setElementUrl(codex()-&gt;url(</find>
       <find>namespace Codex\</find>
       <find>Git</find>
       <find>parseL</find>
@@ -174,6 +562,8 @@
       <find>$this-&gt;dir</find>
       <find>static::</find>
       <find>static::$macros</find>
+      <find>getChildren</find>
+      <find>tag name=&quot;magic&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>codex.</replace>
@@ -243,40 +633,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/codex/phpdoc/.gitignore" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/RevisionPhpdoc.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Console/PhpdocStatusCommand.php" />
-        <option value="$PROJECT_DIR$/scripts/phpdoc.sh" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/processors/macros.md" />
-        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacrosProcessorExtension.php" />
-        <option value="$PROJECT_DIR$/codex/auth/README.md" />
-        <option value="$PROJECT_DIR$/codex/core/src/Concerns/Hookable.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Projects/Commands/FindProjects.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php" />
-        <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/app/TestCommand.php" />
-        <option value="$PROJECT_DIR$/codex/auth/src/BasicAuthHandler.php" />
-        <option value="$PROJECT_DIR$/codex/auth/composer.json" />
-        <option value="$PROJECT_DIR$/.tmp/codex/cold/addon-auth/config/codex-auth.php" />
-        <option value="$PROJECT_DIR$/codex/auth/routes/api.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/Http/HttpServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/auth/src/Http/HttpServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/auth/routes/web.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" />
         <option value="$PROJECT_DIR$/codex/auth/_code-completion.php" />
         <option value="$PROJECT_DIR$/codex/auth/src/ProjectAuth.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Hooks.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Mergable/Model.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Concerns/Macroable.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Api/GraphQL/CodexQueries.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Codex.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/codex/auth/config/codex-auth.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/package-scripts.js" />
         <option value="$PROJECT_DIR$/config/debugbar.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
@@ -294,6 +660,30 @@
         <option value="$PROJECT_DIR$/codex/auth/src/CodexAuth.php" />
         <option value="$PROJECT_DIR$/resources/docs/auth-test/config.php" />
         <option value="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Property.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Codex.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/Properties/FileEntityElement.php" />
+        <option value="$PROJECT_DIR$/scripts/phpdoc.sh" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Entity.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/FQSEN.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocLinks.php" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/src/Documents/PhpdocMacros.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/src/SemverAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/src/SemverAddon.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/src/AlgoliaSearchAddon.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/config/codex-algolia-search.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/composer.json" />
+        <option value="$PROJECT_DIR$/app/TestCommand.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/algolia.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/code_completion.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/MarkdownParser.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/src/AlgoliaSearchAddonServiceProvider.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Document.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/src/Console/IndexCommand.php" />
+        <option value="$PROJECT_DIR$/codex/algolia-search/src/Indexer.php" />
       </list>
     </option>
   </component>
@@ -306,7 +696,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
     <servers>
       <server host="codex.local" id="a0853433-78da-42d5-a66d-316d3d43631c" name="codex.local" />
@@ -489,6 +879,8 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
       <path value="$PROJECT_DIR$/vendor/moontoast/math" />
+      <path value="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php" />
+      <path value="$PROJECT_DIR$/vendor/vinkla/algolia" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -546,114 +938,169 @@
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="algolia-search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="algolia-search" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="algolia-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="algolia-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+              <item name="Processors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+              <item name="Processors" type="462c0819:PsiDirectoryNode" />
+              <item name="Parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Serializer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Serializer" type="462c0819:PsiDirectoryNode" />
+              <item name="Annotations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Serializer" type="462c0819:PsiDirectoryNode" />
+              <item name="Concerns" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Serializer" type="462c0819:PsiDirectoryNode" />
+              <item name="Handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Serializer" type="462c0819:PsiDirectoryNode" />
+              <item name="Phpdoc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Serializer" type="462c0819:PsiDirectoryNode" />
+              <item name="Phpdoc" type="462c0819:PsiDirectoryNode" />
+              <item name="File" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="semver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="phpdoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codex" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
@@ -672,6 +1119,61 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="auth-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="getting-started" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="contributing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="preface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -705,23 +1207,23 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/codex/core/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/codex/auth/src" />
-      <recent name="$PROJECT_DIR$/codex/auth/src/Http/Controllers" />
-      <recent name="$PROJECT_DIR$/codex/auth" />
-      <recent name="$PROJECT_DIR$/codex/core/src/Concerns" />
-      <recent name="$PROJECT_DIR$/resources/docs/auth-test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/codex/phpdoc/old" />
       <recent name="$PROJECT_DIR$/codex/git/src" />
       <recent name="$PROJECT_DIR$/codex/core/theme/types" />
       <recent name="$PROJECT_DIR$/codex/core" />
       <recent name="$PROJECT_DIR$/resources/docs/codex/master/processors" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/codex/algolia-search" />
+      <recent name="$PROJECT_DIR$/codex" />
+      <recent name="$PROJECT_DIR$/codex/auth/src" />
+      <recent name="$PROJECT_DIR$/codex/auth/src/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/codex/auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -736,7 +1238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.test -vvv">
+  <component name="RunManager" selected="PHP Script.codex:algolia:index -vvv">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -778,6 +1280,7 @@
       <item itemvalue="PHP Script.codex:phpdoc:generate" />
       <item itemvalue="PHP Script.codex:phpdoc:status" />
       <item itemvalue="PHP Script.test -vvv" />
+      <item itemvalue="PHP Script.codex:algolia:index -vvv" />
       <item itemvalue="PHP Script.codex:addon uninstall codex/test-addon -vvv" />
       <item itemvalue="PHP Script.codex:addon enable codex/test-addon -vvv" />
       <item itemvalue="PHPUnit.codex/core" />
@@ -861,6 +1364,7 @@
       <workItem from="1549168452416" />
       <workItem from="1549178978282" />
       <workItem from="1549179155604" />
+      <workItem from="1549717204546" />
     </task>
     <task id="LOCAL-00003" summary="Implemented AttributeSchemaExtension that appends and extends the schema with types generated from attribute definitions which resolves #3">
       <created>1545470738005</created>
@@ -1099,25 +1603,25 @@
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.500394" side_tool="true" weight="0.13389562" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49960598" visible="true" weight="0.1473379" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49960598" visible="true" weight="0.14812863" />
       <window_info id="Structure" order="3" sideWeight="0.500394" side_tool="true" weight="0.13389562" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3295861" />
-      <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.4978914" weight="0.16351558" />
+      <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.4978914" weight="0.16344196" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49736425" weight="0.36177823" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49736425" weight="0.36150712" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49920928" weight="0.32926208" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50395364" side_tool="true" weight="0.3541985" />
       <window_info anchor="bottom" id="Docker" order="5" weight="0.32943568" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49973643" weight="0.3295861" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49947286" weight="0.3295861" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.4960464" visible="true" weight="0.3515585" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49947286" visible="true" weight="0.32942975" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.4960464" weight="0.35132384" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3299389" />
       <window_info anchor="bottom" id="Tasks" order="13" weight="0.3299389" />
       <window_info anchor="bottom" id="TaskBrowser" order="14" sideWeight="0.49947286" weight="0.32977098" />
       <window_info anchor="bottom" id="TypeScript" order="15" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.3295861" />
       <window_info anchor="right" id="Database" order="0" visible="true" weight="0.05455983" />
       <window_info anchor="right" id="Remote Host" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
@@ -1252,6 +1756,21 @@
           <line>49</line>
           <option name="timeStamp" value="687" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/TestCommand.php</url>
+          <line>35</line>
+          <option name="timeStamp" value="688" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/algolia-search/src/Console/IndexCommand.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="691" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/codex/algolia-search/src/AlgoliaSearchAddonServiceProvider.php</url>
+          <line>35</line>
+          <option name="timeStamp" value="693" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1295,432 +1814,585 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>$this-&gt;getProvider($service)-&gt;userFromToken($user['token'])</expression-string>
+        <expression-string>$query-&gt;find('body')-&gt;children($selectors)</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>url()-&gt;route('codex.auth.logout', compact('service'))</expression-string>
+        <expression-string>$query-&gt;find('body')-&gt;children('p')</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>&quot;Logout {$user['nickname']} from {$service}&quot;</expression-string>
+        <expression-string>$query-&gt;find('body')</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session()-&gt;get('codex.auth.logins')</expression-string>
+        <expression-string>$query-&gt;find('p')</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session()</expression-string>
+        <expression-string>$query-&gt;children('p')</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session()-&gt;get('codex.auth.logins.bitbucket')</expression-string>
+        <expression-string>$query-&gt;children('p')-&gt;toArray()</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>app()</expression-string>
+        <expression-string>$query-&gt;find('p')-&gt;toArray()</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session()-&gt;start()</expression-string>
+        <expression-string>$query-&gt;children()-&gt;toArray()</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session()-&gt;get('codex')</expression-string>
+        <expression-string>$query-&gt;children()</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session()-&gt;get('codex.auth.logins.github')</expression-string>
+        <expression-string>$query-&gt;document-&gt;toHtml()</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Concerns/InteractsWithFlashData.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Resources/MergeValue.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Middleware/SetCacheHeaders.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Commands/ProcessAttributes.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="594">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="801" selection-start-line="801" selection-end-line="801" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/Http/HttpServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/Api/AuthQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/routes/schema.graphqls">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Http/Controllers/DocumentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="721" selection-start-line="721" selection-end-line="721" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/CodexServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="217" selection-start-line="217" selection-end-line="217" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Guard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Factory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/CreatesUserProviders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Authenticatable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/GenericUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1755">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nuwave/lighthouse/src/Schema/Directives/Fields/AuthDirective.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nuwave/lighthouse/src/Schema/Directives/Fields/MiddlewareDirective.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1215" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/database/migrations/t.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Foundation/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
-          <folding>
-            <element signature="e#1779#1886#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/Reflection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="893" column="20" selection-start-line="893" selection-start-column="20" selection-end-line="893" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Addons/AddonServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1663">
-          <caret line="426" column="9" selection-start-line="426" selection-start-column="9" selection-end-line="426" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/ProjectPolicy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding>
-            <element signature="e#60#167#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1188">
-          <caret line="10722" column="31" selection-start-line="10722" selection-start-column="31" selection-end-line="10722" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1162">
-          <caret line="1182" column="20" selection-start-line="1182" selection-start-column="20" selection-end-line="1182" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/database/migrations/2019_02_04_214631_codex_add_user_fields.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/socialite/src/SocialiteManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6b3a3641-390e-4e17-9ee4-6d2bc3dd0dd8/schema/codexlocal/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/Api/AuthSchemaExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1161">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Api/GraphQL/CodexQueries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Hooks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/socialite/src/Two/GithubProvider.php">
+    <entry file="file://$PROJECT_DIR$/vendor/vinkla/algolia/src/AlgoliaServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/socialite/src/Two/AbstractProvider.php">
+    <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vinkla/algolia/src/AlgoliaFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/algolia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/ModelCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2133">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/DocumentCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Revisions/Revision.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+          <folding>
+            <element signature="e#2195#2257#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/DOM/Node/QuerySelector/Implementation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/HeaderProcessorExtension.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/TocProcessorExtension.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="975" column="9" selection-start-line="975" selection-start-column="9" selection-end-line="975" selection-end-column="9" />
+          <folding>
+            <element signature="e#29824#30427#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="1351" column="20" selection-start-line="1351" selection-start-column="20" selection-end-line="1351" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/ManifestFile.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Manifest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="99" column="20" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/AttributeAnnotationReader.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Annotations/Markdown.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/Phpdoc/File/Docblock.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/PropertyMetadata.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/RevisionPhpdoc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="132" column="70" selection-start-line="132" selection-start-column="70" selection-end-line="132" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/MacrosProcessorExtension.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1002">
+          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/algolia-search/code_completion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#40#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/algolia-search/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/ProcessorExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/src/Serializer/XmlAccessorStrategy.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vinkla/algolia/src/AlgoliaManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#399#493#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/Macroable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="e#877#1094#0#PHP" expanded="true" />
+            <element signature="e#1425#1588#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/block/QuoteTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1031">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/ParserProcessorExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/block/HeadlineTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/block/ListTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1884">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/Markdown.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="139" column="32" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cebe/markdown/GithubMarkdown.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/algolia-search/src/AlgoliaSearchAddonServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Document.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
           <folding>
-            <element signature="e#41#63#0#PHP" />
-            <element signature="e#1949#2253#0#PHP" />
-            <element signature="e#3132#3384#0#PHP" />
-            <element signature="e#3197#3313#0#PHP" />
-            <element signature="e#3545#3712#0#PHP" />
-            <element signature="e#3849#4300#0#PHP" />
-            <element signature="e#3921#4152#0#PHP" />
-            <element signature="e#4163#4237#0#PHP" />
-            <element signature="e#4452#4577#0#PHP" />
-            <element signature="e#4620#5138#0#PHP" />
-            <element signature="e#4657#4743#0#PHP" />
-            <element signature="e#4831#4944#0#PHP" />
-            <element signature="e#4854#4943#1#PHP" />
-            <element signature="e#4962#5061#0#PHP" />
-            <element signature="e#4962#5131#0#PHP" />
-            <element signature="e#5588#5853#0#PHP" />
-            <element signature="e#5639#5702#0#PHP" />
-            <element signature="e#5989#6402#0#PHP" />
-            <element signature="e#6162#6338#0#PHP" />
-            <element signature="e#6213#6337#0#PHP" />
-            <element signature="e#6531#6786#0#PHP" />
-            <element signature="e#6593#6779#0#PHP" />
-            <element signature="e#6875#6961#0#PHP" />
-            <element signature="e#7097#7246#0#PHP" />
-            <element signature="e#7380#7504#0#PHP" />
-            <element signature="e#7585#7654#0#PHP" />
-            <element signature="e#7761#7864#0#PHP" />
-            <element signature="e#7976#8168#0#PHP" />
-            <element signature="e#8025#8127#0#PHP" />
-            <element signature="e#8305#8422#0#PHP" />
-            <element signature="e#8555#8669#0#PHP" />
-            <element signature="e#8776#8853#0#PHP" />
-            <element signature="e#8962#9039#0#PHP" />
-            <element signature="e#9153#9248#0#PHP" />
-            <element signature="e#9345#9418#0#PHP" />
+            <element signature="e#266#479#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Api/GraphQL/GraphQL.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/DOMQueryDecorator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        <state relative-caret-position="351">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nuwave/lighthouse/src/GraphQL.php">
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/MarkdownParser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding>
-            <element signature="e#1851#2131#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1088">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Commands/GetBackendData.php">
+    <entry file="file://$PROJECT_DIR$/vendor/fluentdom/fluentdom/src/FluentDOM/Nodes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1063">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="424">
+          <caret line="486" column="20" selection-start-line="486" selection-start-column="20" selection-end-line="486" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="449" column="13" selection-start-line="449" selection-start-column="13" selection-end-line="449" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/code_completion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="871" selection-start-line="871" selection-end-line="871" />
+        <state relative-caret-position="27">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="e#6258#6278#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/ProjectAuth.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HidesAttributes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="569">
+          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Concerns/HasCodex.php">
+    <entry file="file://$PROJECT_DIR$/codex/algolia-search/src/Console/IndexCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="645">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/auth-test/config.php">
+    <entry file="file://$PROJECT_DIR$/codex/algolia-search/src/Indexer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="240">
+          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/CodexAuth.php">
+    <entry file="file://$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+        <state relative-caret-position="601">
+          <caret line="741" column="24" selection-start-line="741" selection-start-column="24" selection-end-line="741" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/ClientContext.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="143" column="90" selection-start-line="143" selection-start-column="90" selection-end-line="143" selection-end-column="90" />
+        <state relative-caret-position="216">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AlgoliaSearch/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="1843" column="7" lean-forward="true" selection-start-line="1843" selection-start-column="7" selection-end-line="1843" selection-end-column="7" />
+          <folding>
+            <element signature="e#1180#1221#0#PHP" />
+            <element signature="e#1268#1395#0#PHP" />
+            <element signature="e#1889#2140#0#PHP" />
+            <element signature="e#2732#3942#0#PHP" />
+            <element signature="e#3001#3176#0#PHP" />
+            <element signature="e#3187#3857#0#PHP" />
+            <element signature="e#3288#3464#0#PHP" />
+            <element signature="e#3693#3814#0#PHP" />
+            <element signature="e#4400#5377#0#PHP" />
+            <element signature="e#4575#5000#0#PHP" />
+            <element signature="e#4620#4989#0#PHP" />
+            <element signature="e#5017#5370#0#PHP" />
+            <element signature="e#5602#6171#0#PHP" />
+            <element signature="e#5722#5815#0#PHP" />
+            <element signature="e#5895#6024#0#PHP" />
+            <element signature="e#6509#7692#0#PHP" />
+            <element signature="e#6733#7169#0#PHP" />
+            <element signature="e#6790#7158#0#PHP" />
+            <element signature="e#7179#7300#0#PHP" />
+            <element signature="e#7317#7685#0#PHP" />
+            <element signature="e#8072#9211#0#PHP" />
+            <element signature="e#8260#8361#0#PHP" />
+            <element signature="e#8400#8848#0#PHP" />
+            <element signature="e#8529#8796#0#PHP" />
+            <element signature="e#8574#8711#0#PHP" />
+            <element signature="e#8865#9204#0#PHP" />
+            <element signature="e#9594#10287#0#PHP" />
+            <element signature="e#9879#10280#0#PHP" />
+            <element signature="e#10662#11712#0#PHP" />
+            <element signature="e#10808#11177#0#PHP" />
+            <element signature="e#10983#11177#0#PHP" />
+            <element signature="e#11257#11386#0#PHP" />
+            <element signature="e#11396#11648#0#PHP" />
+            <element signature="e#11528#11648#0#PHP" />
+            <element signature="e#12106#12914#0#PHP" />
+            <element signature="e#12224#12317#0#PHP" />
+            <element signature="e#12397#12526#0#PHP" />
+            <element signature="e#12543#12907#0#PHP" />
+            <element signature="e#13231#13803#0#PHP" />
+            <element signature="e#13351#13444#0#PHP" />
+            <element signature="e#13524#13653#0#PHP" />
+            <element signature="e#14042#14698#0#PHP" />
+            <element signature="e#14203#14325#0#PHP" />
+            <element signature="e#14342#14691#0#PHP" />
+            <element signature="e#14892#15322#0#PHP" />
+            <element signature="e#15083#15185#0#PHP" />
+            <element signature="e#15328#15911#0#PHP" />
+            <element signature="e#15506#15904#0#PHP" />
+            <element signature="e#16587#17618#0#PHP" />
+            <element signature="e#17003#17581#0#PHP" />
+            <element signature="e#17083#17191#0#PHP" />
+            <element signature="e#17322#17434#0#PHP" />
+            <element signature="e#25706#26587#0#PHP" />
+            <element signature="e#25884#25968#0#PHP" />
+            <element signature="e#26023#26169#0#PHP" />
+            <element signature="e#26186#26580#0#PHP" />
+            <element signature="e#26703#29367#0#PHP" />
+            <element signature="e#26886#27084#0#PHP" />
+            <element signature="e#27094#27249#0#PHP" />
+            <element signature="e#27519#27753#0#PHP" />
+            <element signature="e#28344#28505#0#PHP" />
+            <element signature="e#28915#29019#0#PHP" />
+            <element signature="e#29029#29330#0#PHP" />
+            <element signature="e#29085#29320#0#PHP" />
+            <element signature="e#29145#29306#0#PHP" />
+            <element signature="e#29437#30593#0#PHP" />
+            <element signature="e#29539#30555#0#PHP" />
+            <element signature="e#29915#30190#0#PHP" />
+            <element signature="e#30681#31615#0#PHP" />
+            <element signature="e#30894#31583#0#PHP" />
+            <element signature="e#30949#31573#0#PHP" />
+            <element signature="e#30995#31316#0#PHP" />
+            <element signature="e#31051#31298#0#PHP" />
+            <element signature="e#31331#31573#0#PHP" />
+            <element signature="e#31354#31559#0#PHP" />
+            <element signature="e#31836#32534#0#PHP" />
+            <element signature="e#32111#32527#0#PHP" />
+            <element signature="e#33374#37012#0#PHP" />
+            <element signature="e#33502#33704#0#PHP" />
+            <element signature="e#33714#33854#0#PHP" />
+            <element signature="e#33864#33990#0#PHP" />
+            <element signature="e#34044#34222#0#PHP" />
+            <element signature="e#34099#34212#0#PHP" />
+            <element signature="e#34288#34703#0#PHP" />
+            <element signature="e#34348#34501#0#PHP" />
+            <element signature="e#34375#34463#1#PHP" />
+            <element signature="e#34516#34693#0#PHP" />
+            <element signature="e#34631#34693#0#PHP" />
+            <element signature="e#34879#36077#0#PHP" />
+            <element signature="e#34977#35552#0#PHP" />
+            <element signature="e#35036#35538#0#PHP" />
+            <element signature="e#35095#35288#0#PHP" />
+            <element signature="e#35130#35234#1#PHP" />
+            <element signature="e#35311#35520#0#PHP" />
+            <element signature="e#35442#35520#0#PHP" />
+            <element signature="e#36260#36970#0#PHP" />
+            <element signature="e#36326#36414#0#PHP" />
+            <element signature="e#36428#36960#0#PHP" />
+            <element signature="e#36580#36676#0#PHP" />
+            <element signature="e#36693#36946#0#PHP" />
+            <element signature="e#36762#36928#0#PHP" />
+            <element signature="e#37470#37908#0#PHP" />
+            <element signature="e#37551#37901#0#PHP" />
+            <element signature="e#38291#38569#0#PHP" />
+            <element signature="e#38850#39096#0#PHP" />
+            <element signature="e#39378#39723#0#PHP" />
+            <element signature="e#39924#40419#0#PHP" />
+            <element signature="e#40081#40412#0#PHP" />
+            <element signature="e#47345#48006#0#PHP" />
+            <element signature="e#47596#47682#0#PHP" />
+            <element signature="e#47699#47999#0#PHP" />
+            <element signature="e#48379#48872#0#PHP" />
+            <element signature="e#48537#48865#0#PHP" />
+            <element signature="e#48958#49037#0#PHP" />
+            <element signature="e#49135#49221#0#PHP" />
+            <element signature="e#49594#50095#0#PHP" />
+            <element signature="e#49754#50088#0#PHP" />
+            <element signature="e#50546#51054#0#PHP" />
+            <element signature="e#50709#51047#0#PHP" />
+            <element signature="e#51160#51249#0#PHP" />
+            <element signature="e#53740#55122#0#PHP" />
+            <element signature="e#53959#54762#0#PHP" />
+            <element signature="e#54114#54198#0#PHP" />
+            <element signature="e#54211#54337#0#PHP" />
+            <element signature="e#54350#54455#0#PHP" />
+            <element signature="e#54466#54762#0#PHP" />
+            <element signature="e#54495#54751#0#PHP" />
+            <element signature="e#54779#55115#0#PHP" />
+            <element signature="e#55420#55623#0#PHP" />
+            <element signature="e#58163#59559#0#PHP" />
+            <element signature="e#58391#59194#0#PHP" />
+            <element signature="e#58546#58630#0#PHP" />
+            <element signature="e#58643#58769#0#PHP" />
+            <element signature="e#58782#58887#0#PHP" />
+            <element signature="e#58898#59194#0#PHP" />
+            <element signature="e#58927#59183#0#PHP" />
+            <element signature="e#59211#59552#0#PHP" />
+            <element signature="e#59789#60010#0#PHP" />
+            <element signature="e#60258#60769#0#PHP" />
+            <element signature="e#60421#60762#0#PHP" />
+            <element signature="e#61078#61557#0#PHP" />
+            <element signature="e#61210#61503#0#PHP" />
+            <element signature="e#61314#61452#0#PHP" />
+            <element signature="e#61679#61847#0#PHP" />
+            <element signature="e#62025#62994#0#PHP" />
+            <element signature="e#62213#62277#0#PHP" />
+            <element signature="e#62286#62447#0#PHP" />
+            <element signature="e#62336#62437#0#PHP" />
+            <element signature="e#62456#62527#0#PHP" />
+            <element signature="e#62537#62611#0#PHP" />
+            <element signature="e#62628#62987#0#PHP" />
+            <element signature="e#63188#64441#0#PHP" />
+            <element signature="e#63437#63508#0#PHP" />
+            <element signature="e#63518#63897#0#PHP" />
+            <element signature="e#63592#63835#0#PHP" />
+            <element signature="e#63642#63821#0#PHP" />
+            <element signature="e#63759#63821#0#PHP" />
+            <element signature="e#63907#63975#0#PHP" />
+            <element signature="e#63985#64074#0#PHP" />
+            <element signature="e#64091#64434#0#PHP" />
+            <element signature="e#64554#65081#0#PHP" />
+            <element signature="e#64720#65074#0#PHP" />
+            <element signature="e#65227#65851#0#PHP" />
+            <element signature="e#65424#65844#0#PHP" />
+            <element signature="e#65978#66570#0#PHP" />
+            <element signature="e#66164#66563#0#PHP" />
+            <element signature="e#66764#67495#0#PHP" />
+            <element signature="e#66994#67488#0#PHP" />
+            <element signature="e#67669#68302#0#PHP" />
+            <element signature="e#67874#68295#0#PHP" />
+            <element signature="e#68391#68512#0#PHP" />
+            <element signature="e#68692#68851#0#PHP" />
+            <element signature="e#68962#69354#0#PHP" />
+            <element signature="e#69036#69347#0#PHP" />
+            <element signature="e#69467#69852#0#PHP" />
+            <element signature="e#69523#69845#0#PHP" />
+            <element signature="e#69998#70480#0#PHP" />
+            <element signature="e#70085#70473#0#PHP" />
+            <element signature="e#70607#71057#0#PHP" />
+            <element signature="e#70683#71050#0#PHP" />
+            <element signature="e#71244#71810#0#PHP" />
+            <element signature="e#71357#71803#0#PHP" />
+            <element signature="e#71984#72735#0#PHP" />
+            <element signature="e#72072#72163#0#PHP" />
+            <element signature="e#72173#72322#0#PHP" />
+            <element signature="e#72339#72728#0#PHP" />
+            <element signature="e#72821#72935#0#PHP" />
+            <element signature="e#73044#73483#0#PHP" />
+            <element signature="e#73100#73384#0#PHP" />
+            <element signature="e#73138#73292#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

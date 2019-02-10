@@ -12,6 +12,8 @@
 namespace Codex\Phpdoc\Serializer\Phpdoc\Properties;
 
 use Codex\Phpdoc\Serializer\Annotations\Attr;
+use Codex\Phpdoc\Serializer\Phpdoc\File\Method;
+use Codex\Phpdoc\Serializer\Phpdoc\File\Property;
 use JMS\Serializer\Annotation as Serializer;
 
 trait FileEntityElement
@@ -29,6 +31,7 @@ trait FileEntityElement
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\Property[]
      * @Serializer\Type("LaravelCollection<Codex\Phpdoc\Serializer\Phpdoc\File\Property>")
      * @Serializer\XmlList(inline=true, entry="property")
+     * @Serializer\Accessor(setter="setProperties")
      * @Attr(new=true,array=true)
      */
     private $properties;
@@ -37,6 +40,7 @@ trait FileEntityElement
      * @var \Codex\Phpdoc\Serializer\Phpdoc\File\Method[]
      * @Serializer\Type("LaravelCollection<Codex\Phpdoc\Serializer\Phpdoc\File\Method>")
      * @Serializer\XmlList(inline=true, entry="method")
+     * @Serializer\Accessor(setter="setMethods")
      * @Attr(new=true,array=true)
      */
     private $methods;
@@ -56,7 +60,7 @@ trait FileEntityElement
      */
     public function setExtends(array $extends)
     {
-        $extends = array_filter($extends, 'strlen');
+        $extends       = array_filter($extends, 'strlen');
         $this->extends = $extends;
 
         return $this;
@@ -75,10 +79,11 @@ trait FileEntityElement
      *
      * @return FileEntityElement
      */
-    public function setProperties(array $properties): FileEntityElement
+    public function setProperties($properties): self
     {
-        $this->properties = $properties;
-
+        $this->properties = $properties->filter(function (Property $property) {
+            return false === $property->getDocblock()->hasTag('magic');
+        });
         return $this;
     }
 
@@ -95,10 +100,11 @@ trait FileEntityElement
      *
      * @return FileEntityElement
      */
-    public function setMethods(array $methods): FileEntityElement
+    public function setMethods($methods): self
     {
-        $this->methods = $methods;
-
+        $this->methods = $methods->filter(function (Method $method) {
+            return false === $method->getDocblock()->hasTag('magic');
+        });
         return $this;
     }
 }

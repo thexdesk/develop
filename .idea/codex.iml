@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/auth/src" isTestSource="false" packagePrefix="Codex\Auth" />
       <sourceFolder url="file://$MODULE_DIR$/codex/semver/src" isTestSource="false" packagePrefix="Codex\Semver" />
       <sourceFolder url="file://$MODULE_DIR$/codex/phpdoc/src" isTestSource="false" packagePrefix="Codex\Phpdoc" />
+      <sourceFolder url="file://$MODULE_DIR$/codex/algolia-search/src" isTestSource="false" packagePrefix="Codex\AlgoliaSearch" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
@@ -25,6 +26,7 @@
       <excludeFolder url="file://$MODULE_DIR$/public/svg" />
       <excludeFolder url="file://$MODULE_DIR$/public/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/storage/codex" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/algolia/algoliasearch-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/anahkiasen/underscore-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
@@ -195,6 +197,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vierbergenlars/php-semver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vinkla/algolia" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webonyx/graphql-php" />

@@ -9,7 +9,8 @@ rm -rf phpdoc
 
 
 
-./phpDocumentor.phar -t phpdoc --template=xml \
+./phpDocumentor.phar \
+    -t phpdoc --template=xml \
     -d codex/composer-plugin/src \
     -d codex/core/src \
     -d codex/phpdoc/src \
@@ -30,6 +31,10 @@ rm -rf phpdoc
     -i vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithExceptionHandling.php \
     -i vendor/laravel/framework/src/Illuminate/Http/Resources/Json/Resource.php
 
+
+#./phpDocumentor.phar \
+#    -t phpdoc --template=xml \
+#    -f codex/core/src/Codex.php
 
 
 cp phpdoc/structure.xml resources/docs/codex/master/structure.xml -f

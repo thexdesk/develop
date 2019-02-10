@@ -3,7 +3,7 @@
 namespace Codex\Phpdoc\Documents;
 
 use Codex\Documents\Processors\Links\Link;
-use Codex\Phpdoc\Entity;
+use Codex\Phpdoc\FQSEN;
 
 class PhpdocLinks
 {
@@ -17,8 +17,8 @@ class PhpdocLinks
         $fullName = $link->param(0, $revision->attr('phpdoc.default_class'));
 //        $basePath  = $phpdoc->getRoutePath();
 //        $entity    = $phpdoc->makeEntity($fullName);
-        $entity    = new Entity($fullName);
-        $fqns     = $entity->fullName;
+        $fqsen     = new FQSEN($fullName);
+        $fqns      = $fqsen->fullName;
         $action    = $link->hasModifier('drawer') ? 'drawer' : 'navigate';
         $modifiers = [];
         foreach ([ 'type', 'popover' ] as $modifier) {
@@ -33,7 +33,11 @@ class PhpdocLinks
         }
 
         $el           = $link->getElement();
-        $linkProps    = json_encode(compact('fqns', 'action', 'modifiers'));
+        $linkProps    = json_encode(compact([
+            'fqsen'     => (string)$fqsen,
+            'action'    => $action,
+            'modifiers' => $modifiers,
+        ]));
         $contentProps = json_encode([
             'project'  => $project->getKey(),
             'revision' => $revision->getKey(),

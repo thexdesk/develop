@@ -28,11 +28,11 @@ class PhpdocMacros
      *
      * @return string
      */
-    public function methodSignature($isCloser = false, $fqns, $inline = false, $hide = '')
+    public function methodSignature($isCloser = false, $fqsen, $inline = false, $hide = '')
     {
         $hide = $this->transformHideCsv($hide);
         $loader = false;
-        $props = $this->toJson(compact('fqns', 'inline', 'hide', 'loader'));
+        $props = $this->toJson(compact('fqsen', 'inline', 'hide', 'loader'));
 
         return "<phpdoc-method-signature props='{$props}'></phpdoc-method-signature>";
     }
@@ -53,11 +53,11 @@ class PhpdocMacros
      *
      * @return string
      */
-    public function method($isCloser = false, $fqns, $collapse = false, $closed = false, $hide = '')
+    public function method($isCloser = false, $fqsen, $collapse = false, $closed = false, $hide = '')
     {
         $hide = $this->transformHideCsv($hide);
         $loader = false;
-        $props = json_encode(compact('fqns', 'collapse', 'closed', 'hide', 'loader'));
+        $props = json_encode(compact('fqsen', 'collapse', 'closed', 'hide', 'loader'));
         return "<phpdoc-method class=\"boxed\" props='{$props}'></phpdoc-method>";
     }
 

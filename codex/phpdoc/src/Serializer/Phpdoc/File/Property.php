@@ -14,6 +14,7 @@ namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Concerns\SerializesSelf;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\AccessModifierProperty;
+use Codex\Phpdoc\Serializer\Phpdoc\Properties\InheritedProperty;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\NamedSpacedElement;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\StaticProperty;
 use Codex\Phpdoc\Serializer\Phpdoc\Properties\TypeProperty;
@@ -32,5 +33,6 @@ class Property implements SelfSerializable
         NamedSpacedElement,
         AccessModifierProperty,
         StaticProperty,
+        InheritedProperty,
         TypeProperty;
 }

@@ -7,6 +7,7 @@ use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\AttributeSchemaGenerator;
 use Codex\Contracts\Projects\Project;
 use Codex\Hooks;
+use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use GraphQL\Executor\ExecutionResult;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
@@ -20,7 +21,7 @@ use Nuwave\Lighthouse\Schema\AST\ASTHelper;
 use Nuwave\Lighthouse\Schema\AST\PartialParser;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Yaml\Yaml;
-
+use Vinkla\Algolia\AlgoliaServiceProvider;
 class TestCommand extends Command
 {
     use DispatchesJobs;
@@ -28,6 +29,13 @@ class TestCommand extends Command
     protected $signature = 'test';
 
     public function handle()
+    {
+
+
+
+        $a='a';
+    }
+    public function handl43e()
     {
 //        $bd = $this->dispatch(new GetBackendData());
 

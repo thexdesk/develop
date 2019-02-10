@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="codex:algolia:index -vvv" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="codex:algolia:index -vvv">
+    <method v="2" />
+  </configuration>
+</component>

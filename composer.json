@@ -20,6 +20,7 @@
         "codex/git": "~1.0",
         "codex/phpdoc": "~1.0",
         "codex/semver": "~1.0",
+        "codex/algolia-search": "~1.0",
         "doctrine/dbal": "^2.9",
         "eddiriarte/console-select": "^2.0",
         "fideloper/proxy": "^4.0",
