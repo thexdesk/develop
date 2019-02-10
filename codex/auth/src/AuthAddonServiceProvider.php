@@ -91,7 +91,7 @@ class AuthAddonServiceProvider extends AddonServiceProvider
 
     protected function restrictApiResults()
     {
-        Hooks::register('CodexQueries::projects', /** @param \Codex\Projects\ProjectCollection $projects */
+        Hooks::register('api.queries.projects', /** @param \Codex\Projects\ProjectCollection $projects */
             function ($projects, $rootValue, $args, $context, $resolveInfo) {
                 $projects = $projects->filter(function (\Codex\Contracts\Projects\Project $project) {
                     if ( ! $project->auth()->isEnabled()) {
@@ -104,7 +104,7 @@ class AuthAddonServiceProvider extends AddonServiceProvider
                 });
                 return $projects;
             });
-        Hooks::register('CodexQueries::project', /** @param \Codex\Contracts\Projects\Project $project */
+        Hooks::register('api.queries.get.project', /** @param \Codex\Contracts\Projects\Project $project */
             function ($project) {
                 if ($project->auth()->isEnabled() && $project->auth()->hasAccess() !== true) {
                     throw NotFoundException::project($project)->toApiError();
@@ -126,7 +126,7 @@ class AuthAddonServiceProvider extends AddonServiceProvider
             'children' => [],
         ]);
 
-        Hooks::register('GetBackendData::response', function ($data) use ($menuId) {
+        Hooks::register('commands.get_backend_data.response', function ($data) use ($menuId) {
             $index = null;
             foreach (data_get($data, 'codex.layout.header.menu', []) as $i => $item) {
                 if ($item[ 'id' ] === $menuId) {

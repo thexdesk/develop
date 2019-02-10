@@ -7,7 +7,6 @@ use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\AttributeSchemaGenerator;
 use Codex\Contracts\Projects\Project;
 use Codex\Hooks;
-use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use GraphQL\Executor\ExecutionResult;
 use GraphQL\Language\AST\FieldDefinitionNode;
 use GraphQL\Language\AST\FieldNode;
@@ -21,7 +20,7 @@ use Nuwave\Lighthouse\Schema\AST\ASTHelper;
 use Nuwave\Lighthouse\Schema\AST\PartialParser;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Yaml\Yaml;
-use Vinkla\Algolia\AlgoliaServiceProvider;
+
 class TestCommand extends Command
 {
     use DispatchesJobs;
@@ -30,36 +29,27 @@ class TestCommand extends Command
 
     public function handle()
     {
-
-
-
-        $a='a';
-    }
-    public function handl43e()
-    {
-//        $bd = $this->dispatch(new GetBackendData());
-
-//        Hooks::register('projects:found', function ($paths, $next, $args) {
-//            $paths[ 'asdf' ] = 'a';
-//            return $paths;
-//        });
-
-        $user = auth()->loginUsingId(1);
-
+        Hooks::register('hooks.run', function ($id, $args) {
+            $this->line("Hook::run({$id})");
+        });
+        Hooks::register('hooks.waterfall', function ($id, $value, $args) {
+            $this->line("Hook::waterfall({$id})");
+        });
 
         $codex     = codex();
-        $actions   = $codex->attr('processors.links.actions');
         $projects  = $codex->getProjects();
         $project   = $projects->get('codex');
         $revisions = $project->getRevisions();
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
-        $document  = $documents->get('processors/macros');
-//        $document  = $documents->get('index');
-        $content = $document->getContent();
+        $document  = $documents->get('index');
+        $content   = $document->getContent();
 
-//        $phpdoc = $codex->get('blade-extensions/master')->phpdoc();
-//        $file = $phpdoc->getFileByFullName('Radic\\BladeExtensions\\Compilers\\MarkdownCompiler');
+        return $this->line($content);
+    }
+
+    public function handleqqq()
+    {
 
 
         $r = graphql()->executeQuery(<<<'EOT'
@@ -78,8 +68,6 @@ EOT
             $this->line(count($r->errors) . ' errors in total');
         }
         $this->line(Yaml::dump($r->data, 10, 4));
-
-        return $content;
     }
 
     public function handle24234234()
