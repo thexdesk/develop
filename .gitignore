@@ -13,3 +13,4 @@ yarn-error.log
 /.tmp
 /phpDocumentor.phar
 /php-plantuml.phar
+/public/vendor
