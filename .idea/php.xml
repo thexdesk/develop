@@ -185,6 +185,10 @@
       <path value="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php" />
       <path value="$PROJECT_DIR$/vendor/vinkla/algolia" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-responsecache" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark-extras" />
+      <path value="$PROJECT_DIR$/vendor/webuni/commonmark-attributes-extension" />
+      <path value="$PROJECT_DIR$/vendor/webuni/commonmark-table-extension" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">
