@@ -22,17 +22,19 @@ class PhpdocStatusCommand extends Command
     public function handle(Filesystem $fs)
     {
         $codex   = codex();
-        $headers = [ 'Revision', 'has Xml file', 'Xml Size', 'Is Generated', 'Files', 'Generated Size' ];
+        $headers = [ 'Revision', 'has Xml file', 'Xml Size', 'Is Generated', 'Files', 'Generated Size', 'Up to date' ];
         $rows    = [];
         foreach ($this->getAllRevisions() as $id) {
             /** @var \Codex\Contracts\Revisions\Revision $revision */
             $revision = $codex->get($id);
             $phpdoc   = $revision->phpdoc();
             $phpdoc->path();
-            $hasXml        = $phpdoc->hasXmlFile();
-            $isGenerated   = $phpdoc->isGenerated();
-            $size          = null;
-            $generatedSize = null;
+
+            $hasXml         = $phpdoc->hasXmlFile();
+            $isGenerated    = $phpdoc->isGenerated();
+            $shouldGenerate = $phpdoc->shouldGenerate();
+            $size           = null;
+            $generatedSize  = null;
             if ($hasXml) {
                 $size = Byte::bytes($revision->getFiles()->size($phpdoc->getXmlPath()))->asMetric()->format('mb/0');
             }
@@ -45,7 +47,17 @@ class PhpdocStatusCommand extends Command
                 $generatedFiles = $sizes->count();
                 $generatedSize  = Byte::bytes($sizes->values()->sum())->asMetric()->format('mb/0');
             }
-            $rows[] = [ $id, $hasXml ? 'yes' : '', $size, $isGenerated ? 'yes' : '', $generatedFiles, $generatedSize ];
+            $yes    = '<info>yes</info>';
+            $no     = '<fg=red;options=bold>no</>';
+            $rows[] = [
+                $id,
+                $hasXml ? $yes : $no,
+                $size,
+                $isGenerated ? $yes : $no,
+                $generatedFiles,
+                $generatedSize,
+                $shouldGenerate ? $no : $yes,
+            ];
         }
         $this->table($headers, $rows);
     }

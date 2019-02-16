@@ -14,6 +14,7 @@ namespace Codex\Phpdoc;
 
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
+use Codex\Hooks;
 use Codex\Phpdoc\Documents\PhpdocLinks;
 use Codex\Phpdoc\Documents\PhpdocMacros;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
@@ -33,7 +34,7 @@ use JMS\Serializer\XmlDeserializationVisitor;
 
 class PhpdocAddonServiceProvider extends AddonServiceProvider
 {
-    public $config = [ 'codex-phpdoc' ];
+    public $config = [ 'codex-phpdoc', 'codex-phpdoc.layout' ];
 
     public $mapConfig = [
         'codex-phpdoc.default_project_config' => 'codex.projects',
@@ -79,6 +80,15 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
         $config->set('codex.processor-defaults.macros.phpdoc:entity', PhpdocMacros::class . '@entity');
         $this->registerRevisionMacros();
         $this->registerSerializer();
+        $this->registerReact();
+    }
+
+    protected function registerReact()
+    {
+        Hooks::register('controller.web.view', function ($view) {
+            view()->startPush('head', '<script type="text/javascript" src="' . asset('vendor/codex_phpdoc/js/phpdoc.js') . '"></script>');
+            view()->startPush('init', 'app.plugin(new codex.phpdoc.default());');
+        });
     }
 
     protected function registerRevisionMacros()

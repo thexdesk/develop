@@ -172,6 +172,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/seld/phar-utils" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/dropbox-api" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/flysystem-dropbox" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-responsecache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/stevenmaguire/oauth2-bitbucket" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/superbalist/flysystem-google-storage" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />

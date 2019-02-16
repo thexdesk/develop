@@ -47,6 +47,8 @@ class RevisionPhpdoc
 
         $this->fire('generate', [ $this, $structure ]);
 
+        $this->fs->deleteDirectory($this->path);
+
         // manifest
         $manifest = $structure->getManifest();
         $manifest->setPhpdoc($this);

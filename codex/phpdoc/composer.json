@@ -14,7 +14,8 @@
     },
     "require": {
         "codex/core": "~2.1",
-        "jms/serializer": "~1.9"
+        "jms/serializer": "~1.9",
+        "phpdocumentor/reflection-docblock": "~3.0|~4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0",

@@ -49,7 +49,7 @@ class Manifest implements SelfSerializable, Responsable
 
     /**
      * @var integer
-     * @Serializer\Accessor(getter="getLastModified")
+     * @Serializer\Accessor(getter="getXmlLastModified")
      * @Serializer\SerializedName("last_modified")
      * @Serializer\Type("integer")
      * @Attr()
@@ -98,6 +98,11 @@ class Manifest implements SelfSerializable, Responsable
     protected $phpdoc;
 
     public function getLastModified()
+    {
+        return $this->last_modified ?? 0;
+    }
+
+    public function getXmlLastModified()
     {
         return $this->phpdoc->getXmlLastModified() ?? 0;
     }
