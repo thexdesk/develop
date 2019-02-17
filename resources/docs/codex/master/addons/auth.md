@@ -26,3 +26,9 @@ php artisan vendor:publish --provider="Codex\Auth\AuthAddonServiceProvider"
     // ...
 ];
 ```
+
+
+<!--*codex:general:hide*-->
+## Copyright/License
+Copyright 2019 [Robin Radic](https://github.com/RobinRadic) - [MIT Licensed](LICENSE.md)
+<!--*codex:/general:hide*-->
