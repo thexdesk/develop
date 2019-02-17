@@ -67,10 +67,14 @@ layout:
                         document: addons/algolia-search
                     -   label: Auth
                         document: addons/auth
+                    -   label: Filesystems
+                        document: addons/filesystems
                     -   label: Git
                         document: addons/git
                     -   label: Phpdoc
                         document: addons/phpdoc
+                    -   label: Sitemap
+                        document: addons/sitemap
 
 
             -   label   : Examples

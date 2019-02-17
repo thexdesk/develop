@@ -19,10 +19,6 @@ class AuthAddonServiceProvider extends AddonServiceProvider
 
     protected $viewDirs = [ 'views' => 'codex-auth' ];
 
-    protected $migrationDirs = [ 'migrations' ];
-
-    protected $publishMigrations = true;
-
     public $providers = [
         Http\HttpServiceProvider::class,
 
@@ -61,10 +57,12 @@ class AuthAddonServiceProvider extends AddonServiceProvider
 
     protected function registerRouteMapConfig()
     {
-        $config = $this->app->make('config');
-        $config->set('codex.routeMap.auth_login_callback', 'codex.auth.login.callback');
-        $config->set('codex.routeMap.auth_login', 'codex.auth.login');
-        $config->set('codex.routeMap.auth_logout', 'codex.auth.logout');
+        Hooks::register('codex.urls.map', function ($map) {
+            $map[ 'auth_login_callback' ] = 'codex.auth.login.callback';
+            $map[ 'auth_login' ]          = 'codex.auth.login';
+            $map[ 'auth_logout' ]         = 'codex.auth.logout';
+            return $map;
+        });
     }
 
     protected function registerClassMacros()

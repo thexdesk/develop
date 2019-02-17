@@ -1,10 +1,34 @@
-
-Project based access delegation
-
-Projects with auth enabled will be
-
-- Invisible and inaccessible to unauthorized users
+---
+title: Auth
+subtitle: Addons
+---
 
 
-Protection will be done at
--  
+# Auth
+
+Provides authentication using oauth providers to restrict project access.    
+
+### Installation
+
+```bash
+composer require codex/auth
+php artisan codex:addons:enable codex/auth
+php artisan vendor:publish --provider="Codex\Auth\AuthAddonServiceProvider"
+```
+
+### Configuration
+
+**[project]/config.php**
+```php
+[
+    // ...
+    'disk' => 'my-dropbox-project',
+    // ...
+];
+```
+
+
+<!--*codex:general:hide*-->
+## Copyright/License
+Copyright 2019 [Robin Radic](https://github.com/RobinRadic) - [MIT Licensed](LICENSE.md)
+<!--*codex:/general:hide*-->

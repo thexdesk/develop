@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->registerFilesystemAdapters();
+//        $this->registerFilesystemAdapters();
     }
 
     protected function registerFilesystemAdapters()

@@ -7,8 +7,11 @@ use Google\Cloud\Storage\StorageClient;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Filesystem\FilesystemAdapter;
 use League\Flysystem\Filesystem;
+use League\Flysystem\Rackspace\RackspaceAdapter;
+use League\Flysystem\Sftp\SftpAdapter;
 use League\Flysystem\WebDAV\WebDAVAdapter;
 use League\Flysystem\ZipArchive\ZipArchiveAdapter;
+use OpenCloud\Rackspace;
 use Sabre\DAV\Client as WebDAVClient;
 use Spatie\Dropbox\Client as DropboxClient;
 use Spatie\FlysystemDropbox\DropboxAdapter;
@@ -37,6 +40,27 @@ class FilesystemsAddonServiceProvider extends AddonServiceProvider
             $name   = $config[ 'driverNames' ][ $driver ];
             $this->$method($name);
         }
+    }
+
+    protected function rackspace($name)
+    {
+        $this->fsm->extend($name, function (Application $app, array $config = []) {
+            $client    = new Rackspace($config[ 'url' ], $config[ 'secret' ], $config[ 'options' ]);
+            $store     = $client->objectStoreService('cloudFiles', $config[ 'region' ]);
+            $container = $store->getContainer('flysystem');
+            $adapter   = new RackspaceAdapter($container);
+            $flysystem = new Filesystem($adapter);
+            return new FilesystemAdapter($flysystem);
+        });
+    }
+
+    protected function sftp($name)
+    {
+        $this->fsm->extend($name, function (Application $app, array $config = []) {
+            $adapter   = new SftpAdapter($config);
+            $flysystem = new Filesystem($adapter);
+            return new FilesystemAdapter($flysystem);
+        });
     }
 
     protected function googleCloud($name)

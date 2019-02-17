@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'skip' => [],
+    'output_path' => public_path('sitemap.xml'),
 ];

@@ -13,7 +13,7 @@ class GenerateSitemap
 
     public function __construct(string $path = null)
     {
-        $this->path = $path ?? public_path('sitemap.xml');
+        $this->path = $path ?? config('codex-sitemap.output_path', public_path('sitemap.xml'));
     }
 
     public function handle(Codex $codex, Sitemap $sitemap)

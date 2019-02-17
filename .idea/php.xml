@@ -108,7 +108,6 @@
       <path value="$PROJECT_DIR$/vendor/patchwork/utf8" />
       <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
       <path value="$PROJECT_DIR$/vendor/gabrielelana/byte-units" />
-      <path value="$PROJECT_DIR$/vendor/vierbergenlars/php-semver" />
       <path value="$PROJECT_DIR$/vendor/league/uri-interfaces" />
       <path value="$PROJECT_DIR$/vendor/league/uri-components" />
       <path value="$PROJECT_DIR$/vendor/league/uri-hostname-parser" />
@@ -189,6 +188,21 @@
       <path value="$PROJECT_DIR$/vendor/league/commonmark-extras" />
       <path value="$PROJECT_DIR$/vendor/webuni/commonmark-attributes-extension" />
       <path value="$PROJECT_DIR$/vendor/webuni/commonmark-table-extension" />
+      <path value="$PROJECT_DIR$/vendor/spatie/browsershot" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/vendor/spatie/crawler" />
+      <path value="$PROJECT_DIR$/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/collect" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/vendor/spatie/robots-txt" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/league/glide" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-sitemap" />
+      <path value="$PROJECT_DIR$/vendor/mikemccabe/json-patch-php" />
+      <path value="$PROJECT_DIR$/vendor/guzzle/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/rackspace/php-opencloud" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-rackspace" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

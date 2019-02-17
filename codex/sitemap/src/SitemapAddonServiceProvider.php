@@ -3,10 +3,15 @@ namespace Codex\Sitemap;
 
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
+use Console\GenerateSitemapCommand;
 
 class SitemapAddonServiceProvider extends AddonServiceProvider
 {
     public $config = [ 'codex-sitemap' ];
+
+    public $commands = [
+        Console\GenerateSitemapCommand::class
+    ];
 
     public function register()
     {

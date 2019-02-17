@@ -45,7 +45,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root'   => storage_path('app'),
         ],
 
         'public' => [
@@ -87,11 +87,34 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
+            'key'    => env('AWS_ACCESS_KEY_ID'),
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
+            'url'    => env('AWS_URL'),
+        ],
+
+        'my-sftp-project' => [
+            'driver'        => 'sftp',
+            'host'          => env('SFTP_HOST'),
+            'port'          => env('SFTP_PORT'),
+            'username'      => env('SFTP_USERNAME'),
+            'password'      => env('SFTP_PASSWORD'),
+            'privateKey'    => env('SFTP_PRIVATEKEY'),
+            'root'          => env('SFTP_ROOT'),
+            'timeout'       => 10,
+            'directoryPerm' => 0755,
+        ],
+
+        'my-rackspace-project' => [
+            'driver'   => 'rackspace',
+            'url'      => env('RACKSPACE_URL'),
+            'secret' => [
+                'username' => env('RACKSPACE_USERNAME'),
+                'apiKey'   => env('RACKSPACE_APIKEY'),
+            ],
+            'region'   => env('RACKSPACE_REGION'),
+            'options'  => [],
         ],
 
     ],

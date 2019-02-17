@@ -6,4 +6,4 @@ subtitle: Addons
 
 # Algolia Search
 
-Integrates algolia search features     
+Provides authentication using oauth providers to restrict project access.    

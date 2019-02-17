@@ -20,7 +20,6 @@
         "codex/auth": "~1.0",
         "codex/git": "~1.0",
         "codex/phpdoc": "~1.0",
-        "codex/semver": "~1.0",
         "codex/filesystems": "~1.0",
         "codex/sitemap": "~1.0",
         "doctrine/dbal": "^2.9",

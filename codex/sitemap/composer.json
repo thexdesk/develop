@@ -18,7 +18,8 @@
         },
         "laravel": {
             "dont-discover": [
-                "codex/sitemap"
+                "codex/sitemap",
+                "spatie/laravel-sitemap"
             ]
         }
     }

@@ -13,7 +13,8 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/semver/src" isTestSource="false" packagePrefix="Codex\Semver" />
       <sourceFolder url="file://$MODULE_DIR$/codex/phpdoc/src" isTestSource="false" packagePrefix="Codex\Phpdoc" />
       <sourceFolder url="file://$MODULE_DIR$/codex/algolia-search/src" isTestSource="false" packagePrefix="Codex\AlgoliaSearch" />
-      <sourceFolder url="file://$MODULE_DIR$/codex/sitemap/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/codex/sitemap/src" isTestSource="false" packagePrefix="Codex\Sitemap" />
+      <sourceFolder url="file://$MODULE_DIR$/codex/filesystems/src" isTestSource="false" packagePrefix="Codex\Filesystems" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
@@ -69,10 +70,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/github" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzle/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/image" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jms/metadata" />
@@ -93,9 +96,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/commonmark-extras" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem-rackspace" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem-sftp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem-webdav" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem-ziparchive" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/glide" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth1-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth2-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth2-github" />
@@ -106,6 +111,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-schemes" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mikemccabe/json-patch-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/moontoast/math" />
@@ -150,6 +156,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rackspace/php-opencloud" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/radic/blade-extensions" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/uuid" />
@@ -173,9 +180,16 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/seld/jsonlint" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/browsershot" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/crawler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/dropbox-api" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/flysystem-dropbox" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/image" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/image-optimizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-responsecache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-sitemap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/robots-txt" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/temporary-directory" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/stevenmaguire/oauth2-bitbucket" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/superbalist/flysystem-google-storage" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
@@ -184,6 +198,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
@@ -199,8 +214,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tightenco/collect" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/vierbergenlars/php-semver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vinkla/algolia" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
