@@ -43,7 +43,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     protected $assetDirs = [ 'assets' => 'codex_phpdoc' ];
 
     public $commands = [
-//        Console\ClearPhpdocCommand::class,
+        Console\PhpdocClearCommand::class,
         Console\PhpdocGenerateCommand::class,
         Console\PhpdocStatusCommand::class,
     ];

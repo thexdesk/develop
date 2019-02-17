@@ -34,6 +34,9 @@ module.exports = {
                 // mkdirp(path('codex/phpdoc/resources/assets')),
                 `cp -r ${themePath('app/dist/vendor/codex_core')} ${path('codex/core/resources/assets')}`,
                 `cp -r ${themePath('app/dist/vendor/codex_phpdoc')} ${path('codex/phpdoc/resources/assets')}`,
+
+                rimraf(path('public/vendor')),
+                `php artisan vendor:publish --tag=public`
             )
         }
     }

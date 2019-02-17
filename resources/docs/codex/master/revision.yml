@@ -40,17 +40,13 @@ layout:
                     -   label   : Writing documentation
                         document: getting-started/writing-documentation
 
-            -   label   : Configuration
+            -   label   : Writing Reference
                 icon    : pencil
                 children:
-                    -   label   : Global
-                        document: configuration/global
-                    -   label   : Project
-                        document: configuration/project
-                    -   label   : Revision
-                        document: configuration/revision
-                    -   label   : Document
-                        document: configuration/document
+                    -   label   : Markdown Basics
+                        document: writing-reference/markdown-basics
+                    -   label   : Markdown Extensions
+                        document: writing-reference/markdown-extensions
 
             -   label   : Processors
                 icon    : cogs

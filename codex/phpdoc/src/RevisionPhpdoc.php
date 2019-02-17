@@ -36,6 +36,12 @@ class RevisionPhpdoc
         $this->fs       = app('files');
     }
 
+    public function clear()
+    {
+        $this->fs->deleteDirectory($this->path);
+        return $this;
+    }
+
     public function generate($force = false)
     {
         if (false === $force && false === $this->shouldGenerate()) {
@@ -47,7 +53,7 @@ class RevisionPhpdoc
 
         $this->fire('generate', [ $this, $structure ]);
 
-        $this->fs->deleteDirectory($this->path);
+        $this->clear();
 
         // manifest
         $manifest = $structure->getManifest();

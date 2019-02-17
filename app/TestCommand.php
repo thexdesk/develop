@@ -29,12 +29,12 @@ class TestCommand extends Command
 
     public function handle()
     {
-        Hooks::register('hooks.run', function ($id, $args) {
-            $this->line("Hook::run({$id})");
-        });
-        Hooks::register('hooks.waterfall', function ($id, $value, $args) {
-            $this->line("Hook::waterfall({$id})");
-        });
+//        Hooks::register('hooks.run', function ($id, $args) {
+//            $this->line("Hook::run({$id})");
+//        });
+//        Hooks::register('hooks.waterfall', function ($id, $value, $args) {
+//            $this->line("Hook::waterfall({$id})");
+//        });
 
         $codex     = codex();
         $projects  = $codex->getProjects();
@@ -42,7 +42,7 @@ class TestCommand extends Command
         $revisions = $project->getRevisions();
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
-        $document  = $documents->get('index');
+        $document  = $documents->get('getting-started/core-concepts');
         $content   = $document->getContent();
 
         return $this->line($content);

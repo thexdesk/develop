@@ -115,9 +115,8 @@ class AuthAddonServiceProvider extends AddonServiceProvider
 
     protected function addAccountMenuItem()
     {
-        $menuId = md5(str_random());
         config()->push('codex.layout.header.menu', [
-            'id'       => $menuId,
+            'id'       => md5(str_random()),
             'label'    => 'Account',
             'sublabel' => 'Guest',
             'type'     => 'sub-menu',
@@ -126,10 +125,10 @@ class AuthAddonServiceProvider extends AddonServiceProvider
             'children' => [],
         ]);
 
-        Hooks::register('commands.get_backend_data.response', function ($data) use ($menuId) {
+        Hooks::register('commands.get_backend_data.response', function ($data) {
             $index = null;
             foreach (data_get($data, 'codex.layout.header.menu', []) as $i => $item) {
-                if ($item[ 'id' ] === $menuId) {
+                if ($item[ 'label' ] === 'Account') {
                     $index = $i;
                     break;
                 }
