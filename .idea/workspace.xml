@@ -2,52 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="cache improvements">
-      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/algolia-search/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/algolia-search/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/algolia-search/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/algolia-search/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/auth/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/core/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/git/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/sitemap/src/Console/GenerateSitemapCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/composer-plugin/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codex/composer-plugin/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/auth/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/codex/auth/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/auth/database/migrations/2019_02_04_214631_codex_add_user_fields.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/config/codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/config/codex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Codex.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Codex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/filesystems/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/codex/filesystems/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/filesystems/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/filesystems/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/filesystems/config/codex-filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/filesystems/config/codex-filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/filesystems/src/FilesystemsAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/filesystems/src/FilesystemsAddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/semver/code_completion.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/semver/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/semver/config/codex-semver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/semver/src/SemverAddon.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/semver/src/SemverAddonServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/sitemap/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/codex/sitemap/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/sitemap/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/sitemap/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/sitemap/config/codex-sitemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/sitemap/config/codex-sitemap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/sitemap/src/Commands/GenerateSitemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/sitemap/src/Commands/GenerateSitemap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/sitemap/src/SitemapAddonServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/sitemap/src/SitemapAddonServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/package-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/addons/algolia-search.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/addons/algolia-search.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/addons/auth.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/addons/auth.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/addons/phpdoc.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/composer-plugin/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/phpspec.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/spec/Anomaly/StreamsComposerPlugin/Installer/AddonInstallerSpec.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/spec/Anomaly/StreamsComposerPlugin/PluginSpec.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/phpdoc/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +171,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codex/algolia-search/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
@@ -223,6 +185,38 @@
                   </previewPanelState>
                 </markdownNavigatorState>
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/phpdoc/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/composer-plugin/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor>
+                <markdownNavigatorState>
+                  <previewPanelState version="2.7.0" />
+                </markdownNavigatorState>
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codex/composer-plugin/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -338,8 +332,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AddonCommand.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AddonsListCommand.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Console/AbstractAddonCommand.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Console/AbstractAddonsCommand.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Console/AddonsInstallCommand.php" />
@@ -389,6 +381,8 @@
         <option value="$PROJECT_DIR$/codex/filesystems/README.md" />
         <option value="$PROJECT_DIR$/codex/auth/README.md" />
         <option value="$PROJECT_DIR$/codex/algolia-search/README.md" />
+        <option value="$PROJECT_DIR$/codex/phpdoc/.gitignore" />
+        <option value="$PROJECT_DIR$/codex/composer-plugin/composer.json" />
       </list>
     </option>
   </component>
@@ -698,6 +692,12 @@
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="composer-plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -766,11 +766,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/codex/composer-plugin" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/codex/algolia-search" />
       <recent name="$PROJECT_DIR$/codex/core" />
       <recent name="$PROJECT_DIR$/codex/auth" />
-      <recent name="$PROJECT_DIR$/codex/git" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/codex/phpdoc/old" />
@@ -1439,36 +1439,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/codex/filesystems/src/FilesystemsAddonServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/filesystems/src/FilesystemsAddon.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/sitemap/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/sitemap/config/codex-sitemap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/git/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/addons/phpdoc.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -2011,6 +1981,51 @@
               </previewPanelState>
             </markdownNavigatorState>
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/phpdoc/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/composer-plugin/spec/Anomaly/StreamsComposerPlugin/PluginSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/composer-plugin/spec/Anomaly/StreamsComposerPlugin/Installer/AddonInstallerSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/composer-plugin/phpspec.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/composer-plugin/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState>
+              <previewPanelState version="2.7.0" />
+            </markdownNavigatorState>
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/composer-plugin/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>

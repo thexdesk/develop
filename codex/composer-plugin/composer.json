@@ -1,7 +1,7 @@
 {
     "name": "codex/composer-plugin",
     "description": "Composer plugin for Codex.",
-    "keywords": ["streams","composer","plugin"],
+    "keywords": ["composer","plugin"],
     "type": "composer-plugin",
     "license": "MIT",
     "require": {
