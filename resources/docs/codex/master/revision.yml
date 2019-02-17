@@ -147,3 +147,6 @@ layout:
                     -   label   : Creating a project
                         document: getting-started/creating-a-project
 
+            -   label   : License
+                icon    : legal
+                document: LICENSE

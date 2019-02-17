@@ -65,6 +65,7 @@ module.exports = {
                 `cp -f ${licensePath} ${path('codex/sitemap/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('codex/filesystems/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('codex/git/LICENSE.md')}`,
+                `cp -f ${licensePath} ${path('resources/docs/codex/master/LICENSE.md')}`,
             )
         }
     }

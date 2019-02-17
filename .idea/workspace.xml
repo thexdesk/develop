@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="cache improvements">
-      <change afterPath="$PROJECT_DIR$/codex/composer-plugin/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codex/composer-plugin/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/codex/composer-plugin/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/phpspec.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/spec/Anomaly/StreamsComposerPlugin/Installer/AddonInstallerSpec.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/composer-plugin/spec/Anomaly/StreamsComposerPlugin/PluginSpec.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/phpdoc/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/codex/phpdoc/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Link.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Link.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Url.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Url.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/CodexCommonMarkExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/CodexCommonMarkExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/package-scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +68,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="1035">
-                <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="48" selection-end-column="28" />
+                <caret line="43" selection-start-line="43" selection-end-line="48" selection-end-column="28" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState>
@@ -86,7 +86,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="756">
-                <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="32" selection-end-column="28" />
+                <caret line="28" selection-start-line="28" selection-end-line="32" selection-end-column="28" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState>
@@ -104,7 +104,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="1048">
-                <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="79" selection-end-column="28" />
+                <caret line="75" selection-start-line="75" selection-end-line="79" selection-end-column="28" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState>
@@ -212,11 +212,227 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codex/composer-plugin/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package-scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1249">
+              <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/docs/codex/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1249">
+              <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/LICENSE.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="135">
+                <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState>
+                  <previewPanelState version="2.7.0">
+                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:7.500001799999978}}</jsState>
+                  </previewPanelState>
+                </markdownNavigatorState>
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/AbstractUri.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="745">
+              <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+              <folding>
+                <element signature="e#3172#3265#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Environment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="474" column="27" selection-start-line="474" selection-start-column="27" selection-end-line="474" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Extension/CommonMarkCoreExtension.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1112">
+              <caret line="106" column="5" selection-start-line="23" selection-start-column="1" selection-end-line="106" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Renderer/LinkRenderer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Parser/AutolinkParser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="810">
+              <caret line="46" column="14" selection-start-line="41" selection-start-column="8" selection-end-line="46" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/CodexCommonMarkExtension.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="999">
+              <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Element/Link.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Util/UrlEncoder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/Http.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="810">
+              <caret line="51" column="6" selection-start-line="48" selection-start-column="4" selection-end-line="51" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/Schemes/Http.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-manipulations/src/Modifiers/Dirname.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-components/src/Components/Scheme.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Url.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Link.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="160" column="20" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-parser/src/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-parser/src/Parser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-9915">
+              <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/UriException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Parser/HtmlInlineParser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -332,12 +548,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AbstractAddonCommand.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AbstractAddonsCommand.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AddonsInstallCommand.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AddonsUninstallCommand.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AddonsEnableCommand.php" />
-        <option value="$PROJECT_DIR$/codex/core/src/Console/AddonsDisableCommand.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Console/ProjectsMakeCommand.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/RevisionPhpdoc.php" />
         <option value="$PROJECT_DIR$/codex/phpdoc/src/Console/PhpdocClearCommand.php" />
@@ -371,9 +581,7 @@
         <option value="$PROJECT_DIR$/codex/core/src/Codex.php" />
         <option value="$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" />
         <option value="$PROJECT_DIR$/codex/core/LICENSE.md" />
-        <option value="$PROJECT_DIR$/package-scripts.js" />
         <option value="$PROJECT_DIR$/codex/core/README.md" />
         <option value="$PROJECT_DIR$/codex/phpdoc/README.md" />
         <option value="$PROJECT_DIR$/codex/sitemap/README.md" />
@@ -383,6 +591,14 @@
         <option value="$PROJECT_DIR$/codex/algolia-search/README.md" />
         <option value="$PROJECT_DIR$/codex/phpdoc/.gitignore" />
         <option value="$PROJECT_DIR$/codex/composer-plugin/composer.json" />
+        <option value="$PROJECT_DIR$/package-scripts.js" />
+        <option value="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/AutolinkParser.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Link.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Url.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/CodexCommonMarkExtension.php" />
+        <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php" />
       </list>
     </option>
   </component>
@@ -704,6 +920,61 @@
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+              <item name="Processors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+              <item name="Processors" type="462c0819:PsiDirectoryNode" />
+              <item name="Links" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+              <item name="Processors" type="462c0819:PsiDirectoryNode" />
+              <item name="Parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+              <item name="Processors" type="462c0819:PsiDirectoryNode" />
+              <item name="Parser" type="462c0819:PsiDirectoryNode" />
+              <item name="CommonMark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="filesystems" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -727,7 +998,179 @@
             <path>
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-components" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-components" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-hostname-parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-hostname-parser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-hostname-parser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Installer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-hostname-parser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PublicSuffix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-manipulations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-manipulations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-manipulations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Modifiers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-parser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-schemes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-schemes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="league" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-schemes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Schemes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1164,7 +1607,7 @@
       <window_info id="Structure" order="3" sideWeight="0.500394" side_tool="true" weight="0.13389562" />
       <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.4978914" weight="0.16344196" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49657354" visible="true" weight="0.29684317" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49657354" weight="0.29684317" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49920928" weight="0.32926208" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5042172" side_tool="true" weight="0.35132384" />
       <window_info anchor="bottom" id="Docker" order="5" weight="0.32942975" />
@@ -1341,7 +1784,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php</url>
-          <line>48</line>
+          <line>56</line>
           <option name="timeStamp" value="723" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1439,262 +1882,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/addons/phpdoc.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="875">
-            <caret line="39" selection-start-line="39" selection-end-line="61" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:0.0000221599999576938}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/addons/sitemap.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/addons/filesystems.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/addons/git.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="783">
-            <caret line="29" column="1" selection-end-line="129" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:415.0000104400001}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/addons/auth.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="9" selection-end-line="27" selection-end-column="3" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:0}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/config/codex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Codex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/auth/src/AuthAddonServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/semver/src/SemverAddonServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/semver/src/SemverAddon.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="522">
-            <caret line="40" column="90" lean-forward="true" selection-end-line="64" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:162}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/1.5.0/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-315" />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/2.0.0-alpha/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/2.0.0-alpha/getting-started/configuration.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-747" />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/2.0.0-alpha/getting-started/creating-a-project.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-2097" />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/2.0.0-alpha/_phpdoc/Codex.CodexServiceProvider.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:92.5}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/2.0.0-alpha/test-pages/concepts.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:809}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/develop/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-315" />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/develop/a.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/develop/dev-page.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/develop/document.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-3744" />
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0" />
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/docs/codex/v1/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1837,13 +2024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1114">
-          <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codex/algolia-search/LICENSE.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1876,7 +2056,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1048">
-            <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="79" selection-end-column="28" />
+            <caret line="75" selection-start-line="75" selection-end-line="79" selection-end-column="28" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState>
@@ -1892,7 +2072,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="756">
-            <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="32" selection-end-column="28" />
+            <caret line="28" selection-start-line="28" selection-end-line="32" selection-end-column="28" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState>
@@ -1940,7 +2120,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1035">
-            <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="48" selection-end-column="28" />
+            <caret line="43" selection-start-line="43" selection-end-line="48" selection-end-column="28" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState>
@@ -2025,7 +2205,182 @@
     <entry file="file://$PROJECT_DIR$/codex/composer-plugin/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1249">
+          <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1249">
+          <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/LICENSE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState>
+              <previewPanelState version="2.7.0">
+                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:7.500001799999978}}</jsState>
+              </previewPanelState>
+            </markdownNavigatorState>
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Renderer/LinkRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Extension/CommonMarkCoreExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1112">
+          <caret line="106" column="5" selection-start-line="23" selection-start-column="1" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Environment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="474" column="27" selection-start-line="474" selection-start-column="27" selection-end-line="474" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Util/UrlEncoder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/Schemes/Http.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-components/src/Components/Scheme.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-manipulations/src/Modifiers/Dirname.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/Http.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="51" column="6" selection-start-line="48" selection-start-column="4" selection-end-line="51" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Element/Link.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Parser/AutolinkParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="46" column="14" selection-start-line="41" selection-start-column="8" selection-end-line="46" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-parser/src/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9915">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-parser/src/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/UriException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/uri-schemes/src/AbstractUri.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+          <folding>
+            <element signature="e#3172#3265#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Url.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/AutolinkParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/league/commonmark/src/Inline/Parser/HtmlInlineParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/CodexCommonMarkExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Links/Link.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="160" column="20" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/LinksProcessorExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
         </state>
       </provider>
     </entry>
