@@ -48,6 +48,13 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'public' => [
+            'driver'     => 'local',
+            'root'       => storage_path('app/public'),
+            'url'        => env('APP_URL') . '/storage',
+            'visibility' => 'public',
+        ],
+
         'stack' => [
             'driver'   => 'webdav',
             'baseUri'  => env('STACK_URI'),
@@ -77,12 +84,6 @@ return [
             'path'   => resource_path('docs/test-zip-project/test-zip-project.zip'),
         ],
 
-        'public' => [
-            'driver'     => 'local',
-            'root'       => storage_path('app/public'),
-            'url'        => env('APP_URL') . '/storage',
-            'visibility' => 'public',
-        ],
 
         's3' => [
             'driver' => 's3',

@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/semver/src" isTestSource="false" packagePrefix="Codex\Semver" />
       <sourceFolder url="file://$MODULE_DIR$/codex/phpdoc/src" isTestSource="false" packagePrefix="Codex\Phpdoc" />
       <sourceFolder url="file://$MODULE_DIR$/codex/algolia-search/src" isTestSource="false" packagePrefix="Codex\AlgoliaSearch" />
+      <sourceFolder url="file://$MODULE_DIR$/codex/sitemap/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
