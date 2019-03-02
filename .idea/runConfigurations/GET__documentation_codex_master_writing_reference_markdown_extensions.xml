@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="GET /documentation/codex/master/writing-reference/markdown-extensions" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" server_name="codex.local" url="/documentation/codex/master/writing-reference/markdown-extensions">
+    <method v="2" />
+  </configuration>
+</component>

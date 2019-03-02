@@ -62,3 +62,4 @@ Most of it's features are provided by addons. Codex is extenable, themeable, hac
 - (Addon Feature) Smooth working, custom PHPDoc integration
 - (Addon Feature) Access restriction on projects using Github/Bitbucket login
 - Much, much more!
+

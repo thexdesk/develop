@@ -42,7 +42,8 @@ class TestCommand extends Command
         $revisions = $project->getRevisions();
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
-        $document  = $documents->get('getting-started/core-concepts');
+//        $document  = $documents->get('getting-started/core-concepts');
+        $document  = $documents->get('writing-reference/markdown-extensions');
         $content   = $document->getContent();
 
         return $this->line($content);

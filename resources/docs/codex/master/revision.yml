@@ -47,6 +47,14 @@ layout:
                         document: writing-reference/markdown-basics
                     -   label   : Markdown Extensions
                         document: writing-reference/markdown-extensions
+                    -   label   : UML
+                        document: writing-reference/uml
+                    -   label   : Charts
+                        document: writing-reference/charts
+                    -   label   : Diagrams
+                        document: writing-reference/diagrams
+                    -   label   : Mathematica
+                        document: writing-reference/mathematica
 
             -   label   : Processors
                 icon    : cogs
@@ -84,10 +92,8 @@ layout:
                         children:
                             -   label   : Example 1
                                 document: examples/layout/example1
-
                             -   label   : Example 2
                                 document: examples/layout/example2
-
                             -   label   : Example 2
                                 document: examples/layout/example3
 
