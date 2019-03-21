@@ -216,6 +216,9 @@
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-config-aggregator-parameters" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/zumba/json-serializer" />
+      <path value="$PROJECT_DIR$/vendor/timacdonald/rule-builder" />
+      <path value="$PROJECT_DIR$/vendor/colinodell/json5" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

@@ -1,0 +1,24 @@
+{
+    "name": "codex/comments",
+    "license": "MIT",
+    "type": "codex-addon",
+    "description": "A Codex Addon",
+    "require": {
+        "codex/core": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codex\\Comments\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "laravel": {
+            "dont-discover": [
+                "codex/comments"
+            ]
+        }
+    }
+}

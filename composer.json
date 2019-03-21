@@ -22,6 +22,9 @@
         "codex/git": "~1.0",
         "codex/phpdoc": "~1.0",
         "codex/sitemap": "~1.0",
+        "codex/blog": "~1.0",
+        "codex/comments": "~1.0",
+        "colinodell/json5": "^2.0",
         "doctrine/dbal": "^2.9",
         "eddiriarte/console-select": "^2.0",
         "fideloper/proxy": "^4.0",
@@ -31,7 +34,8 @@
         "timacdonald/rule-builder": "^4.0",
         "zendframework/zend-config": "3.2.*",
         "zendframework/zend-config-aggregator": "1.1.*",
-        "zendframework/zend-config-aggregator-parameters": "1.1.*"
+        "zendframework/zend-config-aggregator-parameters": "1.1.*",
+        "zumba/json-serializer": "^2.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

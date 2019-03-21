@@ -73,15 +73,15 @@ layout:
                 children:
                     -   label   : Algolia Search
                         document: addons/algolia-search
-                    -   label: Auth
+                    -   label   : Auth
                         document: addons/auth
-                    -   label: Filesystems
+                    -   label   : Filesystems
                         document: addons/filesystems
-                    -   label: Git
+                    -   label   : Git
                         document: addons/git
-                    -   label: Phpdoc
+                    -   label   : Phpdoc
                         document: addons/phpdoc
-                    -   label: Sitemap
+                    -   label   : Sitemap
                         document: addons/sitemap
 
 

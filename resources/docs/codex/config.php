@@ -45,6 +45,10 @@ return [
             'phpdoc'     => true,
             'cache'      => true,
             'buttons'    => true,
+            'comments'   => true,
+        ],
+        'comments'   => [
+            'connection' => 'disqus',
         ],
         'attributes' => [
             'tags' => [

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cea2278fd3fefb0d634f5659b8a792e",
+    "content-hash": "6c7dfb434f0494f4486fac70811b04b9",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -329,66 +329,6 @@
             "time": "2018-04-02T15:43:34+00:00"
         },
         {
-            "name": "cebe/markdown",
-            "version": "1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cebe/markdown.git",
-                "reference": "9bac5e971dd391e2802dca5400bbeacbaea9eb86"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/9bac5e971dd391e2802dca5400bbeacbaea9eb86",
-                "reference": "9bac5e971dd391e2802dca5400bbeacbaea9eb86",
-                "shasum": ""
-            },
-            "require": {
-                "lib-pcre": "*",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "cebe/indent": "*",
-                "facebook/xhprof": "*@dev",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "bin": [
-                "bin/markdown"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "cebe\\markdown\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Carsten Brandt",
-                    "email": "mail@cebe.cc",
-                    "homepage": "http://cebe.cc/",
-                    "role": "Creator"
-                }
-            ],
-            "description": "A super fast, highly extensible markdown parser for PHP",
-            "homepage": "https://github.com/cebe/markdown#readme",
-            "keywords": [
-                "extensible",
-                "fast",
-                "gfm",
-                "markdown",
-                "markdown-extra"
-            ],
-            "time": "2018-03-26T11:24:36+00:00"
-        },
-        {
             "name": "clue/stream-filter",
             "version": "v1.4.0",
             "source": {
@@ -508,6 +448,72 @@
                 "MIT"
             ],
             "description": "Codex Auth Addon"
+        },
+        {
+            "name": "codex/blog",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "codex/blog",
+                "reference": "180fdefebcafb23ed356c8ae6f67d3276c51d4f4",
+                "shasum": null
+            },
+            "require": {
+                "codex/core": "~2.1"
+            },
+            "type": "codex-addon",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "laravel": {
+                    "dont-discover": [
+                        "codex/blog"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codex\\Blog\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Codex Addon"
+        },
+        {
+            "name": "codex/comments",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "codex/comments",
+                "reference": "5c34336f912871c47371951ab6cfac6c8f95345c",
+                "shasum": null
+            },
+            "require": {
+                "codex/core": "~2.1"
+            },
+            "type": "codex-addon",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "laravel": {
+                    "dont-discover": [
+                        "codex/comments"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codex\\Comments\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Codex Addon"
         },
         {
             "name": "codex/composer-plugin",
@@ -730,6 +736,70 @@
                 "MIT"
             ],
             "description": "A Codex Addon"
+        },
+        {
+            "name": "colinodell/json5",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/colinodell/json5.git",
+                "reference": "9b9318dc5b27b38c6347f69bdd6295f87c7cd356"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/colinodell/json5/zipball/9b9318dc5b27b38c6347f69bdd6295f87c7cd356",
+                "reference": "9b9318dc5b27b38c6347f69bdd6295f87c7cd356",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^5.4.8|^7.0"
+            },
+            "require-dev": {
+                "mikehaertl/php-shellcommand": "^1.2.5",
+                "phpunit/phpunit": "^4.8.36|^7.3",
+                "squizlabs/php_codesniffer": "^2.3",
+                "symfony/finder": "^2.8|^3.4|^4.1"
+            },
+            "bin": [
+                "bin/json5"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ColinODell\\Json5\\": "src"
+                },
+                "files": [
+                    "src/global.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "https://www.colinodell.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "UTF-8 compatible JSON5 parser for PHP",
+            "homepage": "https://github.com/colinodell/json5",
+            "keywords": [
+                "JSON5",
+                "json",
+                "json5_decode",
+                "json_decode"
+            ],
+            "time": "2018-09-20T16:05:01+00:00"
         },
         {
             "name": "composer/semver",
@@ -9484,6 +9554,55 @@
             "time": "2017-11-27T11:13:29+00:00"
         },
         {
+            "name": "timacdonald/rule-builder",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/timacdonald/rule-builder.git",
+                "reference": "7e98092bee2b8d351a37334d090ef92f5dc17211"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/timacdonald/rule-builder/zipball/7e98092bee2b8d351a37334d090ef92f5dc17211",
+                "reference": "7e98092bee2b8d351a37334d090ef92f5dc17211",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.3",
+                "illuminate/validation": ">=5.3",
+                "nesbot/carbon": ">=1.0.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "utility",
+            "autoload": {
+                "psr-4": {
+                    "TiMacDonald\\Validation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim MacDonald",
+                    "email": "tim.mac7@me.com",
+                    "homepage": "https://timacdonald.me"
+                }
+            ],
+            "description": "A fluent rule builder for Laravel validation rule generation.",
+            "keywords": [
+                "fluent",
+                "laravel",
+                "rule",
+                "validation"
+            ],
+            "time": "2019-01-10T23:35:06+00:00"
+        },
+        {
             "name": "vinkla/algolia",
             "version": "3.1.0",
             "source": {
@@ -10083,6 +10202,60 @@
                 "zf"
             ],
             "time": "2018-08-28T21:34:05+00:00"
+        },
+        {
+            "name": "zumba/json-serializer",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zumba/json-serializer.git",
+                "reference": "b7415a88841f4493eddfba390456b25fe22e286a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zumba/json-serializer/zipball/b7415a88841f4493eddfba390456b25fe22e286a",
+                "reference": "b7415a88841f4493eddfba390456b25fe22e286a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "suggest": {
+                "jeremeamia/superclosure": "Allow to serialize PHP closures"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zumba\\": "src/",
+                    "Zumba\\JsonSerializer\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Juan Basso",
+                    "email": "juan.basso@zumba.com"
+                },
+                {
+                    "name": "Zumba Fitness, LLC",
+                    "email": "engineering@zumba.com"
+                }
+            ],
+            "description": "Serialize PHP variables, including objects, in JSON format. Support to unserialize it too.",
+            "homepage": "http://tech.zumba.com",
+            "keywords": [
+                "json",
+                "serialize",
+                "serializer"
+            ],
+            "time": "2018-02-07T18:14:13+00:00"
         }
     ],
     "packages-dev": [
@@ -10337,6 +10510,66 @@
                 "laravel-dump-server"
             ],
             "time": "2018-10-04T07:22:24+00:00"
+        },
+        {
+            "name": "cebe/markdown",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cebe/markdown.git",
+                "reference": "9bac5e971dd391e2802dca5400bbeacbaea9eb86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/9bac5e971dd391e2802dca5400bbeacbaea9eb86",
+                "reference": "9bac5e971dd391e2802dca5400bbeacbaea9eb86",
+                "shasum": ""
+            },
+            "require": {
+                "lib-pcre": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "cebe/indent": "*",
+                "facebook/xhprof": "*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "bin": [
+                "bin/markdown"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "cebe\\markdown\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Creator"
+                }
+            ],
+            "description": "A super fast, highly extensible markdown parser for PHP",
+            "homepage": "https://github.com/cebe/markdown#readme",
+            "keywords": [
+                "extensible",
+                "fast",
+                "gfm",
+                "markdown",
+                "markdown-extra"
+            ],
+            "time": "2018-03-26T11:24:36+00:00"
         },
         {
             "name": "composer/ca-bundle",

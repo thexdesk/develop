@@ -15,6 +15,8 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/algolia-search/src" isTestSource="false" packagePrefix="Codex\AlgoliaSearch" />
       <sourceFolder url="file://$MODULE_DIR$/codex/sitemap/src" isTestSource="false" packagePrefix="Codex\Sitemap" />
       <sourceFolder url="file://$MODULE_DIR$/codex/filesystems/src" isTestSource="false" packagePrefix="Codex\Filesystems" />
+      <sourceFolder url="file://$MODULE_DIR$/codex/blog/src" isTestSource="false" packagePrefix="Codex\Blog" />
+      <sourceFolder url="file://$MODULE_DIR$/codex/comments/src" isTestSource="false" packagePrefix="Codex\Comments" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
@@ -47,6 +49,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/git" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/phpdoc" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/sitemap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/colinodell/json5" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/danielstjules/stringy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/deinternetjongens/lighthouse-utils" />
@@ -225,6 +228,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tightenco/collect" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/timacdonald/rule-builder" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vinkla/algolia" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
@@ -237,6 +241,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-config-aggregator-parameters" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-diactoros" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-stdlib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zumba/json-serializer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
