@@ -23,9 +23,7 @@ class FilesystemsAddonServiceProvider extends AddonServiceProvider
 
     public function register()
     {
-        $this->app->booting(function () {
-            $this->registerFilesystemAdapters();
-        });
+        $this->registerFilesystemAdapters();
     }
 
     /** @var \Illuminate\Filesystem\FilesystemManager */

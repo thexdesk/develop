@@ -6,40 +6,44 @@ const themePath = (...parts) => resolve(_themePath, ...parts);
 const path = (...parts) => resolve(__dirname, ...parts);
 const licensePath = path('LICENSE.md');
 
+
+
+const _link = (type = 'dev') => ({
+    script: series(
+        mkdirp(path('public/vendor')),
+        rimraf(path('public/vendor/codex_core')),
+        rimraf(path('public/vendor/codex_phpdoc')),
+        rimraf(path('public/vendor/codex_auth')),
+        `ln -s ${themePath('app', type, 'vendor/codex_core')} ${path('public/vendor/codex_core')}`,
+        `ln -s ${themePath('app', type, 'vendor/codex_phpdoc')} ${path('public/vendor/codex_phpdoc')}`,
+        `ln -s ${themePath('app', type, 'vendor/codex_auth')} ${path('public/vendor/codex_auth')}`
+    )
+});
+const _copy = (type = 'dev') => ({
+    script: series(
+        rimraf(path('codex/core/resources/assets')),
+        rimraf(path('codex/phpdoc/resources/assets')),
+        `cp -r ${themePath('app', type, 'vendor/codex_core')} ${path('codex/core/resources/assets')}`,
+        `cp -r ${themePath('app', type, 'vendor/codex_phpdoc')} ${path('codex/phpdoc/resources/assets')}`,
+
+        // rimraf(path('public/vendor')),
+        // `php artisan vendor:publish --tag=public`
+    )
+})
+
 module.exports = {
 
     scripts: {
         copy               : {
-
             script: series(
                 rimraf(path('public/vendor')),
                 `cp -r ${themePath('app/dist/vendor')} ${path('public/vendor')}`
             )
         },
-        link               : {
-            script: series(
-                mkdirp(path('public/vendor')),
-                rimraf(path('public/vendor/codex_core')),
-                rimraf(path('public/vendor/codex_phpdoc')),
-                rimraf(path('public/vendor/codex_auth')),
-                `ln -s ${themePath('app/dist/vendor/codex_core')} ${path('public/vendor/codex_core')}`,
-                `ln -s ${themePath('app/dist/vendor/codex_phpdoc')} ${path('public/vendor/codex_phpdoc')}`,
-                `ln -s ${themePath('app/dist/vendor/codex_auth')} ${path('public/vendor/codex_auth')}`
-            )
-        },
-        'copy:assets'      : {
-            script: series(
-                rimraf(path('codex/core/resources/assets')),
-                rimraf(path('codex/phpdoc/resources/assets')),
-                // mkdirp(path('codex/core/resources/assets')),
-                // mkdirp(path('codex/phpdoc/resources/assets')),
-                `cp -r ${themePath('app/dist/vendor/codex_core')} ${path('codex/core/resources/assets')}`,
-                `cp -r ${themePath('app/dist/vendor/codex_phpdoc')} ${path('codex/phpdoc/resources/assets')}`,
-
-                rimraf(path('public/vendor')),
-                `php artisan vendor:publish --tag=public`
-            )
-        },
+        'link:dist'        : _link('dist'),
+        'link:dev'         : _link('dev'),
+        'copy:dist'        : _copy('dist'),
+        'copy:dev'         : _copy('dev'),
         'copy:docs:plugins': {
             script: series(
                 rimraf(path('resources/docs/codex/master/addons/algolia-search.md')),
@@ -56,7 +60,7 @@ module.exports = {
                 `cp -f ${path('codex/git/README.md')} ${path('resources/docs/codex/master/addons/git.md')}`
             )
         },
-        'copy:license': {
+        'copy:license'     : {
             script: series(
                 `cp -f ${licensePath} ${path('codex/core/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('codex/algolia-search/LICENSE.md')}`,

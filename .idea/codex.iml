@@ -40,7 +40,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/carica/phpcss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cebe/markdown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/clue/stream-filter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codex/algolia-search" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codex/auth" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/composer-plugin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codex/filesystems" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codex/git" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codex/phpdoc" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codex/sitemap" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/danielstjules/stringy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/deinternetjongens/lighthouse-utils" />
@@ -198,6 +204,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
@@ -206,6 +213,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-kernel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
@@ -223,7 +232,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/webuni/commonmark-attributes-extension" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webuni/commonmark-table-extension" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wikimedia/composer-merge-plugin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-config-aggregator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-config-aggregator-parameters" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-diactoros" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-stdlib" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

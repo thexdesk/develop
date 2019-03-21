@@ -72,8 +72,11 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public function register()
     {
+        Hooks::register('codex.urls.map', function ($map) {
+            $map[ 'phpdoc' ] = 'codex.phpdoc';
+            return $map;
+        });
         $config = $this->app->make('config');
-        $config->set('codex.routeMap.phpdoc', 'codex.phpdoc');
         $config->set('codex.processor-defaults.links.actions.phpdoc', PhpdocLinks::class . '@handle');
         $config->set('codex.processor-defaults.macros.phpdoc:method', PhpdocMacros::class . '@method');
         $config->set('codex.processor-defaults.macros.phpdoc:method:signature', PhpdocMacros::class . '@methodSignature');
