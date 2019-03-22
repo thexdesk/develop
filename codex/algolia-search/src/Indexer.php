@@ -5,7 +5,7 @@ namespace Codex\AlgoliaSearch;
 use Codex\Codex;
 use Codex\Contracts\Documents\Document;
 use Codex\Contracts\Revisions\Revision;
-use Codex\Documents\Processors\Parser\MarkdownParser;
+use Codex\Documents\Processors\Parser\CommonMarkParser;
 use Codex\Documents\Processors\ParserProcessorExtension;
 use FluentDOM\DOM\Element;
 use Vinkla\Algolia\AlgoliaManager;
@@ -21,7 +21,7 @@ class Indexer
     /** @var \Codex\Documents\Processors\ParserProcessorExtension */
     protected $processor;
 
-    /** @var \AlgoliaSearch\Index  */
+    /** @var \AlgoliaSearch\Index */
     protected $index;
 
     /**
@@ -85,7 +85,7 @@ class Indexer
 
     protected function getDocumentContent(Document $document)
     {
-        $parser = app()->make(MarkdownParser::class);
+        $parser = app()->make(CommonMarkParser::class);
         $parser->setOptions($document->attr(
             "processors.{$this->processor->getName()}.markdown",
             $this->codex->attr("processors.{$this->processor->getName()}.markdown", [])

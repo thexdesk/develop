@@ -42,8 +42,8 @@ class TestCommand extends Command
     {
         $codex     = codex();
 
-        $comments = resolve(CommentsManager::class);
-        $disqus = $comments->connection('disqus');
+//        $comments = resolve(CommentsManager::class);
+//        $disqus = $comments->connection('disqus');
 
 
 //        $blog = $codex->getBlog();
@@ -56,7 +56,7 @@ class TestCommand extends Command
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
 //        $document  = $documents->get('getting-started/core-concepts');
-        $document          = $documents->get('processors/links');
+        $document          = $documents->get('processors/macros');
 //        $processorsEnabled = $project->attr('processors.enabled');
 //        $buttons           = $document->attr('processors.buttons');
 //        $attrs             = $document->setHidden([])->toArray();

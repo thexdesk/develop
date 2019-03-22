@@ -45,7 +45,7 @@ return [
             'phpdoc'     => true,
             'cache'      => true,
             'buttons'    => true,
-            'comments'   => true,
+            'comments'   => false,
         ],
         'comments'   => [
             'connection' => 'disqus',
