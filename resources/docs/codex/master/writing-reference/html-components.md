@@ -24,4 +24,9 @@ Tab 1 content
 </c-tabs>
 ```
 
-> To use (additional) components as HTML tags they need to be registered with the frontend which can be accessed in your browser console `codex.core.app.get('components')`.
+> To use/add components as HTML tags they need to be registered with the frontend. 
+> 
+> Check `codex.core.app.get('components')` in your browser's console.
+> 
+> And don't forget to check the [Frontend > Components](../frontend/components#codex:document['frontend/components']) documentation for a in-depth explanation of all possibilities. 
+

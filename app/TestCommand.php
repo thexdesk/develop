@@ -56,7 +56,7 @@ class TestCommand extends Command
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
 //        $document  = $documents->get('getting-started/core-concepts');
-        $document          = $documents->get('processors/macros');
+        $document          = $documents->get('frontend/components');
 //        $processorsEnabled = $project->attr('processors.enabled');
 //        $buttons           = $document->attr('processors.buttons');
 //        $attrs             = $document->setHidden([])->toArray();

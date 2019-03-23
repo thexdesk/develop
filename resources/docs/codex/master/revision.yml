@@ -108,6 +108,8 @@ layout:
                         document: frontend/introduction
                     -   label   : Theme
                         document: frontend/theme
+                    -   label   : Components
+                        document: frontend/components
                     -   label   : Development
                         document: frontend/development
 
