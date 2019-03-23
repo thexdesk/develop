@@ -68,26 +68,6 @@ layout:
                     -   label   : Cache
                         document: processors/cache
 
-            -   label   : Addons
-                icon    : puzzle-piece
-                children:
-                    -   label   : Algolia Search
-                        document: addons/algolia-search
-                    -   label   : Auth
-                        document: addons/auth
-                    -   label   : Blog
-                        document: addons/blog
-                    -   label   : Comments
-                        document: addons/comments
-                    -   label   : Filesystems
-                        document: addons/filesystems
-                    -   label   : Git
-                        document: addons/git
-                    -   label   : Phpdoc
-                        document: addons/phpdoc
-                    -   label   : Sitemap
-                        document: addons/sitemap
-
 
             -   label   : Development
                 icon    : fa-code
@@ -112,6 +92,27 @@ layout:
                         document: frontend/components
                     -   label   : Development
                         document: frontend/development
+
+
+            -   label   : Addons
+                icon    : puzzle-piece
+                children:
+                    -   label   : Algolia Search
+                        document: addons/algolia-search
+                    -   label   : Auth
+                        document: addons/auth
+                    -   label   : Blog
+                        document: addons/blog
+                    -   label   : Comments
+                        document: addons/comments
+                    -   label   : Filesystems
+                        document: addons/filesystems
+                    -   label   : Git
+                        document: addons/git
+                    -   label   : Phpdoc
+                        document: addons/phpdoc
+                    -   label   : Sitemap
+                        document: addons/sitemap
 
             -   label   : Contributing
                 icon    : fa-rocket

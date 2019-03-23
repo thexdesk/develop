@@ -7,8 +7,70 @@ subtitle: Writing Reference
 
 Codex implements various code-based render languages which can be defined using Markdown fenced code.   
 
-<c-tabs>
-<c-tab tab="UML">
+
+
+<!--*codex:tabs*-->
+<!--*codex:tab('Hyperscript')*-->
+
+Documentation can be found at [Frontend > Components](../frontend/components#codex:document['frontend/components'])  
+
+<!--*codex:row({ gutter: 10 })*-->
+<!--*codex:col({ md: 16 })*-->
+**Code**
+```markdown
+    ```hyper
+    h('div', { style: { border: '1px solid lightgrey', padding: '0 20px' } }, h([
+        h('p', 'Wrapped in fragment'),
+        h('p', 'Requires no keys'),
+        h('div', [
+            h('p', { key: 1 }, 'Not wrapped in fragment'),
+            h('p', { key: 2 }, 'Requires keys to be provided'),
+            h('div', { key: 3, className: 'foobar' }, 'The content of div.foobar'),
+        ]),            
+        h('c-tabs', { style: { border: '1px solid lightgrey', margin: '15px 0' } }, [
+            h('c-tab', { key: 'foo', tab: 'foo' }, h('p','The foo tab')),
+            h('c-tab', { key: 'bar', tab: 'bar' }, h('p','The bar tab')),
+            h('c-tab', { key: 'ape', tab: 'ape' }, h([
+               h('p', 'content string'),
+               h('p', 'content string'),
+               h('p', 'content string'),
+               h('p', 'content string'),
+           ])),
+        ]),
+    ]));
+    ```
+```
+<!--*codex:/col*-->
+<!--*codex:col({ md: 8 })*-->
+**Output** 
+```hyper
+h('div', { style: { border: '1px solid lightgrey', padding: '0 20px' } }, h([
+    h('p', 'Wrapped in fragment'),
+    h('p', 'Requires no keys'),
+    h('div', [
+        h('p', { key: 1 }, 'Not wrapped in fragment'),
+        h('p', { key: 2 }, 'Requires keys to be provided'),
+        h('div', { key: 3, className: 'foobar' }, 'The content of div.foobar'),
+    ]),            
+    h('c-tabs', { style: { border: '1px solid lightgrey', margin: '15px 0' } }, [
+        h('c-tab', { key: 'foo', tab: 'foo' }, h('p','The foo tab')),
+        h('c-tab', { key: 'bar', tab: 'bar' }, h('p','The bar tab')),
+        h('c-tab', { key: 'ape', tab: 'ape' }, h([
+           h('p', 'content string'),
+           h('p', 'content string'),
+           h('p', 'content string'),
+           h('p', 'content string'),
+       ])),
+    ]),
+]));
+```
+<!--*codex:/col*-->
+<!--*codex:/row*-->
+
+
+
+<!--*codex:/tab*-->
+<!--*codex:tab('UML')*-->
 
 Uses [nomnoml](https://github.com/skanaar/nomnoml)
 
@@ -81,12 +143,18 @@ Uses [nomnoml](https://github.com/skanaar/nomnoml)
     ```
 ```
 
-</c-tab>
-<c-tab tab="Charts">
+<!--*codex:/tab*-->
+<!--*codex:tab('Charts')*-->
+
+
+
+<!--*codex:tabs*-->
+<!--*codex:tab('Line Chart')*-->
 
 Uses [chartjs](http://www.chartjs.org/docs/)    
     
-**Example**
+[Documentation for Line Chart](http://www.chartjs.org/docs/#line-chart)
+
 
 ```chart
 {
@@ -193,11 +261,12 @@ Uses [chartjs](http://www.chartjs.org/docs/)
 
 ```
 
-<br/>
 
-[Documentation for Line Chart](http://www.chartjs.org/docs/#line-chart)
+<!--*codex:/tab*-->
+<!--*codex:tab('Bar Chart')*-->
 
-##### Bar Chart
+[Documentation for Bar Chart](http://www.chartjs.org/docs/#bar-chart)
+
 
 ```chart
 {
@@ -246,11 +315,10 @@ Uses [chartjs](http://www.chartjs.org/docs/)
 }
 ```
 
-<br/>
+<!--*codex:/tab*-->
+<!--*codex:tab('Radar Chart')*-->
 
-[Documentation for Bar Chart](http://www.chartjs.org/docs/#bar-chart)
-
-##### Radar Chart
+[Documentation for Radar Chart](http://www.chartjs.org/docs/#radar-chart)
 
 ```chart
 {
@@ -308,11 +376,12 @@ Uses [chartjs](http://www.chartjs.org/docs/)
 }
 ```
 
-<br/>
+<!--*codex:/tab*-->
+<!--*codex:tab('Polar Area Chart')*-->
 
-[Documentation for Radar Chart](http://www.chartjs.org/docs/#radar-chart)
 
-##### Polar Area Chart
+[Documentation for Polar Area Chart](http://www.chartjs.org/docs/#polar-area-chart)
+
 
 ```chart
 {
@@ -349,11 +418,12 @@ Uses [chartjs](http://www.chartjs.org/docs/)
 }
 ```
 
-<br/>
+<!--*codex:/tab*-->
+<!--*codex:tab('Pie Chart')*-->
 
-[Documentation for Polar Area Chart](http://www.chartjs.org/docs/#polar-area-chart)
 
-##### Pie Chart
+
+[Documentation for Pie Chart](http://www.chartjs.org/docs/#doughnut-pie-chart)
 
 ```chart
 {
@@ -388,11 +458,12 @@ Uses [chartjs](http://www.chartjs.org/docs/)
 }
 ```
 
-<br/>
+<!--*codex:/tab*-->
+<!--*codex:tab('Doughnut Chart')*-->
 
-[Documentation for Pie Chart](http://www.chartjs.org/docs/#doughnut-pie-chart)
 
-##### Doughnut Chart
+[Documentation for Doughnut Chart](http://www.chartjs.org/docs/#doughnut-pie-chart)
+
 
 ```chart
 {
@@ -427,11 +498,10 @@ Uses [chartjs](http://www.chartjs.org/docs/)
 }
 ```
 
-<br/>
+<!--*codex:/tab*-->
+<!--*codex:tab('Bubble Chart')*-->
 
-[Documentation for Doughnut Chart](http://www.chartjs.org/docs/#doughnut-pie-chart)
 
-##### Bubble Chart
 
 ```chart
 {
@@ -465,13 +535,16 @@ Uses [chartjs](http://www.chartjs.org/docs/)
 
 [Documentation for Bubble Chart](http://www.chartjs.org/docs/#bubble-chart)
     
+    
+<!--*codex:/tab*-->
+<!--*codex:/tabs*-->
    
     
-</c-tab>
-<c-tab tab="Diagrams">
-<c-tabs props='{"tabPosition":"left"}'>
+<!--*codex:/tab*-->
+<!--*codex:tab('Diagrams')*-->
 
-<c-tab tab="Flowchart">
+<!--*codex:tabs({ tabPosition:'left' })*-->
+<!--*codex:tab('Flowchart')*-->
 
 [Flowchart Syntax](http://knsv.github.io/mermaid/#flowcharts-basic-syntax)
 ```mermaid
@@ -492,9 +565,11 @@ C -->|Three| F[Car]
     C -->|Three| F[Car]
     ```
 ```
-</c-tab>
 
-<c-tab tab="Sequence Diagram">
+
+<!--*codex:/tab*-->
+<!--*codex:tab('Sequence Diagram')*-->
+
 
 [Sequence Diagram Syntax](http://knsv.github.io/mermaid/#sequence-diagrams)
 ```mermaid
@@ -513,11 +588,14 @@ end
     end
     ```
 ```
-</c-tab>
 
-<c-tab tab="Gantt diagram">
+<!--*codex:/tab*-->
+<!--*codex:tab('Gantt Diagram')*-->
+
 
 [Gantt Diagram Syntax](http://knsv.github.io/mermaid/#gant-diagrams)
+
+
 ```mermaid
 gantt
 dateFormat  YYYY-MM-DD
@@ -578,9 +656,9 @@ Add another diagram to demo page    : 48h
     Add another diagram to demo page    : 48h
     ```
 ```
-</c-tab>
 
-<c-tab tab="Git graph">
+<!--*codex:/tab*-->
+<!--*codex:tab('Git graph')*-->
 
 **experimental**
 ```mermaid
@@ -621,15 +699,15 @@ merge newbranch
     merge newbranch
     ```
 ```
-</c-tab>
 
-</c-tabs>
-</c-tab>
+<!--*codex:/tab*-->
+<!--*codex:/tabs*-->
 
+<!--*codex:/tab*-->
 
+<!--*codex:tab('Mathematica')*-->
 
-<c-tab tab="Mathematica">
 asf
-</c-tab>
-    
-</c-tabs>
+
+<!--*codex:/tab*-->
+<!--*codex:/tabs*-->

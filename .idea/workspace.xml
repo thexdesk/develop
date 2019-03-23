@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="cache improvements">
-      <change afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/TableRenderer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/codex/master/frontend/components.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/codex/master/frontend/development.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Attributes/ConfigResolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Attributes/ConfigResolver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/CodexCommonMarkExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/CodexCommonMarkExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/FencedCodeRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/FencedCodeRenderer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMarkParser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/addons/phpdoc.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/addons/phpdoc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/writing-reference/html-components.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/writing-reference/html-components.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/docs/codex/master/writing-reference/code-render.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/codex/master/writing-reference/code-render.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +198,7 @@
               <second_editor>
                 <markdownNavigatorState>
                   <previewPanelState version="2.7.0">
-                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:822}}</jsState>
+                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:822.49998703}}</jsState>
                   </previewPanelState>
                 </markdownNavigatorState>
               </second_editor>
@@ -238,8 +227,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1503">
-              <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
+            <state relative-caret-position="744">
+              <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -248,13 +237,13 @@
         <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="243">
-                <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <first_editor relative-caret-position="675">
+                <caret line="25" selection-start-line="25" selection-end-line="25" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState>
                   <previewPanelState version="2.7.0">
-                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:90.49999825999998}}</jsState>
+                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:145.5000183699999}}</jsState>
                   </previewPanelState>
                 </markdownNavigatorState>
               </second_editor>
@@ -262,17 +251,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/frontend/components.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1215">
-                <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+              <first_editor relative-caret-position="130">
+                <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="87" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState>
                   <previewPanelState version="2.7.0">
-                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:153.00000999999997}}</jsState>
+                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:699.000000065}}</jsState>
                   </previewPanelState>
                 </markdownNavigatorState>
               </second_editor>
@@ -303,6 +292,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/writing-reference/code-render.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1420">
+                <caret line="702" column="16" selection-start-line="702" selection-start-column="16" selection-end-line="702" selection-end-column="16" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState>
+                  <previewPanelState version="2.7.0">
+                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:11617.3538659}}</jsState>
+                  </previewPanelState>
+                </markdownNavigatorState>
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -456,7 +463,6 @@
         <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/MacrosProcessorExtension.php" />
         <option value="$PROJECT_DIR$/package-scripts.js" />
         <option value="$PROJECT_DIR$/codex/comments/resources/assets/js/comments.js" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/writing-reference/code-render.md" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/processors/introduction.md" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/processors/cache.md" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/processors/parser.md" />
@@ -471,11 +477,12 @@
         <option value="$PROJECT_DIR$/resources/docs/codex/master/frontend/links.md" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/frontend/development.md" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/writing-reference/html-components.md" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md" />
-        <option value="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" />
         <option value="$PROJECT_DIR$/app/TestCommand.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Documents/Processors/Parser/CommonMark/FencedCodeRenderer.php" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/frontend/components.md" />
+        <option value="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" />
+        <option value="$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md" />
+        <option value="$PROJECT_DIR$/resources/docs/codex/master/writing-reference/code-render.md" />
       </list>
     </option>
   </component>
@@ -713,7 +720,7 @@
     </include_path>
   </component>
   <component name="PhpXdebugProxy" port="9000" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1599" />
     <option name="y" value="34" />
     <option name="width" value="3842" />
@@ -1021,66 +1028,20 @@
               <item name="master" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
             <path>
-              <item name="codex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="codex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="codex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="codex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="codex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="codex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="codex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="codex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="codex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Documents" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="codex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="codex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Documents" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Processors" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="codex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="codex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Documents" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Processors" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Parser" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="writing-reference" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1526,14 +1487,14 @@
       <window_info id="Structure" order="3" sideWeight="0.29042387" side_tool="true" weight="0.30548233" />
       <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.4978914" weight="0.16242363" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49657354" weight="0.32044762" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49657354" weight="0.32026476" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49920928" weight="0.32892057" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5042172" side_tool="true" weight="0.35132384" />
       <window_info anchor="bottom" id="Docker" order="5" weight="0.32942975" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49973643" weight="0.32942975" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49947286" weight="0.32942975" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49578282" visible="true" weight="0.18126273" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49578282" weight="0.18126273" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3299389" />
@@ -2844,22 +2805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/writing-reference/code-render.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="12744">
-            <caret line="472" selection-start-line="472" selection-end-line="472" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:9353}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/processors/introduction.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -3096,7 +3041,7 @@
           <second_editor>
             <markdownNavigatorState>
               <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:822}}</jsState>
+                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:822.49998703}}</jsState>
               </previewPanelState>
             </markdownNavigatorState>
           </second_editor>
@@ -3130,29 +3075,6 @@
               </previewPanelState>
             </markdownNavigatorState>
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState>
-              <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:90.49999825999998}}</jsState>
-              </previewPanelState>
-            </markdownNavigatorState>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1503">
-          <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -3220,16 +3142,55 @@
     <entry file="file://$PROJECT_DIR$/codex/core/src/Documents/Processors/Macros/Components.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/frontend/components.md">
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/revision.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/frontend/introduction.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1215">
-            <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+          <first_editor relative-caret-position="675">
+            <caret line="25" selection-start-line="25" selection-end-line="25" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState>
               <previewPanelState version="2.7.0">
-                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:153.00000999999997}}</jsState>
+                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:145.5000183699999}}</jsState>
+              </previewPanelState>
+            </markdownNavigatorState>
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/frontend/components.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="130">
+            <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="87" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState>
+              <previewPanelState version="2.7.0">
+                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:699.000000065}}</jsState>
+              </previewPanelState>
+            </markdownNavigatorState>
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/docs/codex/master/writing-reference/code-render.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1420">
+            <caret line="702" column="16" selection-start-line="702" selection-start-column="16" selection-end-line="702" selection-end-column="16" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState>
+              <previewPanelState version="2.7.0">
+                <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:11617.3538659}}</jsState>
               </previewPanelState>
             </markdownNavigatorState>
           </second_editor>
