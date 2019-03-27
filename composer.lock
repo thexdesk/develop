@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c7dfb434f0494f4486fac70811b04b9",
+    "content-hash": "1b1dac8c368e81fa1d8dec60a762cb1b",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -633,6 +633,40 @@
                 "MIT"
             ],
             "description": "Codex Git Addon"
+        },
+        {
+            "name": "codex/packagist",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "codex/packagist",
+                "reference": "3023541f5e4070780762c3a7fa513585a3002f9c",
+                "shasum": null
+            },
+            "require": {
+                "codex/core": "~2.1",
+                "knplabs/packagist-api": "1.5.*"
+            },
+            "type": "codex-addon",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "laravel": {
+                    "dont-discover": [
+                        "codex/packagist"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codex\\Packagist\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Codex Addon"
         },
         {
             "name": "codex/phpdoc",
@@ -3142,6 +3176,58 @@
                 "github"
             ],
             "time": "2019-01-28T19:31:35+00:00"
+        },
+        {
+            "name": "knplabs/packagist-api",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/packagist-api.git",
+                "reference": "74dbe93eab7cb80feb8fb9f2294f962d8d37fc71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/packagist-api/zipball/74dbe93eab7cb80feb8fb9f2294f962d8d37fc71",
+                "reference": "74dbe93eab7cb80feb8fb9f2294f962d8d37fc71",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "~1.0",
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Packagist\\Api\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                }
+            ],
+            "description": "Packagist API client.",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "api",
+                "composer",
+                "packagist"
+            ],
+            "time": "2018-01-19T08:15:53+00:00"
         },
         {
             "name": "laradic/dependency-sorter",

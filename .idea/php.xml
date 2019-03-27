@@ -219,6 +219,7 @@
       <path value="$PROJECT_DIR$/vendor/timacdonald/rule-builder" />
       <path value="$PROJECT_DIR$/vendor/colinodell/json5" />
       <path value="$PROJECT_DIR$/vendor/vierbergenlars/php-semver" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/packagist-api" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

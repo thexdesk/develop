@@ -48,24 +48,26 @@ module.exports = {
         'link:theme:public'     : _link('dev'),
         'copy:theme:assets:dist': _copy('dist'),
         'copy:theme:assets'     : _copy('dev'),
-        'copy:docs:addons'     : {
+        'copy:docs:addons'      : {
             script: series(
                 rimraf(path('resources/docs/codex/master/addons/algolia-search.md')),
                 rimraf(path('resources/docs/codex/master/addons/auth.md')),
                 rimraf(path('resources/docs/codex/master/addons/blog.md')),
                 rimraf(path('resources/docs/codex/master/addons/comments.md')),
-                rimraf(path('resources/docs/codex/master/addons/phpdoc.md')),
-                rimraf(path('resources/docs/codex/master/addons/sitemap.md')),
                 rimraf(path('resources/docs/codex/master/addons/filesystems.md')),
                 rimraf(path('resources/docs/codex/master/addons/git.md')),
+                rimraf(path('resources/docs/codex/master/addons/packagist.md')),
+                rimraf(path('resources/docs/codex/master/addons/phpdoc.md')),
+                rimraf(path('resources/docs/codex/master/addons/sitemap.md')),
                 `cp -f ${path('codex/algolia-search/README.md')} ${path('resources/docs/codex/master/addons/algolia-search.md')}`,
                 `cp -f ${path('codex/auth/README.md')} ${path('resources/docs/codex/master/addons/auth.md')}`,
                 `cp -f ${path('codex/blog/README.md')} ${path('resources/docs/codex/master/addons/blog.md')}`,
                 `cp -f ${path('codex/comments/README.md')} ${path('resources/docs/codex/master/addons/comments.md')}`,
+                `cp -f ${path('codex/filesystems/README.md')} ${path('resources/docs/codex/master/addons/filesystems.md')}`,
+                `cp -f ${path('codex/git/README.md')} ${path('resources/docs/codex/master/addons/git.md')}`,
+                `cp -f ${path('codex/packagist/README.md')} ${path('resources/docs/codex/master/addons/packagist.md')}`,
                 `cp -f ${path('codex/phpdoc/README.md')} ${path('resources/docs/codex/master/addons/phpdoc.md')}`,
                 `cp -f ${path('codex/sitemap/README.md')} ${path('resources/docs/codex/master/addons/sitemap.md')}`,
-                `cp -f ${path('codex/filesystems/README.md')} ${path('resources/docs/codex/master/addons/filesystems.md')}`,
-                `cp -f ${path('codex/git/README.md')} ${path('resources/docs/codex/master/addons/git.md')}`
             )
         },
         'copy:license'          : {

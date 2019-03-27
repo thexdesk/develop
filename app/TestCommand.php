@@ -46,10 +46,11 @@ class TestCommand extends Command
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
 //        $document  = $documents->get('getting-started/core-concepts');
-        $document = $documents->get('frontend/components');
+//        $document = $documents->get('frontend/components');
+        $document = $documents->get('index');
         $gitLinks = $document->attr('git_links');
         $content = $document->render();
-        $this->line(Yaml::dump($document->attr('layout.toolbar'), 10, 4));
+        $this->line(Yaml::dump($document->attr('processors'), 10, 4));
     }
 
     public function han234234234le()
