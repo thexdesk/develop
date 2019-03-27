@@ -195,7 +195,6 @@
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/vendor/radic/blade-extensions" />
       <path value="$PROJECT_DIR$/vendor/league/uri-parser" />
-      <path value="$PROJECT_DIR$/vendor/cebe/markdown" />
       <path value="$PROJECT_DIR$/vendor/league/uri-interfaces" />
       <path value="$PROJECT_DIR$/vendor/league/commonmark-extras" />
       <path value="$PROJECT_DIR$/vendor/league/uri-schemes" />
@@ -219,6 +218,7 @@
       <path value="$PROJECT_DIR$/vendor/zumba/json-serializer" />
       <path value="$PROJECT_DIR$/vendor/timacdonald/rule-builder" />
       <path value="$PROJECT_DIR$/vendor/colinodell/json5" />
+      <path value="$PROJECT_DIR$/vendor/vierbergenlars/php-semver" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

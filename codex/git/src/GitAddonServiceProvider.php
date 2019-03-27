@@ -4,10 +4,13 @@ namespace Codex\Git;
 
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
+use Codex\Documents\Document;
 use Codex\Git\Listeners\ResolveBranchTypeDefaultRevision;
 use Codex\Git\Support\GitRevisionCollectionMixin;
+use Codex\Hooks;
 use Codex\Projects\Events\ResolvedProject;
 use Codex\Projects\Project;
+use Codex\Revisions\Revision;
 use Codex\Revisions\RevisionCollection;
 use Illuminate\Contracts\Foundation\Application;
 
@@ -16,7 +19,8 @@ class GitAddonServiceProvider extends AddonServiceProvider
     public $config = [ 'codex-git' ];
 
     public $mapConfig = [
-        'codex-git.default_project_config' => 'codex.projects',
+        'codex-git.default_project_config.branching' => 'codex.projects.branching',
+        'codex-git.default_project_config.git'       => 'codex.projects.git',
     ];
 
     public $listen = [
@@ -31,35 +35,37 @@ class GitAddonServiceProvider extends AddonServiceProvider
 
     public function register()
     {
-        RevisionCollection::mixin(new GitRevisionCollectionMixin());
-
-        Project::macro('getGitConfig', function () {
-            /** @var Project $project */
-            $project = $this;
-            return new ProjectGitConfig($project, app('codex.git.manager'));
+        Hooks::register('project.initialized', function ($project) {
+            if ($project->isGitEnabled()) {
+                $project->push('git_links', config('codex-git.default_project_config.git_links'));
+            }
         });
-        Project::macro('isGitEnabled', function () {
-            /** @var Project $project */
-            $project = $this;
-            return $project->attr('git.enabled', false);
+        Hooks::register('document.resolved', function ($document) {
+            if ($document->isGitLinksEnabled()) {
+                $document->callClosures();
+                $map   = $document->attr('git_links.map', []);
+                $links = $document->attr('git_links.links', []);
+                $document->callClosures(false);
+                foreach ($map as $linkKey => $attrKey) {
+                    $method = 'push';
+                    if (false !== strpos($linkKey, ':')) {
+                        list($linkKey, $method) = explode(':', $linkKey);
+                    }
+                    $link = $links[ $linkKey ];
+                    if ($method === 'set') {
+                        $document->set($attrKey, $link);
+                    } elseif ($method === 'push') {
+                        $document->push($attrKey, $link);
+                    }
+                }
+            }
         });
-
-        $this->app->singleton('codex.git.manager', function (Application $app) {
-            $manager = new ConnectionManager($app[ 'config' ]);
-            $manager->extend('bitbucket', function ($config) {
-                return new Drivers\BitbucketDriver($config);
-            });
-            $manager->extend('github', function ($config) {
-                return new Drivers\GithubDriver($config);
-            });
-
-            return $manager;
-        });
-        $this->app->alias('codex.git.manager', ConnectionManager::class);
-        $this->app->alias('codex.git.manager', Contracts\ConnectionManager::class);
+        $this->registerMacros();
+        $this->registerManager();
     }
 
-    public function boot(AttributeDefinitionRegistry $registry)
+    public
+    function boot(AttributeDefinitionRegistry $registry)
     {
         $projects = $registry->projects;
 
@@ -82,5 +88,68 @@ class GitAddonServiceProvider extends AddonServiceProvider
         $webhook = $git->add('webhook', 'dictionary');
         $webhook->add('enabled', 'boolean');
         $webhook->add('secret', 'string')->noApi();
+
+        $git_links = $projects->add('git_links', 'dictionary')->setApiType('GitLinksConfig', [ 'new' ]);
+        $git_links->add('enabled', 'boolean');
+        $git_links->add('map', 'array.scalarPrototype', 'Assoc');
+        $git_links->add('links', 'dictionaryPrototype', '[Assoc]');
+
+        $registry->revisions->addInheritKeys('git_links');
+        $registry->documents->addInheritKeys('git_links');
+    }
+
+    protected
+    function registerMacros()
+    {
+        RevisionCollection::mixin(new GitRevisionCollectionMixin());
+
+        Project::macro('git', function () {
+            return $this->storage('git', function ($model) {
+                return new GitConfig($model, app('codex.git.manager'));
+            });
+        });
+        Revision::macro('git', function () {
+            return $this->getProject()->git();
+        });
+        Document::macro('git', function () {
+            return $this->getProject()->git();
+        });
+
+        Project::macro('isGitEnabled', function () {
+            return $this->attr('git.enabled', false);
+        });
+        Revision::macro('isGitEnabled', function () {
+            return $this->getProject()->attr('git.enabled', false);
+        });
+        Document::macro('isGitEnabled', function () {
+            return $this->getProject()->attr('git.enabled', false);
+        });
+        Project::macro('isGitLinksEnabled', function () {
+            return $this->attr('git_links.enabled', false);
+        });
+        Revision::macro('isGitLinksEnabled', function () {
+            return $this->attr('git_links.enabled', false);
+        });
+        Document::macro('isGitLinksEnabled', function () {
+            return $this->attr('git_links.enabled', false);
+        });
+    }
+
+    protected
+    function registerManager()
+    {
+        $this->app->singleton('codex.git.manager', function (Application $app) {
+            $manager = new ConnectionManager($app[ 'config' ]);
+            $manager->extend('bitbucket', function ($config) {
+                return new Drivers\BitbucketDriver($config);
+            });
+            $manager->extend('github', function ($config) {
+                return new Drivers\GithubDriver($config);
+            });
+
+            return $manager;
+        });
+        $this->app->alias('codex.git.manager', ConnectionManager::class);
+        $this->app->alias('codex.git.manager', Contracts\ConnectionManager::class);
     }
 }

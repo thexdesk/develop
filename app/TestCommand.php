@@ -6,9 +6,6 @@ use Closure;
 use Codex\Addons\AddonCollection;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\AttributeSchemaGenerator;
-use Codex\Blog\Categories\Commands\FindCategories;
-use Codex\Blog\Categories\Commands\ResolveCategory;
-use Codex\Comments\CommentsManager;
 use Codex\Contracts\Projects\Project;
 use Codex\Exceptions\InvalidConfigurationException;
 use GraphQL\Executor\ExecutionResult;
@@ -40,29 +37,40 @@ class TestCommand extends Command
 
     public function handle()
     {
-        $codex     = codex();
-
-//        $comments = resolve(CommentsManager::class);
-//        $disqus = $comments->connection('disqus');
-
-
-//        $blog = $codex->getBlog();
-//        $categories = $this->dispatch(new FindCategories($blog));
-//        $category = $this->dispatch(new ResolveCategory($blog, head($categories)));
+        $codex = codex();
 
         $projects  = $codex->getProjects();
         $project   = $projects->get('codex');
+        $toolbar   = $project->attr('layout.toolbar');
         $revisions = $project->getRevisions();
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
 //        $document  = $documents->get('getting-started/core-concepts');
-        $document          = $documents->get('frontend/components');
-//        $processorsEnabled = $project->attr('processors.enabled');
-//        $buttons           = $document->attr('processors.buttons');
-//        $attrs             = $document->setHidden([])->toArray();
-        $content           = $document->render();
+        $document = $documents->get('frontend/components');
+        $gitLinks = $document->attr('git_links');
+        $content = $document->render();
+        $this->line(Yaml::dump($document->attr('layout.toolbar'), 10, 4));
+    }
 
-        return $this->line($content);
+    public function han234234234le()
+    {
+        $r = codex()->getApi()->executeQuery(<<<'EOT'
+query  {
+  document(projectKey: "codex", revisionKey:"master",documentKey:"getting-started/installation"){
+    key
+    layout {
+      toolbar @assoc 
+    }
+  }
+}
+EOT
+            , null, []);
+        if (count($r->errors) > 0) {
+            $this->line($r->errors[ 0 ]->getTraceAsString());
+            $this->line($r->errors[ 0 ]->getMessage());
+            $this->line(count($r->errors) . ' errors in total');
+        }
+        $this->line(Yaml::dump($r->data, 10, 4));
     }
 
     public function han123123dle()
@@ -122,11 +130,10 @@ class TestCommand extends Command
         // gather WebFontConfig arrays
         $webfonts = preg_match_all('/(DATA\s*?=\s*?)\{(.+?)(\};)/s', $str, $matches, PREG_SET_ORDER);
 
-        foreach ($matches as $founddata)
-        {
-            $original = $founddata[0];
+        foreach ($matches as $founddata) {
+            $original = $founddata[ 0 ];
 
-            $WFCVariable = $founddata[1];
+            $WFCVariable = $founddata[ 1 ];
 
             // leave outer braces only
             $usable = str_replace($WFCVariable, '', $original);
@@ -136,54 +143,33 @@ class TestCommand extends Command
             $usable = preg_replace('/(\w+)(:\s*?)(\{|\[)/im', '"$1"$2$3', $usable);
 
             // prepare to transform array wrapping single quotes to double quotes
-            $lookups = array(
+            $lookups = [
                 '/(\[)(\s*?)(\')/',
-                '/(\')(\s*?)(\])/'
-            );
+                '/(\')(\s*?)(\])/',
+            ];
 
-            $replace = array(
+            $replace = [
                 '$1$2"',
-                '"$2$3'
-            );
+                '"$2$3',
+            ];
 
             $usable = preg_replace($lookups, $replace, $usable);
 
             // decode
             $jsoned = json_decode($usable);
-
             // and check
         }
     }
-    function json_decode_nice($json, $assoc = TRUE){
-        $json = str_replace(array("\n","\r"),"\\n",$json);
-        $json = preg_replace('/([{,]+)(\s*)([^"]+?)\s*:/','$1"$3":',$json);
-        $json = preg_replace('/(,)\s*}$/','}',$json);
-        $json = preg_replace('/([{,]+.*)\s*:\s*\'(.*?)\'/','$1: "$3"',$json);
-        $data= json_decode($json,$assoc,512);
-        return $data;
-    }
 
 
-    public function handleqqq()
+    function json_decode_nice($json, $assoc = TRUE)
     {
-
-
-        $r = graphql()->executeQuery(<<<'EOT'
-query Test {
-    document(projectKey: "codex", revisionKey:"master", documentKey: "index") {
-        key
-        changes
-        content
-    }
-}
-EOT
-            , null, []);
-        if (count($r->errors) > 0) {
-            $this->line($r->errors[ 0 ]->getTraceAsString());
-            $this->line($r->errors[ 0 ]->getMessage());
-            $this->line(count($r->errors) . ' errors in total');
-        }
-        $this->line(Yaml::dump($r->data, 10, 4));
+        $json = str_replace([ "\n", "\r" ], "\\n", $json);
+        $json = preg_replace('/([{,]+)(\s*)([^"]+?)\s*:/', '$1"$3":', $json);
+        $json = preg_replace('/(,)\s*}$/', '}', $json);
+        $json = preg_replace('/([{,]+.*)\s*:\s*\'(.*?)\'/', '$1: "$3"', $json);
+        $data = json_decode($json, $assoc, 512);
+        return $data;
     }
 
     public function handle24234234()
@@ -703,13 +689,13 @@ class Definition extends Fluent
 
     public function getPath()
     {
-        $segments = [$this->name];
-        $parent = $this->parent;
-        while($parent){
-            $segments[]=$parent->name;
-            $parent=$parent->parent;
+        $segments = [ $this->name ];
+        $parent   = $this->parent;
+        while ($parent) {
+            $segments[] = $parent->name;
+            $parent     = $parent->parent;
         }
-        return implode('.',array_reverse($segments));
+        return implode('.', array_reverse($segments));
     }
 
     public function hasParent()

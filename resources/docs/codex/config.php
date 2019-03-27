@@ -80,4 +80,38 @@ return [
         'default_class' => 'Codex\\Codex',
     ],
 
+    'git'       => [
+        'enabled'    => true,
+        'connection' => 'bitbucket_password',
+        'owner'      => 'codex-project',
+        'repository' => 'graph',
+        'branches'   => [], //[ 'master']
+        'paths'      => [
+            'docs' => 'develop/resources/docs/codex',
+        ],
+    ],
+    'git_links' => [
+        'enabled' => true,
+        'map'     => [
+            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
+        ],
+        'links'   => [
+            'edit_page' => [
+                'component'  => 'c-button',
+                'borderless' => true,
+                'type'       => 'toolbar',
+                'icon'       => 'github',
+                'children'   => 'Edit Page',
+                'target'     => '_black',
+                'href'       => function ($model) {
+                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+                    $git = $model->git();
+                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
+                        return $git->getUrl();
+                    }
+                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
+                },
+            ],
+        ],
+    ],
 ];

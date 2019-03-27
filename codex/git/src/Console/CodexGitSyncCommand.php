@@ -39,7 +39,7 @@ class CodexGitSyncCommand extends Command
             $projects = codex()
                 ->getProjects()
                 ->filter(function (Project $project) {
-                    return $project->isGitEnabled();
+                    return $project->git()->isEnabled();
                 })
                 ->transform(function (Project $project) {
                     return $project->getKey();

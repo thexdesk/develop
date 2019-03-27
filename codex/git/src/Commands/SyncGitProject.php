@@ -76,13 +76,13 @@ class SyncGitProject implements ShouldQueue
         $this->codex   = $codex;
         $this->project = $codex->getProject($this->projectKey);
         $this->cache   = $cache;
-        $this->driver  = $this->project->getGitConfig()->getConnection();
+        $this->driver  = $this->project->git()->connect();
         $this->sync();
     }
 
     protected function sync()
     {
-        $git    = $this->project->getGitConfig();
+        $git    = $this->project->git();
         $forced = $this->force ? 'forced ' : '';
         $this->log("Starting {$forced}sync for project [{$this->project}]", $this->project[ 'git' ]);
         $refs = $this->driver->getRefs($git->getOwner(), $git->getRepository());
@@ -124,7 +124,7 @@ class SyncGitProject implements ShouldQueue
     protected function syncRef(Ref $ref)
     {
         $project  = $this->project;
-        $git      = $project->getGitConfig();
+        $git      = $project->git();
         $download = $this->driver
             ->getZipDownloader()
             ->download($ref->getDownloadUrl());

@@ -49,4 +49,10 @@ interface DriverInterface extends ConnectorInterface
      * @return string
      */
     public function downloadFile(string $url);
+
+    public function getUrl(string $owner, string $repository);
+
+    public function getDocumentUrl(string $owner, string $repository, string $path);
+
+
 }

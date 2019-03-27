@@ -38,6 +38,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public $mapConfig = [
         'codex-phpdoc.default_project_config' => 'codex.projects',
+        'codex-phpdoc.processors' => 'codex.processor-defaults',
     ];
 
     protected $assetDirs = [ 'assets' => 'codex_phpdoc' ];
@@ -77,10 +78,10 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
             return $map;
         });
         $config = $this->app->make('config');
-        $config->set('codex.processor-defaults.links.actions.phpdoc', PhpdocLinks::class . '@handle');
-        $config->set('codex.processor-defaults.macros.phpdoc:method', PhpdocMacros::class . '@method');
-        $config->set('codex.processor-defaults.macros.phpdoc:method:signature', PhpdocMacros::class . '@methodSignature');
-        $config->set('codex.processor-defaults.macros.phpdoc:entity', PhpdocMacros::class . '@entity');
+//        $config->set('codex.processor-defaults.links.actions.phpdoc', PhpdocLinks::class . '@handle');
+//        $config->set('codex.processor-defaults.macros.phpdoc:method', PhpdocMacros::class . '@method');
+//        $config->set('codex.processor-defaults.macros.phpdoc:method:signature', PhpdocMacros::class . '@methodSignature');
+//        $config->set('codex.processor-defaults.macros.phpdoc:entity', PhpdocMacros::class . '@entity');
         $this->registerRevisionMacros();
         $this->registerSerializer();
         $this->registerReact();
@@ -96,19 +97,13 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     protected function registerRevisionMacros()
     {
-        Revision::macro('phpdoc', function ($remake = false) {
-            /** @var Revision $revision */
-            $revision = $this;
-            $storage  = $revision->getStorage();
-            if ($remake || ! $storage->has('phpdoc')) {
-                $storage->put('phpdoc', app()->make(RevisionPhpdoc::class, compact('revision')));
-            }
-            return $storage->get('phpdoc');
+        Revision::macro('phpdoc', function () {
+            return $this->storage('phpdoc', function($revision){
+                return new RevisionPhpdoc($revision);
+            });
         });
         Revision::macro('isPhpdocEnabled', function () {
-            /** @var Revision $revision */
-            $revision = $this;
-            return $revision->attr('phpdoc.enabled', false);
+            return $this->attr('phpdoc.enabled', false);
         });
     }
 

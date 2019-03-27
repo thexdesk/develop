@@ -4,7 +4,7 @@ return [
     'connections'            => [
         'bitbucket_oauth'    => [
             'driver' => 'bitbucket',
-            'method' => 'oauth',
+            'method' => 'token',
             'key'    => env('CODEX_GIT_BITBUCKET_KEY', 'your-key'),
             'secret' => env('CODEX_GIT_BITBUCKET_SECRET', 'your-secret'),
         ],
@@ -44,12 +44,12 @@ return [
         ],
         'git'       => [
             'enabled'    => false,
+            // The connection key to use (as defined at the top of this file)
+            'connection' => '',
             // The owner (organisation or username)
             'owner'      => '',
             // The repository name
             'repository' => '',
-            // The connection key to use (as defined at the top of this file)
-            'connection' => '',
             // Branches to sync
             'branches'   => [], //[ 'master']
             // Version (tags) constraints makes one able to define ranges and whatnot
@@ -77,6 +77,32 @@ return [
 
                 // Github webhooks allow a 'secret' that has to match. Put it in here
                 'secret'  => env('CODEX_GIT_GITHUB_WEBHOOK_SECRET', ''),
+            ],
+        ],
+        'git_links' => [
+            'enabled' => false,
+            'map'     => [
+                'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
+//                'edit_page:push' => 'layout.toolbar.right', // push attribute to array (default)
+//                'edit_page:set'  => 'layout.toolbar.right', // set attribute
+//                'edit_page'      => false, // disable button
+            ],
+            'links'   => [
+                'edit_page' => [
+                    'component'  => 'c-button',
+                    'borderless' => true,
+                    'type'       => 'toolbar',
+                    'icon'       => 'github',
+                    'children'   => 'Edit Page',
+                    'href'       => function ($model) {
+                        /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+                        $git = $model->git();
+                        if ($model instanceof \Codex\Contracts\Documents\Document) {
+                            return $git->getDocumentUrl($model->getPath());
+                        }
+                        return $git->getUrl();
+                    },
+                ],
             ],
         ],
     ],

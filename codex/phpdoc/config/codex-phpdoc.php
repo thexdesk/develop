@@ -31,12 +31,17 @@ return [
     'route_prefix' => 'phpdoc',
 
     'default_processor_config' => [],
-    'processors' => [
-        'links' => [
+    'processors'               => [
+        'links'  => [
             'actions' => [
-                'phpdoc' => \Codex\Phpdoc\Documents\PhpdocLinks::class . '@handle'
-            ]
-        ]
+                'phpdoc' => \Codex\Phpdoc\Documents\PhpdocLinks::class . '@handle',
+            ],
+        ],
+        'macros' => [
+            'phpdoc:method'           => \Codex\Phpdoc\Documents\PhpdocMacros::class . '@method',
+            'phpdoc:method-signature' => \Codex\Phpdoc\Documents\PhpdocMacros::class . '@methodSignature',
+            'phpdoc:member-list'      => \Codex\Phpdoc\Documents\PhpdocMacros::class . '@memberList',
+        ],
     ],
     /*
     |--------------------------------------------------------------------------

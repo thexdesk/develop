@@ -15,13 +15,25 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\TestCommand::class,
         \App\CodexBackendDataCommand::class,
-        \App\ToolboxCommand::class
+        \App\ToolboxCommand::class,
+    ];
+
+    protected $bootstrappers = [
+        \Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables::class,
+        \Illuminate\Foundation\Bootstrap\LoadConfiguration::class,
+        \Codex\Config\LoadConfiguration::class,
+        \Illuminate\Foundation\Bootstrap\HandleExceptions::class,
+        \Illuminate\Foundation\Bootstrap\RegisterFacades::class,
+        \Illuminate\Foundation\Bootstrap\SetRequestForConsole::class,
+        \Illuminate\Foundation\Bootstrap\RegisterProviders::class,
+        \Illuminate\Foundation\Bootstrap\BootProviders::class,
     ];
 
     /**
      * Define the application's command schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param  \Illuminate\Console\Scheduling\Schedule $schedule
+     *
      * @return void
      */
     protected function schedule(Schedule $schedule)
@@ -37,7 +49,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }

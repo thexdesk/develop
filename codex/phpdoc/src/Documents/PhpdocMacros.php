@@ -14,77 +14,72 @@ namespace Codex\Phpdoc\Documents;
 class PhpdocMacros
 {
     /**
-     * Generate the PHPDoc method signature component.
-     *
-     * Possible hide options: inherited,modifiers,arguments,argumentTypes,argumentDefaults,returns,namespace,typeTooltip,typeTooltipClick
-     *
-     * @param bool   $isCloser
-     * @param string $query
-     * @param bool   $inline   (optional)
-     * @param string $hide     (optional) An string containing comma separated values with names of to hide
-     *
-     * @example
-     * codex:phpdoc:method:signature('Codex\Codex::get()', true, 'namespace,tags')
-     *
-     * @return string
-     */
-    public function methodSignature($isCloser = false, $fqsen, $inline = false, $hide = '')
-    {
-        $hide = $this->transformHideCsv($hide);
-        $loader = false;
-        $props = $this->toJson(compact('fqsen', 'inline', 'hide', 'loader'));
-
-        return "<phpdoc-method-signature props='{$props}'></phpdoc-method-signature>";
-    }
-
-    /**
      * Generate the PHPDoc method component.
      *
      * Possible hide options: signature,details,description,example,tags,inherited,modifiers,arguments,argumentTypes,argumentDefaults,returns,namespace,typeTooltip,typeTooltipClick
      *
      * @param bool   $isCloser
-     * @param string $query    The fully qualified namespace to the method
-     * @param bool   $collapse (optional) Makes the method component collapsible
-     * @param bool   $closed   (optional) Used with $collapse. Makes the method component collapsed by default
-     * @param string $hide     (optional) An string containing comma separated values with names of to hide
+     * @param string $fqsen   The fully qualified namespace to the method
+     * @param array  $options (optional)
      *
      * @example
-     * codex:phpdoc:method('Codex\Codex::get()', true, true, 'namespace,tags')
+     * codex:phpdoc:method("Codex\Codex::get()", { })
      *
      * @return string
      */
-    public function method($isCloser = false, $fqsen, $collapse = false, $closed = false, $hide = '')
+    public function method($isCloser = false, $fqsen = null, $options = [])
     {
-        $hide = $this->transformHideCsv($hide);
-        $loader = false;
-        $props = json_encode(compact('fqsen', 'collapse', 'closed', 'hide', 'loader'));
-        return "<phpdoc-method class=\"boxed\" props='{$props}'></phpdoc-method>";
+        return $this->makeClosed('method', $fqsen, $options);
     }
 
-    public function listMembers($isCloser = false, $query)
+    /**
+     * Generate the PHPDoc method signature component.
+     *
+     * @param bool   $isCloser
+     * @param string $fqsen   The fully qualified namespace to the method
+     * @param array  $options (optional)
+     *
+     * @example
+     * codex:phpdoc:method-signature("Codex\Codex::get()", { })
+     *
+     * @return string
+     */
+    public function methodSignature($isCloser = false, $fqsen = null, $options = [])
     {
-        return "<phpdoc-member-list query=\"{$query}\" no-click></phpdoc-member-list>";
+        return $this->makeClosed('method-signature', $fqsen, $options);
     }
 
-    public function file($isCloser = false, $query, $modifiers = '')
+    /**
+     * Generate the PHPDoc member list component.
+     *
+     * @param bool   $isCloser
+     * @param string $fqsen   The fully qualified namespace to the class/interface/trait
+     * @param array  $options (optional)
+     *
+     * @example
+     * codex:phpdoc:member-list("Codex\Codex", { })
+     *
+     * @return string
+     */
+    public function memberList($isCloser = false, $fqsen = null, $options = [])
     {
-        return "<phpdoc-file query=\"{$query}\" {$modifiers}></phpdoc-file>";
+        return $this->makeClosed('member-list', $fqsen, $options);
     }
 
-    protected function transformHideCsv($hide)
+    protected function props(array $data)
     {
-        $hide = $this->csvToArray($hide);
-
-        return array_combine($hide, array_fill(0, \count($hide), true));
+        return json_encode($data, JSON_UNESCAPED_SLASHES);
     }
 
-    protected function csvToArray($str)
+    protected function make(string $name, $isCloser = false, $fqsen = null, $options = [])
     {
-        return array_map('trim', explode(',', $str));
+        $options[ 'fqsen' ] = $options[ 'fqsen' ] ?? $fqsen;
+        return $isCloser ? "</phpdoc-{$name}>" : "<phpdoc-{$name} props='{$this->props($options)}'>";
     }
 
-    protected function toJson($data, $options = 0)
+    protected function makeClosed(string $name, $fqsen = null, $options = [])
     {
-        return json_encode($data, $options);
+        $options[ 'fqsen' ] = $options[ 'fqsen' ] ?? $fqsen;
+        return "<phpdoc-{$name} props='{$this->props($options)}'></phpdoc-{$name}>";
     }
 }

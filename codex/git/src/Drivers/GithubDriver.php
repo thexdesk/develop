@@ -36,6 +36,7 @@ class GithubDriver implements DriverInterface
         $this->builder = new \Github\HttpClient\Builder(new GuzzleClient());
         $this->client  = new \Github\Client($this->builder, 'v3');
 
+        // Authenticate a user for all next requests.
         $this->connect($config);
     }
 
@@ -141,5 +142,16 @@ class GithubDriver implements DriverInterface
     public function getClient()
     {
         return $this->client;
+    }
+
+    public function getUrl(string $owner, string $repository)
+    {
+        return "https://github.com/{$owner}/{$repository}";
+    }
+
+    public function getDocumentUrl(string $owner, string $repository, string $path)
+    {
+        $args = [ $this->getUrl($owner, $repository), 'tree', $path ];
+        return path_join(array_filter($args, 'is_string'));
     }
 }

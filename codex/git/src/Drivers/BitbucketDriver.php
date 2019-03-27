@@ -26,6 +26,7 @@ class BitbucketDriver implements DriverInterface
         $this->builder = new \Bitbucket\HttpClient\Builder(new GuzzleClient());
         $this->client  = new \Bitbucket\Client($this->builder);
 
+        // Authenticate a user for all next requests.
         $this->connect($config);
     }
 
@@ -119,5 +120,16 @@ class BitbucketDriver implements DriverInterface
     public function getClient()
     {
         return $this->client;
+    }
+
+    public function getUrl(string $owner, string $repository)
+    {
+        return "https://bitbucket.org/{$owner}/{$repository}";
+    }
+
+    public function getDocumentUrl(string $owner, string $repository, string $path)
+    {
+        $args = [ $this->getUrl($owner, $repository), 'src', $path ];
+        return path_join(array_filter($args, 'is_string'));
     }
 }

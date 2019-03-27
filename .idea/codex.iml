@@ -41,7 +41,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/beyondcode/laravel-dump-server" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bitbucket/client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/carica/phpcss" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/cebe/markdown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/clue/stream-filter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/algolia-search" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/auth" />
@@ -230,6 +229,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/tightenco/collect" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/timacdonald/rule-builder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vierbergenlars/php-semver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vinkla/algolia" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />

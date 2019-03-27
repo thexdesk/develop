@@ -11,14 +11,15 @@
 
 namespace Codex\Git;
 
-use Codex\Contracts\Projects\Project;
+use Codex\Contracts\Documents\Document;
 use Codex\Git\Connection\Ref;
+use Codex\Mergable\Model;
 use vierbergenlars\SemVer\expression;
 
-class ProjectGitConfig
+class GitConfig
 {
-    /** @var \Codex\Contracts\Projects\Project */
-    protected $project;
+    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document */
+    protected $model;
 
     /** @var expression */
     protected $versions;
@@ -32,9 +33,9 @@ class ProjectGitConfig
      * @param \Codex\Contracts\Projects\Project      $parent
      * @param \Codex\Git\Contracts\ConnectionManager $manager
      */
-    public function __construct(Project $parent, Contracts\ConnectionManager $manager)
+    public function __construct(Model $parent, Contracts\ConnectionManager $manager)
     {
-        $this->project = $parent;
+        $this->model   = $parent;
         $this->manager = $manager;
     }
 
@@ -45,7 +46,7 @@ class ProjectGitConfig
      */
     public function isEnabled()
     {
-        return true === $this->project[ 'git.enabled' ];
+        return true === $this->model[ 'git.enabled' ];
     }
 
     public function shouldSyncRef(Ref $ref)
@@ -65,33 +66,59 @@ class ProjectGitConfig
 
     public function getOwner()
     {
-        return $this->project['git.owner'];
+        return $this->model[ 'git.owner' ];
     }
 
     public function getRepository()
     {
-        return $this->project['git.repository'];
+        return $this->model[ 'git.repository' ];
     }
 
     /**
-     * getConnection method.
-     *
      * @return \Codex\Git\Drivers\DriverInterface|mixed
+     */
+    public function connect()
+    {
+        return $this->manager->connection($this->model[ 'git.connection' ]);
+    }
+
+    /**
+     * The connection name
+     *
+     * @return string
      */
     public function getConnection()
     {
-        return $this->manager->connection($this->project['git.connection']);
+        return $this->model[ 'git.connection' ];
+    }
+
+    public function getUrl()
+    {
+        return $this->connect()->getUrl($this->getOwner(), $this->getRepository());
+    }
+
+    /**
+     * @param \Codex\Contracts\Documents\Document|string $document
+     *
+     * @return string
+     */
+    public function getDocumentUrl($document)
+    {
+        if ($document instanceof Document) {
+            $document = $document->getPath();
+        }
+        return $this->connect()->getDocumentUrl($this->getOwner(), $this->getRepository(), path_join($this->getDocsPath(), (string)$document));
     }
 
     public function getBranches()
     {
-        return $this->project['git.branches'];
+        return $this->model[ 'git.branches' ];
     }
 
     public function getVersions()
     {
         if (null === $this->versions) {
-            $this->versions = new expression($this->project['git.versions']);
+            $this->versions = new expression($this->model[ 'git.versions' ]);
         }
 
         return $this->versions;
@@ -99,22 +126,22 @@ class ProjectGitConfig
 
     public function skipsPatchVersions()
     {
-        return $this->project['git.skip.patch_versions'];
+        return $this->model[ 'git.skip.patch_versions' ];
     }
 
     public function skipsMinorVersions()
     {
-        return $this->project['git.skip.minor_versions'];
+        return $this->model[ 'git.skip.minor_versions' ];
     }
 
     public function getDocsPath()
     {
-        return $this->project['git.paths.docs'];
+        return $this->model[ 'git.paths.docs' ];
     }
 
     public function getIndexPath()
     {
-        return $this->project['git.paths.index'];
+        return $this->model[ 'git.paths.index' ];
     }
 
     /**
@@ -122,9 +149,9 @@ class ProjectGitConfig
      *
      * @return \Codex\Contracts\Projects\Project
      */
-    public function getProject()
+    public function getModel()
     {
-        return $this->project;
+        return $this->model;
     }
 
     /**

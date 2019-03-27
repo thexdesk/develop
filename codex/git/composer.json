@@ -11,7 +11,8 @@
         "graham-campbell/bitbucket": "~4.1",
         "league/oauth2-client": "~2.3",
         "league/oauth2-github": "~2.0",
-        "stevenmaguire/oauth2-bitbucket":"~3.0"
+        "stevenmaguire/oauth2-bitbucket":"~3.0",
+        "vierbergenlars/php-semver": "3.0.*"
     },
     "autoload": {
         "psr-4": {
