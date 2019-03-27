@@ -1,3 +1,6 @@
+///<reference path="../../codex/core/resources/assets/types/codex.core.d.ts"/>
+
+import {} from 'codex.core';
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -33,4 +36,3 @@ const app = new Vue({
 });
 
 
-import {} from 'codex.core';

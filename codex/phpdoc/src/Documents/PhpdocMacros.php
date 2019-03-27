@@ -27,7 +27,7 @@ class PhpdocMacros
      *
      * @return string
      */
-    public function method($isCloser = false, $fqsen = null, $options = [])
+    public function method($isCloser = false, string $fqsen = null, array $options = [])
     {
         return $this->makeClosed('method', $fqsen, $options);
     }
@@ -44,7 +44,7 @@ class PhpdocMacros
      *
      * @return string
      */
-    public function methodSignature($isCloser = false, $fqsen = null, $options = [])
+    public function methodSignature($isCloser = false, string $fqsen = null, array $options = [])
     {
         return $this->makeClosed('method-signature', $fqsen, $options);
     }
@@ -61,7 +61,7 @@ class PhpdocMacros
      *
      * @return string
      */
-    public function memberList($isCloser = false, $fqsen = null, $options = [])
+    public function memberList($isCloser = false, string $fqsen = null, array $options = [])
     {
         return $this->makeClosed('member-list', $fqsen, $options);
     }
@@ -71,14 +71,15 @@ class PhpdocMacros
         return json_encode($data, JSON_UNESCAPED_SLASHES);
     }
 
-    protected function make(string $name, $isCloser = false, $fqsen = null, $options = [])
+    protected function make(string $name, $isCloser = false, string $fqsen = null, array $options = [])
     {
         $options[ 'fqsen' ] = $options[ 'fqsen' ] ?? $fqsen;
         return $isCloser ? "</phpdoc-{$name}>" : "<phpdoc-{$name} props='{$this->props($options)}'>";
     }
 
-    protected function makeClosed(string $name, $fqsen = null, $options = [])
+    protected function makeClosed(string $name, string $fqsen = null, array $options = [])
     {
+
         $options[ 'fqsen' ] = $options[ 'fqsen' ] ?? $fqsen;
         return "<phpdoc-{$name} props='{$this->props($options)}'></phpdoc-{$name}>";
     }

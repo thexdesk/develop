@@ -14,3 +14,6 @@ yarn-error.log
 /phpDocumentor.phar
 /php-plantuml.phar
 /public/vendor
+/.idea/deployment.xml
+/.idea/workspace.xml
+

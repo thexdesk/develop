@@ -61,16 +61,16 @@ processors:
 <!--*codex:tabs({ tabPosition: 'left' })*-->
 <!--*codex:tab('Method Signature')*-->
 ```php
-<!--*codex:phpdoc:method:signature('Codex\Codex::get()', true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method-signature('Codex\Codex::get()', {hide: {namespace: true, tags: true} })*-->
 ````
-<!--*codex:phpdoc:method:signature('Codex\Codex::get()', true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method-signature('Codex\Codex::get()', {hide: {namespace: true, tags: true} })*-->
 <!--*codex:/tab*-->
 
 <!--*codex:tab('Method')*-->
 ```php
-<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method', { boxed: true, hide: {namespace: true, tags: true} })*-->
 ````
-<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', { boxed: true, hide: {namespace: true, tags: true} })*-->
 <!--*codex:/tab*-->
 
 <!--*codex:/tabs*-->

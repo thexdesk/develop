@@ -40,6 +40,7 @@ layout:
                     -   label   : Writing documentation
                         document: getting-started/writing-documentation
 
+
             -   label   : Writing Reference
                 icon    : pencil
                 children:
@@ -51,6 +52,7 @@ layout:
                         document: writing-reference/code-render
                     -   label   : HTML & Components
                         document: writing-reference/html-components
+
 
             -   label   : Processors
                 icon    : cogs
@@ -72,14 +74,35 @@ layout:
             -   label   : Development
                 icon    : fa-code
                 children:
-                    -   label   : Layout
+                    -   label   : The Basics
                         children:
-                            -   label   : Example 1
-                                document: examples/layout/example1
-                            -   label   : Example 2
-                                document: examples/layout/example2
-                            -   label   : Example 2
-                                document: examples/layout/example3
+                            -   label   : Model
+                                document: development/model
+                            -   label   : ModelCollection
+                                document: development/model-collection
+                            -   label   : Codex
+                                document: development/codex
+                            -   label   : Project
+                                document: development/project
+                            -   label   : Revision
+                                document: development/revision
+                            -   label   : Document
+                                document: development/document
+                    -   label   : Digging Deeper
+                        children:
+                            -   label   : Attributes
+                                document: development/attributes
+                            -   label   : Api
+                                document: development/api
+                            -   label   : Addons
+                                document: development/addons
+                            -   label   : Events
+                                document: development/events
+                            -   label   : Hooks
+                                document: development/hooks
+                    -   label   : Rst Parser
+                        document: rst-parser
+
 
             -   label   : Frontend
                 icon    : fa-code
@@ -109,7 +132,9 @@ layout:
                         document: addons/filesystems
                     -   label   : Git
                         document: addons/git
-                    -   label   : Phpdoc
+                    -   label   : Packagist
+                        document: addons/packagist
+                    -   label   : PHPDoc
                         document: addons/phpdoc
                     -   label   : Sitemap
                         document: addons/sitemap

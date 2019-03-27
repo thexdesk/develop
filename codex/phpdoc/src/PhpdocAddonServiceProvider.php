@@ -15,8 +15,6 @@ namespace Codex\Phpdoc;
 use Codex\Addons\AddonServiceProvider;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Hooks;
-use Codex\Phpdoc\Documents\PhpdocLinks;
-use Codex\Phpdoc\Documents\PhpdocMacros;
 use Codex\Phpdoc\Serializer\AttributeAnnotationReader;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
 use Codex\Phpdoc\Serializer\XmlAccessorStrategy;
@@ -38,7 +36,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
 
     public $mapConfig = [
         'codex-phpdoc.default_project_config' => 'codex.projects',
-        'codex-phpdoc.processors' => 'codex.processor-defaults',
+        'codex-phpdoc.processors'             => 'codex.projects.processors',
     ];
 
     protected $assetDirs = [ 'assets' => 'codex_phpdoc' ];
@@ -64,12 +62,6 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     public $providers = [
         Http\HttpServiceProvider::class,
     ];
-
-//    public $listen = [
-//        \Codex\Revisions\Events\ResolvedRevision::class => [
-//
-//        ]
-//    ]
 
     public function register()
     {
@@ -98,7 +90,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     protected function registerRevisionMacros()
     {
         Revision::macro('phpdoc', function () {
-            return $this->storage('phpdoc', function($revision){
+            return $this->storage('phpdoc', function ($revision) {
                 return new RevisionPhpdoc($revision);
             });
         });

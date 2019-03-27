@@ -47,9 +47,9 @@ Revisions with phpdoc enabled allows users to browse the [Api Viewer](#codex:php
 |:--------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
 |       [Class Link](#codex:phpdoc['Codex\Codex'])                                | `[Class Link](#codex:phpdoc['Codex\Codex'])`                                 |
 |       [Class Link](#codex:phpdoc['Codex\Codex']:!styling:!icon)                 | `[Class Link](#codex:phpdoc['Codex\Codex']:!styling:!icon)`                  |
-|       [Class Drawer + Popover](#codex:phpdoc['Codex\Codex']:drawer)     | `[Class Drawer + Popover](#codex:phpdoc['Codex\Codex']:drawer)`      |
+|       [Class Drawer + Popover](#codex:phpdoc['Codex\Codex']:drawer:popover)     | `[Class Drawer + Popover](#codex:phpdoc['Codex\Codex']:drawer:popover)`      |
 |       [](#codex:phpdoc['Codex\Codex']:drawer:popover)                           | `[](#codex:phpdoc['Codex\Codex']:drawer:popover)`                            |
-|       [](#codex:phpdoc['Codex\Codex']:drawer:type)                      | `[](#codex:phpdoc['Codex\Codex']:drawer:type)`                       |
+|       [](#codex:phpdoc['Codex\Codex']:drawer:popover:type)                      | `[](#codex:phpdoc['Codex\Codex']:drawer:popover:type)`                       |
 |       [Link to phpdoc class](#codex:phpdoc['Codex\Codex'])                      | `[Link to phpdoc class](#codex:phpdoc['Codex\Codex'])`                       |
 |       [Link to phpdoc method](#codex:phpdoc['Codex\Codex::get()'])              | `[Link to phpdoc method](#codex:phpdoc['Codex\Codex::get()'])`               |
 |       [Class popover](#codex:phpdoc['Codex\Codex']:popover)                     | `[Class popover](#codex:phpdoc['Codex\Codex']:popover)`                      |

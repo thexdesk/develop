@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es5",
+        "lib": ["dom","es5","es6","es7"],
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true,
+        "jsx": "react",
+        "baseUrl": ".",
+        "paths": {
+
+        }
+    },
+    "include": [
+        "codex/core/resources/assets/types/*",
+        "codex/core/resources/assets/types/**/*",
+        "resources/js/*",
+        "resources/js/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

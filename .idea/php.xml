@@ -220,6 +220,10 @@
       <path value="$PROJECT_DIR$/vendor/colinodell/json5" />
       <path value="$PROJECT_DIR$/vendor/vierbergenlars/php-semver" />
       <path value="$PROJECT_DIR$/vendor/knplabs/packagist-api" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/rst" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/rst-parser" />
+      <path value="$PROJECT_DIR$/vendor/marc-mabe/php-enum" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">
@@ -228,7 +232,7 @@
       <server host="dev.radic.ninja" id="25f726ac-fda4-4823-8347-cd37c6027f45" name="dev.radic.ninja" />
     </servers>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings load_method="CUSTOM_LOADER" bootstrap_file_path="$PROJECT_DIR$/vendor/autoload.php" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" phpunit_phar_path="" use_bootstrap_file="true" />

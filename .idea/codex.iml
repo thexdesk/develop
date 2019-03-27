@@ -61,6 +61,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/rst-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/eddiriarte/console-select" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
@@ -79,6 +80,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/github" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/gregwar/rst" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzle/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
@@ -120,6 +122,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-manipulations" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-schemes" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/marc-mabe/php-enum" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maximebf/debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mikemccabe/json-patch-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
@@ -230,6 +233,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/tightenco/collect" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/timacdonald/rule-builder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vierbergenlars/php-semver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vinkla/algolia" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
@@ -245,6 +249,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-stdlib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zumba/json-serializer" />
     </content>
+    <content url="file://$MODULE_DIR$/codex/core/resources/assets/types" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

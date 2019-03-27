@@ -77,10 +77,11 @@ module.exports = {
                 `cp -f ${licensePath} ${path('codex/auth/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('codex/blog/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('codex/comments/LICENSE.md')}`,
-                `cp -f ${licensePath} ${path('codex/phpdoc/LICENSE.md')}`,
-                `cp -f ${licensePath} ${path('codex/sitemap/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('codex/filesystems/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('codex/git/LICENSE.md')}`,
+                `cp -f ${licensePath} ${path('codex/packagist/LICENSE.md')}`,
+                `cp -f ${licensePath} ${path('codex/phpdoc/LICENSE.md')}`,
+                `cp -f ${licensePath} ${path('codex/sitemap/LICENSE.md')}`,
                 `cp -f ${licensePath} ${path('resources/docs/codex/master/LICENSE.md')}`,
             )
         }
