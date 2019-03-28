@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa47e81-1e1c-4dcc-ba06-20ef31bb18e6" name="Default Changelist" comment="cache improvements">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/git_boot__vvv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Console/GitBootCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/TagCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/TagCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/split.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/split.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/tag.sh" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,27 +69,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/tag.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/TagCommand.php">
+        <entry file="file://$PROJECT_DIR$/scripts/split.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+            <state relative-caret-position="506">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_2.php">
+        <entry file="file://$PROJECT_DIR$/app/Console/TagCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="766" column="9" selection-start-line="766" selection-start-column="9" selection-end-line="766" selection-end-column="9" />
-              <folding>
-                <element signature="e#22855#23217#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="253">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.git/config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="992">
+              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -93,459 +98,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_5.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3312">
-              <caret line="986" column="9" selection-start-line="986" selection-start-column="9" selection-end-line="986" selection-end-column="9" />
-              <folding>
-                <element signature="e#15481#21699#0#PHP" expanded="true" />
-                <element signature="e#28778#29224#0#PHP" expanded="true" />
-                <element signature="e#29262#29500#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/codex/laradic/filesystem/src/Filesystem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
-              <folding>
-                <element signature="e#322#349#0#PHP" />
-                <element signature="e#1287#1369#0#PHP" />
-                <element signature="e#1489#1587#0#PHP" />
-                <element signature="e#1823#2295#0#PHP" />
-                <element signature="e#1924#2289#0#PHP" />
-                <element signature="e#1961#2071#0#PHP" />
-                <element signature="e#2082#2289#0#PHP" />
-                <element signature="e#2366#2512#0#PHP" />
-                <element signature="e#2584#2656#0#PHP" />
-                <element signature="e#2811#2907#0#PHP" />
-                <element signature="e#3161#3599#0#PHP" />
-                <element signature="e#3463#3565#0#PHP" />
-                <element signature="e#3853#3956#0#PHP" />
-                <element signature="e#4934#8182#0#PHP" />
-                <element signature="e#5084#5881#0#PHP" />
-                <element signature="e#5374#5843#0#PHP" />
-                <element signature="e#5508#5843#0#PHP" />
-                <element signature="e#5543#5829#0#PHP" />
-                <element signature="e#5695#5829#0#PHP" />
-                <element signature="e#5955#7096#0#PHP" />
-                <element signature="e#6161#7086#0#PHP" />
-                <element signature="e#6344#6825#0#PHP" />
-                <element signature="e#6409#6814#1#PHP" />
-                <element signature="e#6540#6663#0#PHP" />
-                <element signature="e#6931#7071#0#PHP" />
-                <element signature="e#6962#7060#1#PHP" />
-                <element signature="e#7288#7536#0#PHP" />
-                <element signature="e#7422#7526#0#PHP" />
-                <element signature="e#7545#7664#0#PHP" />
-                <element signature="e#7743#8152#0#PHP" />
-                <element signature="e#7861#8152#0#PHP" />
-                <element signature="e#7888#8142#0#PHP" />
-                <element signature="e#8024#8142#0#PHP" />
-                <element signature="e#8188#8265#0#PHP" />
-                <element signature="e#8443#8787#0#PHP" />
-                <element signature="e#8635#8787#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/codex/laradic/filesystem/src/Temp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1058">
-              <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Tmp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1357">
-              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_7.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2898">
-              <caret line="907" column="9" selection-start-line="907" selection-start-column="9" selection-end-line="907" selection-end-column="9" />
-              <folding>
-                <element signature="e#25323#25715#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/filesystem/Filesystem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-              <folding>
-                <element signature="e#279#344#0#PHP" />
-                <element signature="e#1253#3546#0#PHP" />
-                <element signature="e#1440#1637#0#PHP" />
-                <element signature="e#1717#1899#0#PHP" />
-                <element signature="e#1909#3540#0#PHP" />
-                <element signature="e#1989#2234#0#PHP" />
-                <element signature="e#2363#2671#0#PHP" />
-                <element signature="e#2849#3019#0#PHP" />
-                <element signature="e#3033#3530#0#PHP" />
-                <element signature="e#3233#3516#0#PHP" />
-                <element signature="e#3793#4557#0#PHP" />
-                <element signature="e#3850#4551#0#PHP" />
-                <element signature="e#3907#3966#0#PHP" />
-                <element signature="e#3980#4541#0#PHP" />
-                <element signature="e#4042#4527#0#PHP" />
-                <element signature="e#4241#4411#0#PHP" />
-                <element signature="e#4811#5291#0#PHP" />
-                <element signature="e#4902#5263#0#PHP" />
-                <element signature="e#4961#5169#0#PHP" />
-                <element signature="e#5183#5253#0#PHP" />
-                <element signature="e#5769#6124#0#PHP" />
-                <element signature="e#5842#6118#0#PHP" />
-                <element signature="e#5976#6108#0#PHP" />
-                <element signature="e#6348#7594#0#PHP" />
-                <element signature="e#6393#6566#0#PHP" />
-                <element signature="e#6496#6566#0#PHP" />
-                <element signature="e#6615#7588#0#PHP" />
-                <element signature="e#6655#7578#0#PHP" />
-                <element signature="e#6743#6996#0#PHP" />
-                <element signature="e#7011#7395#0#PHP" />
-                <element signature="e#7191#7381#0#PHP" />
-                <element signature="e#7396#7578#0#PHP" />
-                <element signature="e#8058#8543#0#PHP" />
-                <element signature="e#8144#8537#0#PHP" />
-                <element signature="e#8203#8364#0#PHP" />
-                <element signature="e#8377#8527#0#PHP" />
-                <element signature="e#8954#9694#0#PHP" />
-                <element signature="e#9025#9688#0#PHP" />
-                <element signature="e#9084#9226#0#PHP" />
-                <element signature="e#9239#9678#0#PHP" />
-                <element signature="e#9307#9467#0#PHP" />
-                <element signature="e#9482#9678#0#PHP" />
-                <element signature="e#9505#9664#0#PHP" />
-                <element signature="e#10096#10840#0#PHP" />
-                <element signature="e#10168#10834#0#PHP" />
-                <element signature="e#10227#10370#0#PHP" />
-                <element signature="e#10383#10824#0#PHP" />
-                <element signature="e#10451#10612#0#PHP" />
-                <element signature="e#10627#10824#0#PHP" />
-                <element signature="e#10650#10810#0#PHP" />
-                <element signature="e#11255#12077#0#PHP" />
-                <element signature="e#11377#11563#0#PHP" />
-                <element signature="e#11573#12071#0#PHP" />
-                <element signature="e#11627#11950#0#PHP" />
-                <element signature="e#12315#12674#0#PHP" />
-                <element signature="e#12414#12628#0#PHP" />
-                <element signature="e#13001#13743#0#PHP" />
-                <element signature="e#13087#13372#0#PHP" />
-                <element signature="e#13247#13362#0#PHP" />
-                <element signature="e#13427#13595#0#PHP" />
-                <element signature="e#13466#13546#0#PHP" />
-                <element signature="e#13605#13737#0#PHP" />
-                <element signature="e#14131#14917#0#PHP" />
-                <element signature="e#14197#14314#0#PHP" />
-                <element signature="e#14324#14463#0#PHP" />
-                <element signature="e#14473#14911#0#PHP" />
-                <element signature="e#14544#14750#0#PHP" />
-                <element signature="e#14588#14692#0#PHP" />
-                <element signature="e#14764#14901#0#PHP" />
-                <element signature="e#15082#15678#0#PHP" />
-                <element signature="e#15156#15538#0#PHP" />
-                <element signature="e#15192#15528#0#PHP" />
-                <element signature="e#16325#16856#0#PHP" />
-                <element signature="e#16394#16464#0#PHP" />
-                <element signature="e#16474#16725#0#PHP" />
-                <element signature="e#16507#16573#0#PHP" />
-                <element signature="e#16587#16678#0#PHP" />
-                <element signature="e#16735#16817#0#PHP" />
-                <element signature="e#17167#19747#0#PHP" />
-                <element signature="e#17236#17396#0#PHP" />
-                <element signature="e#17406#17560#0#PHP" />
-                <element signature="e#17613#17777#0#PHP" />
-                <element signature="e#17807#18020#1#PHP" />
-                <element signature="e#17838#17983#0#PHP" />
-                <element signature="e#18312#18655#1#PHP" />
-                <element signature="e#18378#18616#0#PHP" />
-                <element signature="e#18432#18602#0#PHP" />
-                <element signature="e#18515#18602#0#PHP" />
-                <element signature="e#18861#19010#0#PHP" />
-                <element signature="e#19127#19292#0#PHP" />
-                <element signature="e#19223#19292#0#PHP" />
-                <element signature="e#21107#24001#0#PHP" />
-                <element signature="e#21422#22132#0#PHP" />
-                <element signature="e#21559#21821#0#PHP" />
-                <element signature="e#21883#22122#0#PHP" />
-                <element signature="e#22018#22108#0#PHP" />
-                <element signature="e#22206#22532#0#PHP" />
-                <element signature="e#22542#22622#0#PHP" />
-                <element signature="e#22632#23995#0#PHP" />
-                <element signature="e#22675#22951#0#PHP" />
-                <element signature="e#23044#23985#0#PHP" />
-                <element signature="e#23082#23451#0#PHP" />
-                <element signature="e#23231#23316#0#PHP" />
-                <element signature="e#23317#23451#0#PHP" />
-                <element signature="e#23466#23985#0#PHP" />
-                <element signature="e#23489#23971#0#PHP" />
-                <element signature="e#23598#23683#0#PHP" />
-                <element signature="e#23684#23836#0#PHP" />
-                <element signature="e#23837#23971#0#PHP" />
-                <element signature="e#24154#24468#0#PHP" />
-                <element signature="e#24926#26466#0#PHP" />
-                <element signature="e#25156#25674#0#PHP" />
-                <element signature="e#25384#25586#0#PHP" />
-                <element signature="e#25426#25538#0#PHP" />
-                <element signature="e#25762#26386#0#PHP" />
-                <element signature="e#26191#26255#0#PHP" />
-                <element signature="e#26727#27536#0#PHP" />
-                <element signature="e#26824#26886#0#PHP" />
-                <element signature="e#26896#27038#0#PHP" />
-                <element signature="e#27217#27387#0#PHP" />
-                <element signature="e#27791#28306#0#PHP" />
-                <element signature="e#27892#27954#0#PHP" />
-                <element signature="e#27964#28106#0#PHP" />
-                <element signature="e#28116#28300#0#PHP" />
-                <element signature="e#28312#28457#0#PHP" />
-                <element signature="e#28596#28826#0#PHP" />
-                <element signature="e#28832#29245#0#PHP" />
-                <element signature="e#28969#29186#0#PHP" />
-                <element signature="e#29119#29152#0#PHP" />
-                <element signature="e#29153#29186#0#PHP" />
-                <element signature="e#29284#29376#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/finder/SplFileInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-              <folding>
-                <element signature="e#275#385#0#PHP" expanded="true" />
-                <element signature="e#490#673#0#PHP" expanded="true" />
-                <element signature="e#919#1067#0#PHP" expanded="true" />
-                <element signature="e#1159#1309#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/SPL/SPL_c1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/codex/laradic/git/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/codex/laradic/git/LICENSE-github-adapter.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor>
-                <markdownNavigatorState>
-                  <previewPanelState version="2.8.2" />
-                </markdownNavigatorState>
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/codex/laradic/git/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor>
-                <markdownNavigatorState>
-                  <previewPanelState version="2.8.2">
-                    <jsState>{&quot;onLoadScroll&quot;:{&quot;x&quot;:0,&quot;y&quot;:0}}</jsState>
-                  </previewPanelState>
-                </markdownNavigatorState>
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/codex/codex/addon-git/composer.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Command.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="483" column="20" selection-start-line="483" selection-start-column="20" selection-end-line="483" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="https://schemastore.azurewebsites.net/schemas/json/composer.json">
-          <provider selected="true" editor-type-id="httpFileEditor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/phd/package_generic.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ToolboxCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
               <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/CodexBackendDataCommand.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/GitBootCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/TestCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/TestCommand2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/eddiriarte/console-select/src/Traits/SelectableInputs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="89" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/eddiriarte/console-select/src/Inputs/CheckboxInput.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/eddiriarte/console-select/src/Inputs/Exceptions/UnknownOption.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/eddiriarte/console-select/src/Inputs/RadioInput.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/eddiriarte/console-select/src/Helpers/SelectionHelper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/eddiriarte/console-select/src/Helpers/StreamableInput.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/eddiriarte/console-select/src/Providers/SelectServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/gitonomy/gitlib/src/Gitonomy/Git/ReferenceBag.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="157" column="24" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/gitonomy/gitlib/src/Gitonomy/Git/Revision.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+            <state relative-caret-position="851">
+              <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -553,51 +116,435 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/czproject/git-php/src/GitRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="430" column="24" selection-start-line="430" selection-start-column="24" selection-end-line="430" selection-end-column="24" />
+            <state relative-caret-position="1373">
+              <caret line="614" column="5" lean-forward="true" selection-start-line="614" selection-start-column="5" selection-end-line="614" selection-end-column="5" />
               <folding>
-                <element signature="e#336#391#0#PHP" expanded="true" />
+                <element signature="e#394#692#0#PHP" />
+                <element signature="e#464#561#0#PHP" />
+                <element signature="e#623#742#0#PHP" />
+                <element signature="e#729#801#0#PHP" />
+                <element signature="e#948#1081#0#PHP" />
+                <element signature="e#1012#1064#0#PHP" />
+                <element signature="e#1205#1338#0#PHP" />
+                <element signature="e#1252#1321#0#PHP" />
+                <element signature="e#1288#1320#0#PHP" />
+                <element signature="e#1508#1842#0#PHP" />
+                <element signature="e#1568#1719#0#PHP" />
+                <element signature="e#1568#1782#0#PHP" />
+                <element signature="e#1964#2053#0#PHP" />
+                <element signature="e#2214#2349#0#PHP" />
+                <element signature="e#2276#2332#0#PHP" />
+                <element signature="e#2537#2759#0#PHP" />
+                <element signature="e#3100#3162#0#PHP" />
+                <element signature="e#2889#3028#0#PHP" />
+                <element signature="e#2939#3011#0#PHP" />
+                <element signature="e#2978#3010#0#PHP" />
+                <element signature="e#3150#3574#0#PHP" />
+                <element signature="e#3731#4146#0#PHP" />
+                <element signature="e#3219#3406#0#PHP" />
+                <element signature="e#3262#3405#1#PHP" />
+                <element signature="e#3838#3956#0#PHP" />
+                <element signature="e#4017#4092#0#PHP" />
+                <element signature="e#3725#3877#0#PHP" />
+                <element signature="e#3769#3872#0#PHP" />
+                <element signature="e#3812#3871#1#PHP" />
+                <element signature="e#4014#4172#0#PHP" />
+                <element signature="e#4064#4167#0#PHP" />
+                <element signature="e#4107#4166#1#PHP" />
+                <element signature="e#4308#4462#0#PHP" />
+                <element signature="e#4357#4457#0#PHP" />
+                <element signature="e#4397#4456#1#PHP" />
+                <element signature="e#4594#4704#0#PHP" />
+                <element signature="e#4640#4687#0#PHP" />
+                <element signature="e#4837#5063#0#PHP" />
+                <element signature="e#5743#5815#0#PHP" />
+                <element signature="e#5850#5933#0#PHP" />
+                <element signature="e#5194#5742#0#PHP" />
+                <element signature="e#6174#6246#0#PHP" />
+                <element signature="e#6281#6742#0#PHP" />
+                <element signature="e#5556#5673#0#PHP" />
+                <element signature="e#5873#5977#0#PHP" />
+                <element signature="e#5919#5960#0#PHP" />
+                <element signature="e#6183#6464#0#PHP" />
+                <element signature="e#6236#6332#0#PHP" />
+                <element signature="e#6295#6326#0#PHP" />
+                <element signature="e#7521#7610#0#PHP" />
+                <element signature="e#6644#6868#0#PHP" />
+                <element signature="e#7919#7982#0#PHP" />
+                <element signature="e#6767#6851#0#PHP" />
+                <element signature="e#6815#6850#0#PHP" />
+                <element signature="e#7023#7259#0#PHP" />
+                <element signature="e#7163#7239#0#PHP" />
+                <element signature="e#7367#7647#0#PHP" />
+                <element signature="e#7479#7536#0#PHP" />
+                <element signature="e#7707#7773#0#PHP" />
+                <element signature="e#7915#8118#0#PHP" />
+                <element signature="e#9424#9487#0#PHP" />
+                <element signature="e#8048#8101#0#PHP" />
+                <element signature="e#8258#8461#0#PHP" />
+                <element signature="e#9833#9896#0#PHP" />
+                <element signature="e#8391#8444#0#PHP" />
+                <element signature="e#8617#8822#0#PHP" />
+                <element signature="e#10259#10322#0#PHP" />
+                <element signature="e#8751#8805#0#PHP" />
+                <element signature="e#8979#9135#0#PHP" />
+                <element signature="e#9054#9118#0#PHP" />
+                <element signature="e#9267#9412#0#PHP" />
+                <element signature="e#9330#9395#0#PHP" />
+                <element signature="e#9524#9643#0#PHP" />
+                <element signature="e#9574#9626#0#PHP" />
+                <element signature="e#9803#9966#0#PHP" />
+                <element signature="e#9881#9949#0#PHP" />
+                <element signature="e#10076#10441#0#PHP" />
+                <element signature="e#10113#10164#0#PHP" />
+                <element signature="e#12202#12314#0#PHP" />
+                <element signature="e#10510#10621#0#PHP" />
+                <element signature="e#13153#13268#0#PHP" />
+                <element signature="e#13430#13501#0#PHP" />
+                <element signature="e#11466#11530#0#PHP" />
+                <element signature="e#11660#11948#0#PHP" />
+                <element signature="e#14047#14159#0#PHP" />
+                <element signature="e#11953#12465#0#PHP" />
+                <element signature="e#14327#14781#0#PHP" />
+                <element signature="e#14365#14771#0#PHP" />
+                <element signature="e#14403#14650#0#PHP" />
+                <element signature="e#14489#14572#0#PHP" />
+                <element signature="e#14665#14771#0#PHP" />
+                <element signature="e#12598#13296#0#PHP" />
+                <element signature="e#15078#15194#0#PHP" />
+                <element signature="e#12777#12963#0#PHP" />
+                <element signature="e#13010#13116#0#PHP" />
+                <element signature="e#13015#13093#0#PHP" />
+                <element signature="e#13036#13092#1#PHP" />
+                <element signature="e#15615#15728#0#PHP" />
+                <element signature="e#13479#15136#0#PHP" />
+                <element signature="e#16129#16268#0#PHP" />
+                <element signature="e#16304#16548#0#PHP" />
+                <element signature="e#16452#16548#0#PHP" />
+                <element signature="e#13946#13994#0#PHP" />
+                <element signature="e#14017#14144#0#PHP" />
+                <element signature="e#14177#14265#0#PHP" />
+                <element signature="e#14198#14264#1#PHP" />
+                <element signature="e#17031#17139#0#PHP" />
+                <element signature="e#17228#17760#0#PHP" />
+                <element signature="e#17340#17404#0#PHP" />
+                <element signature="e#17504#17576#0#PHP" />
+                <element signature="e#17617#17750#0#PHP" />
+                <element signature="e#17815#17969#0#PHP" />
+                <element signature="e#15215#15659#0#PHP" />
+                <element signature="e#15306#15449#0#PHP" />
+                <element signature="e#15402#15449#0#PHP" />
+                <element signature="e#15454#15624#0#PHP" />
+                <element signature="e#15459#15591#0#PHP" />
+                <element signature="e#15480#15590#1#PHP" />
+                <element signature="e#15778#16214#0#PHP" />
+                <element signature="e#18998#19101#0#PHP" />
+                <element signature="e#19163#19278#0#PHP" />
+                <element signature="e#16395#16532#0#PHP" />
+                <element signature="e#16787#17024#0#PHP" />
+                <element signature="e#17205#18199#0#PHP" />
+                <element signature="e#17455#17612#0#PHP" />
+                <element signature="e#17732#18177#0#PHP" />
+                <element signature="e#17775#17903#0#PHP" />
+                <element signature="e#17909#18046#0#PHP" />
+                <element signature="e#18052#18172#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
+        <entry file="file://$PROJECT_DIR$/vendor/czproject/git-php/src/IGit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="146" selection-start-line="146" selection-end-line="146" />
+            <state relative-caret-position="-1476" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/Core/Core_c.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="293" column="26" selection-start-line="293" selection-start-column="26" selection-end-line="293" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/vierbergenlars/php-semver/src/vierbergenlars/SemVer/version.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+            <state relative-caret-position="23">
+              <caret line="660" column="20" selection-start-line="660" selection-start-column="20" selection-end-line="660" selection-end-column="20" />
               <folding>
-                <element signature="e#208#420#0#PHP" expanded="true" />
-                <element signature="e#1858#2138#0#PHP" expanded="true" />
+                <element signature="e#38#51#0#PHP" />
+                <element signature="e#1762#1983#0#PHP" />
+                <element signature="e#2094#2203#0#PHP" />
+                <element signature="e#2355#2442#0#PHP" />
+                <element signature="e#2581#2744#0#PHP" />
+                <element signature="e#2903#3016#0#PHP" />
+                <element signature="e#3211#3515#0#PHP" />
+                <element signature="e#3290#3349#0#PHP" />
+                <element signature="e#3359#3444#0#PHP" />
+                <element signature="e#3612#3674#0#PHP" />
+                <element signature="e#3816#4205#0#PHP" />
+                <element signature="e#3932#4027#0#PHP" />
+                <element signature="e#3943#4026#2#PHP" />
+                <element signature="e#3932#4104#0#PHP" />
+                <element signature="e#4036#4103#2#PHP" />
+                <element signature="e#4115#4199#0#PHP" />
+                <element signature="e#4337#4428#0#PHP" />
+                <element signature="e#4554#5105#0#PHP" />
+                <element signature="e#4614#4752#0#PHP" />
+                <element signature="e#4678#4751#2#PHP" />
+                <element signature="e#4817#4865#0#PHP" />
+                <element signature="e#4914#4983#0#PHP" />
+                <element signature="e#5012#5085#1#PHP" />
+                <element signature="e#5235#5822#0#PHP" />
+                <element signature="e#5283#5340#0#PHP" />
+                <element signature="e#5444#5586#0#PHP" />
+                <element signature="e#5462#5585#2#PHP" />
+                <element signature="e#5682#5792#0#PHP" />
+                <element signature="e#5698#5791#2#PHP" />
+                <element signature="e#5934#6028#0#PHP" />
+                <element signature="e#6205#6328#0#PHP" />
+                <element signature="e#6334#6514#0#PHP" expanded="true" />
+                <element signature="e#6519#6949#0#PHP" />
+                <element signature="e#6597#6865#0#PHP" />
+                <element signature="e#6638#6805#0#PHP" />
+                <element signature="e#7132#7543#0#PHP" />
+                <element signature="e#7198#7382#0#PHP" />
+                <element signature="e#7246#7371#0#PHP" />
+                <element signature="e#7262#7370#2#PHP" />
+                <element signature="e#7392#7485#0#PHP" />
+                <element signature="e#7703#7882#0#PHP" />
+                <element signature="e#7772#7874#1#PHP" />
+                <element signature="e#8009#8120#0#PHP" />
+                <element signature="e#8198#8413#0#PHP" />
+                <element signature="e#8235#8290#0#PHP" />
+                <element signature="e#8235#8383#0#PHP" />
+                <element signature="e#8310#8382#2#PHP" />
+                <element signature="e#8573#8700#0#PHP" />
+                <element signature="e#8895#9059#0#PHP" />
+                <element signature="e#9236#9374#0#PHP" />
+                <element signature="e#9586#9761#0#PHP" />
+                <element signature="e#9927#10062#0#PHP" />
+                <element signature="e#10264#10436#0#PHP" />
+                <element signature="e#10563#10787#0#PHP" />
+                <element signature="e#10618#10758#0#PHP" />
+                <element signature="e#10672#10748#0#PHP" />
+                <element signature="e#10932#11142#0#PHP" />
+                <element signature="e#11000#11135#0#PHP" />
+                <element signature="e#11012#11134#2#PHP" />
+                <element signature="e#11358#11790#0#PHP" />
+                <element signature="e#11433#11709#0#PHP" />
+                <element signature="e#11528#11673#0#PHP" />
+                <element signature="e#11581#11659#0#PHP" />
+                <element signature="e#11963#12223#0#PHP" />
+                <element signature="e#12007#12155#0#PHP" />
+                <element signature="e#12080#12155#0#PHP" />
+                <element signature="e#12358#12578#0#PHP" />
+                <element signature="e#12422#12516#0#PHP" />
+                <element signature="e#12782#13042#0#PHP" />
+                <element signature="e#12871#13013#0#PHP" />
+                <element signature="e#12940#13013#0#PHP" />
+                <element signature="e#13222#13372#0#PHP" />
+                <element signature="e#13556#13712#0#PHP" />
+                <element signature="e#13915#14062#0#PHP" />
+                <element signature="e#14246#14388#0#PHP" />
+                <element signature="e#14576#14718#0#PHP" />
+                <element signature="e#14907#15054#0#PHP" />
+                <element signature="e#15238#16625#0#PHP" />
+                <element signature="e#15327#15422#0#PHP" />
+                <element signature="e#15432#15532#0#PHP" />
+                <element signature="e#15549#16618#1#PHP" />
+                <element signature="e#15670#15843#0#PHP" />
+                <element signature="e#15705#15842#1#PHP" />
+                <element signature="e#15858#16026#0#PHP" />
+                <element signature="e#16040#16608#0#PHP" />
+                <element signature="e#16806#16909#0#PHP" />
+                <element signature="e#17096#17376#0#PHP" />
+                <element signature="e#17227#17369#0#PHP" />
+                <element signature="e#17241#17368#2#PHP" />
+                <element signature="e#17558#17666#0#PHP" />
+                <element signature="e#17861#18006#0#PHP" />
+                <element signature="e#18205#18442#0#PHP" />
+                <element signature="e#18273#18435#0#PHP" />
+                <element signature="e#18287#18434#2#PHP" />
+                <element signature="e#18629#18912#0#PHP" />
+                <element signature="e#18763#18905#0#PHP" />
+                <element signature="e#18777#18904#2#PHP" />
+                <element signature="e#19094#19208#0#PHP" />
+                <element signature="e#19365#19532#0#PHP" />
+                <element signature="e#19425#19525#0#PHP" />
+                <element signature="e#19439#19524#2#PHP" />
+                <element signature="e#19700#19839#0#PHP" />
+                <element signature="e#20033#20177#0#PHP" />
+                <element signature="e#20316#20428#0#PHP" />
+                <element signature="e#20520#20607#0#PHP" />
+                <element signature="e#20742#20896#0#PHP" />
+                <element signature="e#20786#20867#0#PHP" />
+                <element signature="e#21051#21228#0#PHP" />
+                <element signature="e#21108#21189#0#PHP" />
+                <element signature="e#21427#22459#0#PHP" />
+                <element signature="e#21498#21619#0#PHP" />
+                <element signature="e#21706#22270#0#PHP" />
+                <element signature="e#21811#21897#0#PHP" />
+                <element signature="e#21911#22260#0#PHP" />
+                <element signature="e#22042#22160#0#PHP" />
+                <element signature="e#22321#22428#0#PHP" />
+                <element signature="e#22613#23030#0#PHP" />
+                <element signature="e#22730#22986#0#PHP" />
+                <element signature="e#22833#22931#0#PHP" />
+                <element signature="e#23167#23423#0#PHP" />
+                <element signature="e#23265#23395#0#PHP" />
+                <element signature="e#23305#23385#0#PHP" />
+                <element signature="e#23587#23852#0#PHP" />
+                <element signature="e#23681#23799#0#PHP" />
+                <element signature="e#23986#24123#0#PHP" />
+                <element signature="e#24264#24433#0#PHP" />
+                <element signature="e#24336#24425#1#PHP" />
+                <element signature="e#24534#24607#0#PHP" />
+                <element signature="e#24705#24780#0#PHP" />
+                <element signature="e#24925#25036#0#PHP" />
+                <element signature="e#25132#25219#0#PHP" />
+                <element signature="e#25386#25523#0#PHP" />
+                <element signature="e#25681#25802#0#PHP" />
+                <element signature="e#25929#26141#0#PHP" />
+                <element signature="e#26277#26485#0#PHP" />
+                <element signature="e#26344#26478#0#PHP" />
+                <element signature="e#26355#26477#2#PHP" />
+                <element signature="e#26707#27154#0#PHP" />
+                <element signature="e#26800#27107#0#PHP" />
+                <element signature="e#26967#27054#0#PHP" />
+                <element signature="e#27374#27533#0#PHP" />
+                <element signature="e#27765#28107#0#PHP" />
+                <element signature="e#27850#28064#0#PHP" />
+                <element signature="e#27952#28054#0#PHP" />
+                <element signature="e#28259#28364#0#PHP" />
+                <element signature="e#28485#28650#0#PHP" />
+                <element signature="e#28538#28643#0#PHP" />
+                <element signature="e#28549#28642#2#PHP" />
+                <element signature="e#28788#29170#0#PHP" />
+                <element signature="e#28902#28984#0#PHP" />
+                <element signature="e#28916#28983#2#PHP" />
+                <element signature="e#28902#29163#0#PHP" />
+                <element signature="e#28993#29162#2#PHP" />
+                <element signature="e#29300#29429#0#PHP" />
+                <element signature="e#29599#29734#0#PHP" />
+                <element signature="e#29864#29981#0#PHP" />
+                <element signature="e#30119#30536#0#PHP" />
+                <element signature="e#30233#30328#0#PHP" />
+                <element signature="e#30244#30327#2#PHP" />
+                <element signature="e#30233#30405#0#PHP" />
+                <element signature="e#30337#30404#2#PHP" />
+                <element signature="e#30233#30529#0#PHP" />
+                <element signature="e#30414#30528#2#PHP" />
+                <element signature="e#30706#31008#0#PHP" />
+                <element signature="e#30804#30968#0#PHP" />
+                <element signature="e#30850#30932#0#PHP" />
+                <element signature="e#31133#31459#0#PHP" />
+                <element signature="e#31175#31251#0#PHP" />
+                <element signature="e#31261#31333#0#PHP" />
+                <element signature="e#31639#31790#0#PHP" />
+                <element signature="e#32020#32469#0#PHP" />
+                <element signature="e#32300#32422#0#PHP" />
+                <element signature="e#32625#32710#0#PHP" />
+                <element signature="e#32817#32890#0#PHP" />
+                <element signature="e#33054#33198#0#PHP" />
+                <element signature="e#33329#33432#0#PHP" />
+                <element signature="e#33572#33759#0#PHP" />
+                <element signature="e#33656#33728#0#PHP" />
+                <element signature="e#33918#34029#0#PHP" />
+                <element signature="e#34180#34288#0#PHP" />
+                <element signature="e#34502#34704#0#PHP" />
+                <element signature="e#34555#34634#0#PHP" />
+                <element signature="e#34868#35003#0#PHP" />
+                <element signature="e#35175#35534#0#PHP" />
+                <element signature="e#35223#35412#0#PHP" />
+                <element signature="e#35281#35401#0#PHP" />
+                <element signature="e#35295#35400#2#PHP" />
+                <element signature="e#35429#35527#0#PHP" />
+                <element signature="e#35443#35526#2#PHP" />
+                <element signature="e#35613#35712#0#PHP" />
+                <element signature="e#35915#36276#0#PHP" />
+                <element signature="e#35977#36088#0#PHP" />
+                <element signature="e#36098#36247#0#PHP" />
+                <element signature="e#36152#36237#0#PHP" />
+                <element signature="e#36384#36461#0#PHP" />
+                <element signature="e#36582#36693#0#PHP" />
+                <element signature="e#36846#36982#0#PHP" />
+                <element signature="e#37128#37769#0#PHP" />
+                <element signature="e#37181#37245#0#PHP" />
+                <element signature="e#37423#37738#0#PHP" />
+                <element signature="e#37511#37569#0#PHP" />
+                <element signature="e#37583#37728#0#PHP" />
+                <element signature="e#37892#38183#0#PHP" />
+                <element signature="e#37935#37993#0#PHP" />
+                <element signature="e#38026#38140#0#PHP" />
+                <element signature="e#38321#38535#0#PHP" />
+                <element signature="e#38743#39772#0#PHP" />
+                <element signature="e#39169#39275#0#PHP" />
+                <element signature="e#39629#39728#0#PHP" />
+                <element signature="e#39967#40098#0#PHP" />
+                <element signature="e#40244#40468#0#PHP" />
+                <element signature="e#40600#40713#0#PHP" />
+                <element signature="e#40920#41201#0#PHP" />
+                <element signature="e#41001#41107#0#PHP" />
+                <element signature="e#41338#41666#0#PHP" />
+                <element signature="e#41390#41469#0#PHP" />
+                <element signature="e#41541#41659#0#PHP" />
+                <element signature="e#41555#41655#1#PHP" />
+                <element signature="e#41790#41961#0#PHP" />
+                <element signature="e#41833#41914#0#PHP" />
+                <element signature="e#42115#42234#0#PHP" />
+                <element signature="e#42382#42515#0#PHP" />
+                <element signature="e#42696#43083#0#PHP" />
+                <element signature="e#42843#43076#0#PHP" />
+                <element signature="e#42857#43075#2#PHP" />
+                <element signature="e#42929#43035#0#PHP" />
+                <element signature="e#43259#43354#0#PHP" />
+                <element signature="e#43452#43543#0#PHP" />
+                <element signature="e#43666#43903#0#PHP" />
+                <element signature="e#43722#43794#0#PHP" />
+                <element signature="e#43811#43896#1#PHP" />
+                <element signature="e#44147#44534#0#PHP" />
+                <element signature="e#44207#44317#0#PHP" />
+                <element signature="e#44217#44299#1#PHP" />
+                <element signature="e#44338#44455#0#PHP" />
+                <element signature="e#44350#44437#0#PHP" />
+                <element signature="e#44351#44422#2#PHP" />
+                <element signature="e#44700#44813#0#PHP" />
+                <element signature="e#44916#45101#0#PHP" />
+                <element signature="e#44963#45094#0#PHP" />
+                <element signature="e#44973#45079#1#PHP" />
+                <element signature="e#45211#45676#0#PHP" />
+                <element signature="e#45264#45669#0#PHP" />
+                <element signature="e#45274#45654#1#PHP" />
+                <element signature="e#45306#45616#0#PHP" />
+                <element signature="e#45410#45521#0#PHP" />
+                <element signature="e#45522#45616#0#PHP" />
+                <element signature="e#45800#45910#0#PHP" />
+                <element signature="e#46007#46096#0#PHP" />
+                <element signature="e#46223#46376#0#PHP" />
+                <element signature="e#46476#46547#0#PHP" />
+                <element signature="e#46690#46758#0#PHP" />
+                <element signature="e#46883#46982#0#PHP" />
+                <element signature="e#47097#47175#0#PHP" />
+                <element signature="e#47319#47504#0#PHP" />
+                <element signature="e#47373#47498#0#PHP" />
+                <element signature="e#47441#47498#0#PHP" />
+                <element signature="e#47622#47702#0#PHP" />
+                <element signature="e#47813#47885#0#PHP" />
+                <element signature="e#48024#48647#0#PHP" />
+                <element signature="e#48083#48609#0#PHP" />
+                <element signature="e#48144#48221#0#PHP" />
+                <element signature="e#48222#48308#0#PHP" />
+                <element signature="e#48309#48412#0#PHP" />
+                <element signature="e#48413#48512#0#PHP" />
+                <element signature="e#48513#48609#0#PHP" />
+                <element signature="e#48779#48866#0#PHP" />
+                <element signature="e#49023#49281#0#PHP" />
+                <element signature="e#49065#49214#0#PHP" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/split.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -705,9 +652,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/codex/core/resources/assets/types/modules.d.ts" />
-        <option value="$PROJECT_DIR$/codex/core/resources/views/react/index.blade.php" />
-        <option value="$PROJECT_DIR$/codex/phpdoc/src/PhpdocAddonServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/processors/links.md" />
         <option value="$PROJECT_DIR$/codex/core/config/codex.processor-defaults.php" />
         <option value="$PROJECT_DIR$/resources/docs/codex/master/revision.yml" />
@@ -751,11 +695,14 @@
         <option value="$PROJECT_DIR$/codex/core/src/Projects/Commands/ResolveProject.php" />
         <option value="$PROJECT_DIR$/codex/core/src/Revisions/Commands/ResolveRevision.php" />
         <option value="$PROJECT_DIR$/scripts/tag.sh" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Temp.php" />
         <option value="$PROJECT_DIR$/app/Tmp.php" />
         <option value="$PROJECT_DIR$/app/Console/TagCommand.php" />
         <option value="$PROJECT_DIR$/scripts/split.sh" />
+        <option value="$PROJECT_DIR$/.git/config" />
+        <option value="$PROJECT_DIR$/vendor/czproject/git-php/src/GitRepository.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Console/GitBootCommand.php" />
       </list>
     </option>
   </component>
@@ -1069,6 +1016,27 @@
               <item name="codex" type="b2602c69:ProjectViewProjectNode" />
               <item name="codex" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="czproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="czproject" type="462c0819:PsiDirectoryNode" />
+              <item name="git-php" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="czproject" type="462c0819:PsiDirectoryNode" />
+              <item name="git-php" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codex" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="eddiriarte" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1244,7 +1212,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.0" />
-    <property name="last_opened_file_path" value="/mnt/fat/php/projects/laradic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Console" />
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../.nvm/versions/node/v10.15.0/bin/node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1255,19 +1223,19 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Console" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/Attr" />
+      <recent name="$PROJECT_DIR$/codex/core/resources/assets/types" />
+      <recent name="$PROJECT_DIR$/codex" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/codex/core/resources/assets" />
       <recent name="$PROJECT_DIR$/resources/docs/codex/master/writing-reference" />
       <recent name="$PROJECT_DIR$/codex/phpdoc/old" />
       <recent name="$PROJECT_DIR$/codex/git/src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/Attr" />
-      <recent name="$PROJECT_DIR$/codex/core/resources/assets/types" />
-      <recent name="$PROJECT_DIR$/codex" />
-      <recent name="$PROJECT_DIR$/resources/docs/codex/master" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1282,7 +1250,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.git:tag -vvv">
+  <component name="RunManager" selected="PHP Script.git:boot -vvv">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -1325,6 +1293,7 @@
       <item itemvalue="PHP Script.codex:phpdoc:status" />
       <item itemvalue="PHP Script.test -vvv" />
       <item itemvalue="PHP Script.git:tag -vvv" />
+      <item itemvalue="PHP Script.git:boot -vvv" />
       <item itemvalue="PHP Script.codex:config -vvv" />
       <item itemvalue="PHP Script.codex:algolia:index -vvv" />
       <item itemvalue="PHP Script.codex:addon uninstall codex/test-addon -vvv" />
@@ -1675,14 +1644,14 @@
       <window_info id="Designer" order="4" />
       <window_info anchor="bottom" id="GraphQL" order="0" sideWeight="0.4978914" weight="0.16191445" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.49657354" visible="true" weight="0.31924644" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49657354" weight="0.31924644" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49920928" weight="0.32892057" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50474435" side_tool="true" weight="0.18191108" />
       <window_info anchor="bottom" id="Docker" order="5" weight="0.32942975" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49973643" weight="0.32942975" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49947286" weight="0.32942975" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49525568" weight="0.36863545" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.49525568" visible="true" weight="0.36863545" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3299389" />
@@ -1833,6 +1802,11 @@
           <line>39</line>
           <option name="timeStamp" value="790" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Console/GitBootCommand.php</url>
+          <line>42</line>
+          <option name="timeStamp" value="812" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1933,41 +1907,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/zendframework/zend-config-aggregator/src/ConfigAggregator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zendframework/zend-config-aggregator-parameters/src/ParameterPostProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/config/codex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1376">
-          <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/dependency-injection/ParameterBag/ParameterBagInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/Commands/AggregateAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codex/core/src/Mergable/ParameterPostProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1390">
@@ -2016,9 +1955,6 @@
     <entry file="file://$PROJECT_DIR$/scripts/phpdoc.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/tag.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2415">
@@ -2026,13 +1962,6 @@
           <folding>
             <element signature="e#22855#23217#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2427,16 +2356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/czproject/git-php/src/GitRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="430" column="24" selection-start-line="430" selection-start-column="24" selection-end-line="430" selection-end-column="24" />
-          <folding>
-            <element signature="e#336#391#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
@@ -2462,17 +2381,469 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/TagCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/scripts/tag.sh">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/split.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+        <state relative-caret-position="506">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/TagCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/czproject/git-php/src/IGit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1476" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/czproject/git-php/src/GitRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1373">
+          <caret line="614" column="5" lean-forward="true" selection-start-line="614" selection-start-column="5" selection-end-line="614" selection-end-column="5" />
+          <folding>
+            <element signature="e#394#692#0#PHP" />
+            <element signature="e#464#561#0#PHP" />
+            <element signature="e#623#742#0#PHP" />
+            <element signature="e#729#801#0#PHP" />
+            <element signature="e#948#1081#0#PHP" />
+            <element signature="e#1012#1064#0#PHP" />
+            <element signature="e#1205#1338#0#PHP" />
+            <element signature="e#1252#1321#0#PHP" />
+            <element signature="e#1288#1320#0#PHP" />
+            <element signature="e#1508#1842#0#PHP" />
+            <element signature="e#1568#1719#0#PHP" />
+            <element signature="e#1568#1782#0#PHP" />
+            <element signature="e#1964#2053#0#PHP" />
+            <element signature="e#2214#2349#0#PHP" />
+            <element signature="e#2276#2332#0#PHP" />
+            <element signature="e#2537#2759#0#PHP" />
+            <element signature="e#3100#3162#0#PHP" />
+            <element signature="e#2889#3028#0#PHP" />
+            <element signature="e#2939#3011#0#PHP" />
+            <element signature="e#2978#3010#0#PHP" />
+            <element signature="e#3150#3574#0#PHP" />
+            <element signature="e#3731#4146#0#PHP" />
+            <element signature="e#3219#3406#0#PHP" />
+            <element signature="e#3262#3405#1#PHP" />
+            <element signature="e#3838#3956#0#PHP" />
+            <element signature="e#4017#4092#0#PHP" />
+            <element signature="e#3725#3877#0#PHP" />
+            <element signature="e#3769#3872#0#PHP" />
+            <element signature="e#3812#3871#1#PHP" />
+            <element signature="e#4014#4172#0#PHP" />
+            <element signature="e#4064#4167#0#PHP" />
+            <element signature="e#4107#4166#1#PHP" />
+            <element signature="e#4308#4462#0#PHP" />
+            <element signature="e#4357#4457#0#PHP" />
+            <element signature="e#4397#4456#1#PHP" />
+            <element signature="e#4594#4704#0#PHP" />
+            <element signature="e#4640#4687#0#PHP" />
+            <element signature="e#4837#5063#0#PHP" />
+            <element signature="e#5743#5815#0#PHP" />
+            <element signature="e#5850#5933#0#PHP" />
+            <element signature="e#5194#5742#0#PHP" />
+            <element signature="e#6174#6246#0#PHP" />
+            <element signature="e#6281#6742#0#PHP" />
+            <element signature="e#5556#5673#0#PHP" />
+            <element signature="e#5873#5977#0#PHP" />
+            <element signature="e#5919#5960#0#PHP" />
+            <element signature="e#6183#6464#0#PHP" />
+            <element signature="e#6236#6332#0#PHP" />
+            <element signature="e#6295#6326#0#PHP" />
+            <element signature="e#7521#7610#0#PHP" />
+            <element signature="e#6644#6868#0#PHP" />
+            <element signature="e#7919#7982#0#PHP" />
+            <element signature="e#6767#6851#0#PHP" />
+            <element signature="e#6815#6850#0#PHP" />
+            <element signature="e#7023#7259#0#PHP" />
+            <element signature="e#7163#7239#0#PHP" />
+            <element signature="e#7367#7647#0#PHP" />
+            <element signature="e#7479#7536#0#PHP" />
+            <element signature="e#7707#7773#0#PHP" />
+            <element signature="e#7915#8118#0#PHP" />
+            <element signature="e#9424#9487#0#PHP" />
+            <element signature="e#8048#8101#0#PHP" />
+            <element signature="e#8258#8461#0#PHP" />
+            <element signature="e#9833#9896#0#PHP" />
+            <element signature="e#8391#8444#0#PHP" />
+            <element signature="e#8617#8822#0#PHP" />
+            <element signature="e#10259#10322#0#PHP" />
+            <element signature="e#8751#8805#0#PHP" />
+            <element signature="e#8979#9135#0#PHP" />
+            <element signature="e#9054#9118#0#PHP" />
+            <element signature="e#9267#9412#0#PHP" />
+            <element signature="e#9330#9395#0#PHP" />
+            <element signature="e#9524#9643#0#PHP" />
+            <element signature="e#9574#9626#0#PHP" />
+            <element signature="e#9803#9966#0#PHP" />
+            <element signature="e#9881#9949#0#PHP" />
+            <element signature="e#10076#10441#0#PHP" />
+            <element signature="e#10113#10164#0#PHP" />
+            <element signature="e#12202#12314#0#PHP" />
+            <element signature="e#10510#10621#0#PHP" />
+            <element signature="e#13153#13268#0#PHP" />
+            <element signature="e#13430#13501#0#PHP" />
+            <element signature="e#11466#11530#0#PHP" />
+            <element signature="e#11660#11948#0#PHP" />
+            <element signature="e#14047#14159#0#PHP" />
+            <element signature="e#11953#12465#0#PHP" />
+            <element signature="e#14327#14781#0#PHP" />
+            <element signature="e#14365#14771#0#PHP" />
+            <element signature="e#14403#14650#0#PHP" />
+            <element signature="e#14489#14572#0#PHP" />
+            <element signature="e#14665#14771#0#PHP" />
+            <element signature="e#12598#13296#0#PHP" />
+            <element signature="e#15078#15194#0#PHP" />
+            <element signature="e#12777#12963#0#PHP" />
+            <element signature="e#13010#13116#0#PHP" />
+            <element signature="e#13015#13093#0#PHP" />
+            <element signature="e#13036#13092#1#PHP" />
+            <element signature="e#15615#15728#0#PHP" />
+            <element signature="e#13479#15136#0#PHP" />
+            <element signature="e#16129#16268#0#PHP" />
+            <element signature="e#16304#16548#0#PHP" />
+            <element signature="e#16452#16548#0#PHP" />
+            <element signature="e#13946#13994#0#PHP" />
+            <element signature="e#14017#14144#0#PHP" />
+            <element signature="e#14177#14265#0#PHP" />
+            <element signature="e#14198#14264#1#PHP" />
+            <element signature="e#17031#17139#0#PHP" />
+            <element signature="e#17228#17760#0#PHP" />
+            <element signature="e#17340#17404#0#PHP" />
+            <element signature="e#17504#17576#0#PHP" />
+            <element signature="e#17617#17750#0#PHP" />
+            <element signature="e#17815#17969#0#PHP" />
+            <element signature="e#15215#15659#0#PHP" />
+            <element signature="e#15306#15449#0#PHP" />
+            <element signature="e#15402#15449#0#PHP" />
+            <element signature="e#15454#15624#0#PHP" />
+            <element signature="e#15459#15591#0#PHP" />
+            <element signature="e#15480#15590#1#PHP" />
+            <element signature="e#15778#16214#0#PHP" />
+            <element signature="e#18998#19101#0#PHP" />
+            <element signature="e#19163#19278#0#PHP" />
+            <element signature="e#16395#16532#0#PHP" />
+            <element signature="e#16787#17024#0#PHP" />
+            <element signature="e#17205#18199#0#PHP" />
+            <element signature="e#17455#17612#0#PHP" />
+            <element signature="e#17732#18177#0#PHP" />
+            <element signature="e#17775#17903#0#PHP" />
+            <element signature="e#17909#18046#0#PHP" />
+            <element signature="e#18052#18172#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="293" column="26" selection-start-line="293" selection-start-column="26" selection-end-line="293" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="660" column="20" selection-start-line="660" selection-start-column="20" selection-end-line="660" selection-end-column="20" />
+          <folding>
+            <element signature="e#38#51#0#PHP" />
+            <element signature="e#1762#1983#0#PHP" />
+            <element signature="e#2094#2203#0#PHP" />
+            <element signature="e#2355#2442#0#PHP" />
+            <element signature="e#2581#2744#0#PHP" />
+            <element signature="e#2903#3016#0#PHP" />
+            <element signature="e#3211#3515#0#PHP" />
+            <element signature="e#3290#3349#0#PHP" />
+            <element signature="e#3359#3444#0#PHP" />
+            <element signature="e#3612#3674#0#PHP" />
+            <element signature="e#3816#4205#0#PHP" />
+            <element signature="e#3932#4027#0#PHP" />
+            <element signature="e#3943#4026#2#PHP" />
+            <element signature="e#3932#4104#0#PHP" />
+            <element signature="e#4036#4103#2#PHP" />
+            <element signature="e#4115#4199#0#PHP" />
+            <element signature="e#4337#4428#0#PHP" />
+            <element signature="e#4554#5105#0#PHP" />
+            <element signature="e#4614#4752#0#PHP" />
+            <element signature="e#4678#4751#2#PHP" />
+            <element signature="e#4817#4865#0#PHP" />
+            <element signature="e#4914#4983#0#PHP" />
+            <element signature="e#5012#5085#1#PHP" />
+            <element signature="e#5235#5822#0#PHP" />
+            <element signature="e#5283#5340#0#PHP" />
+            <element signature="e#5444#5586#0#PHP" />
+            <element signature="e#5462#5585#2#PHP" />
+            <element signature="e#5682#5792#0#PHP" />
+            <element signature="e#5698#5791#2#PHP" />
+            <element signature="e#5934#6028#0#PHP" />
+            <element signature="e#6205#6328#0#PHP" />
+            <element signature="e#6334#6514#0#PHP" expanded="true" />
+            <element signature="e#6519#6949#0#PHP" />
+            <element signature="e#6597#6865#0#PHP" />
+            <element signature="e#6638#6805#0#PHP" />
+            <element signature="e#7132#7543#0#PHP" />
+            <element signature="e#7198#7382#0#PHP" />
+            <element signature="e#7246#7371#0#PHP" />
+            <element signature="e#7262#7370#2#PHP" />
+            <element signature="e#7392#7485#0#PHP" />
+            <element signature="e#7703#7882#0#PHP" />
+            <element signature="e#7772#7874#1#PHP" />
+            <element signature="e#8009#8120#0#PHP" />
+            <element signature="e#8198#8413#0#PHP" />
+            <element signature="e#8235#8290#0#PHP" />
+            <element signature="e#8235#8383#0#PHP" />
+            <element signature="e#8310#8382#2#PHP" />
+            <element signature="e#8573#8700#0#PHP" />
+            <element signature="e#8895#9059#0#PHP" />
+            <element signature="e#9236#9374#0#PHP" />
+            <element signature="e#9586#9761#0#PHP" />
+            <element signature="e#9927#10062#0#PHP" />
+            <element signature="e#10264#10436#0#PHP" />
+            <element signature="e#10563#10787#0#PHP" />
+            <element signature="e#10618#10758#0#PHP" />
+            <element signature="e#10672#10748#0#PHP" />
+            <element signature="e#10932#11142#0#PHP" />
+            <element signature="e#11000#11135#0#PHP" />
+            <element signature="e#11012#11134#2#PHP" />
+            <element signature="e#11358#11790#0#PHP" />
+            <element signature="e#11433#11709#0#PHP" />
+            <element signature="e#11528#11673#0#PHP" />
+            <element signature="e#11581#11659#0#PHP" />
+            <element signature="e#11963#12223#0#PHP" />
+            <element signature="e#12007#12155#0#PHP" />
+            <element signature="e#12080#12155#0#PHP" />
+            <element signature="e#12358#12578#0#PHP" />
+            <element signature="e#12422#12516#0#PHP" />
+            <element signature="e#12782#13042#0#PHP" />
+            <element signature="e#12871#13013#0#PHP" />
+            <element signature="e#12940#13013#0#PHP" />
+            <element signature="e#13222#13372#0#PHP" />
+            <element signature="e#13556#13712#0#PHP" />
+            <element signature="e#13915#14062#0#PHP" />
+            <element signature="e#14246#14388#0#PHP" />
+            <element signature="e#14576#14718#0#PHP" />
+            <element signature="e#14907#15054#0#PHP" />
+            <element signature="e#15238#16625#0#PHP" />
+            <element signature="e#15327#15422#0#PHP" />
+            <element signature="e#15432#15532#0#PHP" />
+            <element signature="e#15549#16618#1#PHP" />
+            <element signature="e#15670#15843#0#PHP" />
+            <element signature="e#15705#15842#1#PHP" />
+            <element signature="e#15858#16026#0#PHP" />
+            <element signature="e#16040#16608#0#PHP" />
+            <element signature="e#16806#16909#0#PHP" />
+            <element signature="e#17096#17376#0#PHP" />
+            <element signature="e#17227#17369#0#PHP" />
+            <element signature="e#17241#17368#2#PHP" />
+            <element signature="e#17558#17666#0#PHP" />
+            <element signature="e#17861#18006#0#PHP" />
+            <element signature="e#18205#18442#0#PHP" />
+            <element signature="e#18273#18435#0#PHP" />
+            <element signature="e#18287#18434#2#PHP" />
+            <element signature="e#18629#18912#0#PHP" />
+            <element signature="e#18763#18905#0#PHP" />
+            <element signature="e#18777#18904#2#PHP" />
+            <element signature="e#19094#19208#0#PHP" />
+            <element signature="e#19365#19532#0#PHP" />
+            <element signature="e#19425#19525#0#PHP" />
+            <element signature="e#19439#19524#2#PHP" />
+            <element signature="e#19700#19839#0#PHP" />
+            <element signature="e#20033#20177#0#PHP" />
+            <element signature="e#20316#20428#0#PHP" />
+            <element signature="e#20520#20607#0#PHP" />
+            <element signature="e#20742#20896#0#PHP" />
+            <element signature="e#20786#20867#0#PHP" />
+            <element signature="e#21051#21228#0#PHP" />
+            <element signature="e#21108#21189#0#PHP" />
+            <element signature="e#21427#22459#0#PHP" />
+            <element signature="e#21498#21619#0#PHP" />
+            <element signature="e#21706#22270#0#PHP" />
+            <element signature="e#21811#21897#0#PHP" />
+            <element signature="e#21911#22260#0#PHP" />
+            <element signature="e#22042#22160#0#PHP" />
+            <element signature="e#22321#22428#0#PHP" />
+            <element signature="e#22613#23030#0#PHP" />
+            <element signature="e#22730#22986#0#PHP" />
+            <element signature="e#22833#22931#0#PHP" />
+            <element signature="e#23167#23423#0#PHP" />
+            <element signature="e#23265#23395#0#PHP" />
+            <element signature="e#23305#23385#0#PHP" />
+            <element signature="e#23587#23852#0#PHP" />
+            <element signature="e#23681#23799#0#PHP" />
+            <element signature="e#23986#24123#0#PHP" />
+            <element signature="e#24264#24433#0#PHP" />
+            <element signature="e#24336#24425#1#PHP" />
+            <element signature="e#24534#24607#0#PHP" />
+            <element signature="e#24705#24780#0#PHP" />
+            <element signature="e#24925#25036#0#PHP" />
+            <element signature="e#25132#25219#0#PHP" />
+            <element signature="e#25386#25523#0#PHP" />
+            <element signature="e#25681#25802#0#PHP" />
+            <element signature="e#25929#26141#0#PHP" />
+            <element signature="e#26277#26485#0#PHP" />
+            <element signature="e#26344#26478#0#PHP" />
+            <element signature="e#26355#26477#2#PHP" />
+            <element signature="e#26707#27154#0#PHP" />
+            <element signature="e#26800#27107#0#PHP" />
+            <element signature="e#26967#27054#0#PHP" />
+            <element signature="e#27374#27533#0#PHP" />
+            <element signature="e#27765#28107#0#PHP" />
+            <element signature="e#27850#28064#0#PHP" />
+            <element signature="e#27952#28054#0#PHP" />
+            <element signature="e#28259#28364#0#PHP" />
+            <element signature="e#28485#28650#0#PHP" />
+            <element signature="e#28538#28643#0#PHP" />
+            <element signature="e#28549#28642#2#PHP" />
+            <element signature="e#28788#29170#0#PHP" />
+            <element signature="e#28902#28984#0#PHP" />
+            <element signature="e#28916#28983#2#PHP" />
+            <element signature="e#28902#29163#0#PHP" />
+            <element signature="e#28993#29162#2#PHP" />
+            <element signature="e#29300#29429#0#PHP" />
+            <element signature="e#29599#29734#0#PHP" />
+            <element signature="e#29864#29981#0#PHP" />
+            <element signature="e#30119#30536#0#PHP" />
+            <element signature="e#30233#30328#0#PHP" />
+            <element signature="e#30244#30327#2#PHP" />
+            <element signature="e#30233#30405#0#PHP" />
+            <element signature="e#30337#30404#2#PHP" />
+            <element signature="e#30233#30529#0#PHP" />
+            <element signature="e#30414#30528#2#PHP" />
+            <element signature="e#30706#31008#0#PHP" />
+            <element signature="e#30804#30968#0#PHP" />
+            <element signature="e#30850#30932#0#PHP" />
+            <element signature="e#31133#31459#0#PHP" />
+            <element signature="e#31175#31251#0#PHP" />
+            <element signature="e#31261#31333#0#PHP" />
+            <element signature="e#31639#31790#0#PHP" />
+            <element signature="e#32020#32469#0#PHP" />
+            <element signature="e#32300#32422#0#PHP" />
+            <element signature="e#32625#32710#0#PHP" />
+            <element signature="e#32817#32890#0#PHP" />
+            <element signature="e#33054#33198#0#PHP" />
+            <element signature="e#33329#33432#0#PHP" />
+            <element signature="e#33572#33759#0#PHP" />
+            <element signature="e#33656#33728#0#PHP" />
+            <element signature="e#33918#34029#0#PHP" />
+            <element signature="e#34180#34288#0#PHP" />
+            <element signature="e#34502#34704#0#PHP" />
+            <element signature="e#34555#34634#0#PHP" />
+            <element signature="e#34868#35003#0#PHP" />
+            <element signature="e#35175#35534#0#PHP" />
+            <element signature="e#35223#35412#0#PHP" />
+            <element signature="e#35281#35401#0#PHP" />
+            <element signature="e#35295#35400#2#PHP" />
+            <element signature="e#35429#35527#0#PHP" />
+            <element signature="e#35443#35526#2#PHP" />
+            <element signature="e#35613#35712#0#PHP" />
+            <element signature="e#35915#36276#0#PHP" />
+            <element signature="e#35977#36088#0#PHP" />
+            <element signature="e#36098#36247#0#PHP" />
+            <element signature="e#36152#36237#0#PHP" />
+            <element signature="e#36384#36461#0#PHP" />
+            <element signature="e#36582#36693#0#PHP" />
+            <element signature="e#36846#36982#0#PHP" />
+            <element signature="e#37128#37769#0#PHP" />
+            <element signature="e#37181#37245#0#PHP" />
+            <element signature="e#37423#37738#0#PHP" />
+            <element signature="e#37511#37569#0#PHP" />
+            <element signature="e#37583#37728#0#PHP" />
+            <element signature="e#37892#38183#0#PHP" />
+            <element signature="e#37935#37993#0#PHP" />
+            <element signature="e#38026#38140#0#PHP" />
+            <element signature="e#38321#38535#0#PHP" />
+            <element signature="e#38743#39772#0#PHP" />
+            <element signature="e#39169#39275#0#PHP" />
+            <element signature="e#39629#39728#0#PHP" />
+            <element signature="e#39967#40098#0#PHP" />
+            <element signature="e#40244#40468#0#PHP" />
+            <element signature="e#40600#40713#0#PHP" />
+            <element signature="e#40920#41201#0#PHP" />
+            <element signature="e#41001#41107#0#PHP" />
+            <element signature="e#41338#41666#0#PHP" />
+            <element signature="e#41390#41469#0#PHP" />
+            <element signature="e#41541#41659#0#PHP" />
+            <element signature="e#41555#41655#1#PHP" />
+            <element signature="e#41790#41961#0#PHP" />
+            <element signature="e#41833#41914#0#PHP" />
+            <element signature="e#42115#42234#0#PHP" />
+            <element signature="e#42382#42515#0#PHP" />
+            <element signature="e#42696#43083#0#PHP" />
+            <element signature="e#42843#43076#0#PHP" />
+            <element signature="e#42857#43075#2#PHP" />
+            <element signature="e#42929#43035#0#PHP" />
+            <element signature="e#43259#43354#0#PHP" />
+            <element signature="e#43452#43543#0#PHP" />
+            <element signature="e#43666#43903#0#PHP" />
+            <element signature="e#43722#43794#0#PHP" />
+            <element signature="e#43811#43896#1#PHP" />
+            <element signature="e#44147#44534#0#PHP" />
+            <element signature="e#44207#44317#0#PHP" />
+            <element signature="e#44217#44299#1#PHP" />
+            <element signature="e#44338#44455#0#PHP" />
+            <element signature="e#44350#44437#0#PHP" />
+            <element signature="e#44351#44422#2#PHP" />
+            <element signature="e#44700#44813#0#PHP" />
+            <element signature="e#44916#45101#0#PHP" />
+            <element signature="e#44963#45094#0#PHP" />
+            <element signature="e#44973#45079#1#PHP" />
+            <element signature="e#45211#45676#0#PHP" />
+            <element signature="e#45264#45669#0#PHP" />
+            <element signature="e#45274#45654#1#PHP" />
+            <element signature="e#45306#45616#0#PHP" />
+            <element signature="e#45410#45521#0#PHP" />
+            <element signature="e#45522#45616#0#PHP" />
+            <element signature="e#45800#45910#0#PHP" />
+            <element signature="e#46007#46096#0#PHP" />
+            <element signature="e#46223#46376#0#PHP" />
+            <element signature="e#46476#46547#0#PHP" />
+            <element signature="e#46690#46758#0#PHP" />
+            <element signature="e#46883#46982#0#PHP" />
+            <element signature="e#47097#47175#0#PHP" />
+            <element signature="e#47319#47504#0#PHP" />
+            <element signature="e#47373#47498#0#PHP" />
+            <element signature="e#47441#47498#0#PHP" />
+            <element signature="e#47622#47702#0#PHP" />
+            <element signature="e#47813#47885#0#PHP" />
+            <element signature="e#48024#48647#0#PHP" />
+            <element signature="e#48083#48609#0#PHP" />
+            <element signature="e#48144#48221#0#PHP" />
+            <element signature="e#48222#48308#0#PHP" />
+            <element signature="e#48309#48412#0#PHP" />
+            <element signature="e#48413#48512#0#PHP" />
+            <element signature="e#48513#48609#0#PHP" />
+            <element signature="e#48779#48866#0#PHP" />
+            <element signature="e#49023#49281#0#PHP" />
+            <element signature="e#49065#49214#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/GitBootCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
         </state>
       </provider>
     </entry>

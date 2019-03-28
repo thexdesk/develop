@@ -3,19 +3,14 @@
 namespace App\Console;
 
 use App\Tmp;
-use Cz\Git\GitRepository;
 use Illuminate\Console\Command;
 use Symfony\Component\VarDumper\VarDumper;
 use vierbergenlars\SemVer\SemVerException;
 use vierbergenlars\SemVer\version;
 
-class TagCommand extends Command
+class GitBootCommand extends Command
 {
-    protected $signature = 'git:tag 
-                                    {remote? : The remote you want to tag. Leave empty for interactive selection} 
-                                    {--tag= : The tag name. Leave empty for interactive tagging} 
-                                    {--branch= : The branch of the remote to use for tagging} 
-                                    {--ask-all : Interactive multi-selection of remotes. }';
+    protected $signature = 'git:boot';
 
     /** @var \App\Tmp */
     protected $tmp;
@@ -28,37 +23,29 @@ class TagCommand extends Command
      */
     public function handle()
     {
-        $remote = $this->argument('remote');
-        $branch = $this->option('branch');
+        $remotes              = explode("\n", trim(`git remote`));
+        $remoteFetchTagConfig = $this->git('config --local --get-regexp remote.*.fetch refs/tag')
+            ->filter(function ($line) {
+                $item = last(explode(' ', $line));
+            })->mapWithKeys(function ($item) {
+                return [ $item[ 0 ] => $item[ 1 ] ];
+            })->toArray();
 
-        $repo    = new GitRepository(getcwd());
 
-        // get remote
-        $remotes = $repo->execute('remote');
-        if ($remote === null || ! in_array($remote, $remotes, true)) {
-            $this->error("Remote [$remote] does not exist.");
-            $remoteNames = array_keys($remotes);
-            $remote      = head($this->select('Pick a remote', $remoteNames, false));
-        }
+        $remoteFetchTagOptConfig = collect(explode("\n", trim(`git config --local --get-regexp remote.*.tagopt`)))
+            ->filter(function ($line) {
+                $values = explode(' ', last(explode(' ', $line)));
+                /** @noinspection ExplodeMissUseInspection */
+                return ! in_array('--no-tags', $values, true);
+            })->keys()->toArray();
 
-        // clone to tmp dir
-        $branch    = $branch ?? $repo->getCurrentBranchName();
-        $remoteUrl = head($repo->execute([ 'remote', 'get-url', $remote ])); //data_get($remotes, "{$remote}.fetch");
-        $tmpDir    = $this->cloneToTmp($remoteUrl, $branch);
+        $a = $remoteFetchTagOptConfig->whereIn('remote.origin.tagopt', '--no-tags');
+        VarDumper::dump($remotes);
+    }
 
-        // handle tagging
-        $clone     = new GitRepository($tmpDir);
-        $clone->pull('origin', [ '--tags' ]);
-        $tags = $clone->getTags();
-        $tag  = $this->askTag($tags !== null ? head($tags) : null);
-        if ($this->confirm("Tagging {$tag}, is that ok?")) {
-            $clone->createTag($tag);
-            $clone->push('origin', [ '--tags' ]);
-            $repoTags = $repo->getTags();
-            VarDumper::dump($repoTags);
-            $this->info("Tagged {$tag}");
-        }
-        $this->comment('No changes made');
+    protected function git($cmd)
+    {
+        return collect(explode("\n", trim(shell_exec('git ' . $cmd))));
     }
 
     protected function askTag($prevTag = null)

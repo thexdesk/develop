@@ -1,28 +1,29 @@
 #!/usr/bin/env bash
 
 MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-#splitsh-lite
-
-
 CURRENT_BRANCH="develop"
 
 function split()
 {
     SHA1=`${MYDIR}/splitsh-lite --prefix=$1`
     git push $2 "$SHA1:refs/heads/$CURRENT_BRANCH" -f
-
 }
 
-function remote(){
-    local PREFIX=bitbucket.org:codex-project
-    git remote add $1 "${PREFIX}/$1" || true
-
+function configure(){
     # https://stackoverflow.com/a/51333607/2643122
     git config --local --add remote.$1.fetch +refs/tags/*:refs/tags/$1/*
     git config remote.$1.tagopt --no-tags
 }
 
+function remote(){
+    local PREFIX=bitbucket.org:codex-project
+    git remote add $1 "${PREFIX}/$1" || true
+    configure $1
+}
+
 git pull origin $CURRENT_BRANCH
+
+configure origin
 
 remote algolia-search
 remote auth
