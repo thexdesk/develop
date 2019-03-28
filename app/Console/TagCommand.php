@@ -10,7 +10,11 @@ use vierbergenlars\SemVer\version;
 
 class TagCommand extends Command
 {
-    protected $signature = 'git:tag {remote?} {tag?} {--branch=}';
+    protected $signature = 'git:tag 
+                                    {remote? : The remote you want to tag. Leave empty for interactive selection} 
+                                    {--tag= : The tag name. Leave empty for interactive tagging} 
+                                    {--branch= : The branch of the remote to use for tagging} 
+                                    {--ask-all : Interactive multi-selection of remotes. }';
 
     /** @var \App\Tmp */
     protected $tmp;
@@ -24,7 +28,6 @@ class TagCommand extends Command
     public function handle()
     {
         $remote = $this->argument('remote');
-        $tag    = $this->argument('tag');
         $branch = $this->option('branch');
 
 
@@ -49,6 +52,7 @@ class TagCommand extends Command
         if ($this->confirm("Tagging {$tag}, is that ok?")) {
             $clone->createTag($tag);
             $clone->push('origin', [ '--tags' ]);
+//            $repo->getTags()
             $this->info("Tagged {$tag}");
         }
         $this->comment('No changes made');
@@ -56,7 +60,7 @@ class TagCommand extends Command
 
     protected function askTag($prevTag = null)
     {
-        $tag         = $this->argument('tag');
+        $tag         = $this->option('tag');
         $prevVersion = null;
         if ($prevTag) {
             try {
