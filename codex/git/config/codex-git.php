@@ -94,14 +94,7 @@ return [
                     'type'       => 'toolbar',
                     'icon'       => 'github',
                     'children'   => 'Edit Page',
-                    'href'       => function ($model) {
-                        /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-                        $git = $model->git();
-                        if ($model instanceof \Codex\Contracts\Documents\Document) {
-                            return $git->getDocumentUrl($model->getPath());
-                        }
-                        return $git->getUrl();
-                    },
+                    'href'       => '%git_links.document_url%', /** git_links.document_url is a get modifier in Document @see \Codex\Git\GitAddonServiceProvider */
                 ],
             ],
         ],

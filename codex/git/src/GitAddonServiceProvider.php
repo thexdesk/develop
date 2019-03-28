@@ -40,25 +40,29 @@ class GitAddonServiceProvider extends AddonServiceProvider
                 $project->push('git_links', config('codex-git.default_project_config.git_links'));
             }
         });
-        Hooks::register('document.resolved', function ($document) {
-            if ($document->isGitLinksEnabled()) {
-                $document->callClosures();
-                $map   = $document->attr('git_links.map', []);
-                $links = $document->attr('git_links.links', []);
-                $document->callClosures(false);
-                foreach ($map as $linkKey => $attrKey) {
-                    $method = 'push';
-                    if (false !== strpos($linkKey, ':')) {
-                        list($linkKey, $method) = explode(':', $linkKey);
-                    }
-                    $link = $links[ $linkKey ];
-                    if ($method === 'set') {
-                        $document->set($attrKey, $link);
-                    } elseif ($method === 'push') {
-                        $document->push($attrKey, $link);
-                    }
+        Hooks::register('document.resolved', function (\Codex\Contracts\Documents\Document $document) {
+            if ( ! $document->isGitLinksEnabled()) {
+                return;
+            }
+            $map   = $document->attr('git_links.map', []);
+            $links = $document->attr('git_links.links', []);
+            foreach ($map as $linkKey => $attrKey) {
+                $method = 'push';
+                if (false !== strpos($linkKey, ':')) {
+                    list($linkKey, $method) = explode(':', $linkKey);
+                }
+                $link = $links[ $linkKey ];
+                if ($method === 'set') {
+                    $document->set($attrKey, $link);
+                } elseif ($method === 'push') {
+                    $document->push($attrKey, $link);
                 }
             }
+            $document->addGetMutator('git_links.document_url', function () {
+                /** @var \Codex\Contracts\Documents\Document $document */
+                $document = $this;
+                return $document->git()->getDocumentUrl($document->getPath());
+            });
         });
         $this->registerMacros();
         $this->registerManager();

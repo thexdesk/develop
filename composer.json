@@ -11,7 +11,6 @@
         {"type": "path", "url": "/mnt/fat/php/projects/codex/workbench/laradic/*"},
         {"type": "path", "url": "codex/*"}
     ],
-
     "replace": {
         "codex/core": "*"
     },
@@ -96,8 +95,22 @@
             "@php artisan ide-helper:generate",
             "@php artisan ide:toolbox"
         ],
-        "satis-serve": [
-            "scripts/satis.sh server"
+        "satis:install": [
+            "cd .tmp",
+            "rm -rf satis",
+            "@composer create-project composer/satis:dev-master --ansi"
+        ],
+        "satis:build": [
+            "rm -rf .tmp/satis/cache",
+            "rm -rf .tmp/satis/public",
+            "@php .tmp/satis/bin/satis build --stats -vvv --ansi"
+        ],
+        "satis:serve": [
+            "@php -S localhost:8999 -t .tmp/satis/public"
+        ],
+        "satis": [
+            "@composer satis:build",
+            "@composer satis:serve"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

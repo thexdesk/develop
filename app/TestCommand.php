@@ -3,17 +3,8 @@
 namespace App;
 
 use App\Attr\AttrDemo;
-use Closure;
-use Codex\Exceptions\InvalidConfigurationException;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Fluent;
-use Illuminate\Validation\Factory;
-use Zend\ConfigAggregator\ArrayProvider;
-use Zend\ConfigAggregator\ConfigAggregator;
-use Zend\ConfigAggregatorParameters\ParameterPostProcessor;
 
 class TestCommand extends Command
 {
@@ -28,6 +19,7 @@ class TestCommand extends Command
         $revision = $project->getRevision('master');
         $document = $revision->getDocument('processors/macros');
         $content  = $document->render();
+        $du       = $document->attr('git_links.document_url');
         $this->line($content);
     }
 
@@ -36,6 +28,7 @@ class TestCommand extends Command
         $this->dispatch(new AttrDemo());
     }
 }
+
 //
 //
 //interface DefVisitor

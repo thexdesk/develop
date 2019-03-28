@@ -49,6 +49,7 @@
         }
     ],
     "config": {
-        "cache-ttl": 1
+        "cache-ttl": 1,
+        "cache-dir": ".tmp/satis/cache"
     }
 }
