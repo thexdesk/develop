@@ -8,16 +8,6 @@ class AttrDemo
 {
     public function handle()
     {
-        $array = T::ARRAY;
-
-        $size      = "large";
-        $var_array = [
-            "color" => "blue",
-            "size"  => "medium",
-            "shape" => "sphere",
-        ];
-        extract($var_array, EXTR_PREFIX_SAME, "wddx");
-
 
         $config   = config('codex', []);
         $registry = new DefinitionRegistry();

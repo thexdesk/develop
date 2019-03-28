@@ -26,7 +26,6 @@ class NormalizeVisitor implements ConfigNodeVisitor, RootAwareVisitorInterface
             return $parent !== $node;
         });
 
-        $this->validate($node);
         // code
     }
 
@@ -35,19 +34,4 @@ class NormalizeVisitor implements ConfigNodeVisitor, RootAwareVisitorInterface
         $this->rootNode = $rootNode;
     }
 
-
-    protected function validate(ConfigNode $node)
-    {
-        $value     = $node->getValue();
-        $rules     = $node->getDefinition()->rules;
-        $validator = $this->getValidator(compact('value'), [ 'value' => $rules ]);
-        if ($validator->fails()) {
-            InvalidConfigurationException::reason('Validation failed', $validator->errors()->first());
-        }
-    }
-
-    protected function getValidator($data, $rules)
-    {
-        return resolve(Factory::class)->make($data, $rules);
-    }
 }

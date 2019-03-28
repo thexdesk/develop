@@ -23,17 +23,17 @@ class TestCommand extends Command
 
     public function handle()
     {
-        $this->dispatch(new AttrDemo());
-    }
-
-    public function handle2()
-    {
         $codex    = codex();
         $project  = $codex->getProject('codex');
         $revision = $project->getRevision('master');
         $document = $revision->getDocument('processors/macros');
         $content  = $document->render();
         $this->line($content);
+    }
+
+    public function handle3()
+    {
+        $this->dispatch(new AttrDemo());
     }
 }
 //
