@@ -11,7 +11,7 @@ use vierbergenlars\SemVer\version;
 
 class TagCommand extends Command
 {
-    protected $signature = 'git:tag 
+    protected $signature = 'dev:tag 
                                     {remote? : The remote you want to tag. Leave empty for interactive selection} 
                                     {--tag= : The tag name. Leave empty for interactive tagging} 
                                     {--branch= : The branch of the remote to use for tagging} 
@@ -37,7 +37,7 @@ class TagCommand extends Command
         $remotes = $repo->execute('remote');
         if ($remote === null || ! in_array($remote, $remotes, true)) {
             $this->error("Remote [$remote] does not exist.");
-            $remoteNames = array_keys($remotes);
+            $remoteNames = $remotes;
             $remote      = head($this->select('Pick a remote', $remoteNames, false));
         }
 
@@ -51,7 +51,7 @@ class TagCommand extends Command
         $clone->pull('origin', [ '--tags' ]);
         $tags = $clone->getTags();
         $tag  = $this->askTag($tags !== null ? head($tags) : null);
-        if ($this->confirm("Tagging {$tag}, is that ok?")) {
+        if ($this->confirm("Tagging {$tag}, is that ok?", true)) {
             $clone->createTag($tag);
             $clone->push('origin', [ '--tags' ]);
             $repoTags = $repo->getTags();

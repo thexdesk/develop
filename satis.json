@@ -1,0 +1,53 @@
+{
+    "name": "codex",
+    "output-dir": ".tmp/out",
+    "homepage": "http://localhost:8999",
+    "output-html": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/core"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/algolia-search"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/auth"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/blog"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/comments"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/composer-plugin"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/filesystems"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/git"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/packagist"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/phpdoc"
+        },
+        {
+            "type": "vcs",
+            "url": "bitbucket.org:codex-project/sitemap"
+        }
+    ],
+    "require-all": true
+}

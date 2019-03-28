@@ -227,6 +227,7 @@
       <path value="$PROJECT_DIR$/vendor/teqneers/php-stream-wrapper-for-git" />
       <path value="$PROJECT_DIR$/vendor/gitonomy/gitlib" />
       <path value="$PROJECT_DIR$/vendor/czproject/git-php" />
+      <path value="$PROJECT_DIR$/vendor/phpextra/sorter" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

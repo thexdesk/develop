@@ -11,6 +11,7 @@
         {"type": "path", "url": "/mnt/fat/php/projects/codex/workbench/laradic/*"},
         {"type": "path", "url": "codex/*"}
     ],
+
     "replace": {
         "codex/core": "*"
     },
@@ -33,6 +34,7 @@
         "gitonomy/gitlib": "^1.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "phpextra/sorter": "^1.0",
         "spatie/laravel-responsecache": "^4.4",
         "teqneers/php-stream-wrapper-for-git": "^2.0",
         "timacdonald/rule-builder": "^4.0",
@@ -93,6 +95,9 @@
             "@php artisan ide-helper:meta",
             "@php artisan ide-helper:generate",
             "@php artisan ide:toolbox"
+        ],
+        "satis-serve": [
+            "scripts/satis.sh server"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

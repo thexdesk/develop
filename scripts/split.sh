@@ -18,7 +18,7 @@ function configure(){
 function remote(){
     local PREFIX=bitbucket.org:codex-project
     git remote add $1 "${PREFIX}/$1" || true
-    configure $1
+#    configure $1
 }
 
 git pull origin $CURRENT_BRANCH

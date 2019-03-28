@@ -1,32 +1,13 @@
 {
-    "name": "codex/filesystems",
-    "type": "codex-addon",
-    "description": "A Codex Addon",
-    "keywords": [
-        "laravel",
-        "documentation",
-        "markdown",
-        "codex",
-        "flysystem",
-        "filesystem",
-        "disks",
-        "remote"
-    ],
-    "license": "MIT",
+    "keywords": ["laravel", "documentation", "markdown", "codex"],
     "homepage": "https://codex.radic.ninja",
-    "authors": [
-        {
-            "name": "Robin Radic",
-            "email": "rradic@hotmail.com",
-            "homepage": "https://radic.ninja",
-            "role": "developer"
-        }
-    ],
+    "authors": [{"name": "Robin Radic", "email": "rradic@hotmail.com", "homepage": "https://radic.ninja", "role": "developer"}],
+    "license": "MIT",
     "support": {
         "docs": "https://codex.radic.ninja",
         "email": "rradic@hotmail.com",
         "issues": "https://github.com/codex-project/codex/issues",
-        "source": "https://github.com/codex-project/codex/filesystems",
+        "source": "https://github.com/codex-project/",
         "wiki": "https://codex.radic.ninja"
     },
     "suggest": {
@@ -34,33 +15,15 @@
         "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
         "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
         "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+        "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
         "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
         "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
         "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
         "codex/sitemap": "Generates a sitemap.xml (~2.0)"
     },
-    "require": {
-        "codex/core": "~2.1",
-        "league/flysystem-sftp": "~1.0",
-        "league/flysystem-webdav": "~1.0",
-        "league/flysystem-ziparchive": "~1.0",
-        "spatie/flysystem-dropbox": "~1.0",
-        "superbalist/flysystem-google-storage": "~5.0",
-        "league/flysystem-rackspace": "~1.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Codex\\Filesystems\\": "src/"
-        }
-    },
     "extra": {
         "branch-alias": {
             "dev-master": "2.1.x-dev"
-        },
-        "laravel": {
-            "dont-discover": [
-                "codex/filesystems"
-            ]
         }
     }
 }

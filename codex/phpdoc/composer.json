@@ -2,15 +2,46 @@
     "name": "codex/phpdoc",
     "type": "codex-addon",
     "description": "The Phpdoc addon provides Codex the means to parse the phpdoc generated xml file and integrate documenation in a user-friendly way.",
-    "keywords": ["laravel", "documentation", "docs", "markdown", "codex", "phpdoc"],
-    "homepage": "http://codex-project.ninja",
-    "authors": [{"name": "Robin Radic", "email": "robin@radic.nl"}],
+    "keywords": [
+        "laravel",
+        "documentation",
+        "markdown",
+        "codex",
+        "phpdoc",
+        "api",
+        "information",
+        "links",
+        "macros",
+        "api documentation",
+        "apidoc",
+        "api-doc"
+    ],
     "license": "MIT",
+    "homepage": "https://codex.radic.ninja",
+    "authors": [
+        {
+            "name": "Robin Radic",
+            "email": "rradic@hotmail.com",
+            "homepage": "https://radic.ninja",
+            "role": "developer"
+        }
+    ],
     "support": {
-        "docs": "http://codex-project.ninja/documentation/codex-addon-phpdoc",
-        "email": "robin@radic.nl",
-        "issues": "https://github.com/codex-project/addon-phpdoc/issues",
-        "source": "https://github.com/codex-project/addon-phpdoc"
+        "docs": "https://codex.radic.ninja",
+        "email": "rradic@hotmail.com",
+        "issues": "https://github.com/codex-project/codex/issues",
+        "source": "https://github.com/codex-project/codex/phpdoc",
+        "wiki": "https://codex.radic.ninja"
+    },
+    "suggest": {
+        "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+        "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+        "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+        "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+        "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+        "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+        "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+        "codex/sitemap": "Generates a sitemap.xml (~2.0)"
     },
     "require": {
         "codex/core": "~2.1",
@@ -23,7 +54,7 @@
         "mockery/mockery": "~0.9",
         "orchestra/testbench": "3.5.*",
         "graham-campbell/testbench": "~4.0",
-        "superbalist/flysystem-google-storage":"~5.0"
+        "superbalist/flysystem-google-storage": "~5.0"
     },
     "autoload": {
         "psr-4": {
@@ -37,12 +68,12 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover":[
+            "dont-discover": [
                 "codex/phpdoc"
             ]
         },
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "2.1.x-dev"
         }
     }
 }

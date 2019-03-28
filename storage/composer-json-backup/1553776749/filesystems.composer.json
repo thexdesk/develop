@@ -3,10 +3,6 @@
     "type": "codex-addon",
     "description": "A Codex Addon",
     "keywords": [
-        "laravel",
-        "documentation",
-        "markdown",
-        "codex",
         "flysystem",
         "filesystem",
         "disks",

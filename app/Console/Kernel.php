@@ -17,7 +17,8 @@ class Kernel extends ConsoleKernel
         \App\CodexBackendDataCommand::class,
         \App\ToolboxCommand::class,
         TagCommand::class,
-        GitBootCommand::class
+        BootCommand::class,
+        ComposerJsonCommand::class
     ];
 
     protected $bootstrappers = [

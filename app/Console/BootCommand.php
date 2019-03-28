@@ -8,9 +8,9 @@ use Symfony\Component\VarDumper\VarDumper;
 use vierbergenlars\SemVer\SemVerException;
 use vierbergenlars\SemVer\version;
 
-class GitBootCommand extends Command
+class BootCommand extends Command
 {
-    protected $signature = 'git:boot';
+    protected $signature = 'dev:boot';
 
     /** @var \App\Tmp */
     protected $tmp;
