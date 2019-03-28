@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="composer-files" pattern="file[codex]:composer.json||file[codex]:codex/*/composer.json||file[codex]:resources/stubs/composer.stub.json" />
+</component>

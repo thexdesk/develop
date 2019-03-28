@@ -55,7 +55,7 @@
     "extra": {
         "class": "Codex\\ComposerPlugin\\Plugin",
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
+            "dev-develop": "2.0.x-dev"
         }
     },
     "config": {

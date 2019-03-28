@@ -58,7 +58,11 @@ class ComposerJsonCommand extends Command
                 $stub   = DotArrayWrapper::make(json5_decode(file_get_contents($this->stubFilePath), true));
 
                 $target[ 'suggest' ]            = array_except($stub[ 'suggest' ], $target[ 'name' ]);
-                $target[ 'keywords' ]           = array_unique(array_merge($stub->get('keywords', []), $target->get('keywords', []), $vars->get('keywords', [])));
+                $target[ 'keywords' ]           = array_unique(array_merge(
+                    $k1 = $stub->get('keywords', []),
+                    $k2 = $target->get('keywords', []),
+                    $k3 = $vars->get('keywords', [])
+                ));
                 $target[ 'homepage' ]           = $stub[ 'homepage' ];
                 $target[ 'authors' ]            = $stub[ 'authors' ];
                 $target[ 'license' ]            = $stub[ 'license' ];
@@ -69,10 +73,15 @@ class ComposerJsonCommand extends Command
 
                 $target = $this->fixOrder($target);
                 $target = $target->toArray();
+                $target['keywords'] = array_values($target['keywords']);
                 $json   = json_encode($target, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES, 4);
 
                 $this->fs->move($package[ 'filePath' ], path_join($this->backupPath, $package[ 'name' ] . '.composer.json'));
                 $this->fs->put($package[ 'filePath' ], $json);
+//                $this->line($json);
+//                if(!$this->confirm('next?', true)){
+//                    exit();
+//                }
                 $this->info("[{$package['name']}] composer.json updated");
             });
     }

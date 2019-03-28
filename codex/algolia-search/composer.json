@@ -1,7 +1,7 @@
 {
     "name": "codex/algolia-search",
     "type": "codex-addon",
-    "description": "Codex Algolia Search Addon adds search.",
+    "description": "Codex Addon - Integrates algolia search into codex ",
     "keywords": [
         "laravel",
         "documentation",
@@ -38,7 +38,7 @@
         "codex/sitemap": "Generates a sitemap.xml (~2.0)"
     },
     "require": {
-        "codex/core": "~2.1",
+        "codex/core": "~2.0",
         "vinkla/algolia": "~3.0"
     },
     "autoload": {
@@ -48,7 +48,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
+            "dev-develop": "2.0.x-dev"
         },
         "laravel": {
             "dont-discover": [

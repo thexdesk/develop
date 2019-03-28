@@ -31,9 +31,10 @@ function install(){
     cd $(dirname "${SATIS_DIR}")
     rm -rf $SATIS_DIR
     composer create-project composer/satis:dev-master
-    s init --name="codex" --homepage="http://localhost:${PORT}" -n
-    add-packages
-    s satis.json satis.json .tmp/
+}
+
+function build(){
+    s build
 }
 
 function serve(){

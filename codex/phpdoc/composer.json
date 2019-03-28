@@ -1,7 +1,7 @@
 {
     "name": "codex/phpdoc",
     "type": "codex-addon",
-    "description": "The Phpdoc addon provides Codex the means to parse the phpdoc generated xml file and integrate documenation in a user-friendly way.",
+    "description": "Codex Addon - Integrates PHPDoc documentation, links and macros in your projects",
     "keywords": [
         "laravel",
         "documentation",
@@ -44,7 +44,7 @@
         "codex/sitemap": "Generates a sitemap.xml (~2.0)"
     },
     "require": {
-        "codex/core": "~2.1",
+        "codex/core": "~2.0",
         "jms/serializer": "~1.9",
         "phpdocumentor/reflection-docblock": "~3.0|~4.0"
     },
@@ -73,7 +73,7 @@
             ]
         },
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
+            "dev-develop": "2.0.x-dev"
         }
     }
 }

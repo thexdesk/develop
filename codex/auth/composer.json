@@ -1,7 +1,7 @@
 {
     "name": "codex/auth",
     "type": "codex-addon",
-    "description": "Codex Auth Addon",
+    "description": "Codex Addon - Provides authentication using oauth providers (socialite) to restrict project access",
     "keywords": [
         "laravel",
         "documentation",
@@ -43,7 +43,7 @@
         "codex/sitemap": "Generates a sitemap.xml (~2.0)"
     },
     "require": {
-        "codex/core": "~2.1",
+        "codex/core": "~2.0",
         "laravel/socialite": "~4.0"
     },
     "autoload": {
@@ -53,7 +53,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
+            "dev-develop": "2.0.x-dev"
         },
         "laravel": {
             "dont-discover": [

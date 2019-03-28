@@ -1,7 +1,7 @@
 {
     "name": "codex/filesystems",
     "type": "codex-addon",
-    "description": "A Codex Addon",
+    "description": "Codex Addon - Adds a collection of common filesystem adapters. These can be used by your projects.",
     "keywords": [
         "laravel",
         "documentation",
@@ -40,7 +40,7 @@
         "codex/sitemap": "Generates a sitemap.xml (~2.0)"
     },
     "require": {
-        "codex/core": "~2.1",
+        "codex/core": "~2.0",
         "league/flysystem-sftp": "~1.0",
         "league/flysystem-webdav": "~1.0",
         "league/flysystem-ziparchive": "~1.0",
@@ -55,7 +55,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
+            "dev-develop": "2.0.x-dev"
         },
         "laravel": {
             "dont-discover": [

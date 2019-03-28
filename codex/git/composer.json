@@ -1,7 +1,7 @@
 {
     "name": "codex/git",
     "type": "codex-addon",
-    "description": "Codex Git Addon",
+    "description": "Codex Addon - Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches.",
     "keywords": [
         "laravel",
         "documentation",
@@ -45,7 +45,7 @@
         "codex/sitemap": "Generates a sitemap.xml (~2.0)"
     },
     "require": {
-        "codex/core": "~2.1",
+        "codex/core": "~2.0",
         "php-http/guzzle6-adapter": "1.1.*",
         "graham-campbell/manager": "~4.0",
         "graham-campbell/github": "~7.3",
@@ -62,7 +62,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
+            "dev-develop": "2.0.x-dev"
         },
         "laravel": {
             "dont-discover": [
