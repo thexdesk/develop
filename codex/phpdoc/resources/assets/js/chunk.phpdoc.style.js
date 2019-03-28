@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["phpdoc.style"],{"./src/phpdoc/styling/codex.phpdoc.scss":function(p,c,o){}}]);
