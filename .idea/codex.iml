@@ -51,6 +51,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/codex/sitemap" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/colinodell/json5" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/czproject/git-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/danielstjules/stringy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/deinternetjongens/lighthouse-utils" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -73,6 +74,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/fluentdom/selectors-phpcss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/gabrielelana/byte-units" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/gitonomy/gitlib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/google/auth" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/google/cloud" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/bitbucket" />
@@ -229,6 +231,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/teqneers/php-stream-wrapper-for-git" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tightenco/collect" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />

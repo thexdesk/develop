@@ -224,6 +224,9 @@
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/doctrine/rst-parser" />
       <path value="$PROJECT_DIR$/vendor/marc-mabe/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/teqneers/php-stream-wrapper-for-git" />
+      <path value="$PROJECT_DIR$/vendor/gitonomy/gitlib" />
+      <path value="$PROJECT_DIR$/vendor/czproject/git-php" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">
