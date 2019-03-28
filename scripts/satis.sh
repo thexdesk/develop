@@ -34,7 +34,8 @@ function install(){
 }
 
 function build(){
-    s build
+    rm -rf "${SATIS_DIR}/public"
+    s build --stats -vvv
 }
 
 function serve(){

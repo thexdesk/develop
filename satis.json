@@ -1,8 +1,7 @@
 {
     "name": "codex",
-    "output-dir": ".tmp/out",
+    "output-dir": ".tmp/satis/public",
     "homepage": "http://localhost:8999",
-    "output-html": true,
     "repositories": [
         {
             "type": "vcs",
@@ -49,5 +48,20 @@
             "url": "bitbucket.org:codex-project/sitemap"
         }
     ],
-    "require-all": true
+    "require": {
+        "codex/algolia-search": "dev-develop",
+        "codex/auth": "dev-develop",
+        "codex/blog": "dev-develop",
+        "codex/comments": "dev-develop",
+        "codex/composer-plugin": "dev-develop",
+        "codex/core": "dev-develop",
+        "codex/filesystems": "dev-develop",
+        "codex/git": "dev-develop",
+        "codex/packagist": "dev-develop",
+        "codex/phpdoc": "dev-develop",
+        "codex/sitemap": "dev-develop"
+    },
+    "config": {
+        "cache-ttl": 1
+    }
 }

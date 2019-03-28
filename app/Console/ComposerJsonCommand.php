@@ -51,7 +51,7 @@ class ComposerJsonCommand extends Command
                 $composer = json5_decode($json, true);
                 return DotArrayWrapper::make(compact('name', 'dirPath', 'filePath', 'json', 'composer'));
             })->filter(function (DotArrayWrapper $package) {
-                return $package->get('name') !== 'test-plugin';
+                return $package->get('name') !== 'test-plugin' && $package->get('name') !== 'composer-plugin';
             })->each(function (DotArrayWrapper $package) {
                 $vars   = $this->getVarsFor($package->get('name'));
                 $target = DotArrayWrapper::make($package->get('composer'));
