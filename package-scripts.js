@@ -29,7 +29,7 @@ const _copy = (type = 'dev') => ({
         `cp -r ${themePath('app', type, 'vendor/codex_core')} ${path('codex/core/resources/assets')}`,
         `cp -r ${themePath('app', type, 'vendor/codex_comments')} ${path('codex/comments/resources/assets')}`,
         `cp -r ${themePath('app', type, 'vendor/codex_phpdoc')} ${path('codex/phpdoc/resources/assets')}`,
-
+        `cd ../codex-project.ninja && composer assets`
         // rimraf(path('public/vendor')),
         // `php artisan vendor:publish --tag=public`
     )

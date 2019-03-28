@@ -92,7 +92,8 @@ return [
                     'component'  => 'c-button',
                     'borderless' => true,
                     'type'       => 'toolbar',
-                    'icon'       => 'github',
+//                    'icon'       => '%git.connection_config.driver%',
+                    'icon'       => '%git.connection_config%',
                     'children'   => 'Edit Page',
                     'href'       => '%git_links.document_url%', /** git_links.document_url is a get modifier in Document @see \Codex\Git\GitAddonServiceProvider */
                 ],

@@ -40,6 +40,13 @@ class GitAddonServiceProvider extends AddonServiceProvider
                 $project->push('git_links', config('codex-git.default_project_config.git_links'));
             }
         });
+        Hooks::register('project.resolved', function (\Codex\Contracts\Projects\Project $project) {
+            $project->addGetMutator('git.connection_config', function () {
+                /** @var \Codex\Contracts\Projects\Project $project */
+                $project = $this;
+                return $project->git()->getManager()->getConnectionConfig($project->git()->getConnection());
+            });
+        });
         Hooks::register('document.resolved', function (\Codex\Contracts\Documents\Document $document) {
             if ( ! $document->isGitLinksEnabled()) {
                 return;

@@ -117,26 +117,28 @@ return [
                 'component'  => 'c-button',
                 'borderless' => true,
                 'type'       => 'toolbar',
-                'icon'       => function ($model) {
-                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-                    $git        = $model->git();
-                    $connection = data_get($git->getManager()->getConnectionConfig($git->getConnection()), 'driver');
-                    if ($connection === 'bitbucket' || $connection === 'github') {
-                        return $connection;
-                    }
-                    return 'git';
-                },
+                'icon'       => '%git.connection_config%',
+//                'icon'       => function ($model) {
+//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+//                    $git        = $model->git();
+//                    $connection = data_get($git->getManager()->getConnectionConfig($git->getConnection()), 'driver');
+//                    if ($connection === 'bitbucket' || $connection === 'github') {
+//                        return $connection;
+//                    }
+//                    return 'git';
+//                },
                 'children'   => 'Edit Page',
                 'title'      => 'Edit this page',
                 'target'     => '_black',
-                'href'       => function ($model) {
-                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-                    $git = $model->git();
-                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
-                        return $git->getUrl();
-                    }
-                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
-                },
+                'href'       => '%git_links.document_url%'
+//                'href'       => function ($model) {
+//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+//                    $git = $model->git();
+//                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
+//                        return $git->getUrl();
+//                    }
+//                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
+//                },
             ],
         ],
     ],
