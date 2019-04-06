@@ -3,7 +3,6 @@
 namespace App;
 
 use App\Attr\AttrDemo;
-use Codex\Attributes\AttributeConfigBuilderGenerator;
 use Codex\Commands\CompileBladeString;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -16,13 +15,12 @@ class TestCommand extends Command
 
     public function handle()
     {
+        $this->conf();
         $codex    = codex();
         $project  = $codex->getProject('codex');
         $revision = $project->getRevision('master');
         $document = $revision->getDocument('processors/macros');
-        $gitLinks= $document->attr('git_links.links.edit_page');
-        $icon=$gitLinks['icon'];
-        $href=$gitLinks['href'];
+        $gitLinks = $document->attr('git_links.links.edit_page');
         $content  = $document->render();
         $attrs    = $document->getAttributes();
         $du       = $document->attr('git_links.links');
@@ -40,7 +38,7 @@ class TestCommand extends Command
         $config->set('exptest2.second', [ 'third' => 'third' ]);
         $config->set('exptest2.third', [ 'first' => '%exptest2.first% and %exptest2.first%', 'second' => '%exptest2.second%' ]);
         $config->set('exptest2.fourth', [ 'first' => '%exptest2.first% and %exptest2.first%', 'second' => '%exptest2.third%' ]);
-        $val      = $config->get('exptest2');
+        $val = $config->get('exptest2');
         return $val;
     }
 
