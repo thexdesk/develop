@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="docker-workflow-1.14">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jenkins-ci/plugins/docker-workflow/1.14/docker-workflow-1.14.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/org/jenkins-ci/plugins" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$MAVEN_REPOSITORY$/org/jenkins-ci/plugins" recursive="false" />
+  </library>
+</component>

@@ -3,6 +3,8 @@
 namespace App;
 
 use App\Attr\AttrDemo;
+use Codex\Attributes\AttributeConfigBuilderGenerator;
+use Codex\Commands\CompileBladeString;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
@@ -18,13 +20,45 @@ class TestCommand extends Command
         $project  = $codex->getProject('codex');
         $revision = $project->getRevision('master');
         $document = $revision->getDocument('processors/macros');
+        $gitLinks= $document->attr('git_links.links.edit_page');
+        $icon=$gitLinks['icon'];
+        $href=$gitLinks['href'];
         $content  = $document->render();
-        $du       = $document->attr('git_links.document_url');
+        $attrs    = $document->getAttributes();
+        $du       = $document->attr('git_links.links');
         $this->line($content);
+    }
+
+    protected function conf()
+    {
+
+        $config = app()->make('codex.config');
+//        $config->set('exptest.first', 'first');
+//        $config->set('exptest.second', [ 'third' => 'third' ]);
+//        $config->set('exptest.third', [ 'first' => '% this["first"] % and % this["second"] %', 'second' => '% this["second"] %' ]);
+        $config->set('exptest2.first', 'first');
+        $config->set('exptest2.second', [ 'third' => 'third' ]);
+        $config->set('exptest2.third', [ 'first' => '%exptest2.first% and %exptest2.first%', 'second' => '%exptest2.second%' ]);
+        $config->set('exptest2.fourth', [ 'first' => '%exptest2.first% and %exptest2.first%', 'second' => '%exptest2.third%' ]);
+        $val      = $config->get('exptest2');
+        return $val;
     }
 
     public function handle3()
     {
+        $asdf = $this->dispatch(new CompileBladeString(<<<'EOF'
+@if($a === 'n')
+    {% 'a === n ' %}
+@endif
+{% 'basePath = ' . $app->basePath() %}
+EOF
+            ,
+            [
+                'a'   => 'n',
+                'app' => $this->getLaravel(),
+            ]
+        ));
+
         $this->dispatch(new AttrDemo());
     }
 }

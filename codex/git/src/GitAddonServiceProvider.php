@@ -21,6 +21,7 @@ class GitAddonServiceProvider extends AddonServiceProvider
     public $mapConfig = [
         'codex-git.default_project_config.branching' => 'codex.projects.branching',
         'codex-git.default_project_config.git'       => 'codex.projects.git',
+        'codex-git.default_project_config.git_links'       => 'codex.projects.git_links',
     ];
 
     public $listen = [
@@ -35,16 +36,15 @@ class GitAddonServiceProvider extends AddonServiceProvider
 
     public function register()
     {
-        Hooks::register('project.initialized', function ($project) {
-            if ($project->isGitEnabled()) {
-                $project->push('git_links', config('codex-git.default_project_config.git_links'));
-            }
-        });
-        Hooks::register('project.resolved', function (\Codex\Contracts\Projects\Project $project) {
+//        Hooks::register('project.initialized', function (\Codex\Contracts\Projects\Project $project) {
+//            if ($project->isGitEnabled()) {
+//                $project->push('git_links', config('codex-git.default_project_config.git_links'));
+//            }
+//        });
+        Hooks::register(['project.resolved','revision.resolved','document.resolved'], function (\Codex\Contracts\Mergable\Model $project) {
             $project->addGetMutator('git.connection_config', function () {
-                /** @var \Codex\Contracts\Projects\Project $project */
-                $project = $this;
-                return $project->git()->getManager()->getConnectionConfig($project->git()->getConnection());
+                /** @var \Codex\Contracts\Projects\Project $this */
+                return $this->git()->getManager()->getConnectionConfig($this->git()->getConnection());
             });
         });
         Hooks::register('document.resolved', function (\Codex\Contracts\Documents\Document $document) {
@@ -75,8 +75,7 @@ class GitAddonServiceProvider extends AddonServiceProvider
         $this->registerManager();
     }
 
-    public
-    function boot(AttributeDefinitionRegistry $registry)
+    public function attributes(AttributeDefinitionRegistry $registry)
     {
         $projects = $registry->projects;
 
@@ -102,15 +101,14 @@ class GitAddonServiceProvider extends AddonServiceProvider
 
         $git_links = $projects->add('git_links', 'dictionary')->setApiType('GitLinksConfig', [ 'new' ]);
         $git_links->add('enabled', 'boolean');
-        $git_links->add('map', 'array.scalarPrototype', 'Assoc');
-        $git_links->add('links', 'dictionaryPrototype', '[Assoc]');
+        $git_links->add('map', 'array.scalarPrototype', 'Assoc',[]);
+        $git_links->add('links', 'dictionaryPrototype', '[Assoc]',[]);
 
-        $registry->revisions->addInheritKeys('git_links');
-        $registry->documents->addInheritKeys('git_links');
+        $registry->revisions->addInheritKeys(['git','git_links']);
+        $registry->documents->addInheritKeys(['git','git_links']);
     }
 
-    protected
-    function registerMacros()
+    protected function registerMacros()
     {
         RevisionCollection::mixin(new GitRevisionCollectionMixin());
 
@@ -146,8 +144,7 @@ class GitAddonServiceProvider extends AddonServiceProvider
         });
     }
 
-    protected
-    function registerManager()
+    protected function registerManager()
     {
         $this->app->singleton('codex.git.manager', function (Application $app) {
             $manager = new ConnectionManager($app[ 'config' ]);

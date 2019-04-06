@@ -16,24 +16,6 @@ return [
         ],
     ],
 
-//    'layout' => [
-//        'header' => [
-//            'menu' => [
-//                [
-//                    'label' => 'Projects',
-//                    'projects' => true,
-//                    'type' => 'side-menu',
-//                    'side' => 'right'
-//                ],
-//                [
-//                    'label' => 'Revisions',
-//                    'revisions' => true,
-//                    'type' => 'side-menu',
-//                    'side' => 'right'
-//                ]
-//            ]
-//        ]
-//    ],
     'processors'   => [
         'enabled'    => [
             'attributes' => true,
@@ -60,17 +42,7 @@ return [
         ],
         'toc'        => [
             'header_link_show' => true,
-        ],
-        'buttons'    => [
-            'buttons' => [
-                [
-                    'label'  => 'Test',
-                    'icon'   => 'github',
-                    'target' => '_blank',
-                    'href'   => 'https://github.com',
-                ],
-            ],
-        ],
+        ]
     ],
 
     'default_revision' => \Codex\Git\BranchType::PRODUCTION,
@@ -109,37 +81,40 @@ return [
     ],
     'git_links' => [
         'enabled' => true,
-        'map'     => [
-            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
-        ],
-        'links'   => [
-            'edit_page' => [
-                'component'  => 'c-button',
-                'borderless' => true,
-                'type'       => 'toolbar',
-                'icon'       => '%git.connection_config%',
-//                'icon'       => function ($model) {
-//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-//                    $git        = $model->git();
-//                    $connection = data_get($git->getManager()->getConnectionConfig($git->getConnection()), 'driver');
-//                    if ($connection === 'bitbucket' || $connection === 'github') {
-//                        return $connection;
-//                    }
-//                    return 'git';
-//                },
-                'children'   => 'Edit Page',
-                'title'      => 'Edit this page',
-                'target'     => '_black',
-                'href'       => '%git_links.document_url%'
-//                'href'       => function ($model) {
-//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-//                    $git = $model->git();
-//                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
-//                        return $git->getUrl();
-//                    }
-//                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
-//                },
-            ],
-        ],
+//        'map'     => [
+//            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
+//        ],
+//        'links'   => [
+//            'edit_page' => [
+//                'component'  => 'c-button',
+//                'borderless' => true,
+//                'type'       => 'toolbar',
+//                'icon'       => '%git.connection_config%',
+//                'children'   => 'Edit Page',
+//                'title'      => 'Edit this page',
+//                'target'     => '_black',
+//                'href'       => '%git_links.document_url%'
+//            ],
+//        ],
     ],
 ];
+
+
+//    'layout' => [
+//        'header' => [
+//            'menu' => [
+//                [
+//                    'label' => 'Projects',
+//                    'projects' => true,
+//                    'type' => 'side-menu',
+//                    'side' => 'right'
+//                ],
+//                [
+//                    'label' => 'Revisions',
+//                    'revisions' => true,
+//                    'type' => 'side-menu',
+//                    'side' => 'right'
+//                ]
+//            ]
+//        ]
+//    ],
