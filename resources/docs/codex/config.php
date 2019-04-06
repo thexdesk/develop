@@ -73,7 +73,7 @@ return [
         'enabled'    => true,
         'connection' => 'bitbucket_password',
         'owner'      => 'codex-project',
-        'repository' => 'graph',
+        'repository' => 'core',
         'branches'   => [], //[ 'master']
         'paths'      => [
             'docs' => 'develop/resources/docs/codex',

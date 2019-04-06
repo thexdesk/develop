@@ -31,8 +31,8 @@ layout:
                         document: getting-started/installation
                     -   label   : Core Concepts
                         document: getting-started/core-concepts
-                    -   label   : Basic Configuration
-                        document: getting-started/basic-configuration
+                    -   label   : Configuration
+                        document: getting-started/configuration
                     -   label   : Directory Structure
                         document: getting-started/directory-structure
                     -   label   : Creating a Project

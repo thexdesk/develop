@@ -91,10 +91,13 @@ return [
                 'edit_page' => [
                     'component'  => 'c-button',
                     'borderless' => true,
+                    'target'     => '_black',
                     'type'       => 'toolbar',
+                    /** git.connection_config is a get modifier in Document @see \Codex\Git\GitAddonServiceProvider */
                     'icon'       => '%git.connection_config.driver%',
                     'children'   => 'Edit Page',
-                    'href'       => '%git_links.document_url%', /** git_links.document_url is a get modifier in Document @see \Codex\Git\GitAddonServiceProvider */
+                    /** git_links.document_url is a get modifier in Document @see \Codex\Git\GitAddonServiceProvider */
+                    'href'       => '%git_links.document_url%',
                 ],
             ],
         ],
