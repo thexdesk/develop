@@ -64,20 +64,20 @@ yarn
                         sh '''
 IPADDR=$(node_modules/.bin/internal-ip --ipv4)
 cp -f .env.jenkins .env
-lv key:generate
-lv dotenv:set-key APP_URL $IPADDR
-lv dotenv:set-key BACKEND_HOST $IPADDR
-lv dotenv:set-key BACKEND_PORT $BACKEND_PORT
-lv dotenv:set-key BACKEND_URL "http://$IPADDR:$BACKEND_PORT"
-lv dotenv:set-key CODEX_GIT_GITHUB_TOKEN $GITHUB_TOKEN
-lv dotenv:set-key CODEX_GIT_GITHUB_SECRET $GITHUB_TOKEN_SECRET
-lv dotenv:set-key CODEX_GIT_BITBUCKET_KEY $BITBUCKET_KEY
-lv dotenv:set-key CODEX_GIT_BITBUCKET_SECRET $BITBUCKET_KEY_SECRET
+php artisan key:generate
+php artisan dotenv:set-key APP_URL $IPADDR
+php artisan dotenv:set-key BACKEND_HOST $IPADDR
+php artisan dotenv:set-key BACKEND_PORT $BACKEND_PORT
+php artisan dotenv:set-key BACKEND_URL "http://$IPADDR:$BACKEND_PORT"
+php artisan dotenv:set-key CODEX_GIT_GITHUB_TOKEN $GITHUB_TOKEN
+php artisan dotenv:set-key CODEX_GIT_GITHUB_SECRET $GITHUB_TOKEN_SECRET
+php artisan dotenv:set-key CODEX_GIT_BITBUCKET_KEY $BITBUCKET_KEY
+php artisan dotenv:set-key CODEX_GIT_BITBUCKET_SECRET $BITBUCKET_KEY_SECRET
 
-lv dotenv:set-key CODEX_AUTH_GITHUB_ID $GITHUB_AUTH_ID
-lv dotenv:set-key CODEX_AUTH_GITHUB_SECRET $GITHUB_AUTH_SECRET
-lv dotenv:set-key CODEX_AUTH_BITBUCKET_ID $BITBUCKET_AUTH_ID
-lv dotenv:set-key CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
+php artisan dotenv:set-key CODEX_AUTH_GITHUB_ID $GITHUB_AUTH_ID
+php artisan dotenv:set-key CODEX_AUTH_GITHUB_SECRET $GITHUB_AUTH_SECRET
+php artisan dotenv:set-key CODEX_AUTH_BITBUCKET_ID $BITBUCKET_AUTH_ID
+php artisan dotenv:set-key CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
 '''
                     }
 
