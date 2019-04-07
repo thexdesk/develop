@@ -63,19 +63,19 @@ backend-install (){
 }
 
 
-frontend-install() {
-    _git-submodule-update
-    cd $THEME_DIR
-    yarn
-    cd $THEME_DIR/app/build
-    $THEME_DIR/node_modules/.bin/tsc -p tsconfig.json
-}
+#frontend-install() {
+#    _git-submodule-update
+#    cd $THEME_DIR
+#    yarn
+#    cd $THEME_DIR/app/build
+#    $THEME_DIR/node_modules/.bin/tsc -p tsconfig.json
+#}
 
-frontend-build(){
-    cd $THEME_DIR
-    yarn api build
-    yarn app prod:build
-}
+#frontend-build(){
+#    cd $THEME_DIR
+#    yarn api build
+#    yarn app prod:build
+#}
 
 backend-serve(){
     _load-dotenv

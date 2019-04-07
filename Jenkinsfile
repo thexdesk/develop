@@ -38,19 +38,25 @@ node {
 
             stage('prepare') {
                 parallel backend: {
-                    stage('install') {
+                    stage('install dependencies') {
                         sh 'scripts/ci.sh backend-install'
                     }
                 }, frontend: {
-                    stage('install') {
-                        sh 'scripts/ci.sh frontend-install'
+                    stage('install dependencies') {
+                        dir('theme') {
+                            sh 'yarn'
+                        }
                     }
-
-                    stage('build') {
-                        sh 'scripts/ci.sh frontend-build'
+                    stage('compile') {
+                        dir('theme/app/build') {
+                            sh '../../node_modules/.bin/tsc -p tsconfig.json'
+                        }
+                        dir('theme') {
+                            sh 'yarn api build'
+                            sh 'yarn app prod:build'
+                        }
                     }
-
-                    stage('post-build') {
+                    stage('report') {
 
                         sh 'mkdir -p html_reports/bundle-analyzer'
                         sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
