@@ -10,20 +10,24 @@ MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 ROOT_DIR=$(dirname $MYDIR)
 THEME_DIR="$ROOT_DIR/theme"
 
-alias lv='php $ROOT_DIR/artisan'
-
+function lv {
+    php $PWD/artisan $*
+}
 
 function _load-dotenv {
     source $ROOT_DIR/.env
 }
+
 function _getip {
     $ROOT_DIR/node_modules/.bin/internal-ip --ipv4
 }
+
 function _git-submodule-update {
     cd $ROOT_DIR
     pwd
     git submodule update --init --remote --force
 }
+
 function _backend-install-codex {
 
     lv codex:addon:enable codex/auth
@@ -33,10 +37,10 @@ function _backend-install-codex {
     lv codex:addon:enable codex/packagist
     lv codex:addon:enable codex/phpdoc
     lv codex:addon:enable codex/sitemap
-    
 }
+
 function _backend-install-env {
-    local IP=$(getip)
+    local IP=$(_getip)
     cp -f $ROOT_DIR/.env.jenkins $ROOT_DIR/.env
     lv dotenv:set-key APP_URL $IP
     lv dotenv:set-key BACKEND_HOST $IP
