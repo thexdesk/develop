@@ -70,16 +70,21 @@ node {
         stage('backend: tests') {
             echo 'todo'
         }
-        parallel {
-            stage('backend: serve') {
+        stage('backend: run') {
+            parallel serve: {
                 sh 'scripts/ci.sh backend-serve'
-            }
-            stage('backend: post-serve') {
-                echo 'todo'
-            }
+                stage('serve stage') {
+                    echo 'todo'
+                }
+            }, other: {
+                stage('other stage') {
+                    echo 'todo'
+                }
+            }, o
         }
-
     }
+
 }
+
 
 
