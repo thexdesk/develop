@@ -21,7 +21,7 @@
 
 node {
     withEnv([
-        'BACKEND_URL=http://localhost:39967',
+        'BACKEND_PORT=39967',
         'IS_JENKINS=1'
     ]) {
         stage('SCM') {
@@ -29,35 +29,44 @@ node {
             sh 'git submodule update --init --remote --force'
         }
 
-        stage('frontend: install') {
-            sh 'scripts/ci.sh frontend-install'
-        }
-
-        stage('frontend: build') {
-            sh 'scripts/ci.sh frontend-build'
-        }
-
-        stage('frontend: post-build') {
-            sh 'mkdir -p html_reports'
-
-            stage('publish bundle-analyzer') {
-                sh 'mkdir -p html_reports/bundle-analyzer'
-                sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
-                publishHTML([
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: 'html_reports/bundle-analyzer',
-                    reportFiles: 'index.html',
-                    reportName: 'Bundle Analyzer',
-                    reportTitles: ''
-                ])
-            }
-        }
+//        stage('frontend: install') {
+//            sh 'scripts/ci.sh frontend-install'
+//        }
+//
+//        stage('frontend: build') {
+//            sh 'scripts/ci.sh frontend-build'
+//        }
+//
+//        stage('frontend: post-build') {
+//            sh 'mkdir -p html_reports'
+//
+//            stage('publish bundle-analyzer') {
+//                sh 'mkdir -p html_reports/bundle-analyzer'
+//                sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
+//                publishHTML([
+//                    allowMissing: false,
+//                    alwaysLinkToLastBuild: false,
+//                    keepAll: true,
+//                    reportDir: 'html_reports/bundle-analyzer',
+//                    reportFiles: 'index.html',
+//                    reportName: 'Bundle Analyzer',
+//                    reportTitles: ''
+//                ])
+//            }
+//        }
 
 
         stage('backend: install') {
             sh 'scripts/ci.sh backend-install'
+        }
+        stage('backend: tests') {
+            echo 'todo'
+        }
+        stage('backend: serve') {
+            sh 'scripts/ci.sh backend-serve'
+        }
+        stage('backend: post-serve') {
+            echo 'todo'
         }
 
     }
