@@ -41,7 +41,7 @@ node {
                     ]
                 ],
                 userRemoteConfigs: scm.userRemoteConfigs,
-//                submoduleCfg                  : []
+                submoduleCfg                  : []
             ])
 //            sh 'git submodule update --init --remote --force'
         }
