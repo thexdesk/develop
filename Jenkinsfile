@@ -144,12 +144,19 @@ node {
                 "BITBUCKET_AUTH_SECRET=${bitbucketAuthSecret}",
             ]) {
                 stage('SCM') {
-                    checkout([
-                        $class           : 'GitSCM',
-                        branches         : scm.branches,
-                        extensions       : scm.extensions + [[$class: 'WipeWorkspace']],
-                        userRemoteConfigs: scm.userRemoteConfigs,
+                    checkout scm
+                    input([
+                        id        : 'StartPreviewServer',
+                        message   : 'Start preview server?',
+                        ok        : 'Start',
+                        parameters: [
+                            booleanParam(defaultValue: false, description: '', name: 'startPreviewServer'),
+                            string(defaultValue: '20', description: 'Timeout in minutes', name: 'serverTimeout', trim: true)
+                        ]
                     ])
+                    echo "start: ${startPreviewServer}"
+
+//                    checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,])
                     sh 'git submodule update --init --remote --force'
                 }
 
@@ -207,7 +214,7 @@ php artisan codex:addon:enable codex/phpdoc
     } catch (e) {
         throw e
     } finally {
-        cleanWs cleanWhenFailure: true
+        echo "done"
     }
 
 }
