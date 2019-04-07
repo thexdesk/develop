@@ -2,8 +2,10 @@
 
 stage('Prepare') {
     stage('SCM: checkout') {
-        checkout scm
-        sh "git submodule update --init --remote --force"
+        node {
+            checkout scm
+            sh "git submodule update --init --remote --force"
+        }
     }
 
     parallel {
