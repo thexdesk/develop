@@ -1,11 +1,10 @@
 #!/usr/bin/env groovy
+node {
 
 stage('Prepare') {
     stage('SCM: checkout') {
-        node {
             checkout scm
             sh "git submodule update --init --remote --force"
-        }
     }
 
     parallel {
@@ -51,3 +50,4 @@ stage('Prepare') {
     }
 }
 
+}
