@@ -80,7 +80,7 @@ node {
                 stage('other stage') {
                     echo 'todo'
                 }
-            }, o
+            }
         }
     }
 
