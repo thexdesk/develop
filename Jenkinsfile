@@ -3,7 +3,6 @@ node {
 
     checkout scm
     sh "git submodule update --init --remote --force"
-    stage('Prepare') {
         parallel {
             stage('Backend') {
                 node('Backend node') {
@@ -45,6 +44,5 @@ node {
             }
 
         }
-    }
 
 }
