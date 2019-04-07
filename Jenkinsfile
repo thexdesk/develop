@@ -47,7 +47,7 @@ node {
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
-                    reportDir: 'frontend',
+                    reportDir: 'html_reports/bundle-analyzer',
                     reportFiles: 'index.html',
                     reportName: 'Bundle Analyzer',
                     reportTitles: ''
