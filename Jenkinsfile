@@ -63,7 +63,7 @@ yarn
                     stage('add env') {
                         sh '''
 IPADDR=$(node_modules/.bin/internal-ip --ipv4)
-cp -f $ROOT_DIR/.env.jenkins $ROOT_DIR/.env
+cp -f .env.jenkins .env
 lv key:generate
 lv dotenv:set-key APP_URL $IPADDR
 lv dotenv:set-key BACKEND_HOST $IPADDR
