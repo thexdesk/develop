@@ -10,7 +10,7 @@ MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 ROOT_DIR=$(dirname $MYDIR)
 THEME_DIR="$ROOT_DIR/theme"
 
-alias lv=php "$ROOT_DIR/artisan"
+alias lv='php $ROOT_DIR/artisan'
 
 
 function _load-dotenv {
