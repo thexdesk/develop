@@ -90,7 +90,7 @@ def generatePhpdocStructure() {
     stage('phpdoc structure') {
         sh '''
 rm -rf phpdoc
-./phpDocumentor.phar \
+php phpDocumentor.phar \
     -t phpdoc --template=xml \
     -d codex/composer-plugin/src \
     -d codex/core/src \
