@@ -43,7 +43,7 @@ node {
                 userRemoteConfigs: scm.userRemoteConfigs,
 //                submoduleCfg                  : []
             ])
-            sh 'git submodule update --init --remote --force'
+//            sh 'git submodule update --init --remote --force'
         }
 
 //        stage('frontend: install') {
