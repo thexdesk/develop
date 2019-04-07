@@ -63,7 +63,9 @@ node {
             echo 'todo'
         }
         stage('backend: serve') {
-            sh 'scripts/ci.sh backend-serve'
+            node('backend-serve') {
+                sh 'scripts/ci.sh backend-serve'
+            }
         }
         stage('backend: post-serve') {
             echo 'todo'
