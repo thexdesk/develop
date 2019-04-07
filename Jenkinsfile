@@ -35,9 +35,9 @@ node {
                         disableSubmodules  : false,
                         parentCredentials  : false,
                         recursiveSubmodules: true,
-                        reference          : 'theme',
+//                        reference          : 'theme',
                         trackingSubmodules : false,
-                        parentCredentials  : true,
+//                        parentCredentials  : true,
                     ]
                 ],
                 userRemoteConfigs: scm.userRemoteConfigs,
