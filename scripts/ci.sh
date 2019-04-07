@@ -8,6 +8,7 @@ set -e
 
 MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 ROOT_DIR=$(dirname $MYDIR)
+THEME_DIR="$ROOT_DIR/theme"
 
 git-submodule-update(){
     cd $ROOT_DIR
@@ -29,20 +30,20 @@ backend-install (){
 frontend-install() {
     git-submodule-update
 
-    cd $ROOT_DIR/theme
+    cd $THEME_DIR
     pwd
     yarn
 
-    cd $ROOT_DIR/theme/app/build
+    cd $THEME_DIR/app/build
     pwd
-    $ROOT_DIR/node_modules/.bin/tsc -p tsconfig.json
+    $THEME_DIR/node_modules/.bin/tsc -p tsconfig.json
 }
 
 frontend-build(){
-    cd $ROOT_DIR
+    cd $THEME_DIR
     pwd
-    yarn theme api build
-    yarn theme app prod:build
+    yarn api build
+    yarn app prod:build
 }
 
 $*
