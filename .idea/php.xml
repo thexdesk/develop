@@ -228,6 +228,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/laradic/dependency-sorter" />
+      <path value="$PROJECT_DIR$/vendor/laradic/service-provider" />
+      <path value="$PROJECT_DIR$/vendor/laradic/dependency-sorter" />
+      <path value="$PROJECT_DIR$/vendor/laradic/dependency-sorter" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

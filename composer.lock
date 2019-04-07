@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd6796add99f06ad31f411326093cf9a",
+    "content-hash": "51f52d3ca704d1f386f85ab992354feb",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -3668,11 +3668,16 @@
         {
             "name": "laradic/dependency-sorter",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laradic/dependency-sorter.git",
+                "reference": "d2ec2b0727536b0564452c8bde499d967d32f2e4"
+            },
             "dist": {
-                "type": "path",
-                "url": "/mnt/fat/php/projects/codex/workbench/laradic/dependency-sorter",
+                "type": "zip",
+                "url": "https://api.github.com/repos/laradic/dependency-sorter/zipball/d2ec2b0727536b0564452c8bde499d967d32f2e4",
                 "reference": "d2ec2b0727536b0564452c8bde499d967d32f2e4",
-                "shasum": null
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0"
@@ -3688,25 +3693,21 @@
                     "Laradic\\DependencySorter\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Laradic\\Tests\\DependencySorter\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
             "authors": [
                 {
-                    "name": "Laradic",
-                    "homepage": "https://laradic.nl",
-                    "email": "info@laradic.nl"
+                    "name": "Robin Radic",
+                    "email": "robin@laradic.nl",
+                    "homepage": "http://robin.radic.nl",
+                    "role": "Developer"
                 },
                 {
-                    "name": "Robin Radic",
-                    "homepage": "http://robin.radic.nl",
-                    "email": "robin@laradic.nl",
-                    "role": "Developer"
+                    "name": "Laradic",
+                    "email": "info@laradic.nl",
+                    "homepage": "https://laradic.nl"
                 }
             ],
             "description": "A dependency sorter package",
@@ -3714,31 +3715,39 @@
                 "dependencies",
                 "laradic",
                 "laravel"
-            ]
+            ],
+            "time": "2018-03-04T07:55:38+00:00"
         },
         {
             "name": "laradic/service-provider",
-            "version": "dev-master",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laradic/service-provider.git",
+                "reference": "506654565a1d024482e4638a3be7036cb526c2c1"
+            },
             "dist": {
-                "type": "path",
-                "url": "/mnt/fat/php/projects/codex/workbench/laradic/service-provider",
-                "reference": "b1428d566b97b3662b405c64ff0cad8a89102033",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/laradic/service-provider/zipball/506654565a1d024482e4638a3be7036cb526c2c1",
+                "reference": "506654565a1d024482e4638a3be7036cb526c2c1",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.0",
                 "laradic/support": "~1.0",
-                "php": ">=7.0.0"
+                "php": ">=5.5.9"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "~1.9",
+                "laradic/phing": "1.0.*",
+                "laradic/testing": "~1.0.1",
                 "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "~4.0|~5.0|~6.0"
+                "phpunit/phpunit": "~4.0|~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -3746,20 +3755,15 @@
                     "Laradic\\ServiceProvider\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Laradic\\Tests\\ServiceProvider\\": "tests/",
-                    "TestVendor\\TestPkg11\\": "resources/fixture/testvendor/testpkg11/src"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
                     "name": "Robin Radic",
-                    "homepage": "http://robin.radic.nl",
                     "email": "robin@radic.nl",
+                    "homepage": "http://robin.radic.nl",
                     "role": "Developer"
                 }
             ],
@@ -3774,16 +3778,22 @@
                 "repositories",
                 "service",
                 "structure"
-            ]
+            ],
+            "time": "2017-05-27T23:49:20+00:00"
         },
         {
             "name": "laradic/support",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laradic/support.git",
+                "reference": "f1f8292f86547b5f089210f4cec160089011d942"
+            },
             "dist": {
-                "type": "path",
-                "url": "/mnt/fat/php/projects/codex/workbench/laradic/support",
+                "type": "zip",
+                "url": "https://api.github.com/repos/laradic/support/zipball/f1f8292f86547b5f089210f4cec160089011d942",
                 "reference": "f1f8292f86547b5f089210f4cec160089011d942",
-                "shasum": null
+                "shasum": ""
             },
             "require": {
                 "anahkiasen/underscore-php": "~2.0",
@@ -3812,19 +3822,15 @@
                     "Laradic\\Support\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Laradic\\Tests\\Support\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
                     "name": "Robin Radic",
-                    "homepage": "http://robin.radic.nl",
                     "email": "robin@radic.nl",
+                    "homepage": "http://robin.radic.nl",
                     "role": "Developer"
                 }
             ],
@@ -3836,7 +3842,8 @@
                 "repositories",
                 "structure",
                 "support"
-            ]
+            ],
+            "time": "2018-03-04T07:55:38+00:00"
         },
         {
             "name": "laravel/framework",

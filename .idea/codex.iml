@@ -96,9 +96,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/justinrainbow/json-schema" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/github-api" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/packagist-api" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/laradic/dependency-sorter" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/laradic/service-provider" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/laradic/support" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/nexmo-notification-channel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/slack-notification-channel" />

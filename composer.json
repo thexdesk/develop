@@ -8,7 +8,6 @@
     ],
     "license": "MIT",
     "repositories": [
-        {"type": "path", "url": "/mnt/fat/php/projects/codex/workbench/laradic/*"},
         {"type": "path", "url": "codex/*"}
     ],
     "replace": {
@@ -90,6 +89,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "test:core": [
+            "@php vendor/bin/phpunit  --bootstrap ./vendor/autoload.php --configuration ./codex/core/phpunit.xml"
+        ],
         "ide": [
             "@php artisan ide-helper:meta",
             "@php artisan ide-helper:generate",
