@@ -38,10 +38,10 @@ node {
         }
 
         stage('frontend: post-build') {
-            sh 'mkdir -f -p html_reports'
+            sh 'mkdir -p html_reports'
 
             stage('publish bundle-analyzer') {
-                sh 'mkdir -f -p html_reports/bundle-analyzer'
+                sh 'mkdir -p html_reports/bundle-analyzer'
                 sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
                 publishHTML([
                     allowMissing: false,
