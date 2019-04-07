@@ -6,7 +6,7 @@ node {
         checkout scm
     }
     stage('SCM: update submodule') {
-        sh "git submodule update --init --remote --recursive --force"
+        sh "git submodule update --init --remote --force"
     }
     stage('Prepare: clean') {
         sh 'pwd'
