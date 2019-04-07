@@ -7,9 +7,10 @@ node {
     }
     stage('Prepare') {
         sh 'pwd'
-        sh 'rm -rf vendor'
+        sh 'rm -rf ./vendor ./codex-addons'
     }
     stage('Install Dependencies') {
-        sh 'composer install'
+        sh 'composer install --no-scripts'
+        sh 'composer update --no-scripts'
     }
 }
