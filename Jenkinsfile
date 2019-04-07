@@ -105,24 +105,37 @@ cp -r  theme/app/dist/vendor/codex_phpdoc      codex/phpdoc/resources/assets
 '''
             }
 
+            stage('install addons') {
+                sh '''
+# php artisan codex:addon:enable codex/algolia-search
+php artisan codex:addon:enable codex/auth
+# php artisan codex:addon:enable codex/blog
+php artisan codex:addon:enable codex/comments
+php artisan codex:addon:enable codex/filesystems
+php artisan codex:addon:enable codex/git
+php artisan codex:addon:enable codex/packagist
+php artisan codex:addon:enable codex/phpdoc
+# php artisan codex:addon:enable codex/sitemap
+'''
+            }
 
-            parallel 'install addons': {
-                stage('backend: Install addons') {
-                    sh 'scripts/ci.sh backend-enable-codex-addons'
-                    sh 'rm -rf public/vendor'
-                    sh 'php artisan vendor:publish --tag=public'
-                }
-            }, 'generate phpdoc': {
-                sh 'scripts/phpdoc.sh'
-                sh 'php artisan codex:phpdoc:generate codex/master -f'
-                sh 'php artisan codex:phpdoc:generate --all'
-            }, 'git sync': {
-                sh 'php artisan codex:git:sync blade-extensions-github -f'
-            }, 'serve': {
-                timeout(time: 20, unit: 'MINUTES') {
+            parallel 'serve': {
+                timeout(time: 10, unit: 'MINUTES') {
                     currentBuild.result = "SUCCESS"
                     sh 'scripts/ci.sh backend-serve'
-                    currentBuild.result = "SUCCESS"
+                }
+            }, 'background tasks': {
+                stage('background tasks') {
+                    parallel 'publish assets': {
+                        sh 'rm -rf public/vendor'
+                        sh 'php artisan vendor:publish --tag=public'
+                    }, 'generate phpdoc': {
+                        sh 'scripts/phpdoc.sh'
+                        sh 'php artisan codex:phpdoc:generate codex/master -f'
+                        sh 'php artisan codex:phpdoc:generate --all'
+                    }, 'git sync': {
+                        sh 'php artisan codex:git:sync blade-extensions-github -f'
+                    }
                 }
             }
         }
