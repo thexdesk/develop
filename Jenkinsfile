@@ -18,14 +18,31 @@
 //// GIT_BRANCH                  For Git-based projects, this variable contains the Git branch that was checked out for the build (normally origin/master)
 
 
-
 node {
     withEnv([
         'BACKEND_PORT=39967',
         'IS_JENKINS=1'
     ]) {
         stage('SCM') {
-            checkout scm
+//            checkout scm
+            checkout([
+                $class           : 'GitSCM',
+                branches         : scm.branches,
+                extensions       : scm.extensions + [
+                    [$class: 'WipeWorkspace'],
+                    [
+                        $class             : 'SubmoduleOption',
+                        disableSubmodules  : false,
+                        parentCredentials  : false,
+                        recursiveSubmodules: true,
+                        reference          : 'theme',
+                        trackingSubmodules : false,
+                        parentCredentials  : true,
+                    ]
+                ],
+                userRemoteConfigs: scm.userRemoteConfigs,
+//                submoduleCfg                  : []
+            ])
             sh 'git submodule update --init --remote --force'
         }
 
@@ -73,3 +90,5 @@ node {
 
     }
 }
+
+
