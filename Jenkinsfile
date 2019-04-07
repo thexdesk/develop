@@ -119,6 +119,20 @@ rm -rf phpdoc
     }
 }
 
+timeout(time: 10, unit: 'MINUTES') {
+    def INPUT_PARAMS = input([
+        id        : 'StartPreviewServer',
+        message   : 'Start preview server?',
+        ok        : 'Start',
+        parameters: [
+            booleanParam(defaultValue: false, description: '', name: 'START'),
+            string(defaultValue: '20', description: 'Timeout in minutes', name: 'TIMEOUT', trim: true)
+        ]
+    ])
+    echo "START: ${INPUT_PARAMS.START}"
+    echo "TIMEOUT: ${INPUT_PARAMS.TIMEOUT}"
+}
+
 //noinspection GroovyAssignabilityCheck
 node {
     try {
@@ -145,17 +159,6 @@ node {
             ]) {
                 stage('SCM') {
                     checkout scm
-                    input([
-                        id        : 'StartPreviewServer',
-                        message   : 'Start preview server?',
-                        ok        : 'Start',
-                        parameters: [
-                            booleanParam(defaultValue: false, description: '', name: 'startPreviewServer'),
-                            string(defaultValue: '20', description: 'Timeout in minutes', name: 'serverTimeout', trim: true)
-                        ]
-                    ])
-                    echo "start: ${startPreviewServer}"
-
 //                    checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,])
                     sh 'git submodule update --init --remote --force'
                 }
@@ -216,7 +219,21 @@ php artisan codex:addon:enable codex/phpdoc
     } finally {
         echo "done"
     }
+}
 
+
+timeout(time: 10, unit: 'MINUTES') {
+    def INPUT_PARAMS = input([
+        id        : 'StartPreviewServer',
+        message   : 'Start preview server?',
+        ok        : 'Start',
+        parameters: [
+            booleanParam(defaultValue: false, description: '', name: 'START'),
+            string(defaultValue: '20', description: 'Timeout in minutes', name: 'TIMEOUT', trim: true)
+        ]
+    ])
+    echo "START: ${INPUT_PARAMS.START}"
+    echo "TIMEOUT: ${INPUT_PARAMS.TIMEOUT}"
 }
 
 
