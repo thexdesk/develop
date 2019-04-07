@@ -1,4 +1,4 @@
-#!groovy
+#!/usr/bin/env groovy
 
 
 node {
@@ -11,6 +11,11 @@ node {
     }
     stage('Install Dependencies') {
         sh 'composer install --no-scripts'
-        sh 'composer update --no-scripts'
+    }
+    stage('Configuring Application') {
+        sh 'cp -f .env.jenkins .env'
+    }
+    stage('Update Dependencies') {
+        sh 'composer update'
     }
 }
