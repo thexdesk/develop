@@ -15,15 +15,11 @@ class TestCommand extends Command
 
     public function handle()
     {
-        $this->conf();
         $codex    = codex();
         $project  = $codex->getProject('codex');
         $revision = $project->getRevision('master');
-        $document = $revision->getDocument('processors/macros');
-        $gitLinks = $document->attr('git_links.links.edit_page');
+        $document = $revision->getDocument('getting-started/core-concepts');
         $content  = $document->render();
-        $attrs    = $document->getAttributes();
-        $du       = $document->attr('git_links.links');
         $this->line($content);
     }
 

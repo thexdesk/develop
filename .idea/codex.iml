@@ -258,5 +258,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="groovy-1.8.6" level="application" />
     <orderEntry type="library" name="docker-workflow-1.14" level="project" />
+    <orderEntry type="library" name="groovy-2.4.52-jenkins" level="application" />
   </component>
 </module>
