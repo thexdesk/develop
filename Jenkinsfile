@@ -79,13 +79,13 @@ node {
         stage('backend: tests') {
             echo 'todo'
         }
-        stage('backend: serve') {
-            node('backend-serve') {
+        parallel {
+            stage('backend: serve') {
                 sh 'scripts/ci.sh backend-serve'
             }
-        }
-        stage('backend: post-serve') {
-            echo 'todo'
+            stage('backend: post-serve') {
+                echo 'todo'
+            }
         }
 
     }
