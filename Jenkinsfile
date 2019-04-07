@@ -10,6 +10,6 @@ node {
         sh 'rm -rf vendor'
     }
     stage('Install Dependencies') {
-        sh 'php composer.phar install'
+        sh 'composer install'
     }
 }
