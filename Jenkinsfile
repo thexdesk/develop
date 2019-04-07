@@ -29,19 +29,10 @@ node {
                 $class           : 'GitSCM',
                 branches         : scm.branches,
                 extensions       : scm.extensions + [
-                    [$class: 'WipeWorkspace'],
-                    [
-                        $class             : 'SubmoduleOption',
-                        disableSubmodules  : false,
-                        parentCredentials  : false,
-                        recursiveSubmodules: true,
-                        reference          : '',
-                        trackingSubmodules : false,
-//                        parentCredentials  : true,
-                    ]
+                    [$class: 'WipeWorkspace']
                 ],
                 userRemoteConfigs: scm.userRemoteConfigs,
-                submoduleCfg                  : []
+//                submoduleCfg                  : []
             ])
 //            sh 'git submodule update --init --remote --force'
         }
