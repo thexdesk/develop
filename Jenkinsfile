@@ -42,34 +42,17 @@ node {
                         sh 'scripts/ci.sh backend-install'
                     }
                 }, frontend: {
-                    stage('install dependencies') {
-                        dir('theme') {
-                            sh 'yarn'
-                        }
+                    dir('theme') {
+                        sh 'yarn'
                     }
-                    stage('compile') {
-                        dir('theme/app/build') {
-                            sh '../../node_modules/.bin/tsc -p tsconfig.json'
-                        }
-                        dir('theme') {
-                            sh 'yarn api build'
-                            sh 'yarn app prod:build'
-                        }
+                    dir('theme/app/build') {
+                        sh '../../node_modules/.bin/tsc -p tsconfig.json'
                     }
-                    stage('report') {
+                    dir('theme') {
+                        sh 'yarn api build'
+                        sh 'yarn app prod:build'
+                    }
 
-                        sh 'mkdir -p html_reports/bundle-analyzer'
-                        sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
-                        publishHTML([
-                            allowMissing         : false,
-                            alwaysLinkToLastBuild: false,
-                            keepAll              : true,
-                            reportDir            : 'html_reports/bundle-analyzer',
-                            reportFiles          : 'index.html',
-                            reportName           : 'Bundle Analyzer',
-                            reportTitles         : ''
-                        ])
-                    }
                 }
             }
 
@@ -122,16 +105,26 @@ cp -r  theme/app/dist/vendor/codex_phpdoc      codex/phpdoc/resources/assets
 '''
             }
 
-            stage('backend: Install addons') {
-                sh 'scripts/ci.sh backend-enable-codex-addons'
-                sh 'rm -rf public/vendor'
-                sh 'php artisan vendor:publish --tag=public'
-            }
 
-            stage('serve') {
-                sh 'scripts/ci.sh backend-serve'
+            parallel 'install addons': {
+                stage('backend: Install addons') {
+                    sh 'scripts/ci.sh backend-enable-codex-addons'
+                    sh 'rm -rf public/vendor'
+                    sh 'php artisan vendor:publish --tag=public'
+                }
+            }, 'generate phpdoc': {
+                sh 'scripts/phpdoc.sh'
+                sh 'php artisan codex:phpdoc:generate codex/master -f'
+                sh 'php artisan codex:phpdoc:generate --all'
+            }, 'git sync': {
+                sh 'php artisan codex:git:sync blade-extensions-github -f'
+            }, 'serve': {
+                timeout(time: 20, unit: 'MINUTES') {
+                    currentBuild.result = "SUCCESS"
+                    sh 'scripts/ci.sh backend-serve'
+                    currentBuild.result = "SUCCESS"
+                }
             }
-
         }
     } catch (e) {
         throw e
