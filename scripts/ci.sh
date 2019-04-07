@@ -22,6 +22,7 @@ backend-install (){
     composer install --no-scripts
     cp -f .env.jenkins .env
     composer update
+    yarn
 }
 
 
@@ -34,7 +35,7 @@ frontend-install() {
 
     cd $ROOT_DIR/theme/app/build
     pwd
-    tsc -p tsconfig.json
+    $ROOT_DIR/node_modules/.bin/tsc -p tsconfig.json
 }
 
 frontend-build(){

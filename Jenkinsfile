@@ -5,10 +5,6 @@ node {
         sh 'git submodule update --init --remote --force'
     }
 
-    stage('backend: install'){
-        sh 'scripts/ci.sh backend-install'
-    }
-
     stage('frontend: install'){
         sh 'scripts/ci.sh frontend-install'
     }
@@ -22,6 +18,11 @@ node {
         stage('publish bundle-analyzer'){
             sh 'echo "done"'
         }
+    }
+
+
+    stage('backend: install'){
+        sh 'scripts/ci.sh backend-install'
     }
 
 }
