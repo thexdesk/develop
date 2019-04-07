@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 
+# https://www.tldp.org/LDP/abs/html/options.html
+# exit on first error
+set -e
+
+
+
 MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 ROOT_DIR=$(dirname $MYDIR)
 
+git-submodule-update(){
+    cd $ROOT_DIR
+    pwd
+    git submodule update --init --remote --force
+}
 
 backend-install (){
     cd $ROOT_DIR
@@ -15,18 +26,22 @@ backend-install (){
 
 
 frontend-install() {
-    cd $ROOT_DIR
-    pwd
-    git submodule update --init --remote --force
+    git-submodule-update
+
     cd $ROOT_DIR/theme
     pwd
     yarn
-    yarn app prod:build
+
+    cd $ROOT_DIR/theme/app/build
+    pwd
+    tsc -p tsconfig.json
 }
 
-install(){
-    backend-install
-    frontend-install
+frontend-build(){
+    cd $ROOT_DIR
+    pwd
+    yarn theme api build
+    yarn theme app prod:build
 }
 
 $*
