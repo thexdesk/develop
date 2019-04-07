@@ -73,25 +73,67 @@ node {
                 }
             }
 
-            stage('tests') {
-                echo 'todo'
+            stage('merge front/back-end') {
+                sh '''
+# Clean addons documentation   
+rm -f resources/docs/codex/master/addons/algolia-search.md
+rm -f resources/docs/codex/master/addons/auth.md
+rm -f resources/docs/codex/master/addons/blog.md
+rm -f resources/docs/codex/master/addons/comments.md
+rm -f resources/docs/codex/master/addons/filesystems.md
+rm -f resources/docs/codex/master/addons/git.md
+rm -f resources/docs/codex/master/addons/packagist.md
+rm -f resources/docs/codex/master/addons/phpdoc.md
+rm -f resources/docs/codex/master/addons/sitemap.md
+
+# Copy addon README's to docs
+cp -f codex/algolia-search/README.md    resources/docs/codex/master/addons/algolia-search.md
+cp -f codex/auth/README.md              resources/docs/codex/master/addons/auth.md
+cp -f codex/blog/README.md              resources/docs/codex/master/addons/blog.md
+cp -f codex/comments/README.md          resources/docs/codex/master/addons/comments.md
+cp -f codex/filesystems/README.md       resources/docs/codex/master/addons/filesystems.md
+cp -f codex/git/README.md               resources/docs/codex/master/addons/git.md
+cp -f codex/packagist/README.md         resources/docs/codex/master/addons/packagist.md
+cp -f codex/phpdoc/README.md            resources/docs/codex/master/addons/phpdoc.md
+cp -f codex/sitemap/README.md           resources/docs/codex/master/addons/sitemap.md
+
+# Copy the license to every addon folder and docs
+cp -f LICENSE.md                        codex/core/LICENSE.md
+cp -f LICENSE.md                        codex/algolia-search/LICENSE.md
+cp -f LICENSE.md                        codex/auth/LICENSE.md
+cp -f LICENSE.md                        codex/blog/LICENSE.md
+cp -f LICENSE.md                        codex/comments/LICENSE.md
+cp -f LICENSE.md                        codex/filesystems/LICENSE.md
+cp -f LICENSE.md                        codex/git/LICENSE.md
+cp -f LICENSE.md                        codex/packagist/LICENSE.md
+cp -f LICENSE.md                        codex/phpdoc/LICENSE.md
+cp -f LICENSE.md                        codex/sitemap/LICENSE.md
+cp -f LICENSE.md                        resources/docs/codex/master/LICENSE.md
+
+# Clean addon assets
+rm -rf  codex/core/resources/assets
+rm -rf  codex/comments/resources/assets
+rm -rf  codex/phpdoc/resources/assets
+
+# Copy the new prod build assets to addons
+cp -r  theme/app/dist/vendor/codex_core        codex/core/resources/assets
+cp -r  theme/app/dist/vendor/codex_comments    codex/comments/resources/assets
+cp -r  theme/app/dist/vendor/codex_phpdoc      codex/phpdoc/resources/assets
+'''
+            }
+
+            stage('backend: Install addons') {
+                sh 'scripts/ci.sh backend-enable-codex-addons'
+                sh 'rm -rf public/vendor'
+                sh 'php artisan vendor:publish --tag=public'
             }
 
             stage('serve') {
-                parallel backend: {
-                    sh 'scripts/ci.sh backend-serve'
-                    stage('serve stage') {
-                        echo 'todo'
-                    }
-                }, frontend: {
-                    stage('other stage') {
-                        echo 'todo'
-                    }
-                }
+                sh 'scripts/ci.sh backend-serve'
             }
 
         }
-    } catch (e){
+    } catch (e) {
         throw e
     } finally {
         cleanWs cleanWhenFailure: true

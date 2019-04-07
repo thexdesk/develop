@@ -28,17 +28,6 @@ function _git-submodule-update {
     git submodule update --init --remote --force
 }
 
-function _backend-install-codex {
-
-    lv codex:addon:enable codex/auth
-    lv codex:addon:enable codex/comments
-    lv codex:addon:enable codex/filesystems
-    lv codex:addon:enable codex/git
-    lv codex:addon:enable codex/packagist
-    lv codex:addon:enable codex/phpdoc
-    lv codex:addon:enable codex/sitemap
-}
-
 function _backend-install-env {
     local IP=$(_getip)
     cp -f $ROOT_DIR/.env.jenkins $ROOT_DIR/.env
@@ -59,7 +48,16 @@ backend-install (){
     composer dump-autoload
     yarn
     _backend-install-env
-    _backend-install-codex
+}
+
+backend-enable-codex-addons() {
+    lv codex:addon:enable codex/auth
+    lv codex:addon:enable codex/comments
+    lv codex:addon:enable codex/filesystems
+    lv codex:addon:enable codex/git
+    lv codex:addon:enable codex/packagist
+    lv codex:addon:enable codex/phpdoc
+    lv codex:addon:enable codex/sitemap
 }
 
 
