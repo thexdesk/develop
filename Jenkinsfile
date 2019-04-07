@@ -38,9 +38,20 @@ node {
         }
 
         stage('frontend: post-build') {
-            sh 'echo "done"'
+            sh 'mkdir -f -p html_reports'
+
             stage('publish bundle-analyzer') {
-                sh 'echo "done"'
+                sh 'mkdir -f -p html_reports/bundle-analyzer'
+                sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: true,
+                    reportDir: 'frontend',
+                    reportFiles: 'index.html',
+                    reportName: 'Bundle Analyzer',
+                    reportTitles: ''
+                ])
             }
         }
 
