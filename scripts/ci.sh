@@ -52,9 +52,10 @@ backend-install (){
     cd $ROOT_DIR
     rm -rf ./vendor ./codex-addons
     composer install --no-scripts
-    _backend-install-env
     composer update
     yarn
+    _backend-install-env
+    _backend-install-codex
 }
 
 
