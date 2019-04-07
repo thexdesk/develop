@@ -2,6 +2,10 @@
 
 namespace App\Console;
 
+use App\Codex\Console\BootCommand;
+use App\Codex\Console\ComposerJsonCommand;
+use App\Codex\Console\TagCommand;
+use App\Codex\Console\ToolboxCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,11 +18,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\TestCommand::class,
-        \App\CodexBackendDataCommand::class,
-        \App\ToolboxCommand::class,
-        TagCommand::class,
-        BootCommand::class,
-        ComposerJsonCommand::class
+        \App\CodexBackendDataCommand::class
     ];
 
     protected $bootstrappers = [

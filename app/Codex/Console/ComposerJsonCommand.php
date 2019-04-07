@@ -1,6 +1,6 @@
 <?php /** @noinspection ALL */
 
-namespace App\Console;
+namespace App\Codex\Console;
 
 use Codex\Support\DotArrayWrapper;
 use Illuminate\Console\Command;

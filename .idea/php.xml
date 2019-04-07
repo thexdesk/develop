@@ -232,6 +232,9 @@
       <path value="$PROJECT_DIR$/vendor/laradic/service-provider" />
       <path value="$PROJECT_DIR$/vendor/laradic/dependency-sorter" />
       <path value="$PROJECT_DIR$/vendor/laradic/dependency-sorter" />
+      <path value="$PROJECT_DIR$/vendor/jackiedo/dotenv-editor" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-self-diagnosis" />
+      <path value="$PROJECT_DIR$/vendor/geerlingguy/ping" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

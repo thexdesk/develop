@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Console;
+namespace App\Codex\Console;
 
-use App\Tmp;
+use Codex\Filesystem\Tmp;
 use Cz\Git\GitRepository;
 use Illuminate\Console\Command;
 use Symfony\Component\VarDumper\VarDumper;

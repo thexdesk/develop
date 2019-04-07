@@ -178,6 +178,7 @@ return [
 
         EddIriarte\Console\Providers\SelectServiceProvider::class,
 
+        \App\Codex\CodexServiceProvider::class,
 
         \Codex\CodexServiceProvider::class
 
