@@ -16,4 +16,4 @@ yarn-error.log
 /public/vendor
 /.idea/deployment.xml
 /.idea/workspace.xml
-
+/jenkins
