@@ -5,6 +5,9 @@ node {
     stage('checkout') {
         checkout scm
     }
+    stage('Print data') {
+        sh 'pwd'
+    }
     stage('Prepare Installation') {
         sh 'rm -rf vendor composer.lock'
 
