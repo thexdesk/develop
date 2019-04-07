@@ -1,5 +1,4 @@
 #!/usr/bin/env groovy
-
 // https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
 //// BUILD_NUMBER                The current build number, such as "153"
 //// BUILD_ID                    The current build id, such as "2005-08-22_23-59-59" (YYYY-MM-DD_hh-mm-ss, defunct since version 1.597)
@@ -20,27 +19,68 @@
 
 node {
     try {
-        withEnv([
-            'BACKEND_PORT=39967',
-            'IS_JENKINS=1'
+        withCredentials([
+            usernamePassword(credentialsId: 'github-secret-token', passwordVariable: 'githubTokenSecret', usernameVariable: 'githubToken'),
+            usernamePassword(credentialsId: 'bitbucket-key-secret', passwordVariable: 'bitbucketKeySecret', usernameVariable: 'bitbucketKey'),
+            usernamePassword(credentialsId: 'auth-github-id-secret', passwordVariable: 'githubAuthSecret', usernameVariable: 'githubAuthId'),
+            usernamePassword(credentialsId: 'auth-bitbucket-id-secret', passwordVariable: 'bitbucketAuthSecret', usernameVariable: 'bitbucketAuthId')
         ]) {
-            stage('SCM') {
-                checkout([
-                    $class           : 'GitSCM',
-                    branches         : scm.branches,
-                    extensions       : scm.extensions + [[$class: 'WipeWorkspace']],
-                    userRemoteConfigs: scm.userRemoteConfigs,
-                ])
-                sh 'git submodule update --init --remote --force'
-            }
+            withEnv([
+                "BACKEND_PORT=39967",
+                "IS_JENKINS=1",
+                "GITHUB_TOKEN=${githubToken}",
+                "GITHUB_TOKEN_SECRET=${githubTokenSecret}",
+                "BITBUCKET_KEY=${bitbucketKey}",
+                "BITBUCKET_KEY_SECRET=${bitbucketKeySecret}",
 
-            sh 'mkdir -p html_reports'
+                "GITHUB_AUTH_ID=${githubAuthId}",
+                "GITHUB_AUTH_SECRET=${githubAuthSecret}",
+                "BITBUCKET_AUTH_ID=${bitbucketAuthId}",
+                "BITBUCKET_AUTH_SECRET=${bitbucketAuthSecret}",
+            ]) {
+                stage('SCM') {
+                    checkout([
+                        $class           : 'GitSCM',
+                        branches         : scm.branches,
+                        extensions       : scm.extensions + [[$class: 'WipeWorkspace']],
+                        userRemoteConfigs: scm.userRemoteConfigs,
+                    ])
+                    sh 'git submodule update --init --remote --force'
+                }
 
-            stage('prepare') {
+                sh 'mkdir -p html_reports'
+
                 parallel backend: {
                     stage('install dependencies') {
-                        sh 'scripts/ci.sh backend-install'
+                        sh '''
+rm -rf ./vendor ./codex-addons
+composer install --no-scripts
+composer dump-autoload
+yarn
+'''
                     }
+
+                    stage('add env') {
+                        sh '''
+IPADDR=$(node_modules/.bin/internal-ip --ipv4)
+cp -f $ROOT_DIR/.env.jenkins $ROOT_DIR/.env
+lv key:generate
+lv dotenv:set-key APP_URL $IPADDR
+lv dotenv:set-key BACKEND_HOST $IPADDR
+lv dotenv:set-key BACKEND_PORT $BACKEND_PORT
+lv dotenv:set-key BACKEND_URL "http://$IPADDR:$BACKEND_PORT"
+lv dotenv:set-key CODEX_GIT_GITHUB_TOKEN $GITHUB_TOKEN
+lv dotenv:set-key CODEX_GIT_GITHUB_SECRET $GITHUB_TOKEN_SECRET
+lv dotenv:set-key CODEX_GIT_BITBUCKET_KEY $BITBUCKET_KEY
+lv dotenv:set-key CODEX_GIT_BITBUCKET_SECRET $BITBUCKET_KEY_SECRET
+
+lv dotenv:set-key CODEX_AUTH_GITHUB_ID $GITHUB_AUTH_ID
+lv dotenv:set-key CODEX_AUTH_GITHUB_SECRET $GITHUB_AUTH_SECRET
+lv dotenv:set-key CODEX_AUTH_BITBUCKET_ID $BITBUCKET_AUTH_ID
+lv dotenv:set-key CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
+'''
+                    }
+
                 }, frontend: {
                     dir('theme') {
                         sh 'yarn'
@@ -54,10 +94,9 @@ node {
                     }
 
                 }
-            }
 
-            stage('merge front/back-end') {
-                sh '''
+                stage('merge front/back-end') {
+                    sh '''
 # Clean addons documentation   
 rm -f resources/docs/codex/master/addons/algolia-search.md
 rm -f resources/docs/codex/master/addons/auth.md
@@ -103,10 +142,10 @@ cp -r  theme/app/dist/vendor/codex_core        codex/core/resources/assets
 cp -r  theme/app/dist/vendor/codex_comments    codex/comments/resources/assets
 cp -r  theme/app/dist/vendor/codex_phpdoc      codex/phpdoc/resources/assets
 '''
-            }
+                }
 
-            stage('install addons') {
-                sh '''
+                stage('install addons') {
+                    sh '''
 # php artisan codex:addon:enable codex/algolia-search
 php artisan codex:addon:enable codex/auth
 # php artisan codex:addon:enable codex/blog
@@ -117,25 +156,17 @@ php artisan codex:addon:enable codex/packagist
 php artisan codex:addon:enable codex/phpdoc
 # php artisan codex:addon:enable codex/sitemap
 '''
-            }
-
-            parallel 'serve': {
-                timeout(time: 10, unit: 'MINUTES') {
-                    currentBuild.result = "SUCCESS"
-                    sh 'scripts/ci.sh backend-serve'
                 }
-            }, 'background tasks': {
-                stage('background tasks') {
-                    parallel 'publish assets': {
-                        sh 'rm -rf public/vendor'
-                        sh 'php artisan vendor:publish --tag=public'
-                    }, 'generate phpdoc': {
-                        sh 'scripts/phpdoc.sh'
-                        sh 'php artisan codex:phpdoc:generate codex/master -f'
-                        sh 'php artisan codex:phpdoc:generate --all'
-                    }, 'git sync': {
-                        sh 'php artisan codex:git:sync blade-extensions-github -f'
-                    }
+
+                parallel 'publish assets': {
+                    sh 'rm -rf public/vendor'
+                    sh 'php artisan vendor:publish --tag=public'
+                }, 'generate phpdoc': {
+                    sh 'scripts/phpdoc.sh'
+                    sh 'php artisan codex:phpdoc:generate codex/master -f'
+                    sh 'php artisan codex:phpdoc:generate --all'
+                }, 'git sync': {
+                    sh 'php artisan codex:git:sync blade-extensions-github --force'
                 }
             }
         }
@@ -144,6 +175,7 @@ php artisan codex:addon:enable codex/phpdoc
     } finally {
         cleanWs cleanWhenFailure: true
     }
+
 }
 
 
