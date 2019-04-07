@@ -56,7 +56,7 @@ backend-install (){
     cd $ROOT_DIR
     rm -rf ./vendor ./codex-addons
     composer install --no-scripts
-    composer run-script post-autoload-dump
+    composer dump-autoload
     yarn
     _backend-install-env
     _backend-install-codex
