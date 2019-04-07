@@ -35,7 +35,7 @@ node {
                         disableSubmodules  : false,
                         parentCredentials  : false,
                         recursiveSubmodules: true,
-//                        reference          : 'theme',
+                        reference          : '',
                         trackingSubmodules : false,
 //                        parentCredentials  : true,
                     ]
