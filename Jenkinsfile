@@ -19,71 +19,77 @@
 
 
 node {
-    withEnv([
-        'BACKEND_PORT=39967',
-        'IS_JENKINS=1'
-    ]) {
-        stage('SCM') {
-//            checkout scm
-            checkout([
-                $class           : 'GitSCM',
-                branches         : scm.branches,
-                extensions       : scm.extensions + [
-                    [$class: 'WipeWorkspace']
-                ],
-                userRemoteConfigs: scm.userRemoteConfigs,
-//                submoduleCfg                  : []
-            ])
-//            sh 'git submodule update --init --remote --force'
-        }
+    try {
+        withEnv([
+            'BACKEND_PORT=39967',
+            'IS_JENKINS=1'
+        ]) {
+            stage('SCM') {
+                checkout([
+                    $class           : 'GitSCM',
+                    branches         : scm.branches,
+                    extensions       : scm.extensions + [[$class: 'WipeWorkspace']],
+                    userRemoteConfigs: scm.userRemoteConfigs,
+                ])
+                sh 'git submodule update --init --remote --force'
+            }
 
-//        stage('frontend: install') {
-//            sh 'scripts/ci.sh frontend-install'
-//        }
-//
-//        stage('frontend: build') {
-//            sh 'scripts/ci.sh frontend-build'
-//        }
-//
-//        stage('frontend: post-build') {
-//            sh 'mkdir -p html_reports'
-//
-//            stage('publish bundle-analyzer') {
-//                sh 'mkdir -p html_reports/bundle-analyzer'
-//                sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
-//                publishHTML([
-//                    allowMissing: false,
-//                    alwaysLinkToLastBuild: false,
-//                    keepAll: true,
-//                    reportDir: 'html_reports/bundle-analyzer',
-//                    reportFiles: 'index.html',
-//                    reportName: 'Bundle Analyzer',
-//                    reportTitles: ''
-//                ])
-//            }
-//        }
+            sh 'mkdir -p html_reports'
 
+            stage('prepare') {
+                parallel backend: {
+                    stage('install') {
+                        sh 'scripts/ci.sh backend-install'
+                    }
+                }, frontend: {
+                    stage('install') {
+                        sh 'scripts/ci.sh frontend-install'
+                    }
 
-        stage('backend: install') {
-            sh 'scripts/ci.sh backend-install'
-        }
-        stage('backend: tests') {
-            echo 'todo'
-        }
-        stage('backend: run') {
-            parallel serve: {
-                sh 'scripts/ci.sh backend-serve'
-                stage('serve stage') {
-                    echo 'todo'
-                }
-            }, other: {
-                stage('other stage') {
-                    echo 'todo'
+                    stage('build') {
+                        sh 'scripts/ci.sh frontend-build'
+                    }
+
+                    stage('post-build') {
+
+                        sh 'mkdir -p html_reports/bundle-analyzer'
+                        sh 'cp -f theme/app/dist/bundle-analyzer.html html_reports/bundle-analyzer/index.html'
+                        publishHTML([
+                            allowMissing         : false,
+                            alwaysLinkToLastBuild: false,
+                            keepAll              : true,
+                            reportDir            : 'html_reports/bundle-analyzer',
+                            reportFiles          : 'index.html',
+                            reportName           : 'Bundle Analyzer',
+                            reportTitles         : ''
+                        ])
+                    }
                 }
             }
-        }
-    }
 
+            stage('tests') {
+                echo 'todo'
+            }
+
+            stage('serve') {
+                parallel backend: {
+                    sh 'scripts/ci.sh backend-serve'
+                    stage('serve stage') {
+                        echo 'todo'
+                    }
+                }, frontend: {
+                    stage('other stage') {
+                        echo 'todo'
+                    }
+                }
+            }
+
+        }
+    } catch (e){
+        throw e
+    } finally {
+        cleanWs cleanWhenFailure: true
+    }
 }
 
 
