@@ -227,11 +227,16 @@ php artisan codex:addon:enable codex/phpdoc
 
                 stage('split'){
                     sh 'git remote set-url origin bitbucket.org:codex-project/develop'
+
+                    copyArtifacts(filter: 'splitsh.db', fingerprintArtifacts: true, projectName: 'codex/develop', target: '.git')
                     sh 'scripts/split.sh'
+
+                    sh 'cp -f .git/splitsh.db splitsh.db'
+                    archiveArtifacts([artifacts: 'splitsh.db', onlyIfSuccessful: true])
+                    sh 'rm -f splitsh.db'
                 }
 
                 stage('report') {
-
                     publishHTML([
                         allowMissing         : false,
                         alwaysLinkToLastBuild: false,
