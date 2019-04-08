@@ -227,8 +227,11 @@ php artisan codex:addon:enable codex/phpdoc
 
                 stage('split'){
                     sh 'git remote set-url origin bitbucket.org:codex-project/develop'
-
-                    copyArtifacts(filter: 'splitsh.db', fingerprintArtifacts: true, projectName: 'codex/develop', target: '.git')
+                    try {
+                        copyArtifacts(filter: 'splitsh.db', fingerprintArtifacts: true, projectName: 'codex/develop', target: '.git')
+                    } catch( e ) {
+                        echo 'Failed to copy "splitsh.db" from latest build. '
+                    }
                     sh 'scripts/split.sh'
 
                     sh 'cp -f .git/splitsh.db splitsh.db'
