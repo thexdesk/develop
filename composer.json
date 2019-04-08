@@ -41,8 +41,7 @@
         "zendframework/zend-config-aggregator-parameters": "1.1.*",
         "zumba/json-serializer": "^2.2",
         "jackiedo/dotenv-editor": "^1.0",
-        "beyondcode/laravel-self-diagnosis": "~1.2",
-        "phpdocumentor/phpdocumentor": "2.9.*"
+        "beyondcode/laravel-self-diagnosis": "~1.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
