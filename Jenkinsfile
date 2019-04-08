@@ -183,6 +183,16 @@ node {
                 parallel backend: {
                     backendInstallDependencies()
                     backendSetEnv()
+                    stage('init') {
+                        sh 'wget http://phpdoc.org/phpDocumentor.phar'
+                    }
+                    generatePhpdocStructure()
+                    stage('cache codex/master') {
+                        sh 'php artisan codex:phpdoc:generate codex/master -f'
+                    }
+                    stage('cache all other') {
+                        sh 'php artisan codex:phpdoc:generate --all'
+                    }
                 }, frontend: {
                     dir('theme') {
                         sh 'yarn'
