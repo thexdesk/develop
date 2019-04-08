@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+import javaposse.jobdsl.dsl.helpers.publisher.CloneWorkspaceContext
 
 
 def backendInstallDependencies() {
@@ -192,6 +193,7 @@ node {
                         sh 'php artisan codex:phpdoc:generate codex/master --force'
                     }
                 }, frontend: {
+                    copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
                     dir('theme') {
                         sh 'yarn'
                     }
@@ -217,6 +219,8 @@ node {
                 }, 'git sync': {
                     sh 'php artisan codex:git:sync blade-extensions-github --force'
                 }
+
+
 //
 //
 //                stage('Ask ') {
@@ -233,6 +237,8 @@ node {
         echo "done"
     }
 }
+
+
 
 // https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
 //// BUILD_NUMBER                The current build number, such as "153"
