@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
 MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-CURRENT_BRANCH="develop"
+BRANCH_NAME=$(git symbolic-ref -q HEAD)
+BRANCH_NAME=${BRANCH_NAME##refs/heads/}
+BRANCH_NAME=${BRANCH_NAME:-HEAD}
+
+
+CURRENT_BRANCH=${BRANCH_NAME}
+
 
 function split()
 {

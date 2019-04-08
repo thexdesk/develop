@@ -225,6 +225,10 @@ php artisan codex:addon:enable codex/phpdoc
                     sh 'vendor/bin/phpunit'
                 }
 
+                stage('split'){
+                    sh 'scripts/split.sh'
+                }
+
                 stage('report') {
 
                     publishHTML([
