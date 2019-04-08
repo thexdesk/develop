@@ -192,9 +192,7 @@ node {
                         sh 'php artisan codex:phpdoc:generate codex/master --force'
                     }
                 }, frontend: {
-                    sh 'mkdir -p theme'
-                    copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
-                    sh 'cp theme.tar.gz theme/theme.tar.gz'
+                    copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme')
                     dir('theme') {
                         sh 'tar -xvzf theme.tar.gz'
                     }
