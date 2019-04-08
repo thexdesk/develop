@@ -198,12 +198,17 @@ node {
                 "BITBUCKET_AUTH_ID=${bitbucketAuthId}",
                 "BITBUCKET_AUTH_SECRET=${bitbucketAuthSecret}",
             ]) {
-                stage('SCM') {
+                stage('checkout') {
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
-                backendInstallDependencies()
-                backendSetEnv()
-                backendInstallAddons()
+                stage('install') {
+                    backendInstallDependencies()
+                    backendSetEnv()
+                    backendInstallAddons()
+                }
+                stage('test'){
+                    sh 'vendor/bin/phpunit'
+                }
 
 //                parallel backend: {
 //                    backendInstallDependencies()
