@@ -194,7 +194,7 @@ node {
                     }
                 }, frontend: {
                     copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
-                    tar - xvzf
+                    sh 'tar - xvzf theme.tar.gz'
 //                    dir('theme') {
 //                        sh 'yarn'
 //                    }

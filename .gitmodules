@@ -1,4 +1,0 @@
-[submodule "theme"]
-	path = theme
-	url = bitbucket.org:codex-project/theme
-	branch = master
