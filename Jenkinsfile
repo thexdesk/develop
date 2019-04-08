@@ -217,14 +217,14 @@ node {
                 }, 'git sync': {
                     sh 'php artisan codex:git:sync blade-extensions-github --force'
                 }
-
-
-                stage('Ask ') {
-                    def INPUT = askStartPreviewServer()
-
-                    echo "START: ${INPUT.START}"
-                    echo "TIMEOUT: ${INPUT.TIMEOUT}"
-                }
+//
+//
+//                stage('Ask ') {
+//                    def INPUT = askStartPreviewServer()
+//
+//                    echo "START: ${INPUT.START}"
+//                    echo "TIMEOUT: ${INPUT.TIMEOUT}"
+//                }
             }
         }
     } catch (e) {
