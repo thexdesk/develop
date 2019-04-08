@@ -395,7 +395,7 @@ class File implements SelfSerializable, Responsable
             return gzuncompress(base64_decode($this->source));
         }
         catch (\Exception $ex) {
-            return $this->source;
+            return is_string($this->source) ? $this->source : '';
         }
     }
 
