@@ -226,6 +226,7 @@ php artisan codex:addon:enable codex/phpdoc
                 }
 
                 stage('split'){
+                    sh 'git remote set-url origin bitbucket.org:codex-project/develop'
                     sh 'scripts/split.sh'
                 }
 
