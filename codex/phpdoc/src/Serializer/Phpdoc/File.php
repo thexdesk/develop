@@ -389,7 +389,7 @@ class File implements SelfSerializable, Responsable
     /**
      * @return string
      */
-    public function getSource(): string
+    public function getSource()
     {
         try {
             return gzuncompress(base64_decode($this->source));
