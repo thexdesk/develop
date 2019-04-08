@@ -194,20 +194,21 @@ node {
                     }
                 }, frontend: {
                     copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
-                    dir('theme') {
-                        sh 'yarn'
-                    }
-                    dir('theme/app/build') {
-                        sh '../../node_modules/.bin/tsc -p tsconfig.json'
-                    }
-                    dir('theme') {
-                        sh 'yarn api build'
-                        sh 'yarn app prod:build'
-                    }
+                    tar - xvzf
+//                    dir('theme') {
+//                        sh 'yarn'
+//                    }
+//                    dir('theme/app/build') {
+//                        sh '../../node_modules/.bin/tsc -p tsconfig.json'
+//                    }
+//                    dir('theme') {
+//                        sh 'yarn api build'
+//                        sh 'yarn app prod:build'
+//                    }
                 }
 
                 mergeFrontendToBackend()
-                backendInstallAddons()
+//                backendInstallAddons()
 
                 parallel 'publish assets': {
                     sh 'rm -rf public/vendor'
