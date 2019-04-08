@@ -195,7 +195,7 @@ node {
                     sh 'mkdir -p theme'
                     dir('theme') {
                         copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
-                        sh 'tar - xvzf theme.tar.gz'
+                        sh 'tar -xvzf theme.tar.gz'
                     }
                 }
 
