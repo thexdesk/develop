@@ -89,6 +89,8 @@ cp -r  theme/vendor/codex_phpdoc      codex/phpdoc/resources/assets
 def backendGeneratePhpdocStructure() {
     stage('phpdoc structure') {
         sh '''
+wget http://phpdoc.org/phpDocumentor.phar
+
 rm -rf phpdoc
 php phpDocumentor.phar \
     -t phpdoc --template=xml \
@@ -113,11 +115,23 @@ php phpDocumentor.phar \
     -i vendor/laravel/framework/src/Illuminate/Http/Resources/Json/Resource.php
 
 cp phpdoc/structure.xml resources/docs/codex/master/structure.xml -f
-
 rm -rf phpdoc
 '''
     }
 }
+
+def backendGeneratePhpdocCache(String packageName = null) {
+    if (packageName) {
+        stage("phpdoc cache ${packageName}") {
+            sh "php artisan codex:phpdoc:generate ${packageName} --force"
+        }
+    } else {
+        stage('phpdoc cache all') {
+            sh 'php artisan codex:phpdoc:generate --all'
+        }
+    }
+}
+
 
 def backendInstallAddons() {
     stage('install addons') {
@@ -134,6 +148,14 @@ php artisan codex:addon:enable codex/phpdoc
 '''
     }
 }
+
+def backendPublishAssets() {
+    stage('publish assets') {
+        sh 'rm -rf public/vendor'
+        sh 'php artisan vendor:publish --tag=public'
+    }
+}
+
 
 def askStartPreviewServer() {
     timeout(time: 10, unit: 'MINUTES') {
@@ -179,37 +201,38 @@ node {
                 stage('SCM') {
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
-
-                parallel backend: {
+                stage('install dependencies') {
                     backendInstallDependencies()
+                }
+                stage('set env') {
                     backendSetEnv()
+                }
+                stage('install addons') {
                     backendInstallAddons()
-                    stage('init') {
-                        sh 'wget http://phpdoc.org/phpDocumentor.phar'
-                    }
-                    backendGeneratePhpdocStructure()
-                    stage('cache codex/master') {
-                        sh 'php artisan codex:phpdoc:generate codex/master --force'
-                    }
-                }, frontend: {
-                    copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme')
-                    dir('theme') {
-                        sh 'tar -xvzf theme.tar.gz'
-                    }
                 }
 
-                mergeFrontendToBackend()
-
-                parallel 'publish assets': {
-                    sh 'rm -rf public/vendor'
-                    sh 'php artisan vendor:publish --tag=public'
-                }, 'generate phpdoc': {
-                    stage('cache all other') {
-                        sh 'php artisan codex:phpdoc:generate --all'
-                    }
-                }, 'git sync': {
-                    sh 'php artisan codex:git:sync blade-extensions-github --force'
-                }
+//                parallel backend: {
+//                    backendInstallDependencies()
+//                    backendSetEnv()
+//                    backendInstallAddons()
+//                }, frontend: {
+//                    copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme')
+//                    dir('theme') {
+//                        sh 'tar -xvzf theme.tar.gz'
+//                    }
+//                }
+//
+//                mergeFrontendToBackend()
+//
+//                parallel 'publish assets': {
+//                    backendPublishAssets()
+//                }, 'generate phpdoc': {
+//
+//                    backendGeneratePhpdocStructure()
+//                    backendGeneratePhpdocCache()
+//                }, 'git sync': {
+//                    sh 'php artisan codex:git:sync blade-extensions-github --force'
+//                }
             }
         }
     } catch (e) {
