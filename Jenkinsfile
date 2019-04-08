@@ -86,7 +86,7 @@ cp -r  theme/app/dist/vendor/codex_phpdoc      codex/phpdoc/resources/assets
     }
 }
 
-def generatePhpdocStructure() {
+def backendGeneratePhpdocStructure() {
     stage('phpdoc structure') {
         sh '''
 rm -rf phpdoc
@@ -187,13 +187,13 @@ node {
                     stage('init') {
                         sh 'wget http://phpdoc.org/phpDocumentor.phar'
                     }
-                    generatePhpdocStructure()
+                    backendGeneratePhpdocStructure()
                     stage('cache codex/master') {
                         sh 'php artisan codex:phpdoc:generate codex/master --force'
                     }
-                    stage('cache all other') {
-                        sh 'php artisan codex:phpdoc:generate --all'
-                    }
+//                    stage('cache all other') {
+//                        sh 'php artisan codex:phpdoc:generate --all'
+//                    }
                 }, frontend: {
                     dir('theme') {
                         sh 'yarn'
@@ -214,13 +214,13 @@ node {
                     sh 'rm -rf public/vendor'
                     sh 'php artisan vendor:publish --tag=public'
                 }, 'generate phpdoc': {
-                    stage('init') {
-                        sh 'wget http://phpdoc.org/phpDocumentor.phar'
-                    }
-                    generatePhpdocStructure()
-                    stage('cache codex/master') {
-                        sh 'php artisan codex:phpdoc:generate codex/master -f'
-                    }
+//                    stage('init') {
+//                        sh 'wget http://phpdoc.org/phpDocumentor.phar'
+//                    }
+//                    backendGeneratePhpdocStructure()
+//                    stage('cache codex/master') {
+//                        sh 'php artisan codex:phpdoc:generate codex/master -f'
+//                    }
                     stage('cache all other') {
                         sh 'php artisan codex:phpdoc:generate --all'
                     }
@@ -236,20 +236,7 @@ node {
     }
 }
 
-
-timeout(time: 10, unit: 'MINUTES') {
-    def INPUT_PARAMS = input([
-        id        : 'StartPreviewServer',
-        message   : 'Start preview server?',
-        ok        : 'Start',
-        parameters: [
-            booleanParam(defaultValue: false, description: '', name: 'START'),
-            string(defaultValue: '20', description: 'Timeout in minutes', name: 'TIMEOUT', trim: true)
-        ]
-    ])
-    echo "START: ${INPUT_PARAMS.START}"
-    echo "TIMEOUT: ${INPUT_PARAMS.TIMEOUT}"
-}
+askStartServer()
 
 
 // https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
