@@ -201,15 +201,9 @@ node {
                 stage('SCM') {
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
-                stage('install dependencies') {
-                    backendInstallDependencies()
-                }
-                stage('set env') {
-                    backendSetEnv()
-                }
-                stage('install addons') {
-                    backendInstallAddons()
-                }
+                backendInstallDependencies()
+                backendSetEnv()
+                backendInstallAddons()
 
 //                parallel backend: {
 //                    backendInstallDependencies()
