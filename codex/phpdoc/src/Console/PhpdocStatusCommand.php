@@ -35,6 +35,7 @@ class PhpdocStatusCommand extends Command
             $shouldGenerate = $phpdoc->shouldGenerate();
             $size           = null;
             $generatedSize  = null;
+            $generatedFiles = null;
             if ($hasXml) {
                 $size = Byte::bytes($revision->getFiles()->size($phpdoc->getXmlPath()))->asMetric()->format('mb/0');
             }

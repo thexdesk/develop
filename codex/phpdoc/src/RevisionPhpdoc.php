@@ -5,6 +5,7 @@ namespace Codex\Phpdoc;
 use Codex\Concerns\HasCallbacks;
 use Codex\Contracts\Revisions\Revision;
 use Codex\Exceptions\MissingFileException;
+use Codex\Filesystem\Tmp;
 use Codex\Phpdoc\Serializer\Manifest;
 use Codex\Phpdoc\Serializer\Phpdoc\File;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
@@ -48,32 +49,44 @@ class RevisionPhpdoc
             return $this;
         }
 
-        $this->ensureGeneratedDirectory();
-        $structure = PhpdocStructure::deserialize($this->getXml(), 'xml');
+
+        $structure = PhpdocStructure::deserialize($this->getXml(), 'xml'); //        $this->ensureGeneratedDirectory();
 
         $this->fire('generate', [ $this, $structure ]);
 
         $this->clear();
 
+        // Generate all files in a tmp dir first, then move the dir once all complete
+        $tmp = new Tmp(md5($this->path));
+        $tmp->initRunFolder(true);
+        $createTmpFile = function ($path) use ($tmp) {
+            $path = path_relative($path, $this->path);
+            $path = str_ensure_right($path, '.php');
+            return $tmp->createFile($path); //->getRealPath();
+        };
+
         // manifest
         $manifest = $structure->getManifest();
         $manifest->setPhpdoc($this);
-        $manifest->serializeToFile($this->getManifestPath());
+
+        $manifest->serializeToFile((string)$createTmpFile($this->getManifestPath()));
         $this->fire('generated.manifest', [ $this, $manifest ]);
 
         // full (unsplitted)
-        $structure->serializeToFile($this->path('full.php'));
+        $structure->serializeToFile((string)$createTmpFile($this->path('full.php')));
         $this->fire('generated.full', [ $this, $manifest ]);
 
         // files
         $files = $structure->getFiles();
         $total = count($files);
         foreach ($files as $i => $file) {
-//            $entity = $file->getEntity();
-            $file->serializeToFile($this->path($file->getHash()));
-            $this->fire('generated.file', [ $this, $file, $i, $total ]);
+            $filePath = $createTmpFile($this->path($file->getHash()));
+            $file->serializeToFile((string)$filePath);
+            $this->fire('generated.file', [ $this, $filePath, $file, $i, $total ]);
         }
         $this->fire('generated.files', [ $this, $files ]);
+
+        $tmp->moveDirTo($this->path);
 
         $this->fire('generated', [ $this, $structure ]);
         return $this;

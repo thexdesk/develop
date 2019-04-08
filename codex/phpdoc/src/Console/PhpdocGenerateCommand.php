@@ -77,12 +77,13 @@ class PhpdocGenerateCommand extends Command
                     })
                 ->on('generated.file', /**
                  * @param \Codex\Phpdoc\RevisionPhpdoc         $phpdoc
-                 * @param \Codex\Phpdoc\Serializer\Phpdoc\File $file
+                 * @param \SplFileObject $file
+                 * @param \Codex\Phpdoc\Serializer\Phpdoc\File $pfile
                  * @param                                      $i
                  * @param                                      $total
                  */
-                    function ($phpdoc, $file, $i, $total) {
-                        $filename = $file->getPath();
+                    function ($phpdoc, $file, $pfile,$i, $total) {
+                        $filename = $pfile->getPath();
                         $this->revBar->setMessage('Generating');
                         $this->revBar->setMessage($filename, 'filename');
                         $this->revBar->advance();

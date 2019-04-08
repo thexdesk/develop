@@ -27,6 +27,7 @@ trait SerializeToFile
      */
     private $fs;
 
+
     public function serializeToFile($filePath): self
     {
         if (null === $this->fs) {

@@ -118,7 +118,21 @@ rm -rf phpdoc
 '''
     }
 }
-
+def backendInstallAddons(){
+    stage('install addons') {
+        sh '''
+# php artisan codex:addon:enable codex/algolia-search
+php artisan codex:addon:enable codex/auth
+# php artisan codex:addon:enable codex/blog
+php artisan codex:addon:enable codex/comments
+php artisan codex:addon:enable codex/filesystems
+php artisan codex:addon:enable codex/git
+php artisan codex:addon:enable codex/packagist
+php artisan codex:addon:enable codex/phpdoc
+# php artisan codex:addon:enable codex/sitemap
+'''
+    }
+}
 def askStartServer() {
     timeout(time: 10, unit: 'MINUTES') {
         def INPUT_PARAMS = input([
@@ -166,11 +180,6 @@ node {
                     sh 'git submodule update --init --remote --force'
                 }
 
-                def INP = askStartServer()
-                echo "START: ${INP.START}"
-                echo "TIMEOUT: ${INP.TIMEOUT}"
-
-
                 parallel backend: {
                     backendInstallDependencies()
                     backendSetEnv()
@@ -188,20 +197,7 @@ node {
                 }
 
                 mergeFrontendToBackend()
-
-                stage('install addons') {
-                    sh '''
-# php artisan codex:addon:enable codex/algolia-search
-php artisan codex:addon:enable codex/auth
-# php artisan codex:addon:enable codex/blog
-php artisan codex:addon:enable codex/comments
-php artisan codex:addon:enable codex/filesystems
-php artisan codex:addon:enable codex/git
-php artisan codex:addon:enable codex/packagist
-php artisan codex:addon:enable codex/phpdoc
-# php artisan codex:addon:enable codex/sitemap
-'''
-                }
+                backendInstallAddons();
 
                 parallel 'publish assets': {
                     sh 'rm -rf public/vendor'
