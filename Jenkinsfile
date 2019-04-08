@@ -201,12 +201,27 @@ node {
                 stage('checkout') {
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
+
                 stage('install') {
-                    backendInstallDependencies()
+                    sh 'rm -rf ./vendor ./codex-addons'
+                    sh 'composer install --no-scripts'
+                    sh 'composer dump-autoload'
+                    sh 'yarn'
                     backendSetEnv()
-                    backendInstallAddons()
+                    sh '''
+# php artisan codex:addon:enable codex/algolia-search
+php artisan codex:addon:enable codex/auth
+# php artisan codex:addon:enable codex/blog
+php artisan codex:addon:enable codex/comments
+php artisan codex:addon:enable codex/filesystems
+php artisan codex:addon:enable codex/git
+php artisan codex:addon:enable codex/packagist
+php artisan codex:addon:enable codex/phpdoc
+# php artisan codex:addon:enable codex/sitemap
+'''
                 }
-                stage('test'){
+
+                stage('test') {
                     sh 'vendor/bin/phpunit'
                 }
 
