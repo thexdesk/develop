@@ -80,9 +80,9 @@ rm -rf  codex/comments/resources/assets
 rm -rf  codex/phpdoc/resources/assets
 
 # Copy the new prod build assets to addons
-cp -r  theme/app/dist/vendor/codex_core        codex/core/resources/assets
-cp -r  theme/app/dist/vendor/codex_comments    codex/comments/resources/assets
-cp -r  theme/app/dist/vendor/codex_phpdoc      codex/phpdoc/resources/assets
+cp -r  theme/vendor/codex_core        codex/core/resources/assets
+cp -r  theme/vendor/codex_comments    codex/comments/resources/assets
+cp -r  theme/vendor/codex_phpdoc      codex/phpdoc/resources/assets
 '''
     }
 }
@@ -193,8 +193,11 @@ node {
                         sh 'php artisan codex:phpdoc:generate codex/master --force'
                     }
                 }, frontend: {
-                    copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
-                    sh 'tar - xvzf theme.tar.gz'
+                    sh 'mkdir theme'
+                    dir('theme') {
+                        copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
+                        sh 'tar - xvzf theme.tar.gz'
+                    }
 //                    dir('theme') {
 //                        sh 'yarn'
 //                    }
