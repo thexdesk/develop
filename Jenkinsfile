@@ -183,12 +183,13 @@ node {
                 parallel backend: {
                     backendInstallDependencies()
                     backendSetEnv()
+                    backendInstallAddons()
                     stage('init') {
                         sh 'wget http://phpdoc.org/phpDocumentor.phar'
                     }
                     generatePhpdocStructure()
                     stage('cache codex/master') {
-                        sh 'php artisan codex:phpdoc:generate codex/master -f'
+                        sh 'php artisan codex:phpdoc:generate codex/master --force'
                     }
                     stage('cache all other') {
                         sh 'php artisan codex:phpdoc:generate --all'
@@ -207,7 +208,7 @@ node {
                 }
 
                 mergeFrontendToBackend()
-                backendInstallAddons();
+                backendInstallAddons()
 
                 parallel 'publish assets': {
                     sh 'rm -rf public/vendor'
