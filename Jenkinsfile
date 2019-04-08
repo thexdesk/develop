@@ -226,6 +226,16 @@ php artisan codex:addon:enable codex/phpdoc
                 }
 
                 stage('report') {
+
+                    publishHTML([
+                        allowMissing         : false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll              : true,
+                        reportDir            : '.codeCoverage/html',
+                        reportFiles          : 'index.html',
+                        reportName           : 'Code Coverage',
+                        reportTitles         : ''
+                    ])
                     step([
                         $class              : 'CloverPublisher',
                         cloverReportDir     : 'reports/clover',
