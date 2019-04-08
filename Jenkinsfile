@@ -1,6 +1,4 @@
 #!/usr/bin/env groovy
-import javaposse.jobdsl.dsl.helpers.publisher.CloneWorkspaceContext
-
 
 def backendInstallDependencies() {
     stage('install dependencies') {
@@ -35,6 +33,7 @@ php artisan dotenv:set-key CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
 '''
     }
 }
+
 
 def mergeFrontendToBackend() {
     stage('merge front/back-end') {
@@ -119,7 +118,8 @@ rm -rf phpdoc
 '''
     }
 }
-def backendInstallAddons(){
+
+def backendInstallAddons() {
     stage('install addons') {
         sh '''
 # php artisan codex:addon:enable codex/algolia-search
@@ -134,6 +134,7 @@ php artisan codex:addon:enable codex/phpdoc
 '''
     }
 }
+
 def askStartPreviewServer() {
     timeout(time: 10, unit: 'MINUTES') {
         def INPUT_PARAMS = input([
@@ -176,9 +177,7 @@ node {
                 "BITBUCKET_AUTH_SECRET=${bitbucketAuthSecret}",
             ]) {
                 stage('SCM') {
-                    checkout scm
-//                    checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,])
-                    sh 'git submodule update --init --remote --force'
+                    checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
 
                 parallel backend: {
@@ -193,26 +192,14 @@ node {
                         sh 'php artisan codex:phpdoc:generate codex/master --force'
                     }
                 }, frontend: {
-                    sh 'mkdir theme'
+                    sh 'mkdir -p theme'
                     dir('theme') {
                         copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme-artifacts')
                         sh 'tar - xvzf theme.tar.gz'
                     }
-//                    dir('theme') {
-//                        sh 'yarn'
-//                    }
-//                    dir('theme/app/build') {
-//                        sh '../../node_modules/.bin/tsc -p tsconfig.json'
-//                    }
-//                    dir('theme') {
-//                        sh 'yarn api build'
-//                        sh 'yarn app prod:build'
-//                    }
                 }
 
-
                 mergeFrontendToBackend()
-//                backendInstallAddons()
 
                 parallel 'publish assets': {
                     sh 'rm -rf public/vendor'
@@ -224,16 +211,6 @@ node {
                 }, 'git sync': {
                     sh 'php artisan codex:git:sync blade-extensions-github --force'
                 }
-
-
-//
-//
-//                stage('Ask ') {
-//                    def INPUT = askStartPreviewServer()
-//
-//                    echo "START: ${INPUT.START}"
-//                    echo "TIMEOUT: ${INPUT.TIMEOUT}"
-//                }
             }
         }
     } catch (e) {
@@ -242,7 +219,6 @@ node {
         echo "done"
     }
 }
-
 
 
 // https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
