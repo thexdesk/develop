@@ -133,7 +133,7 @@ php artisan codex:addon:enable codex/phpdoc
 '''
     }
 }
-def askStartServer() {
+def askStartPreviewServer() {
     timeout(time: 10, unit: 'MINUTES') {
         def INPUT_PARAMS = input([
             id        : 'StartPreviewServer',
@@ -191,9 +191,6 @@ node {
                     stage('cache codex/master') {
                         sh 'php artisan codex:phpdoc:generate codex/master --force'
                     }
-//                    stage('cache all other') {
-//                        sh 'php artisan codex:phpdoc:generate --all'
-//                    }
                 }, frontend: {
                     dir('theme') {
                         sh 'yarn'
@@ -214,18 +211,19 @@ node {
                     sh 'rm -rf public/vendor'
                     sh 'php artisan vendor:publish --tag=public'
                 }, 'generate phpdoc': {
-//                    stage('init') {
-//                        sh 'wget http://phpdoc.org/phpDocumentor.phar'
-//                    }
-//                    backendGeneratePhpdocStructure()
-//                    stage('cache codex/master') {
-//                        sh 'php artisan codex:phpdoc:generate codex/master -f'
-//                    }
                     stage('cache all other') {
                         sh 'php artisan codex:phpdoc:generate --all'
                     }
                 }, 'git sync': {
                     sh 'php artisan codex:git:sync blade-extensions-github --force'
+                }
+
+
+                stage('Ask ') {
+                    def INPUT = askStartPreviewServer()
+
+                    echo "START: ${INPUT.START}"
+                    echo "TIMEOUT: ${INPUT.TIMEOUT}"
                 }
             }
         }
@@ -235,9 +233,6 @@ node {
         echo "done"
     }
 }
-
-askStartServer()
-
 
 // https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
 //// BUILD_NUMBER                The current build number, such as "153"
