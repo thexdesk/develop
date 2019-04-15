@@ -247,6 +247,7 @@ php artisan codex:addon:enable codex/phpdoc
                         unhealthyTarget     : [methodCoverage: 50, conditionalCoverage: 50, statementCoverage: 50], // optional, default is none
                         failingTarget       : [methodCoverage: 0, conditionalCoverage: 0, statementCoverage: 0]     // optional, default is none
                     ])
+                    junit('.codeCoverage/junit.xml')
                 }
 //                parallel backend: {
 //                    backendInstallDependencies()
