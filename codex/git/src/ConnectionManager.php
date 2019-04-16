@@ -11,6 +11,7 @@
 
 namespace Codex\Git;
 
+use Codex\Git\Drivers\DriverInterface;
 use GrahamCampbell\Manager\AbstractManager;
 
 /**
@@ -18,6 +19,7 @@ use GrahamCampbell\Manager\AbstractManager;
  *
  * @author  Robin Radic
  * @mixin \Codex\Git\Drivers\GithubDriver
+ * @method DriverInterface connection(string $name = null)
  */
 class ConnectionManager extends AbstractManager implements Contracts\ConnectionManager
 {

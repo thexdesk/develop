@@ -4,8 +4,10 @@ namespace App;
 
 use App\Attr\AttrDemo;
 use Codex\Commands\CompileBladeString;
+use Codex\Git\Config\GitConfig;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Symfony\Component\VarDumper\VarDumper;
 
 class TestCommand extends Command
 {
@@ -14,6 +16,27 @@ class TestCommand extends Command
     protected $signature = 'test';
 
     public function handle()
+    {
+        $def = config('codex-git.def.git',[]);
+
+        $codex    = codex();
+        $project  = $codex->getProject('codex');
+        $project->set('git', $def);
+        $git = new GitConfig($project, app('codex.git.manager'));
+
+        $remotes = $git->getRemotes();
+        $syncs = $git->getSyncs();
+        $links = $git->getLinks();
+//        $revision = $project->getRevision('master');
+//        $document = $revision->getDocument('writing-reference/markdown-extensions');
+//        $content  = $document->render();
+        $data = collect(compact('remotes','syncs','links'));
+        $array = $git->toArray();
+        VarDumper::dump($git->toArray());
+
+        return;
+    }
+    public function handle3()
     {
         $codex    = codex();
         $project  = $codex->getProject('codex');
@@ -39,7 +62,7 @@ class TestCommand extends Command
         return $val;
     }
 
-    public function handle3()
+    public function hand4le3()
     {
         $asdf = $this->dispatch(new CompileBladeString(<<<'EOF'
 @if($a === 'n')

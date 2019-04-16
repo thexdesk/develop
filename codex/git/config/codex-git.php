@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'connections'            => [
+    'connections' => [
         'bitbucket_oauth'    => [
             'driver' => 'bitbucket',
             'method' => 'token',
@@ -37,6 +37,82 @@ return [
             'method' => 'jwt',
         ],
     ],
+
+    'def' => [
+        'git' => [
+            'enabled' => false,
+            'remotes' => [
+                'main' => [
+                    // The connection key to use (as defined at the top of this file)
+                    'connection' => '',
+                    // The owner (organisation or username)
+                    'owner'      => '',
+                    // The repository name
+                    'repository' => '',
+                    // repository url
+                    'url'        => 'https://bitbucket.org/%s/%s',
+
+                    'document_url' => 'https://bitbucket.org/%s/%s/src/%s',
+
+                    'webhook' => [
+                        // Enable webhook support. Configure it in Github/Bitbucket.
+                        // This will automaticly sync your project every time a 'push' event occurs
+                        // This also requires you to configure queues properly (by using for example, redis with supervisord)
+                        'enabled' => false,
+
+                        // Github webhooks allow a 'secret' that has to match. Put it in here
+                        'secret'  => null,
+                    ],
+                ],
+            ],
+            'syncs'    => [
+                [
+                    'remote'   => 'main',
+                    // Branches to sync
+                    'branches' => [], //[ 'master']
+                    // Version (tags) constraints makes one able to define ranges and whatnot
+                    // * || 1.x || >=2.5.0 || 5.0.0 - 7.2.3'
+                    'versions' => false,
+
+                    'skip' => [
+                        'patch_versions' => false,
+                        'minor_versions' => false,
+                    ],
+
+                    'copy' => [
+                        'docs',
+                        'docs/**/*.md',
+                        'docs/index.md' => 'index.md',
+                        'README.md'     => 'index.md',
+                    ],
+                ],
+            ],
+            'links'   => [
+                'enabled' => false,
+                'remote'  => 'main',
+                'map'     => [
+                    'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
+//                'edit_page:push' => 'layout.toolbar.right', // push attribute to array (default)
+//                'edit_page:set'  => 'layout.toolbar.right', // set attribute
+//                'edit_page'      => false, // disable button
+                ],
+                'links'   => [
+                    'edit_page' => [
+                        'component'  => 'c-button',
+                        'borderless' => true,
+                        'target'     => '_black',
+                        'type'       => 'toolbar',
+                        /** git.connection_config is a get modifier in Document @see \Codex\Git\GitAddonServiceProvider */
+//                        'icon'       => '%remote.connection.driver%',
+                        'children'   => 'Edit Page',
+                        /** git_links.document_url is a get modifier in Document @see \Codex\Git\GitAddonServiceProvider */
+//                        'href'       => '%remote.document_url%',
+                    ],
+                ],
+            ],
+        ],
+    ],
+
     'default_project_config' => [
         'branching' => [
             'production'  => 'master',
