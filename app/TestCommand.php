@@ -18,7 +18,8 @@ class TestCommand extends Command
         $codex    = codex();
         $project  = $codex->getProject('codex');
         $revision = $project->getRevision('master');
-        $document = $revision->getDocument('getting-started/core-concepts');
+//        $document = $revision->getDocument('getting-started/core-concepts');
+        $document = $revision->getDocument('writing-reference/markdown-extensions');
         $content  = $document->render();
         $this->line($content);
     }

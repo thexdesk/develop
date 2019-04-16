@@ -50,10 +50,18 @@ This is *red*{style="color: red"}.
 Markup is based on [php markdown extra](https://michelf.ca/projects/php-markdown/extra/#abbr) definition, but without multiline support:
 
 *[HTML]: Hyper Text Markup Language
+
 *[W3C]:  World Wide Web Consortium
+
 The HTML specification
 is maintained by the W3C.
 
+```markdown
+*[HTML]: Hyper Text Markup Language
+*[W3C]:  World Wide Web Consortium
+The HTML specification
+is maintained by the W3C.
+```
 
 ### Footnote
 
