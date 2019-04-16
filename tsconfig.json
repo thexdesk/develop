@@ -1,11 +1,15 @@
 {
+    "compileOnSave": false,
     "compilerOptions": {
         "module": "esnext",
         "target": "es5",
+        "outDir": ".tmp/out",
+        "sourceMap": true,
         "lib": ["dom","es5","es6","es7"],
         "allowSyntheticDefaultImports": true,
         "emitDecoratorMetadata": true,
         "jsx": "react",
+        "allowJs": true,
         "baseUrl": ".",
         "paths": {
 
@@ -15,7 +19,8 @@
         "codex/core/resources/assets/types/*",
         "codex/core/resources/assets/types/**/*",
         "resources/js/*",
-        "resources/js/**/*"
+        "resources/js/**/*",
+        "test.ts"
     ],
     "exclude": [
         "node_modules"

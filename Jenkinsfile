@@ -249,28 +249,6 @@ php artisan codex:addon:enable codex/phpdoc
                     ])
                     junit('.codeCoverage/junit.xml')
                 }
-//                parallel backend: {
-//                    backendInstallDependencies()
-//                    backendSetEnv()
-//                    backendInstallAddons()
-//                }, frontend: {
-//                    copyArtifacts(filter: 'theme.tar.gz', fingerprintArtifacts: true, projectName: 'codex/theme', target: 'theme')
-//                    dir('theme') {
-//                        sh 'tar -xvzf theme.tar.gz'
-//                    }
-//                }
-//
-//                mergeFrontendToBackend()
-//
-//                parallel 'publish assets': {
-//                    backendPublishAssets()
-//                }, 'generate phpdoc': {
-//
-//                    backendGeneratePhpdocStructure()
-//                    backendGeneratePhpdocCache()
-//                }, 'git sync': {
-//                    sh 'php artisan codex:git:sync blade-extensions-github --force'
-//                }
             }
         }
     } catch (e) {
