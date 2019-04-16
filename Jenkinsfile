@@ -2,7 +2,7 @@
 //noinspection GroovyAssignabilityCheck
 node {
     try {
-        def common = load "${WORKSPACE}@script/scripts/common.groovy"
+        def common = load "${pwd()}/scripts/common.groovy"
 
         common._withCredentials {
             common._withEnv {
