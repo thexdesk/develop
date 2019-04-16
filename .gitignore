@@ -20,3 +20,4 @@ yarn-error.log
 /job-dsl-seed
 /theme
 /.codeCoverage
+/jenkins-shared

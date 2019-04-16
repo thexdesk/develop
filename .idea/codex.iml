@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/comments/src" isTestSource="false" packagePrefix="Codex\Comments" />
       <sourceFolder url="file://$MODULE_DIR$/jenkins" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scripts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jenkins-shared/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
