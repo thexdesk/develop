@@ -199,7 +199,12 @@ node {
                 "BITBUCKET_AUTH_SECRET=${bitbucketAuthSecret}",
             ]) {
                 stage('checkout') {
-                    checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
+                    checkout([
+                        $class: 'GitSCM',
+                        branches: scm.branches,
+                        extensions: scm.extensions + [[$class: 'WipeWorkspace']],
+                        userRemoteConfigs: scm.userRemoteConfigs,
+                    ])
                 }
 
                 stage('install') {
@@ -226,6 +231,7 @@ php artisan codex:addon:enable codex/phpdoc
                 }
 
                 stage('split') {
+                    sh 'git remote set-url origin bitbucket.org:codex-project/develop'
                     sh 'scripts/split.sh'
                 }
 
