@@ -11,7 +11,6 @@ node {
                     def scmVars = common._checkout()
                     currentBuild.displayName = "build(${env.BUILD_NUMBER}) branch(${scmVars.GIT_BRANCH}) ref(${scmVars.GIT_COMMIT})"
                 }
-
                 stage('install') {
                     common.installDependencies()
                     common.setDotEnv()

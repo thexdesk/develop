@@ -116,6 +116,22 @@ rm -rf phpdoc
 '''
 }
 
+class Artisan {
+    final static enableAddons(){
+        sh '''
+# php artisan codex:addon:enable codex/algolia-search
+php artisan codex:addon:enable codex/auth
+# php artisan codex:addon:enable codex/blog
+php artisan codex:addon:enable codex/comments
+php artisan codex:addon:enable codex/filesystems
+php artisan codex:addon:enable codex/git
+php artisan codex:addon:enable codex/packagist
+php artisan codex:addon:enable codex/phpdoc
+# php artisan codex:addon:enable codex/sitemap
+'''
+    }
+}
+
 def laravelPhpdocCache(String packageName = null) {
     if (packageName) {
         sh "php artisan codex:phpdoc:generate ${packageName} --force"
