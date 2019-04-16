@@ -1,9 +1,8 @@
 #!/usr/bin/env groovy
-
-def common = load "scripts/common.groovy"
 //noinspection GroovyAssignabilityCheck
 node {
     try {
+        def common = load "${WORKSPACE}/scripts/common.groovy"
         common._withCredentials {
             common._withEnv {
                 stage('checkout') {

@@ -3,7 +3,7 @@
 //noinspection GroovyAssignabilityCheck
 node {
     try {
-        def common = load "scripts/common.groovy"
+        def common = load "${WORKSPACE}/scripts/common.groovy"
         common._withCredentials {
             common._withEnv {
                 stage('checkout') {
