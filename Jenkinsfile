@@ -10,7 +10,8 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-                codex.checkout()
+                def s = codex.checkout()
+                print(s)
             }
 
             stage('install') {
