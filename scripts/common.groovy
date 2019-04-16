@@ -8,7 +8,7 @@ def installDependencies() {
     sh 'yarn'
 }
 
-def setDotEnv(String url) {
+def setDotEnv(String url = 'http://localhost') {
     sh '''
 cp -f .env.jenkins .env
 php artisan key:generate
