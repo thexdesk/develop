@@ -15,7 +15,6 @@ node {
                 stage('install') {
                     common.installDependencies()
                     common.setDotEnv()
-                    Artisan.enableAddons()
                     common.laravelEnableAddons()
                 }
 
