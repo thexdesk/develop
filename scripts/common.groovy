@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 
+
 def installDependencies() {
     sh 'rm -rf ./vendor ./codex-addons'
     sh 'composer install --no-scripts'

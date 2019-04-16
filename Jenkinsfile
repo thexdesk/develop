@@ -2,6 +2,7 @@
 //noinspection GroovyAssignabilityCheck
 node {
     try {
+        checkout scm
         def common = load "${pwd()}/scripts/common.groovy"
 
         common._withCredentials {
