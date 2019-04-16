@@ -8,26 +8,24 @@ node {
         def codex = new Codex(this)
         print(codex)
 
-        codex.useCredentials {
-            codex.useEnv {
-                stage('checkout') {
-                    codex.checkout()
-                }
+        codex.useEnv {
+            stage('checkout') {
+                codex.checkout()
+            }
 
-                stage('install') {
-                    codex.backend
-                        .install()
-                        .setDotEnv()
-                        .enableAddons()
-                }
+            stage('install') {
+                codex.backend
+                    .install()
+                    .setDotEnv()
+                    .enableAddons()
+            }
 
-                stage('test') {
-                    codex.backend.runTests()
-                }
+            stage('test') {
+                codex.backend.runTests()
+            }
 
-                stage('report') {
-                    codex.backend.reportTests()
-                }
+            stage('report') {
+                codex.backend.reportTests()
             }
         }
     } catch (e) {
