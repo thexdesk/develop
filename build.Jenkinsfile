@@ -17,9 +17,15 @@ node {
                     common.enableAddons()
                 }
 
-                stage('test') {
-                    common.runTests()
-                    common.reportTests()
+                stage('build') {
+                    common.copyThemeToPackages()
+                }
+
+                stage('commit') {
+                    sh 'git add -A'
+                    sh 'git commit -m "copy new assets"'
+                    sh 'git push --all'
+                    sh 'scripts/split.sh'
                 }
             }
         }
