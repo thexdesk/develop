@@ -15,7 +15,7 @@ node {
                 stage('install') {
                     common.installDependencies()
                     common.setDotEnv()
-                    common.enableAddons()
+                    common.laravelEnableAddons()
                 }
 
                 stage('build') {
