@@ -9,3 +9,9 @@ Contains:
 - Codex PHP packages
 - Development files
 - Intellij configuration
+
+
+Branching:
+
+- `codex/develop-ci` Tests
+- `codex/develop-snapshot` Unit tests

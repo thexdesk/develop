@@ -230,11 +230,6 @@ php artisan codex:addon:enable codex/phpdoc
                     sh 'vendor/bin/phpunit'
                 }
 
-                stage('split') {
-                    sh 'git remote set-url origin bitbucket.org:codex-project/develop'
-                    sh 'scripts/split.sh'
-                }
-
                 stage('report') {
                     publishHTML([
                         allowMissing         : false,
