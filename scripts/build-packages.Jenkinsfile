@@ -13,22 +13,15 @@ node {
                 codex.checkout()
             }
 
-            stage('install') {
-                backend
-                    .install()
-                    .setDotEnv()
-                    .enableAddons()
+            stage('copy theme assets') {
+                backend.copyThemeToPackages()
             }
 
-            stage('test') {
-                backend.runTests()
+            if (codex.inCommitMessage('[ci:deploy-packages]')) {
+                stage('commit changes') {
+                    backend.commitThemeToPackages()
+                }
             }
-
-            stage('report') {
-                backend.reportTests()
-            }
-
-
         }
     } catch (e) {
         throw e

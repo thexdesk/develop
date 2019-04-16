@@ -13,21 +13,6 @@ node {
                 codex.checkout()
             }
 
-            stage('install') {
-                backend
-                    .install()
-                    .setDotEnv()
-                    .enableAddons()
-            }
-
-            stage('test') {
-                backend.runTests()
-            }
-
-            stage('report') {
-                backend.reportTests()
-            }
-
 
         }
     } catch (e) {
