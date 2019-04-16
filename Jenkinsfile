@@ -28,6 +28,18 @@ node {
             stage('report') {
                 codex.backend.reportTests()
             }
+
+            if(codex.inCommitMessage('[ci:build]')) {
+                stage('build') {
+                    codex.backend.copyThemeToPackages()
+                }
+
+                stage('commit') {
+                    codex.backend.commitThemeToPackages()
+                }
+            }
+
+
         }
     } catch (e) {
         throw e
