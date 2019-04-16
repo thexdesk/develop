@@ -1,34 +1,32 @@
 #!/usr/bin/env groovy
-import nl.radic.Radic
+import nl.radic.Codex
 
+print(this)
 //noinspection GroovyAssignabilityCheck
 node {
     try {
-        def r = new Radic()
-        print(r)
+        def codex = new Codex(this)
+        print(codex)
 
-        checkout scm
-//        def common = load "${pwd()}/scripts/common.groovy"
-
-        common._withCredentials {
-            common._withEnv {
+        codex.useCredentials {
+            codex.useEnv {
                 stage('checkout') {
-                    def scmVars = common._checkout()
-                    currentBuild.displayName = "build(${env.BUILD_NUMBER}) branch(${scmVars.GIT_BRANCH}) ref(${scmVars.GIT_COMMIT})"
+                    codex.checkout()
                 }
 
                 stage('install') {
-                    common.installDependencies()
-                    common.setDotEnv()
-                    common.laravelEnableAddons()
+                    codex.backend
+                        .install()
+                        .setDotEnv()
+                        .enableAddons()
                 }
 
                 stage('test') {
-                    common.runTests()
+                    codex.backend.runTests()
                 }
 
                 stage('report') {
-                    common.reportTests()
+                    codex.backend.reportTests()
                 }
             }
         }
