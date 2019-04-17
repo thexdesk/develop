@@ -11,7 +11,11 @@ node {
         codex.useEnv {
             stage('checkout') {
                 codex.checkout()
+                echo codex.scmVars.GIT_BRANCH.toString()
+                echo codex.scmVars.GIT_BRANCH.toString().endsWith('develop').toString()
             }
+
+
 
             stage('install') {
                 backend
