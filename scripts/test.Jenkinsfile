@@ -1,7 +1,5 @@
 #!/usr/bin/env groovy
 import nl.radic.Radic
-import nl.radic.semver.SemanticVersion
-import nl.radic.semver.VersionList
 
 //noinspection GroovyAssignabilityCheck
 node {
@@ -13,8 +11,6 @@ node {
         codex.useEnv {
             stage('checkout') {
                 radic.git.checkout()
-                telegramSend "start ${currentBuild.getFullProjectName()} ${currentBuild.result}"
-
             }
 
             stage('install') {
@@ -34,17 +30,11 @@ node {
 
             if (radic.git.getScmBranch().endsWith('develop')) {
                 stage('merge master') {
-                    radic.git.setRemote('develop')
+                    radic.git.setRemote("${codex.remoteSshUrl}/develop.git")
                     radic.git.mergeInto('master')
                 }
             }
-
-            stage('notify') {
-                telegramSend "${currentBuild.getFullProjectName()} ${currentBuild.result}"
-            }
-
         }
-
     } catch (e) {
         throw e
     } finally {
