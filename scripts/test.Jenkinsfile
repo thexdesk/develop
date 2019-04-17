@@ -36,11 +36,12 @@ node {
                     radic.git.mergeInto('master')
                 }
             }
+            telegramSend "${currentBuild.name} ${currentBuild.result}"
         }
 
     } catch (e) {
         throw e
     } finally {
-        telegramSend "${currentBuild.baseName} ${currentBuild.result}"
+        echo 'done'
     }
 }
