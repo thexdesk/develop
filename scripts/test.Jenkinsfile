@@ -12,7 +12,7 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-                codex.checkout()
+                radic.git.checkout()
             }
 
             stage('install') {
