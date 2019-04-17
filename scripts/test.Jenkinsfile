@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 import nl.radic.Radic
+import nl.radic.semver.SemanticVersion
+import nl.radic.semver.VersionList
 
 //noinspection GroovyAssignabilityCheck
 node {
@@ -28,17 +30,10 @@ node {
                 backend.reportTests()
             }
 
-            if(codex.scmVars.GIT_BRANCH.toString().endsWith('develop')){
-                stage('merge master'){
-                    sh 'git remote set-url origin git@bitbucket.org:codex-project/develop.git'
-                    sh 'git fetch origin master'
-                    sh 'git pull origin master'
-                    sh 'git checkout origin/master -b master'
-                    sh 'git checkout develop'
-                    sh 'git merge master'
-                    sh 'git checkout master'
-                    sh 'git merge develop'
-                    sh 'git push origin master'
+            if (radic.git.getScmBranch().endsWith('develop')) {
+                stage('merge master') {
+                    radic.git.setRemote('develop')
+                    radic.git.mergeInto('master')
                 }
             }
         }
