@@ -24,7 +24,7 @@ node {
                 }
 
                 stage('deploy packages') {
-                    def buildJob = radic.build('packages.radic.ninja')
+                    def buildJob = radic.build('packages.radic.ninja/deploy')
                 }
             }
         }
