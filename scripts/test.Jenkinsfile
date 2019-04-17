@@ -11,8 +11,6 @@ node {
         codex.useEnv {
             stage('checkout') {
                 codex.checkout()
-                echo codex.scmVars.GIT_BRANCH.toString()
-                echo codex.scmVars.GIT_BRANCH.toString().endsWith('develop').toString()
             }
 
             stage('install') {
@@ -32,6 +30,7 @@ node {
 
             if(codex.scmVars.GIT_BRANCH.toString().endsWith('develop')){
                 stage('merge master'){
+                    sh 'git remote set-url origin git@bitbucket.org:codex-project/develop.git'
                     sh 'git fetch origin master'
                     sh 'git pull origin master'
                     sh 'git merge master'
