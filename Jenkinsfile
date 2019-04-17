@@ -27,9 +27,8 @@ node {
             stage('report') {
                 backend.reportTests()
             }
-
-
         }
+
     } catch (e) {
         throw e
     } finally {
