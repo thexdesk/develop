@@ -13,8 +13,9 @@ node {
         codex.useEnv {
             stage('checkout') {
                 radic.git.checkout()
+                telegramSend "start ${currentBuild.getFullProjectName()} ${currentBuild.result}"
+
             }
-            telegramSend "start ${currentBuild.getFullProjectName()} ${currentBuild.result}"
 
             stage('install') {
                 backend
