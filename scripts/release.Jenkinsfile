@@ -14,17 +14,11 @@ node {
                 codex.checkout()
             }
 
-            stage('copy theme assets') {
-                backend.copyThemeToPackages()
-            }
 
             if (env.DEPLOY_PACKAGES) {
-                stage('commit changes') {
-                    backend.commitThemeToPackages()
-                }
 
                 stage('deploy packages') {
-                    def buildJob = radic.build(job: 'packages.radic.ninja')
+                    def buildJob = radic.build('packages.radic.ninja')
                 }
             }
         }
