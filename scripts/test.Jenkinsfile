@@ -11,6 +11,8 @@ node {
         codex.useEnv {
             stage('checkout') {
                 codex.checkout()
+                echo codex.scmVars.GIT_BRANCH.toString()
+                echo codex.scmVars.GIT_BRANCH.toString().endsWith('develop').toString()
             }
 
             stage('install') {
@@ -28,8 +30,18 @@ node {
                 backend.reportTests()
             }
 
-
+            if(codex.scmVars.GIT_BRANCH.toString().endsWith('develop')){
+                stage('merge master'){
+                    sh 'git fetch origin master'
+                    sh 'git pull origin master'
+                    sh 'git merge master'
+                    sh 'git checkout master'
+                    sh 'git merge develop'
+                    sh 'git push origin master'
+                }
+            }
         }
+
     } catch (e) {
         throw e
     } finally {
