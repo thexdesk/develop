@@ -33,6 +33,8 @@ node {
                     sh 'git remote set-url origin git@bitbucket.org:codex-project/develop.git'
                     sh 'git fetch origin master'
                     sh 'git pull origin master'
+                    sh 'git checkout origin/master -b master'
+                    sh 'git checkout develop'
                     sh 'git merge master'
                     sh 'git checkout master'
                     sh 'git merge develop'
