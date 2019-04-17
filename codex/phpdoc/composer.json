@@ -73,7 +73,7 @@
             ]
         },
         "branch-alias": {
-            "dev-master": "2.x-dev"
+            "dev-master": "2.999.x-dev"
         }
     }
 }

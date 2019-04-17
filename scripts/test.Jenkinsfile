@@ -38,7 +38,10 @@ node {
                     radic.git.mergeInto('master')
                 }
             }
-            telegramSend "${currentBuild.getFullProjectName()} ${currentBuild.result}"
+
+            stage('notify') {
+                telegramSend "${currentBuild.getFullProjectName()} ${currentBuild.result}"
+            }
 
         }
 
