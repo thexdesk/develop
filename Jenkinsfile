@@ -27,6 +27,17 @@ node {
             stage('report') {
                 backend.reportTests()
             }
+
+            if(codex.scmVars.GIT_BRANCH == 'develop'){
+                stage('merge master'){
+                    sh 'git fetch origin master'
+                    sh 'git pull origin master'
+                    sh 'git merge master'
+                    sh 'git checkout master'
+                    sh 'git merge develop'
+                    sh 'git push origin master'
+                }
+            }
         }
 
     } catch (e) {
