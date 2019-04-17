@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+
 import nl.radic.Radic
 
 //noinspection GroovyAssignabilityCheck
@@ -17,9 +18,13 @@ node {
                 backend.copyThemeToPackages()
             }
 
-            if (codex.inCommitMessage('[ci:deploy-packages]')) {
+            if (env.DEPLOY_PACKAGES) {
                 stage('commit changes') {
                     backend.commitThemeToPackages()
+                }
+
+                stage('deploy packages') {
+                    def buildJob = radic.build(job: 'packages.radic.ninja')
                 }
             }
         }
