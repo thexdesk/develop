@@ -28,7 +28,7 @@ node {
                 backend.reportTests()
             }
 
-            if(codex.scmVars.GIT_BRANCH == 'develop'){
+            if(codex.scmVars.GIT_BRANCH.toString().endsWith('develop')){
                 stage('merge master'){
                     sh 'git fetch origin master'
                     sh 'git pull origin master'
