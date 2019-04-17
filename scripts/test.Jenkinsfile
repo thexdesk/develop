@@ -14,6 +14,7 @@ node {
             stage('checkout') {
                 radic.git.checkout()
             }
+            telegramSend "start ${currentBuild.getFullProjectName()} ${currentBuild.result}"
 
             stage('install') {
                 backend
@@ -36,7 +37,8 @@ node {
                     radic.git.mergeInto('master')
                 }
             }
-            telegramSend "${currentBuild.name} ${currentBuild.result}"
+            telegramSend "${currentBuild.getFullProjectName()} ${currentBuild.result}"
+
         }
 
     } catch (e) {

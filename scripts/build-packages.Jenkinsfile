@@ -28,7 +28,6 @@ node {
                 }
             }
 
-            telegramSend "${currentBuild.name} ${currentBuild.result}"
         }
 
     } catch (e) {
