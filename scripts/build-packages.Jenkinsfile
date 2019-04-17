@@ -31,6 +31,7 @@ node {
     } catch (e) {
         throw e
     } finally {
-        echo "done"
+        telegramSend "${currentBuild.baseName} ${currentBuild.result}"
+
     }
 }
