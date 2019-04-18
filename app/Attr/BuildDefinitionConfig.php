@@ -1,14 +1,13 @@
 <?php
 
 
-namespace App;
+namespace App\Attr;
 
 
-use App\Attr\Definition;
+use App\Attr\Config\ArrayNodeDefinition;
+use App\Attr\Config\NodeBuilder;
+use App\Attr\Config\TreeBuilder;
 use App\Attr\Type as T;
-use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
-use Symfony\Component\Config\Definition\Builder\NodeBuilder;
-use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
 class BuildDefinitionConfig
 {
@@ -80,15 +79,11 @@ class BuildDefinitionConfig
                 return $definition->type->is(T::RECURSE);
             })->first();
 
-            $node = $this->getArrayRecursiveDefinition($definition->name, $recurseChild->name, function(NodeBuilder $builder, ArrayNodeDefinition $node) use ($children){
+            $node = $this->getArrayRecursiveDefinition($definition->name, $recurseChild->name, function (NodeBuilder $builder, ArrayNodeDefinition $node) use ($children) {
                 $children->filter(function (Definition $definition) {
                     return false === $definition->type->is(T::RECURSE);
-                })->each(function (Definition $definition) use ($builder,$node) {
-                    $child = static::node($definition->name);
-                    $this->handleChild($definition, $child);
-
-                    $builder->append($child->getChildNodeDefinitions()[$definition->name]);
-//                    $builder->append($child);
+                })->each(function (Definition $definition) use ($builder, $node) {
+                    $this->handleChild($definition, $node);
                 });
             });
 
@@ -116,7 +111,12 @@ class BuildDefinitionConfig
             }
         }
         if (isset($definition->default)) {
-            $node->defaultValue($definition->default);
+            if ($node->getNode()) {
+                $node->defaultValue($definition->default);
+            }
+            if (method_exists($node, 'addDefaultsIfNotSet')) {
+                $node->addDefaultsIfNotSet();
+            }
         }
         if ($definition->required) {
             $node->isRequired();

@@ -41,7 +41,7 @@ class DefinitionRegistry
      *
      * @param string $name
      *
-     * @return \App\DefinitionGroup
+     * @return \App\Attr\DefinitionGroup
      */
     public function resolveGroup(string $name)
     {

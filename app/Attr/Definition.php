@@ -26,6 +26,9 @@ use Illuminate\Support\Fluent;
  * @method static Type FLOAT()
  * @method static Type ARRAY()
  * @method static Type MIXED()
+ * @method static Type RECURSIVE()
+ * @method static Type RECURSE()
+ * @method static Type MAP()
  *
  */
 class Definition extends Fluent
@@ -36,6 +39,9 @@ class Definition extends Fluent
     const FLOAT = Type::FLOAT;
     const ARRAY = Type::ARRAY;
     const MIXED = Type::MIXED;
+    const RECURSIVE = Type::RECURSIVE;
+    const RECURSE = Type::RECURSE;
+    const MAP = Type::MAP;
 
     public static function __callStatic($name, $arguments)
     {
@@ -44,15 +50,24 @@ class Definition extends Fluent
         }
     }
 
-    public function __construct($parent = null)
+    public function __construct($parent = null, array $attributes = [])
     {
         $children = new Collection();
-        parent::__construct(array_merge(compact('parent', 'children'), []));
+        parent::__construct(array_merge(compact('parent', 'children'), $attributes));
         $this
             ->parent($parent)
             ->name('root')
             ->type('array')
             ->api('Mixed');
+    }
+
+    public function clone()
+    {
+        $clone           = new static($this->parent, $this->attributes);
+        $clone->children = $this->children->map(function (Definition $child) {
+            return $child->clone();
+        });
+        return $clone;
     }
 
     /** @param Type|string $value */
@@ -95,17 +110,17 @@ class Definition extends Fluent
     public function child($name, $type = null, $default = null, $apiType = null)
     {
         if ( ! $this->children->has($name)) {
-            $this->children->put($name, with(new static($this))->name($name));
+            $this->children->put($name, with(new self($this))->name($name));
         }
         /** @var static $child */
         $child = $this->children->get($name);
-        if ($type) {
+        if ($type !== null) {
             $child->type($type);
         }
-        if ($default) {
+        if ($default !== null) {
             $child->default($default);
         }
-        if ($apiType) {
+        if ($apiType !== null) {
             $child->api($apiType);
         }
         return $child;

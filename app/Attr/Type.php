@@ -29,7 +29,7 @@ class Type extends Enum
         self::INT       => 'Int',
         self::FLOAT     => 'Int',
         self::ARRAY     => '[Assoc]',
-        self::MAP       => '[Assoc]',
+        self::MAP       => 'Assoc',
         self::MIXED     => 'Mixed',
         self::RECURSIVE => '[Assoc]',
         self::RECURSE   => '[Assoc]',
@@ -82,6 +82,12 @@ class Type extends Enum
      */
     public static function getApiType($type)
     {
+        if(!$type instanceof static){
+            $type = static::get($type);
+            if($type->is(static::ARRAY)){
+
+            }
+        }
         if ($type instanceof static) {
             $type = $type->getValue();
         }

@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Attr\AttrDemo;
+use App\Attr\BuildDefinitionConfig;
 use App\Attr\Definition;
 use App\Attr\DefinitionRegistry;
 use App\Attr\Type as T;
@@ -10,9 +11,6 @@ use Codex\Commands\CompileBladeString;
 use Codex\Git\Config\GitConfig;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
-use Symfony\Component\Config\Definition\Builder\NodeBuilder;
-use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\VarDumper\VarDumper;
 
@@ -25,10 +23,14 @@ class TestCommand extends Command
 
     public function handle()
     {
-        $config             = config('codex', []);
-        $config[ 'layout' ] = codex()->get('codex/master::index')->attr('layout', []);
-        $registry           = new DefinitionRegistry();
-        $codex              = $registry->codex;
+        $config[ 'codex' ]                = config('codex', []);
+        $document                         = codex()->get('codex/master::index');
+        $config[ 'codex' ][ 'layout' ]    = $document->attr('layout', []);
+        $config[ 'codex' ][ 'projects' ]  = $document->getAttributes();
+        $config[ 'codex' ][ 'revisions' ] = $document->getAttributes();
+        $config[ 'codex' ][ 'documents' ] = $document->getAttributes();
+        $registry                         = new DefinitionRegistry();
+        $codex                            = $registry->codex;
         $codex->child('changes', T::ARRAY(T::STRING)); //->default([]);
         $cache = $codex->child('cache', T::MAP)->api('CacheConfig', [ 'new' ]);
 
@@ -121,14 +123,14 @@ class TestCommand extends Command
         $layoutHeader->child('show_right_toggle', T::BOOL, false);
 
         $layoutFooter = $addLayoutVerticalSide('footer', 'LayoutFooter');
-//        $layoutFooter->children->put('menu', $menu);
+        $layoutFooter->children->put('menu', $menu);
         $layoutFooter->child('text', T::STRING);
 
         $layoutLeft = $addLayoutHorizontalSide('left', 'LayoutLeft');
         $layoutLeft->children->put('menu', $menu);
 
         $layoutRight = $addLayoutHorizontalSide('right', 'LayoutRight');
-//        $layoutRight->children->put('menu', $menu);
+        $layoutRight->children->put('menu', $menu);
 
 
         $layoutMiddle = $addLayoutPart('middle', 'LayoutMiddle');
@@ -140,29 +142,79 @@ class TestCommand extends Command
         $layoutContent->child('margin', T::MIXED, 0);
 
         $layoutToolbar = $addLayoutPart('toolbar', 'LayoutToolbar');
-//        $layoutToolbar->child('breadcrumbs', 'dictionaryPrototype', '[Assoc]');
-//        $layoutToolbar->child('left', 'dictionaryPrototype', '[Assoc]'); //->setApiType('LayoutToolbarItem', [ 'new'])->setDefault([]);
-//        $layoutToolbar->child('right', 'dictionaryPrototype', '[Assoc]'); //->setApiType('LayoutToolbarItem', [ 'new'])->setDefault([]);
+        $layoutToolbar->child('breadcrumbs', T::ARRAY(T::MAP));
+        $layoutToolbar->child('left', T::ARRAY(T::MAP));
+        $layoutToolbar->child('right', T::ARRAY(T::MAP));
 
-//        $layout           = $codex->child('layout', T::MAP);
-//        $layoutHeader     = $layout->child('header', T::MAP);
-//        $layoutHeaderMenu = $layoutHeader->child('menu', T::ARRAY(T::MAP), []);
+        $projects = $registry->projects;
+        $projects->mergeKeys([]);
+        $projects->inheritKeys([ 'processors', 'layout', 'cache' ]);
+        $projects->child('inherits', T::ARRAY(T::STRING), []);
+        $projects->child('changes', T::MAP, []);
+        $projects->child('key', T::STRING, null, 'ID!');
+        $projects->child('path', T::STRING)->noApi();
+        $projects->child('display_name', T::STRING, '');
+        $projects->child('description', T::STRING, '');
+        $projects->child('disk', T::STRING, null);
+        $projects->child('view', T::STRING, 'codex::document');
 
-        //endregion
+        $meta = $projects->child('meta', T::MAP)->api('Meta', [ 'new' ]);
+        $meta->child('icon', T::STRING, 'fa-book');
+        $meta->child('color', T::STRING, 'deep-orange');
+        $meta->child('license', T::STRING, 'MIT');
+
+        $meta->child('defaultTitle', T::STRING);
+        $meta->child('title', T::STRING);
+        $meta->child('titleTemplate', T::STRING);
+        $meta->child('titleAttributes', T::MAP);
+        $meta->child('htmlAttributes', T::MAP);
+        $meta->child('bodyAttributes', T::MAP);
+        $metaLink   = $meta->child('link', T::MAP, []);
+        $metameta   = $meta->child('meta', T::MAP, []);
+        $metaScript = $meta->child('script', T::ARRAY(T::STRING), []);
+        $metaStyle  = $meta->child('style', T::ARRAY(T::STRING), []);
+
+        $projects->child('default_revision', T::STRING, 'master');
+        $projects->child('allow_revision_php_config', T::STRING, false);
+        $projects->child('allowed_revision_config_files', T::ARRAY(T::STRING));
+
+        $projects->child('default_document', T::STRING, 'index');
+        $projects->child('document_extensions', T::ARRAY(T::STRING));
 
 
+        $revisions = $registry->revisions;
+        $revisions->mergeKeys([]);
+        $revisions->inheritKeys([ 'processors', 'meta', 'layout', 'view', 'cache', 'default_document', 'document_extensions' ]);
+        $revisions->child('inherits', T::ARRAY(T::STRING), []);
+        $revisions->child('changes', T::MAP, []);
+        $revisions->child('key', T::STRING, null, 'ID!');
 
-//        $rootBuilder = new TreeBuilder('root');
-//        $rootNode    = $rootBuilder->getRootNode();
-//        $rootNode->ignoreExtraKeys(true);
-//        $rootNodeBuilder = $rootNode->addDefaultsIfNotSet()->children();
+        $documents = $registry->documents;
+        $documents->mergeKeys([]);
+        $documents->inheritKeys([ 'processors', 'meta', 'layout', 'view', 'cache' ]);
+        $documents->child('inherits', T::ARRAY(T::STRING), []);
+        $documents->child('changes', T::MAP, []);
+        $documents->child('key', T::STRING, null, 'ID!');
+        $documents->child('path', T::STRING);
+        $documents->child('extension', T::STRING);
+        $documents->child('content', T::STRING);
+        $documents->child('last_modified', T::INT);
+        $documents->child('title', T::STRING, '');
+        $documents->child('subtitle', T::STRING, '');
+        $documents->child('description', T::STRING, '');
+        $documents->child('scripts', T::ARRAY(T::STRING), []);
+        $documents->child('styles', T::ARRAY(T::STRING), []);
+        $documents->child('html', T::ARRAY(T::STRING), []);
 
-        $tree = $this->dispatch(new BuildDefinitionConfig($registry->getGroup('codex')));
+        $clone1 = $codex->clone();
 
-        data_set($config, 'processors.enabled', [ 'phpdoc' => true ]);
-        $data   = with(new Processor())->process($tree, [ 'codex' => $config ]);
-        $header = data_get($data, 'layout.header', []);
-        VarDumper::dump($header);
+//        data_set($config, 'processors.enabled', [ 'phpdoc' => true ]);
+        $data[ 'codex' ]     = with(new Processor())->process($this->dispatch(new BuildDefinitionConfig($registry->getGroup('codex'))), $config);
+//        $data[ 'projects' ]  = with(new Processor())->process($this->dispatch(new BuildDefinitionConfig($registry->getGroup('projects'))), $config);
+//        $data[ 'revisions' ] = with(new Processor())->process($this->dispatch(new BuildDefinitionConfig($registry->getGroup('revisions'))), $config);
+        $data[ 'documents' ] = with(new Processor())->process($this->dispatch(new BuildDefinitionConfig($registry->getGroup('documents'))), []);
+//        $header = data_get($data, 'layout.header', []);
+        VarDumper::dump($data);
         return;
     }
 
@@ -215,7 +267,7 @@ class TestCommand extends Command
 //            } elseif ($definition->type->is(T::MAP)) {
 //                if ($definition->hasChildren()) {
 //                    $node = $parentNode->children()->arrayNode($definition->name);
-//                    $node->addDefaultsIfNotSet();
+//                    $node->childDefaultsIfNotSet();
 //                    $node->ignoreExtraKeys();
 //                } else {
 //                    $node = $parentNode->children()->arrayNode($definition->name)->arrayPrototype();
