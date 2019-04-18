@@ -21,14 +21,40 @@
 #git push --delete phpdoc 0.1.0
 #git push --delete sitemap 0.1.0
 
-git push --delete algolia-search develop
-git push --delete auth develop
-git push --delete blog develop
-git push --delete comments develop
-git push --delete composer-plugin develop
-git push --delete core develop
-git push --delete filesystems develop
-git push --delete git develop
-git push --delete packagist develop
-git push --delete phpdoc develop
-git push --delete sitemap
+git remote remove algolia-search || true
+git remote remove auth || true
+git remote remove blog || true
+git remote remove comments || true
+git remote remove composer-plugin || true
+git remote remove core || true
+git remote remove filesystems || true
+git remote remove git || true
+git remote remove packagist || true
+git remote remove phpdoc || true
+git remote remove sitemap || true
+
+git remote add algolia-search github.com:codex-project/algolia-search || true
+git remote add auth github.com:codex-project/auth || true
+git remote add blog github.com:codex-project/blog || true
+git remote add comments github.com:codex-project/comments || true
+git remote add composer-plugin github.com:codex-project/composer-plugin || true
+git remote add core github.com:codex-project/core || true
+git remote add filesystems github.com:codex-project/filesystems || true
+git remote add git github.com:codex-project/git || true
+git remote add packagist github.com:codex-project/packagist || true
+git remote add phpdoc github.com:codex-project/phpdoc || true
+git remote add sitemap github.com:codex-project/sitemap || true
+
+
+
+git push --delete algolia-search "master}"
+git push --delete auth "master}"
+git push --delete blog "master}"
+git push --delete comments "master}"
+git push --delete composer-plugin "master}"
+git push --delete core "master}"
+git push --delete filesystems "master}"
+git push --delete git "master}"
+git push --delete packagist "master}"
+git push --delete phpdoc "master}"
+git push --delete sitemap "master}"

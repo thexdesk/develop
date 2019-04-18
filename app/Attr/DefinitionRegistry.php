@@ -23,7 +23,7 @@ class DefinitionRegistry
 
     public function addGroup(string $name)
     {
-        return $this->groups[ $name ] = with(new DefinitionGroup())->name($name);
+        return $this->groups[ $name ] = with(new DefinitionGroup())->name($name)->type(Type::MAP);
     }
 
     public function keys()

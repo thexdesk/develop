@@ -6,5 +6,4 @@ use Codex\Addons\Addon;
 
 class PackagistAddon extends Addon
 {
-
 }

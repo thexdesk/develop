@@ -138,6 +138,11 @@ class Definition extends Fluent
         return $this->children->has($name);
     }
 
+    public function hasChildren()
+    {
+        return $this->children->isNotEmpty();
+    }
+
     public function createConfigNode($value = null)
     {
         return new ConfigNode($this, $value);
