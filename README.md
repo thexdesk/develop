@@ -16,6 +16,8 @@ Branching:
 
 CI/CD:
 
+[CI/CD Server Dashboard](https://jenkins.radic.ninja/blue/pipelines)
+
 | Job/Status     | Description    |
 |------|-----|
 | [![Build Status](https://jenkins.radic.ninja/buildStatus/icon?subject=codex%2Fdevelop%2Ftest&job=codex%2Fdevelop%2Ftest&style=flat-square)](https://jenkins.radic.ninja/blue/organizations/jenkins/codex%2Fdevelop%2Ftest) | Unit tests |
