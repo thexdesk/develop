@@ -2,11 +2,12 @@
 
 namespace App;
 
-use Codex\Attributes\Commands\BuildDefinitionConfig;
-use Codex\Attributes\Commands\BuildDefinitionSchema;
 use Codex\Attributes\AttributeDefinition;
 use Codex\Attributes\AttributeDefinitionRegistry;
+use Codex\Attributes\Commands\BuildDefinitionConfig;
+use Codex\Attributes\Commands\BuildDefinitionSchema;
 use Codex\Git\Config\GitConfig;
+use Http\Adapter\Guzzle6\Client as GuzzleClient;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Symfony\Component\Config\Definition\Processor;
@@ -27,13 +28,37 @@ class TestCommand extends Command
 //        $document = $revision->getDocument('getting-started/core-concepts');
         $document = $revision->getDocument('writing-reference/markdown-extensions');
         $content  = $document->render();
-        $data = [
-            'project' => $project->getAttributes(),
-            'revision' => $revision->getAttributes(),
-            'document' => $document->getAttributes(),
+        $data     = [
+            'project'  => $project->toArray('*'),
+            'revision' => $revision->toArray('*'),
+            'document' => $document->toArray('*'),
         ];
 
+        $description = $document[ 'description' ];
+
+        $result = $codex->getApi()->executeQuery(/** @lang GraphQL */ <<<'EOT'
+query {
+    document(projectKey: "codex", revisionKey: "master", documentKey: "index") {
+        changes @assoc
+    }
+}
+EOT
+            , null, []);
         $this->line($content);
+    }
+
+    public function hand4324234le()
+    {
+
+        $builder = new \Github\HttpClient\Builder(new GuzzleClient());
+        $client  = new \Github\Client($builder, 'v3');
+        $client->authenticate(env('CODEX_GIT_GITHUB_TOKEN'), \Github\Client::AUTH_HTTP_TOKEN);
+//        $client->authenticate(env('CODEX_GIT_GITHUB_USERNAME'), env('CODEX_GIT_GITHUB_PASSWORD'), \Github\Client::AUTH_HTTP_PASSWORD);
+        $me = $client->me()->show();
+//        $auths = $client->authorizations()->all();
+
+        $team = $client->organizations()->show('codex-project');
+        return;
     }
 
 

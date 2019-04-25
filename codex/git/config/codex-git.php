@@ -38,10 +38,17 @@ return [
         ],
     ],
 
-    'def' => [
-        'git' => [
+    'default_project_config' => [
+        'branching' => [
+            'production'  => 'master',
+            'development' => 'develop',
+        ],
+
+
+        'git2' => [
             'enabled' => false,
             'remotes' => [
+                /*
                 'main' => [
                     // The connection key to use (as defined at the top of this file)
                     'connection' => '',
@@ -64,15 +71,17 @@ return [
                         'secret'  => null,
                     ],
                 ],
+                */
             ],
-            'syncs'    => [
+            'syncs'   => [
+                /*
                 [
                     'remote'   => 'main',
                     // Branches to sync
                     'branches' => [], //[ 'master']
                     // Version (tags) constraints makes one able to define ranges and whatnot
                     // * || 1.x || >=2.5.0 || 5.0.0 - 7.2.3'
-                    'versions' => false,
+                    'versions' => null,
 
                     'skip' => [
                         'patch_versions' => false,
@@ -81,11 +90,12 @@ return [
 
                     'copy' => [
                         'docs',
-                        'docs/**/*.md',
+                        'docs/ ** /*.md',
                         'docs/index.md' => 'index.md',
                         'README.md'     => 'index.md',
                     ],
                 ],
+                */
             ],
             'links'   => [
                 'enabled' => false,
@@ -111,14 +121,8 @@ return [
                 ],
             ],
         ],
-    ],
 
-    'default_project_config' => [
-        'branching' => [
-            'production'  => 'master',
-            'development' => 'develop',
-        ],
-        'git'       => [
+        'git'      => [
             'enabled'    => false,
             // The connection key to use (as defined at the top of this file)
             'connection' => '',

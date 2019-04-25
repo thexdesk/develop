@@ -25,20 +25,6 @@ class HttpServiceProvider extends ServiceProvider
     protected $namespace = 'Codex\Git\Http\Controllers';
 
     /**
-     * Define your route model bindings, pattern filters, etc.
-     *
-     * @param  \Illuminate\Routing\Router $router
-     *
-     * @return void
-     */
-    public function boot(Router $router)
-    {
-        //
-
-        parent::boot($router);
-    }
-
-    /**
      * Define the routes for the application.
      *
      * @param  \Illuminate\Routing\Router $router

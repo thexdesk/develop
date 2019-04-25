@@ -2,6 +2,7 @@
 
 namespace Codex\Git\Http\Controllers;
 
+use Codex\Git\Commands\SyncGitProject;
 use Codex\Projects\Project;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Response;
@@ -82,14 +83,15 @@ class WebhookController extends Controller
     protected function applyToGitProjects($remote, \Closure $closure)
     {
         $codex = codex();
-        foreach ($codex->projects->all() as $project) {
-            $name = $project->getName();
+        foreach ($codex->getProjects()->all() as $project) {
+            /** @var \Codex\Contracts\Projects\Project $project */
+            $key = $project->getKey();
 
-            if ( ! $project['git.enabled'] || ! $project['git.webhook.enabled'] || $project['git.connection'] !== $remote) {
+            if ( ! $project[ 'git.enabled' ] || ! $project[ 'git.webhook.enabled' ] || $project[ 'git.connection' ] !== $remote) {
                 continue;
             }
 
-            $projectRepo = $project->config('git.owner') . '/' . $project->config('git.repository');
+            $projectRepo = $project->attr('git.owner') . '/' . $project->attr('git.repository');
             $hookRepo    = call_user_func_array($closure, [ $project ]);
 
             if ($hookRepo instanceof Response) {
@@ -99,8 +101,8 @@ class WebhookController extends Controller
                 continue;
             }
 
-            $this->dispatch(new SyncJob($name));
-            $this->codex->log('info', 'codex.git.webhook.success', [ 'remote' => $remote, 'name' => $name ]);
+            $this->dispatch(new SyncGitProject($key));
+            $codex->log('info', 'codex.git.webhook.success', [ 'remote' => $remote, 'name' => $key ]);
 
             return response('', 200);
         }

@@ -3,7 +3,6 @@
 namespace Codex\Git;
 
 use Codex\Addons\AddonServiceProvider;
-use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Documents\Document;
 use Codex\Git\Listeners\ResolveBranchTypeDefaultRevision;
 use Codex\Git\Support\GitRevisionCollectionMixin;
@@ -19,9 +18,10 @@ class GitAddonServiceProvider extends AddonServiceProvider
     public $config = [ 'codex-git' ];
 
     public $mapConfig = [
+        'codex-git.def'                              => 'codex.projects.def',
         'codex-git.default_project_config.branching' => 'codex.projects.branching',
         'codex-git.default_project_config.git'       => 'codex.projects.git',
-        'codex-git.default_project_config.git_links'       => 'codex.projects.git_links',
+        'codex-git.default_project_config.git_links' => 'codex.projects.git_links',
     ];
 
     public $listen = [
@@ -35,12 +35,23 @@ class GitAddonServiceProvider extends AddonServiceProvider
     ];
 
     public $extensions = [
-        GitAttributeExtension::class
+        GitAttributeExtension::class,
+    ];
+
+    public $providers = [
+        Http\HttpServiceProvider::class,
     ];
 
     public function register()
     {
-        Hooks::register(['project.resolved','revision.resolved','document.resolved'], function (\Codex\Contracts\Models\Model $project) {
+        $this->registerHooks();
+        $this->registerMacros();
+        $this->registerManager();
+    }
+
+    protected function registerHooks()
+    {
+        Hooks::register([ 'project.resolved', 'revision.resolved', 'document.resolved' ], function (\Codex\Contracts\Models\Model $project) {
             $project->addGetMutator('git.connection_config', function () {
                 /** @var \Codex\Contracts\Projects\Project $this */
                 return $this->git()->getManager()->getConnectionConfig($this->git()->getConnection());
@@ -70,8 +81,6 @@ class GitAddonServiceProvider extends AddonServiceProvider
                 return $document->git()->getDocumentUrl($document->getPath());
             });
         });
-        $this->registerMacros();
-        $this->registerManager();
     }
 
     protected function registerMacros()
