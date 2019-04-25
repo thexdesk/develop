@@ -21,6 +21,10 @@ class FilesystemsAddonServiceProvider extends AddonServiceProvider
 {
     public $config = [ 'codex-filesystems' ];
 
+    public $extensions = [
+        FilesystemsAttributeExtension::class
+    ];
+
     public function register()
     {
         $this->registerFilesystemAdapters();

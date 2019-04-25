@@ -3,7 +3,7 @@
 namespace Codex\Comments\Drivers;
 
 use Codex\Comments\Contracts\CommentDriver as CommentDriverContract;
-use Codex\Mergable\Model;
+use Codex\Models\Model;
 
 abstract class CommentDriver implements CommentDriverContract
 {

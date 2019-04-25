@@ -5,7 +5,6 @@
 namespace Codex\Auth;
 
 use Codex\Addons\AddonServiceProvider;
-use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Codex;
 use Codex\Exceptions\NotFoundException;
 use Codex\Hooks;
@@ -26,6 +25,7 @@ class AuthAddonServiceProvider extends AddonServiceProvider
 
     public $extensions = [
         Api\AuthSchemaExtension::class,
+        AuthAttributeExtension::class,
     ];
 
     public function register()
@@ -34,25 +34,6 @@ class AuthAddonServiceProvider extends AddonServiceProvider
         $this->registerClassMacros();
         $this->restrictApiResults();
         $this->addAccountMenuItem();
-    }
-
-    public function boot(AttributeDefinitionRegistry $registry)
-    {
-
-        $urls = $registry->codex->getChild('urls');
-        $urls->add('auth_login_callback', 'string');
-        $urls->add('auth_login', 'string');
-        $urls->add('auth_logout', 'string');
-
-
-        $projects = $registry->projects;
-        $auth     = $projects->add('auth', 'dictionary')->setApiType('AuthConfig', [ 'new' ]);
-        $auth->add('enabled', 'boolean');
-        $with = $auth->add('with', 'array.arrayPrototype')->noApi();
-        $with->add('service', 'string');
-        $with->add('groups', 'array.scalarPrototype');
-        $with->add('emails', 'array.scalarPrototype');
-        $with->add('usernames', 'array.scalarPrototype');
     }
 
     protected function registerRouteMapConfig()

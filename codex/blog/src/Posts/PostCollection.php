@@ -2,7 +2,7 @@
 
 namespace Codex\Blog\Posts;
 
-use Codex\Mergable\ModelCollection;
+use Codex\Models\ModelCollection;
 
 class PostCollection extends ModelCollection
 {

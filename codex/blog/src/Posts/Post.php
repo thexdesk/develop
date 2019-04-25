@@ -2,10 +2,10 @@
 
 namespace Codex\Blog\Posts;
 
-use Codex\Contracts\Mergable\ChildInterface;
+use Codex\Contracts\Models\ChildInterface;
 use Codex\Documents\Document;
 use Codex\Blog\Contracts\Posts\Post as PostContract;
-use Codex\Mergable\Model;
+use Codex\Models\Model;
 use Codex\Concerns;
 
 class Post extends Model  implements PostContract,ChildInterface
@@ -48,7 +48,7 @@ class Post extends Model  implements PostContract,ChildInterface
         $this->contentResolver     = function (Document $document) {
             return $document->getFiles()->get($document->getPath());
         };
-        $registry                  = $this->getCodex()->getRegistry()->resolveGroup('documents');
+        $registry                  = $this->getCodex()->getRegistry()->resolve('documents');
         $attributes[ 'extension' ] = path_get_extension($attributes[ 'path' ]);
         $attributes                = Hooks::waterfall('document.initialize', $attributes, [ $registry, $this ]);
         $this->initialize($attributes, $registry);
@@ -194,7 +194,7 @@ class Post extends Model  implements PostContract,ChildInterface
     }
 
     /**
-     * @return \Codex\Mergable\Model
+     * @return \Codex\Models\Model
      */
     public function getParent()
     {

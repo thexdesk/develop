@@ -5,12 +5,12 @@ namespace Codex\Blog;
 use Codex\Blog\Categories\CategoryCollection;
 use Codex\Blog\Contracts\Blog as BlogContract;
 use Codex\Concerns;
-use Codex\Contracts\Mergable\ChildInterface;
-use Codex\Contracts\Mergable\ParentInterface;
+use Codex\Contracts\Models\ChildInterface;
+use Codex\Contracts\Models\ParentInterface;
 use Codex\Hooks;
-use Codex\Mergable\Concerns\HasChildren;
-use Codex\Mergable\Concerns\HasParent;
-use Codex\Mergable\Model;
+use Codex\Models\Concerns\HasChildren;
+use Codex\Models\Concerns\HasParent;
+use Codex\Models\Model;
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Filesystem\Filesystem;
 
@@ -45,7 +45,7 @@ class Blog extends Model implements BlogContract,ParentInterface, ChildInterface
         $this->setParent($this->getCodex());
         $this->setChildren($categories->setParent($this));
 
-        $registry   = $this->getCodex()->getRegistry()->resolveGroup('blog');
+        $registry   = $this->getCodex()->getRegistry()->resolve('blog');
         $attributes = $config->get('codex-blog', []);
         $attributes = Hooks::waterfall('blog.initialize', $attributes, [ $registry, $this ]);
         $this->initialize($attributes, $registry);

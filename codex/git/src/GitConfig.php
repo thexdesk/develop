@@ -13,7 +13,7 @@ namespace Codex\Git;
 
 use Codex\Contracts\Documents\Document;
 use Codex\Git\Connection\Ref;
-use Codex\Mergable\Model;
+use Codex\Models\Model;
 use vierbergenlars\SemVer\expression;
 
 class GitConfig

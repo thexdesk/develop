@@ -2,7 +2,7 @@
 
 namespace Codex\Blog\Categories;
 
-use Codex\Mergable\ModelCollection;
+use Codex\Models\ModelCollection;
 
 class CategoryCollection extends ModelCollection
 {

@@ -3,11 +3,11 @@
 namespace Codex\Blog\Categories;
 
 use Codex\Blog\Contracts\Blog;
-use Codex\Contracts\Mergable\ParentInterface;
+use Codex\Contracts\Models\ParentInterface;
 use Codex\Hooks;
-use Codex\Mergable\Concerns\HasChildren;
-use Codex\Mergable\Concerns\HasParent;
-use Codex\Mergable\Model;
+use Codex\Models\Concerns\HasChildren;
+use Codex\Models\Concerns\HasParent;
+use Codex\Models\Model;
 use Codex\Concerns;
 use Codex\Blog\Contracts\Categories\Category as CategoryContract;
 
@@ -33,7 +33,7 @@ class Category extends Model implements CategoryContract, ParentInterface
     public function __construct(array $attributes, Blog $blog)
     {
         $this->setParent($blog);
-        $registry                  = $this->getCodex()->getRegistry()->resolveGroup('categories');
+        $registry                  = $this->getCodex()->getRegistry()->resolve('categories');
         $attributes[ 'extension' ] = path_get_extension($attributes[ 'path' ]);
         $attributes                = Hooks::waterfall('blog.category.initialize', $attributes, [ $registry, $this ]);
         $this->initialize($attributes, $registry);

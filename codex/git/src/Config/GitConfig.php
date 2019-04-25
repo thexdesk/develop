@@ -5,7 +5,7 @@ namespace Codex\Git\Config;
 
 
 use ArrayAccess;
-use Codex\Contracts\Mergable\Model;
+use Codex\Contracts\Models\Model;
 use Codex\Git\Contracts\ConnectionManager;
 use Codex\Support\HasDotArray;
 use Illuminate\Contracts\Support\Arrayable;
@@ -16,7 +16,7 @@ class GitConfig implements ArrayAccess, Arrayable
         toArray as protected _toArray;
     }
 
-    /** @var \Codex\Contracts\Mergable\Model */
+    /** @var \Codex\Contracts\Models\Model */
     protected $model;
 
     /** @var \Codex\Git\Contracts\ConnectionManager */

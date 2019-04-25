@@ -25,7 +25,7 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @Serializer\XmlRoot("class")
  */
-class ClassFile  implements SelfSerializable
+class ClassFile implements SelfSerializable
 {
     use SerializesSelf,
         NamedSpacedElement,
@@ -35,7 +35,7 @@ class ClassFile  implements SelfSerializable
      * @var string[]
      * @Serializer\Type("LaravelCollection<string>")
      * @Serializer\XmlList(inline=true, entry="implements")
-     * @Attr(type="array.scalarPrototype", array=true)
+     * @Attr(type="array", array=true)
      */
     private $implements;
 

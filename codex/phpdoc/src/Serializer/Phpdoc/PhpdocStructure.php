@@ -28,7 +28,7 @@ use JMS\Serializer\Annotation as Serializer;
  * @author  Robin Radic
  *
  * @Serializer\XmlRoot("project")
- * @Attr("phpdoc", type="dictionary", new=true)
+ * @Attr("phpdoc", type="map", new=true)
  *
  */
 class PhpdocStructure implements SelfSerializable, Responsable

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Attr;
+namespace Codex\Attr;
 
-use App\Attr\Type as T;
+use Codex\Attr\Type as T;
 
 class AttrDemo
 {
@@ -24,7 +24,7 @@ class AttrDemo
         $codex->child('default_project', T::STRING)->api('ID')->required();
 
         foreach ($registry->keys() as $name) {
-            $group     = $registry->getGroup($name);
+            $group     = $registry->get($name);
             $processor = new ConfigProcessor();
             $config    = $processor->process($group, $config);
         }

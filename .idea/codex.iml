@@ -10,7 +10,6 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/git/src" isTestSource="false" packagePrefix="Codex\Git" />
       <sourceFolder url="file://$MODULE_DIR$/codex/composer-plugin/src" isTestSource="false" packagePrefix="Codex\ComposerPlugin" />
       <sourceFolder url="file://$MODULE_DIR$/codex/auth/src" isTestSource="false" packagePrefix="Codex\Auth" />
-      <sourceFolder url="file://$MODULE_DIR$/codex/semver/src" isTestSource="false" packagePrefix="Codex\Semver" />
       <sourceFolder url="file://$MODULE_DIR$/codex/phpdoc/src" isTestSource="false" packagePrefix="Codex\Phpdoc" />
       <sourceFolder url="file://$MODULE_DIR$/codex/algolia-search/src" isTestSource="false" packagePrefix="Codex\AlgoliaSearch" />
       <sourceFolder url="file://$MODULE_DIR$/codex/sitemap/src" isTestSource="false" packagePrefix="Codex\Sitemap" />
@@ -19,6 +18,7 @@
       <sourceFolder url="file://$MODULE_DIR$/codex/comments/src" isTestSource="false" packagePrefix="Codex\Comments" />
       <sourceFolder url="file://$MODULE_DIR$/jenkins-shared/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scripts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/codex/packagist/src" isTestSource="false" packagePrefix="Codex\Packagist" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />

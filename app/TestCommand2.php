@@ -79,7 +79,7 @@ EOT
     public function han123123dle()
     {
         $config   = config('codex', []);
-        $registry = new DefinitionRegistry();
+        $registry = new AttributeDefinitionRegistry();
         $codex    = $registry->codex;
         $codex->child('changes', 'array', []);
         $cache = $codex->child('cache', 'array')->api('CacheConfig', [ 'new' ]);
@@ -92,7 +92,7 @@ EOT
         $codex->child('default_project', 'string')->api('ID');
 
         foreach ($registry->keys() as $name) {
-            $group     = $registry->getGroup($name);
+            $group     = $registry->get($name);
             $processor = new ConfigProcessor();
             $config    = $processor->process($group, $config);
         }

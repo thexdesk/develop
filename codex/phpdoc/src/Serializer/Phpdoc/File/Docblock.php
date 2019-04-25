@@ -11,7 +11,6 @@
 
 namespace Codex\Phpdoc\Serializer\Phpdoc\File;
 
-use Codex\Documents\Processors\ParserProcessorExtension;
 use Codex\Phpdoc\Contracts\Serializer\SelfSerializable;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Codex\Phpdoc\Serializer\Annotations\Markdown;

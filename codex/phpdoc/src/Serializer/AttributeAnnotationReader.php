@@ -2,7 +2,7 @@
 
 namespace Codex\Phpdoc\Serializer;
 
-use Codex\Attributes\AttributeDefinitionParent;
+use Codex\Attributes\AttributeDefinition;
 use Codex\Phpdoc\Serializer\Annotations\Attr;
 use Doctrine\Common\Annotations\Reader;
 
@@ -16,7 +16,7 @@ class AttributeAnnotationReader
         $this->reader = $reader;
     }
 
-    public function handleClassAnnotations($class, AttributeDefinitionParent $parentDefinition = null)
+    public function handleClassAnnotations($class, AttributeDefinition $parentDefinition = null)
     {
         if (is_object($class)) {
             $class = get_class($class);
@@ -39,7 +39,7 @@ class AttributeAnnotationReader
                 if ($propertyAnnotation instanceof Attr) {
                     $propertyAnnotation->setTargetProperty($reflectionProperty);
                     $propertyDefinition = $propertyAnnotation->getAttributeDefinition();
-                    $parentDefinition->addChild($propertyDefinition);
+                    $parentDefinition->child($propertyDefinition);
                     if ($propertyAnnotation->hasChildType()) {
                         $childType = $propertyAnnotation->getChildType();
                         if (class_exists($childType)) {

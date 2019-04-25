@@ -71,6 +71,7 @@
     <inspection_tool class="JSMethodCanBeStatic" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="OneTimeUseVariablesInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="PhpComposerExtensionStubsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpFullyQualifiedNameUsageInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="PhpUnhandledExceptionInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="SecurityAdvisoriesInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="optionConfiguration">

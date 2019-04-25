@@ -6,7 +6,7 @@ use Codex\Blog\Categories\Events\ResolvedCategory;
 use Codex\Blog\Contracts\Blog;
 use Codex\Blog\Contracts\Categories\Category;
 use Codex\Hooks;
-use Codex\Mergable\Commands\MergeAttributes;
+use Codex\Models\Commands\MergeAttributes;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Symfony\Component\Yaml\Yaml;

@@ -57,6 +57,7 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
     public $extensions = [
         Api\PhpdocSchemaExtension::class,
         Documents\PhpdocProcessorExtension::class,
+        PhpdocAttributeExtension::class
     ];
 
     public $providers = [
@@ -117,26 +118,4 @@ class PhpdocAddonServiceProvider extends AddonServiceProvider
         });
         $this->app->alias(\JMS\Serializer\Serializer::class, 'codex.serializer');
     }
-
-    public function boot(AttributeDefinitionRegistry $registry, AttributeAnnotationReader $reader)
-    {
-        $registry->codex->getChild('urls')->add('phpdoc', 'string');
-        $phpdoc = $registry->addGroup('phpdoc');
-        $phpdoc->addChild($reader->handleClassAnnotations(PhpdocStructure::class));
-
-        $projects = $registry->projects;
-        $phpdoc   = $projects->add('phpdoc', 'dictionary')->setApiType('PhpdocConfig', [ 'new' ]);
-        $phpdoc->add('enabled', 'boolean'); // => false,
-        $phpdoc->add('document_slug', 'string'); // => 'phpdoc',
-        $phpdoc->add('title', 'string'); // => 'Api Documentation',
-        $phpdoc->add('xml_path', 'string'); // => 'structure.xml',
-        $phpdoc->add('doc_path', 'string'); // => '_phpdoc',
-        $phpdoc->add('doc_disabled_processors', 'array.scalarPrototype'); // => [ 'header', 'toc' ], //'button',
-        $phpdoc->add('view', 'string'); // => 'codex-phpdoc::document',
-        $phpdoc->add('layout', 'dictionary', 'Layout'); // => require __DIR__ . '/codex-phpdoc.layout.php',
-        $phpdoc->add('default_class', 'string'); // => null,
-
-        $registry->revisions->addInheritKeys('phpdoc');
-    }
-
 }

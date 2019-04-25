@@ -3,7 +3,7 @@
 namespace Codex\Phpdoc\Serializer\Annotations;
 
 use Codex\Attributes\AttributeDefinition;
-use Codex\Attributes\AttributeDefinitionType;
+use Codex\Attributes\AttributeType as T;
 use Doctrine\Common\Annotations\Annotation\Target;
 use phpDocumentor\Reflection\DocBlock;
 use phpDocumentor\Reflection\DocBlockFactory;
@@ -22,7 +22,7 @@ class Attr
     /** @var string */
     private $name;
 
-    /** @var string */
+    /** @var string|T */
     private $type;
 
     /** @var string */
@@ -130,7 +130,7 @@ class Attr
             if ($type instanceof Object_) {
                 if ($this->apiType === null) {
                     $this->apiType = ($type->getFqsen() ? $type->getFqsen()->getName() : null);
-                    $this->type    = 'array.arrayPrototype';
+                    $this->type    = T::ARRAY(T::MAP);
                 }
                 $type = (string)$type->getFqsen();
             }
@@ -138,15 +138,15 @@ class Attr
         }
 
 
-        if($this->type === 'int'){
-            $this->type = 'integer';
+        if ($this->type === 'int') {
+            $this->type = T::INT;
         }
-        if($this->type === 'bool'){
-            $this->type = 'boolean';
+        if ($this->type === 'bool') {
+            $this->type = T::BOOL;
         }
 
-        if ($this->apiType === null && AttributeDefinitionType::isValid($this->type)) {
-            $this->apiType = with(new AttributeDefinitionType($this->type))->toApiType();
+        if ($this->apiType === null && T::has($this->type)) {
+            $this->apiType = with(T::get($this->type))->toApiType();
         }
 
         if ($this->new && $this->apiType !== null) {
@@ -173,8 +173,8 @@ class Attr
     public function getAttributeDefinition()
     {
         if ( ! isset($this->definition)) {
-            $this->definition = new AttributeDefinition($this->name, $this->type);
-            $this->definition->setApiType($this->apiType, $this->getApiTypeOpts());
+            $this->definition = with(new AttributeDefinition())->name($this->name)->type($this->type);
+            $this->definition->api($this->apiType, $this->getApiTypeOpts());
         }
         return $this->definition;
     }
