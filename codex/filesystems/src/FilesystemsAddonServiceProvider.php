@@ -6,6 +6,7 @@ use Codex\Addons\AddonServiceProvider;
 use Google\Cloud\Storage\StorageClient;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Filesystem\FilesystemAdapter;
+use League\Flysystem\Adapter\Ftp;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Rackspace\RackspaceAdapter;
 use League\Flysystem\Sftp\SftpAdapter;
@@ -56,6 +57,15 @@ class FilesystemsAddonServiceProvider extends AddonServiceProvider
         });
     }
 
+    protected function ftp($name)
+    {
+        $this->fsm->extend($name, function (Application $app, array $config = []) {
+            $adapter   = new Ftp($config);
+            $flysystem = new Filesystem($adapter);
+            return new FilesystemAdapter($flysystem);
+        });
+    }
+
     protected function sftp($name)
     {
         $this->fsm->extend($name, function (Application $app, array $config = []) {
@@ -78,7 +88,6 @@ class FilesystemsAddonServiceProvider extends AddonServiceProvider
     protected function zip($name)
     {
         $this->fsm->extend($name, function (Application $app, array $config = []) {
-
             $adapter   = new ZipArchiveAdapter($config[ 'path' ]);
             $flysystem = new Filesystem($adapter);
             return new FilesystemAdapter($flysystem);

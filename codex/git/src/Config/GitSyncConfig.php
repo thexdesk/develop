@@ -5,6 +5,7 @@ namespace Codex\Git\Config;
 
 
 use Codex\Git\Connection\Ref;
+use Codex\Git\Connection\RefCollection;
 use vierbergenlars\SemVer\expression;
 
 class GitSyncConfig extends AbstractGitConfigChild
@@ -49,6 +50,25 @@ class GitSyncConfig extends AbstractGitConfigChild
         }
         return false;
     }
+
+    /**
+     * @return \Codex\Git\Connection\RefCollection|Ref[]
+     */
+    public function getRefs()
+    {
+        $refs = [];
+        foreach ($this->getRemote()->getRefs()->all() as $ref) {
+            if ($this->shouldSyncRef($ref)) {
+                $destination = $ref->getName();
+                if ($ref->isBranch()) {
+                    $destination = $this->getBranches()->get($ref->getName());
+                }
+                $refs[ $destination ] = $ref;
+            }
+        }
+        return RefCollection::make($refs);
+    }
+
 
     /** @var \Illuminate\Support\Collection|string[] */
     protected $branches;

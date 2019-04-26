@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="codex:git:sync -vvv --all --force" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="codex:git:sync -vvv --all --force">
+    <method v="2" />
+  </configuration>
+</component>

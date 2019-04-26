@@ -12,6 +12,7 @@ use Codex\Git\Commands\SyncProject;
 use Codex\Git\Config\GitConfig;
 use Codex\Git\Config\GitSyncConfig;
 use Codex\Git\Connection\Ref;
+use Codex\Git\Console\CodexGitSyncCommand;
 use Http\Adapter\Guzzle6\Client as GuzzleClient;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -27,31 +28,18 @@ class TestCommand extends Command
 
     public function handle()
     {
-        $project = codex()->getProject('codex-zip-git');
-        $git     = $project->git();
-        $gitData = $git->toArray();
+        $projectKey = 'codex-ftp-git';
+        $project    = codex()->getProject($projectKey);
+        $git        = $project->git();
+        $gitData    = $git->toArray();
 
-        SyncProject::onEvent('sync_ref', function (Copier $copier, Ref $ref, GitSyncConfig $sync) {
-            $remote  = $sync->getRemote();
-            $project = $sync->getGit()->getModel();
-            $rows    = [];
-            foreach ($copier->getCopied() as $item) {
-                $rows[] = [
-                    $item[ 'src' ],
-                    '[remote]' . $item[ 'srcItem' ]->key(),
-                    '[revision]' . $item[ 'destItem' ]->key(),
-                ];
-            }
-            $this->line(' - remote: ' . $remote->getName() . ':' . $remote->getOwner() . '/' . $remote->getRepository());
-            $this->line(' - revision: ' . $project->getKey() . '/' . $ref->getName());
-            $this->table([
-                'glob',
-                'src',
-                'dest',
-            ], $rows);
-        },false);
-        $this->dispatch(with(new SyncProject('codex-zip-git', true)));
+        $master = $project->getRevision('master');
+        $v1     = $project->getRevision('v1');
+        CodexGitSyncCommand::attachConsoleTableListener();
+//        $this->dispatch(with(new SyncProject($projectKey, true)));
 
+        $document=$master->getDocument('index');
+        $content  = $document->render();
 
         return;
         if ( ! $project->hasRevision('master')) {

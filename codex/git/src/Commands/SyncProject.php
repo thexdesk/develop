@@ -5,7 +5,6 @@ namespace Codex\Git\Commands;
 
 
 use Codex\Codex;
-use Codex\Concerns\HasCallbacks;
 use Codex\Concerns\HasEvents;
 use Codex\Filesystem\Copier;
 use Codex\Git\Config\GitSyncConfig;
@@ -71,6 +70,8 @@ class SyncProject implements ShouldQueue
         $this->project = $codex->getProject($this->projectKey);
         $this->cache   = $cache;
         if ($this->project->isGitEnabled()) {
+            $forced = $this->force ? 'forced ' : '';
+            $this->log("Starting {$forced}sync for project [{$this->project}]", $this->project[ 'git' ]);
             $this->git = $this->project->git();
             foreach ($this->git->getSyncs() as $sync) {
                 $this->sync($sync);
@@ -81,10 +82,8 @@ class SyncProject implements ShouldQueue
     public function sync(GitSyncConfig $sync)
     {
         $remote = $sync->getRemote();
-        $forced = $this->force ? 'forced ' : '';
-        $this->log("Starting {$forced}sync for project [{$this->project}]", $this->project[ 'git' ]);
 
-        $refs = $remote->getRefs();
+        $refs = $sync->getRefs();
 
         if ($sync->skipsMinorVersions()) {
             $this->log('Skipping minor versions');
@@ -94,56 +93,49 @@ class SyncProject implements ShouldQueue
             $refs = $refs->skipPatchVersions()->concat($refs->branches());
         }
 
-        foreach ($refs as $ref) {
+        foreach ($refs as $destination => $ref) {
             /** @var Ref $ref */
-            if ($sync->shouldSyncRef($ref)) {
-                if (false === $this->force && $this->cache->get($ref->getCacheKey()) === $ref->getHash()) {
-                    $this->log("Ref [{$ref->getName()}] skipped, matches the cached hash", $ref->toArray());
-                    continue;
-                }
+            if (false === $this->force && $this->cache->get($ref->getCacheKey()) === $ref->getHash()) {
+                $this->log("Ref [{$this->project}/{$ref->getName()}] skipped, matches the cached hash", $ref->toArray());
+                continue;
+            }
+            $this->log("Syncing ref [{$this->project}/{$ref->getName()}] synced", $ref->toArray());
+
 //                $this->fireEvent('git:sync:ref', compact('ref'));
 //                if (null !== $this->fire('git:sync:ref', compact('ref'), true)) {
 //                    $this->log("Ref [{$ref->getName()}] canceled by hook", $ref->toArray());
 //                    continue;
 //                }
-                try {
-                    $this->syncRef($sync, $ref);
-                    $this->cache->forever($ref->getCacheKey(), $ref->getHash());
-                    $this->log("Ref [{$ref->getName()}] synced", $ref->toArray());
-                }
-                catch (\Exception $e) {
-                    $this->codex->getLog()->error($e->getMessage(), (array)$e);
-                }
-            } else {
-                $this->log("Ref [{$ref->getName()}] skipped", $ref->toArray());
+            try {
+                $this->syncRef($sync, $ref, $destination);
+                $this->cache->forever($ref->getCacheKey(), $ref->getHash());
+                $this->log("Ref [{$this->project}/{$ref->getName()}] synced", $ref->toArray());
+            }
+            catch (\Exception $e) {
+                $this->codex->getLog()->error("[{$this->project}/{$ref->getName()}] {$e->getMessage()}", (array)$e);
             }
         }
     }
 
-    protected function syncRef(GitSyncConfig $sync, Ref $ref)
+    protected function syncRef(GitSyncConfig $sync, Ref $ref, $path = null)
     {
         /** @var \League\Flysystem\Filesystem $projectFs */
         /** @var \League\Flysystem\Adapter\AbstractAdapter $projectFsAdapter */
 
-        $remote            = $sync->getRemote();
-        $connection        = $remote->getConnection();
-        $downloader        = $connection->getZipDownloader();
-        $download          = $downloader->download($ref->getDownloadUrl());
-        $extractedPath     = $download->getExtractedPath();
-        $projectFs         = $this->project->getDisk()->getDriver();
-        $projectFsAdapter  = $projectFs->getAdapter();
-        $defaultPathPrefix = $projectFsAdapter->getPathPrefix();
-        $projectFsAdapter->setPathPrefix(path_absolute($ref->getName(),'/'));
-
-        $copier = new Copier($extractedPath, $projectFs);
+        $remote        = $sync->getRemote();
+        $connection    = $remote->getConnection();
+        $downloader    = $connection->getZipDownloader();
+        $download      = $downloader->download($ref->getDownloadUrl());
+        $extractedPath = $download->getExtractedPath();
+        $projectFs     = $this->project->getDisk()->getDriver();
+        $path          = $path ?: $ref->getName();
+        $copier        = new Copier($extractedPath, $projectFs);
 
         foreach ($sync->getCopy() as $src => $dest) {
-            $copier->copy($src, $dest);
+            $copier->copy($src, $dest, compact('path'));
         }
 
-        $projectFsAdapter->setPathPrefix($defaultPathPrefix);
-
-        $this->fireEvent('sync_ref',  $copier, $ref, $sync );
+        $this->fireEvent('sync_ref', $copier, $ref, $sync);
     }
 
 }

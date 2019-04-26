@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'use'         => [ 'webdav', 'dropbox', 'zip', 'google-cloud', 'sftp', 'rackspace' ],
+    'use'         => [ 'webdav', 'dropbox', 'zip', 'google-cloud', 'sftp', 'rackspace', 'ftp' ],
     'driverNames' => [
         'webdav'       => 'webdav',
         'dropbox'      => 'dropbox',
@@ -9,5 +9,6 @@ return [
         'google-cloud' => 'google-cloud',
         'sftp'         => 'sftp',
         'rackspace'    => 'rackspace',
+        'ftp'          => 'ftp',
     ],
 ];

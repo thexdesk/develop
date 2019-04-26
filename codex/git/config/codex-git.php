@@ -126,43 +126,6 @@ return [
             ],
         ],
 
-        'git2'      => [
-            'enabled'    => false,
-            // The connection key to use (as defined at the top of this file)
-            'connection' => '',
-            // The owner (organisation or username)
-            'owner'      => '',
-            // The repository name
-            'repository' => '',
-            // Branches to sync
-            'branches'   => [], //[ 'master']
-            // Version (tags) constraints makes one able to define ranges and whatnot
-            // * || 1.x || >=2.5.0 || 5.0.0 - 7.2.3'
-            'versions'   => false,
-
-            'skip'  => [
-                'patch_versions' => false,
-                'minor_versions' => false,
-            ],
-
-            // paths
-            'paths' => [
-                // relative path to the root folder where the docs are
-                'docs'  => 'docs',
-                // relative path to the index.md file. You can use the README.md or docs/index.md for example
-                'index' => 'docs/index.md' // 'index' => 'README.md',
-            ],
-
-            'webhook' => [
-                // Enable webhook support. Configure it in Github/Bitbucket.
-                // This will automaticly sync your project every time a 'push' event occurs
-                // This also requires you to configure queues properly (by using for example, redis with supervisord)
-                'enabled' => false,
-
-                // Github webhooks allow a 'secret' that has to match. Put it in here
-                'secret'  => env('CODEX_GIT_GITHUB_WEBHOOK_SECRET', ''),
-            ],
-        ],
         'git_links' => [
             'enabled' => false,
             'map'     => [

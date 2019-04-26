@@ -90,6 +90,19 @@ return [
             'path'   => resource_path('docs/codex-zip-git/codex-zip-git.zip'),
         ],
 
+        'codex-ftp-git-project' => [
+            'driver'        => 'ftp',
+            'host'          => env('SFTP_HOST'),
+            'port'          => env('SFTP_PORT'),
+            'username'      => env('SFTP_USERNAME'),
+            'password'      => env('SFTP_PASSWORD'),
+            'root'          => env('SFTP_ROOT'),
+            'passive'       => true,
+            'ssl'           => false,
+            'timeout'       => 10,
+            'directoryPerm' => 0755,
+        ],
+
 
         's3' => [
             'driver' => 's3',
@@ -113,14 +126,14 @@ return [
         ],
 
         'my-rackspace-project' => [
-            'driver'   => 'rackspace',
-            'url'      => env('RACKSPACE_URL'),
-            'secret' => [
+            'driver'  => 'rackspace',
+            'url'     => env('RACKSPACE_URL'),
+            'secret'  => [
                 'username' => env('RACKSPACE_USERNAME'),
                 'apiKey'   => env('RACKSPACE_APIKEY'),
             ],
-            'region'   => env('RACKSPACE_REGION'),
-            'options'  => [],
+            'region'  => env('RACKSPACE_REGION'),
+            'options' => [],
         ],
 
     ],

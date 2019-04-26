@@ -22,7 +22,7 @@ return [
 
     'default_revision' => \Codex\Git\BranchType::PRODUCTION,
 
-    'disk' => 'codex-zip-git-project',
+    'disk' => 'codex-ftp-git-project',
 
     'git' => [
         'enabled' => true,
