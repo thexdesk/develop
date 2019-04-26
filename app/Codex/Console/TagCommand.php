@@ -2,7 +2,7 @@
 
 namespace App\Codex\Console;
 
-use Codex\Filesystem\Tmp;
+use Codex\Filesystem\Temp;
 use Cz\Git\GitRepository;
 use Illuminate\Console\Command;
 use Symfony\Component\VarDumper\VarDumper;
@@ -106,7 +106,7 @@ class TagCommand extends Command
 
     protected function makeTempDir($prefix)
     {
-        $this->tmp = app()->make(Tmp::class, [ 'prefix' => 'codex-git-tag-' . $prefix ]);
+        $this->tmp = app()->make(Temp::class, [ 'prefix' => 'codex-git-tag-' . $prefix ]);
         $this->tmp->initRunFolder();
         $tmpDir = $this->tmp->getTmpFolder();
         return $tmpDir;

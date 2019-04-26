@@ -78,6 +78,7 @@ class FilesystemsAddonServiceProvider extends AddonServiceProvider
     protected function zip($name)
     {
         $this->fsm->extend($name, function (Application $app, array $config = []) {
+
             $adapter   = new ZipArchiveAdapter($config[ 'path' ]);
             $flysystem = new Filesystem($adapter);
             return new FilesystemAdapter($flysystem);

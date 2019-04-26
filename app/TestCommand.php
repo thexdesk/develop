@@ -6,7 +6,12 @@ use Codex\Attributes\AttributeDefinition;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\Commands\BuildDefinitionConfig;
 use Codex\Attributes\Commands\BuildDefinitionSchema;
+use Codex\Filesystem\Copier;
+use Codex\Filesystem\Local;
+use Codex\Git\Commands\SyncProject;
 use Codex\Git\Config\GitConfig;
+use Codex\Git\Config\GitSyncConfig;
+use Codex\Git\Connection\Ref;
 use Http\Adapter\Guzzle6\Client as GuzzleClient;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -22,9 +27,38 @@ class TestCommand extends Command
 
     public function handle()
     {
-        $codex    = codex();
-        $project  = $codex->getProject('codex');
+        $project = codex()->getProject('codex-zip-git');
+        $git     = $project->git();
+        $gitData = $git->toArray();
+
+        SyncProject::onEvent('sync_ref', function (Copier $copier, Ref $ref, GitSyncConfig $sync) {
+            $remote  = $sync->getRemote();
+            $project = $sync->getGit()->getModel();
+            $rows    = [];
+            foreach ($copier->getCopied() as $item) {
+                $rows[] = [
+                    $item[ 'src' ],
+                    '[remote]' . $item[ 'srcItem' ]->key(),
+                    '[revision]' . $item[ 'destItem' ]->key(),
+                ];
+            }
+            $this->line(' - remote: ' . $remote->getName() . ':' . $remote->getOwner() . '/' . $remote->getRepository());
+            $this->line(' - revision: ' . $project->getKey() . '/' . $ref->getName());
+            $this->table([
+                'glob',
+                'src',
+                'dest',
+            ], $rows);
+        },false);
+        $this->dispatch(with(new SyncProject('codex-zip-git', true)));
+
+
+        return;
+        if ( ! $project->hasRevision('master')) {
+            return;
+        }
         $revision = $project->getRevision('master');
+
 //        $document = $revision->getDocument('getting-started/core-concepts');
         $document = $revision->getDocument('writing-reference/markdown-extensions');
         $content  = $document->render();
@@ -36,15 +70,29 @@ class TestCommand extends Command
 
         $description = $document[ 'description' ];
 
-        $result = $codex->getApi()->executeQuery(/** @lang GraphQL */ <<<'EOT'
-query {
-    document(projectKey: "codex", revisionKey: "master", documentKey: "index") {
-        changes @assoc
-    }
-}
-EOT
-            , null, []);
         $this->line($content);
+    }
+
+    public function han345345dle()
+    {
+        $from  = new Local(storage_path('codex/git/35e1da08eef1b5df1b65ea636ab2cad7/core-master'));
+        $paths = $from->glob([
+            'resources/docs/*',
+            'resources/docs',
+            'resources/assets/**/*',
+        ]);
+
+        $dirs = $paths->directories();
+
+        $without = $paths->withoutDirectoryChildren();
+
+        $to     = base_path('.tmp/test-copier');
+        $copier = new Copier($from, $to);
+        $copier->copy('resources/docs/index.md', 'index.md');
+        $copier->copy('resources/docs/index.md', 'docs/index.md');
+        $copier->copy('resources/docs/*', 'docs2/');
+
+        return;
     }
 
     public function hand4324234le()

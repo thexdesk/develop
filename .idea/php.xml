@@ -235,6 +235,8 @@
       <path value="$PROJECT_DIR$/vendor/jackiedo/dotenv-editor" />
       <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-self-diagnosis" />
       <path value="$PROJECT_DIR$/vendor/geerlingguy/ping" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/path-util" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/glob" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">

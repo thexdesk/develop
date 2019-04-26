@@ -5,7 +5,7 @@ namespace Codex\Phpdoc;
 use Codex\Concerns\HasCallbacks;
 use Codex\Contracts\Revisions\Revision;
 use Codex\Exceptions\MissingFileException;
-use Codex\Filesystem\Tmp;
+use Codex\Filesystem\Temp;
 use Codex\Phpdoc\Serializer\Manifest;
 use Codex\Phpdoc\Serializer\Phpdoc\File;
 use Codex\Phpdoc\Serializer\Phpdoc\PhpdocStructure;
@@ -57,7 +57,7 @@ class RevisionPhpdoc
         $this->clear();
 
         // Generate all files in a tmp dir first, then move the dir once all complete
-        $tmp = new Tmp(md5($this->path));
+        $tmp = new Temp(md5($this->path));
         $tmp->initRunFolder(true);
         $createTmpFile = function ($path) use ($tmp) {
             $path = path_relative($path, $this->path);

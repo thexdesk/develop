@@ -16,7 +16,7 @@ return [
         ],
     ],
 
-    'processors'   => [
+    'processors' => [
         'enabled'    => [
             'attributes' => true,
             'parser'     => true,
@@ -42,7 +42,7 @@ return [
         ],
         'toc'        => [
             'header_link_show' => true,
-        ]
+        ],
     ],
 
     'default_revision' => \Codex\Git\BranchType::PRODUCTION,
@@ -69,34 +69,6 @@ return [
         'default_class' => 'Codex\\Codex',
     ],
 
-    'git'       => [
-        'enabled'    => true,
-        'connection' => 'bitbucket_password',
-        'owner'      => 'codex-project',
-        'repository' => 'core',
-        'branches'   => [], //[ 'master']
-        'paths'      => [
-            'docs' => 'develop/resources/docs/codex',
-        ],
-    ],
-    'git_links' => [
-        'enabled' => true,
-//        'map'     => [
-//            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
-//        ],
-//        'links'   => [
-//            'edit_page' => [
-//                'component'  => 'c-button',
-//                'borderless' => true,
-//                'type'       => 'toolbar',
-//                'icon'       => '%git.connection_config%',
-//                'children'   => 'Edit Page',
-//                'title'      => 'Edit this page',
-//                'target'     => '_black',
-//                'href'       => '%git_links.document_url%'
-//            ],
-//        ],
-    ],
 ];
 
 

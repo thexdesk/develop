@@ -28,6 +28,7 @@ class ZipDownloader
     /** @var \Codex\Git\Drivers\DriverInterface */
     protected $driver;
 
+
     /**
      * ZipDownloader constructor.
      *
@@ -35,7 +36,7 @@ class ZipDownloader
      */
     public function __construct(\Illuminate\Filesystem\Filesystem $fs)
     {
-        $this->fs = $fs;
+        $this->fs      = $fs;
         $this->tmpPath = storage_path('codex/git');
     }
 
@@ -115,7 +116,7 @@ class ZipDownloader
         return $this;
     }
 
-    public function download($url)
+    public function download($url, $cache = true)
     {
         // Check up on method to zip
         $this->hasUnzipCapabilities();
@@ -123,41 +124,48 @@ class ZipDownloader
         $urlHash = md5($url);
 
         // prepare new temporary directory
-        $tmpExtractPath = $this->tmpPath.\DIRECTORY_SEPARATOR.$urlHash;
-        $this->remakeDirectory($tmpExtractPath);
+        $tmpExtractPath = $this->tmpPath . \DIRECTORY_SEPARATOR . $urlHash;
+        $tmpFilePath    = $tmpExtractPath . '.zip';
 
-        $tmpFilePath = $tmpExtractPath.'.zip';
-        if ($this->fs->exists($tmpFilePath)) {
-            $this->fs->delete($tmpFilePath);
+        if ( ! $cache) {
+            $this->remakeDirectory($tmpExtractPath);
+
+            if ($this->fs->exists($tmpFilePath)) {
+                $this->fs->delete($tmpFilePath);
+            }
+        }
+        if ( ! $this->fs->exists($tmpFilePath)) {
+            $contents = $this->driver->downloadFile($url);
+            $this->fs->put($tmpFilePath, $contents);
         }
 
-        $contents = $this->driver->downloadFile($url);
-        $this->fs->put($tmpFilePath, $contents);
+        if ( ! $this->fs->exists($tmpExtractPath)) {
+            $zip = new ZipArchive();
+            $zip->open($tmpFilePath);
+            $zip->extractTo($tmpExtractPath);
+        }
 
-        $zip = new ZipArchive();
-        $zip->open($tmpFilePath);
-        $zip->extractTo($tmpExtractPath);
-
-        $this->fs->delete($tmpFilePath);
-
+        if ( ! $cache) {
+            $this->fs->delete($tmpFilePath);
+        }
         return new ZipDownloaderResult($this, $tmpExtractPath);
     }
 
     protected function hasUnzipCapabilities()
     {
         if (null === self::$hasSystemUnzip) {
-            $finder = new ExecutableFinder();
-            self::$hasSystemUnzip = (bool) $finder->find('unzip');
+            $finder               = new ExecutableFinder();
+            self::$hasSystemUnzip = (bool)$finder->find('unzip');
         }
-        if (!class_exists('ZipArchive') && !self::$hasSystemUnzip) {
+        if ( ! class_exists('ZipArchive') && ! self::$hasSystemUnzip) {
             // php.ini path is added to the error message to help users find the correct file
             $iniPath = php_ini_loaded_file();
             if ($iniPath) {
-                $iniMessage = 'The php.ini used by your command-line PHP is: '.$iniPath;
+                $iniMessage = 'The php.ini used by your command-line PHP is: ' . $iniPath;
             } else {
                 $iniMessage = 'A php.ini file does not exist. You will have to create one.';
             }
-            $error = "The zip extension and unzip command are both missing, skipping.\n".$iniMessage;
+            $error = "The zip extension and unzip command are both missing, skipping.\n" . $iniMessage;
             throw new \RuntimeException($error);
         }
     }

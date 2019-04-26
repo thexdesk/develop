@@ -18,7 +18,6 @@ class GitAddonServiceProvider extends AddonServiceProvider
     public $config = [ 'codex-git' ];
 
     public $mapConfig = [
-        'codex-git.def'                              => 'codex.projects.def',
         'codex-git.default_project_config.branching' => 'codex.projects.branching',
         'codex-git.default_project_config.git'       => 'codex.projects.git',
         'codex-git.default_project_config.git_links' => 'codex.projects.git_links',
@@ -51,18 +50,18 @@ class GitAddonServiceProvider extends AddonServiceProvider
 
     protected function registerHooks()
     {
-        Hooks::register([ 'project.resolved', 'revision.resolved', 'document.resolved' ], function (\Codex\Contracts\Models\Model $project) {
-            $project->addGetMutator('git.connection_config', function () {
-                /** @var \Codex\Contracts\Projects\Project $this */
-                return $this->git()->getManager()->getConnectionConfig($this->git()->getConnection());
-            });
-        });
+//        Hooks::register([ 'project.resolved', 'revision.resolved', 'document.resolved' ], function (\Codex\Contracts\Models\Model $project) {
+//            $project->addGetMutator('git.connection_config', function () {
+//                /** @var \Codex\Contracts\Projects\Project $this */
+//                return $this->git()->getManager()->getConnectionConfig($this->git()->getConnection());
+//            });
+//        });
         Hooks::register('document.resolved', function (\Codex\Contracts\Documents\Document $document) {
             if ( ! $document->isGitLinksEnabled()) {
                 return;
             }
-            $map   = $document->attr('git_links.map', []);
-            $links = $document->attr('git_links.links', []);
+            $map   = $document->attr('git.links.map', []);
+            $links = $document->attr('git.links.links', []);
             foreach ($map as $linkKey => $attrKey) {
                 $method = 'push';
                 if (false !== strpos($linkKey, ':')) {
@@ -75,7 +74,7 @@ class GitAddonServiceProvider extends AddonServiceProvider
                     $document->push($attrKey, $link);
                 }
             }
-            $document->addGetMutator('git_links.document_url', function () {
+            $document->addGetMutator('git.links.document_url', function () {
                 /** @var \Codex\Contracts\Documents\Document $document */
                 $document = $this;
                 return $document->git()->getDocumentUrl($document->getPath());
@@ -89,33 +88,37 @@ class GitAddonServiceProvider extends AddonServiceProvider
 
         Project::macro('git', function () {
             return $this->storage('git', function ($model) {
-                return new GitConfig($model, app('codex.git.manager'));
+                return new Config\GitConfig($model, app('codex.git.manager'));
             });
         });
         Revision::macro('git', function () {
-            return $this->getProject()->git();
+            return $this->storage('git', function ($model) {
+                return new Config\GitConfig($model, app('codex.git.manager'));
+            });
         });
         Document::macro('git', function () {
-            return $this->getProject()->git();
+            return $this->storage('git', function ($model) {
+                return new Config\GitConfig($model, app('codex.git.manager'));
+            });
         });
 
         Project::macro('isGitEnabled', function () {
             return $this->attr('git.enabled', false);
         });
         Revision::macro('isGitEnabled', function () {
-            return $this->getProject()->attr('git.enabled', false);
+            return $this->attr('git.enabled', false);
         });
         Document::macro('isGitEnabled', function () {
-            return $this->getProject()->attr('git.enabled', false);
+            return $this->attr('git.enabled', false);
         });
         Project::macro('isGitLinksEnabled', function () {
-            return $this->attr('git_links.enabled', false);
+            return $this->attr('git.links.enabled', false);
         });
         Revision::macro('isGitLinksEnabled', function () {
-            return $this->attr('git_links.enabled', false);
+            return $this->attr('git.links.enabled', false);
         });
         Document::macro('isGitLinksEnabled', function () {
-            return $this->attr('git_links.enabled', false);
+            return $this->attr('git.links.enabled', false);
         });
     }
 

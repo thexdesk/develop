@@ -4,6 +4,8 @@
 namespace Codex\Git\Config;
 
 
+use Codex\Git\Drivers\DriverInterface;
+
 class GitRemoteConfig extends AbstractGitConfigChild
 {
     /** @var string */
@@ -20,6 +22,9 @@ class GitRemoteConfig extends AbstractGitConfigChild
         return $this->name;
     }
 
+    /**
+     * @return \Codex\Git\Drivers\DriverInterface
+     */
     public function getConnection()
     {
         return $this->getGit()->getManager()->connection($this->get('connection'));
@@ -47,5 +52,10 @@ class GitRemoteConfig extends AbstractGitConfigChild
     public function getWebhookSecret()
     {
         return $this->get('webhook.secret');
+    }
+
+    public function getRefs()
+    {
+        return $this->getConnection()->getRefs($this->getOwner(), $this->getRepository());
     }
 }

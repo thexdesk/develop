@@ -1,30 +1,24 @@
 <?php
-/**
- * Copyright (c) 2018. Codex Project.
- *
- * The license can be found in the package and online at https://codex-project.mit-license.org.
- *
- * @copyright 2018 Codex Project
- * @author    Robin Radic
- * @license   https://codex-project.mit-license.org MIT License
- */
+
 
 namespace Codex\Git\Commands;
 
+
 use Codex\Codex;
 use Codex\Concerns\HasCallbacks;
-use Codex\Exceptions\Exception;
+use Codex\Concerns\HasEvents;
+use Codex\Filesystem\Copier;
+use Codex\Git\Config\GitSyncConfig;
 use Codex\Git\Connection\Ref;
 use Codex\Git\Contracts\ConnectionManager;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Symfony\Component\Finder\SplFileInfo;
 
-class SyncGitProject implements ShouldQueue
+class SyncProject implements ShouldQueue
 {
     use Queueable;
-    use HasCallbacks;
+    use HasEvents;
 
     /** @var \Codex\Contracts\Projects\Project */
     protected $project;
@@ -32,8 +26,8 @@ class SyncGitProject implements ShouldQueue
     /** @var \Codex\Codex */
     protected $codex;
 
-    /** @var \Codex\Git\Drivers\DriverInterface */
-    protected $driver;
+    /** @var \Codex\Git\Config\GitConfig */
+    protected $git;
 
     /** @var \Illuminate\Contracts\Cache\Repository */
     protected $cache;
@@ -50,7 +44,7 @@ class SyncGitProject implements ShouldQueue
      * @param      $projectKey
      * @param bool $force
      */
-    public function __construct($projectKey, $force = false)
+    public function __construct(string $projectKey, $force = false)
     {
         $this->projectKey = $projectKey;
         $this->force      = $force;
@@ -76,39 +70,44 @@ class SyncGitProject implements ShouldQueue
         $this->codex   = $codex;
         $this->project = $codex->getProject($this->projectKey);
         $this->cache   = $cache;
-        $this->driver  = $this->project->git()->connect();
-        $this->sync();
+        if ($this->project->isGitEnabled()) {
+            $this->git = $this->project->git();
+            foreach ($this->git->getSyncs() as $sync) {
+                $this->sync($sync);
+            }
+        }
     }
 
-    protected function sync()
+    public function sync(GitSyncConfig $sync)
     {
-        $git    = $this->project->git();
+        $remote = $sync->getRemote();
         $forced = $this->force ? 'forced ' : '';
         $this->log("Starting {$forced}sync for project [{$this->project}]", $this->project[ 'git' ]);
-        $refs = $this->driver->getRefs($git->getOwner(), $git->getRepository());
-        if ($git->skipsMinorVersions()) {
+
+        $refs = $remote->getRefs();
+
+        if ($sync->skipsMinorVersions()) {
             $this->log('Skipping minor versions');
             $refs = $refs->skipMinorVersions()->concat($refs->branches());
-        } elseif ($git->skipsPatchVersions()) {
+        } elseif ($sync->skipsPatchVersions()) {
             $this->log('Skipping patch versions');
             $refs = $refs->skipPatchVersions()->concat($refs->branches());
         }
 
-        $this->driver->getZipDownloader()->cleanRootPath();
-
         foreach ($refs as $ref) {
-            if ($git->shouldSyncRef($ref)) {
+            /** @var Ref $ref */
+            if ($sync->shouldSyncRef($ref)) {
                 if (false === $this->force && $this->cache->get($ref->getCacheKey()) === $ref->getHash()) {
                     $this->log("Ref [{$ref->getName()}] skipped, matches the cached hash", $ref->toArray());
                     continue;
                 }
-                $this->fire('git:sync:ref', compact('ref'));
+//                $this->fireEvent('git:sync:ref', compact('ref'));
 //                if (null !== $this->fire('git:sync:ref', compact('ref'), true)) {
 //                    $this->log("Ref [{$ref->getName()}] canceled by hook", $ref->toArray());
 //                    continue;
 //                }
                 try {
-                    $this->syncRef($ref);
+                    $this->syncRef($sync, $ref);
                     $this->cache->forever($ref->getCacheKey(), $ref->getHash());
                     $this->log("Ref [{$ref->getName()}] synced", $ref->toArray());
                 }
@@ -121,44 +120,30 @@ class SyncGitProject implements ShouldQueue
         }
     }
 
-    protected function syncRef(Ref $ref)
+    protected function syncRef(GitSyncConfig $sync, Ref $ref)
     {
-        $project  = $this->project;
-        $git      = $project->git();
-        $download = $this->driver
-            ->getZipDownloader()
-            ->download($ref->getDownloadUrl());
+        /** @var \League\Flysystem\Filesystem $projectFs */
+        /** @var \League\Flysystem\Adapter\AbstractAdapter $projectFsAdapter */
 
-        $pfs = $project->getFiles(); // project filesystem
-        $lfs = $download->getFs(); // local filesystem
+        $remote            = $sync->getRemote();
+        $connection        = $remote->getConnection();
+        $downloader        = $connection->getZipDownloader();
+        $download          = $downloader->download($ref->getDownloadUrl());
+        $extractedPath     = $download->getExtractedPath();
+        $projectFs         = $this->project->getDisk()->getDriver();
+        $projectFsAdapter  = $projectFs->getAdapter();
+        $defaultPathPrefix = $projectFsAdapter->getPathPrefix();
+        $projectFsAdapter->setPathPrefix(path_absolute($ref->getName(),'/'));
 
-        $docsPath = $download->getExtractedPath() . \DIRECTORY_SEPARATOR . $git->getDocsPath();
-        if ( ! $lfs->exists($docsPath)) {
-            throw Exception::make("Docs path does not exist [{$docsPath}");
+        $copier = new Copier($extractedPath, $projectFs);
+
+        foreach ($sync->getCopy() as $src => $dest) {
+            $copier->copy($src, $dest);
         }
-        $indexFilePath = $download->getExtractedPath() . \DIRECTORY_SEPARATOR . $git->getIndexPath();
-        if ( ! $lfs->exists($indexFilePath)) {
-            throw Exception::make("Index file path does not exist [{$indexFilePath}");
-        }
 
-        $pfs->deleteDirectory($ref->getName());
-        $pfs->makeDirectory($ref->getName());
+        $projectFsAdapter->setPathPrefix($defaultPathPrefix);
 
-        $files = collect($lfs->allFiles($docsPath));
-        $files->each(function (SplFileInfo $file) use ($pfs, $lfs, $ref) {
-            $dirPath = $file->getRelativePath();
-            $pfs->makeDirectory($ref->getName() . \DIRECTORY_SEPARATOR . $dirPath);
-            $pfs->put(
-                $ref->getName() . \DIRECTORY_SEPARATOR . $file->getRelativePathname(),
-                $lfs->get($file->getPathname())
-            );
-        });
-
-        $pfs->put(
-            $ref->getName() . \DIRECTORY_SEPARATOR . 'index.' . $lfs->extension($indexFilePath),
-            $lfs->get($indexFilePath)
-        );
-
-        $download->clean();
+        $this->fireEvent('sync_ref',  $copier, $ref, $sync );
     }
+
 }

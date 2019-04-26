@@ -5,7 +5,7 @@
 namespace Codex\Projects {
 
     /**
-     * @method \Codex\Git\GitConfig git()
+     * @method \Codex\Git\Config\GitConfig git()
      * @method boolean isGitEnabled()
      * @method boolean isGitLinksEnabled()
      */
@@ -17,7 +17,7 @@ namespace Codex\Projects {
 namespace Codex\Revisions {
 
     /**
-     * @method \Codex\Git\GitConfig git()
+     * @method \Codex\Git\Config\GitConfig git()
      * @method boolean isGitEnabled()
      * @method boolean isGitLinksEnabled()
      */
@@ -29,7 +29,7 @@ namespace Codex\Revisions {
 namespace Codex\Documents {
 
     /**
-     * @method \Codex\Git\GitConfig git()
+     * @method \Codex\Git\Config\GitConfig git()
      * @method boolean isGitEnabled()
      * @method boolean isGitLinksEnabled()
      */

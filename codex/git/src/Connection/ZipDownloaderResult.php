@@ -49,4 +49,9 @@ class ZipDownloaderResult
     {
         return $this->downloader;
     }
+
+    public function __destruct()
+    {
+        $this->clean();
+    }
 }

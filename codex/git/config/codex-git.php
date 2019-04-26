@@ -45,7 +45,7 @@ return [
         ],
 
 
-        'git2' => [
+        'git' => [
             'enabled' => false,
             'remotes' => [
                 /*
@@ -88,6 +88,10 @@ return [
                         'minor_versions' => false,
                     ],
 
+                    'clean' => [
+
+                    ],
+
                     'copy' => [
                         'docs',
                         'docs/ ** /*.md',
@@ -122,7 +126,7 @@ return [
             ],
         ],
 
-        'git'      => [
+        'git2'      => [
             'enabled'    => false,
             // The connection key to use (as defined at the top of this file)
             'connection' => '',
