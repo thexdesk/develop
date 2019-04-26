@@ -4,6 +4,7 @@
 namespace Codex\Git\Config;
 
 
+use Codex\Exceptions\InvalidConfigurationException;
 use Codex\Git\Connection\Ref;
 use Codex\Git\Connection\RefCollection;
 use vierbergenlars\SemVer\expression;
@@ -110,8 +111,23 @@ class GitSyncConfig extends AbstractGitConfigChild
         return $this->copy;
     }
 
-    public function getCleanPaths()
+    public function getCleanPaths($prefix = null)
     {
-
+        $clean = $this->get('clean');
+        if ( ! $clean) {
+            return [];
+        }
+        if ($clean === true) {
+            return [ path_njoin($prefix, '') ];
+        }
+        if (is_string($clean)) {
+            return [ path_njoin($prefix, $clean) ];
+        }
+        if (is_array($clean)) {
+            return array_map(function ($path) use ($prefix) {
+                return path_njoin($prefix, $path);
+            }, $clean);
+        }
+        throw InvalidConfigurationException::reason('clean');
     }
 }

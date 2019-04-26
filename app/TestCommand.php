@@ -6,12 +6,10 @@ use Codex\Attributes\AttributeDefinition;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\Commands\BuildDefinitionConfig;
 use Codex\Attributes\Commands\BuildDefinitionSchema;
-use Codex\Filesystem\Copier;
 use Codex\Filesystem\Local;
+use Codex\Filesystem\Utils\Copier;
 use Codex\Git\Commands\SyncProject;
 use Codex\Git\Config\GitConfig;
-use Codex\Git\Config\GitSyncConfig;
-use Codex\Git\Connection\Ref;
 use Codex\Git\Console\CodexGitSyncCommand;
 use Http\Adapter\Guzzle6\Client as GuzzleClient;
 use Illuminate\Console\Command;
@@ -28,15 +26,15 @@ class TestCommand extends Command
 
     public function handle()
     {
-        $projectKey = 'codex-ftp-git';
+        $projectKey = 'codex-git';
         $project    = codex()->getProject($projectKey);
         $git        = $project->git();
         $gitData    = $git->toArray();
 
         $master = $project->getRevision('master');
         $v1     = $project->getRevision('v1');
-        CodexGitSyncCommand::attachConsoleTableListener();
-//        $this->dispatch(with(new SyncProject($projectKey, true)));
+        CodexGitSyncCommand::attachConsoleTableListener($this);
+        $this->dispatch(with(new SyncProject($projectKey, true)));
 
         $document=$master->getDocument('index');
         $content  = $document->render();

@@ -13,7 +13,7 @@ namespace Codex\Git\Console;
 
 use Codex\Codex;
 use Codex\Contracts\Projects\Project;
-use Codex\Filesystem\Copier;
+use Codex\Filesystem\Utils\Copier;
 use Codex\Git\Commands\SyncProject;
 use Codex\Git\Config\GitSyncConfig;
 use Codex\Git\Connection\Ref;
@@ -70,9 +70,9 @@ class CodexGitSyncCommand extends Command
         }
     }
 
-    public static function attachConsoleTableListener()
+    public static function attachConsoleTableListener(Command $command)
     {
-        SyncProject::onEvent('sync_ref', function (Copier $copier, Ref $ref, GitSyncConfig $sync) {
+        SyncProject::onEvent('sync_ref', static function (Copier $copier, Ref $ref, GitSyncConfig $sync) use ($command) {
             $remote  = $sync->getRemote();
             $project = $sync->getGit()->getModel();
             $rows    = [];
@@ -83,9 +83,9 @@ class CodexGitSyncCommand extends Command
                     '[revision]' . $item[ 'destItem' ]->key(),
                 ];
             }
-            $this->line(' - remote: ' . $remote->getName() . ':' . $remote->getOwner() . '/' . $remote->getRepository());
-            $this->line(' - revision: ' . $project->getKey() . '/' . $ref->getName());
-            $this->table([
+            $command->line(' - remote: ' . $remote->getName() . ':' . $remote->getOwner() . '/' . $remote->getRepository());
+            $command->line(' - revision: ' . $project->getKey() . '/' . $ref->getName());
+            $command->table([
                 'glob',
                 'src',
                 'dest',

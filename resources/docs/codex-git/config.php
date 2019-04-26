@@ -134,6 +134,8 @@ return [
                     'minor_versions' => false,
                 ],
 
+                'clean' => true,
+
                 'copy' => [
                     'resources/docs/codex/v1/**/*.*',
                 ],
@@ -150,6 +152,8 @@ return [
                     'patch_versions' => false,
                     'minor_versions' => false,
                 ],
+
+                'clean' => true,
 
                 'copy' => [
                     'resources/docs',

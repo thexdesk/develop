@@ -6,7 +6,8 @@ namespace Codex\Git\Commands;
 
 use Codex\Codex;
 use Codex\Concerns\HasEvents;
-use Codex\Filesystem\Copier;
+use Codex\Filesystem\Utils\Cleaner;
+use Codex\Filesystem\Utils\Copier;
 use Codex\Git\Config\GitSyncConfig;
 use Codex\Git\Connection\Ref;
 use Codex\Git\Contracts\ConnectionManager;
@@ -129,8 +130,13 @@ class SyncProject implements ShouldQueue
         $extractedPath = $download->getExtractedPath();
         $projectFs     = $this->project->getDisk()->getDriver();
         $path          = $path ?: $ref->getName();
-        $copier        = new Copier($extractedPath, $projectFs);
 
+        $cleaner = new Cleaner($projectFs);
+        foreach ($sync->getCleanPaths($path) as $cleanPath) {
+            $cleaner->clean($cleanPath);
+        }
+
+        $copier = new Copier($extractedPath, $projectFs);
         foreach ($sync->getCopy() as $src => $dest) {
             $copier->copy($src, $dest, compact('path'));
         }
