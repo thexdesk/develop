@@ -16,7 +16,7 @@ node {
             stage('install') {
                 backend
                     .unlockComposer()
-                    .install()
+                    .install(true,false)
                     .setDotEnv()
                     .enableAddons()
             }
