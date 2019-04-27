@@ -38,7 +38,7 @@ node {
             }
 
             stage('Serve') {
-                radic.currentBuild.description = "Serves dev example at ${URL}"
+                radic.currentBuild.description = "Serves dev example at <a href='${URL}' target='_blank'>${URL}</a>"
                 radic.currentBuild.result = "SUCCESS"
                 backend.artisan("serve --host=${HOST} --port=${PORT}")
             }
