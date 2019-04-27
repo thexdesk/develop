@@ -13,6 +13,7 @@ node {
 
         codex.useEnv {
             stage('checkout') {
+
                 php.pdepend(['src'] as String[])
                 radic.git.checkout()
                 print(scm)
