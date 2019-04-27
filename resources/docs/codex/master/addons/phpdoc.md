@@ -31,9 +31,9 @@ Revisions with phpdoc enabled allows users to browse the [Api Viewer](#codex:php
 #### Macros
 **Example**
 ```php
-<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', { hide: ['namespace','tags','example'], boxed: true })*-->
 ````
-<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', { hide: ['namespace','tags','example'], boxed: true })*-->
 
 
 #### Links
