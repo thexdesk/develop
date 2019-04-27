@@ -1,19 +1,9 @@
 const {rimraf, series, copy, mkdirp} = require('nps-utils');
 const {resolve} = require('path');
 
-const path = (...parts) => resolve(__dirname, ...parts);
-
-const _themePath = path('../theme');
+const _themePath = resolve(__dirname, '../theme');
 const themePath = (...parts) => resolve(_themePath, ...parts);
-
-const _docsPath = path('docs');
-const docsPath = (...parts) => resolve(_docsPath, ...parts);
-
-const _packagesPath = path('codex');
-const packagesPath = (...parts) => resolve(_packagesPath, ...parts);
-const packagePath = (name, ...parts) => resolve(_packagesPath, name, ...parts);
-const packageReadmePath = (name) => packagePath(name, 'README.md');
-
+const path = (...parts) => resolve(__dirname, ...parts);
 const licensePath = path('LICENSE.md');
 
 
@@ -48,27 +38,6 @@ const _copy = (type = 'dev') => ({
 module.exports = {
 
     scripts: {
-        'docs:link': {
-            script: series(
-                rimraf(packagePath('core', 'resources/docs/addons')),
-                mkdirp(packagePath('core', 'resources/docs/addons')),
-                `ln -s ${packageReadmePath('algolia-search')} ${packagePath('core', 'resources/docs/addons/git.md')}`,
-                `ln -s ${packageReadmePath('auth')} ${packagePath('core', 'resources/docs/addons/auth.md')}`,
-                `ln -s ${packageReadmePath('blog')} ${packagePath('core', 'resources/docs/addons/blog.md')}`,
-                `ln -s ${packageReadmePath('comments')} ${packagePath('core', 'resources/docs/addons/comments.md')}`,
-                `ln -s ${packageReadmePath('composer-plugin')} ${packagePath('composer-core', 'resources/docs/addons/composer-plugin.md')}`,
-                `ln -s ${packageReadmePath('core')} ${packagePath('core', 'resources/docs/addons/core.md')}`,
-                `ln -s ${packageReadmePath('filesystems')} ${packagePath('core', 'resources/docs/addons/filesystems.md')}`,
-                `ln -s ${packageReadmePath('git')} ${packagePath('core', 'resources/docs/addons/git.md')}`,
-                `ln -s ${packageReadmePath('packagist')} ${packagePath('core', 'resources/docs/addons/packagist.md')}`,
-                `ln -s ${packageReadmePath('phpdoc')} ${packagePath('core', 'resources/docs/addons/phpdoc.md')}`,
-                `ln -s ${packageReadmePath('sitemap')} ${packagePath('core', 'resources/docs/addons/sitemap.md')}`,
-
-                rimraf(docsPath('codex/master')),
-                `ln -s ${path('codex/core/resources/docs')} ${docsPath('codex/master')}`,
-            )
-        },
-
         copy                    : {
             script: series(
                 rimraf(path('public/vendor')),
@@ -79,6 +48,28 @@ module.exports = {
         'link:theme:public'     : _link('dev'),
         'copy:theme:assets:dist': _copy('dist'),
         'copy:theme:assets'     : _copy('dev'),
+        'copy:docs:addons'      : {
+            script: series(
+                rimraf(path('resources/docs/codex/master/addons/algolia-search.md')),
+                rimraf(path('resources/docs/codex/master/addons/auth.md')),
+                rimraf(path('resources/docs/codex/master/addons/blog.md')),
+                rimraf(path('resources/docs/codex/master/addons/comments.md')),
+                rimraf(path('resources/docs/codex/master/addons/filesystems.md')),
+                rimraf(path('resources/docs/codex/master/addons/git.md')),
+                rimraf(path('resources/docs/codex/master/addons/packagist.md')),
+                rimraf(path('resources/docs/codex/master/addons/phpdoc.md')),
+                rimraf(path('resources/docs/codex/master/addons/sitemap.md')),
+                `cp -f ${path('codex/algolia-search/README.md')} ${path('resources/docs/codex/master/addons/algolia-search.md')}`,
+                `cp -f ${path('codex/auth/README.md')} ${path('resources/docs/codex/master/addons/auth.md')}`,
+                `cp -f ${path('codex/blog/README.md')} ${path('resources/docs/codex/master/addons/blog.md')}`,
+                `cp -f ${path('codex/comments/README.md')} ${path('resources/docs/codex/master/addons/comments.md')}`,
+                `cp -f ${path('codex/filesystems/README.md')} ${path('resources/docs/codex/master/addons/filesystems.md')}`,
+                `cp -f ${path('codex/git/README.md')} ${path('resources/docs/codex/master/addons/git.md')}`,
+                `cp -f ${path('codex/packagist/README.md')} ${path('resources/docs/codex/master/addons/packagist.md')}`,
+                `cp -f ${path('codex/phpdoc/README.md')} ${path('resources/docs/codex/master/addons/phpdoc.md')}`,
+                `cp -f ${path('codex/sitemap/README.md')} ${path('resources/docs/codex/master/addons/sitemap.md')}`,
+            )
+        },
         'copy:license'          : {
             script: series(
                 `cp -f ${licensePath} ${path('codex/core/LICENSE.md')}`,
