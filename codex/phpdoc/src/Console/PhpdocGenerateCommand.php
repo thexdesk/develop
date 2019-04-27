@@ -39,10 +39,14 @@ class PhpdocGenerateCommand extends Command
         }
 
         if (empty($revisions)) {
+            $revisions = $this->getAllRevisions();
+            if(empty($revisions)){
+                return $this->warn('No phpdoc revisions found');
+            }
             if (Command::hasMacro('select')) {
-                $revisions = $this->select('Select revisions', $this->getAllRevisions(), true);
+                $revisions = $this->select('Select revisions', $revisions, true);
             } else {
-                $revisions = $this->choice('Select revisions', $this->getAllRevisions(), null, null, true);
+                $revisions = $this->choice('Select revisions', $revisions, null, null, true);
             }
         }
 
