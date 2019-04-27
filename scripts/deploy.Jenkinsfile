@@ -20,7 +20,7 @@ node {
             stage('install') {
                 backend
                     .unlockComposer()
-                    .install(true, false)
+                    .install()
                     .setDotEnv("http://${HOST}:${PORT}")
                     .enableAddons()
 
