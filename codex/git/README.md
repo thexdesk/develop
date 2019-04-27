@@ -163,7 +163,7 @@ To use automatic synchronisation:
 - You need to add a webhook to your github/bitbucket repository. The webhook url should be equal to the `codex.git.webhook.{bitbucket,github}` route url. Use `php artisan route:list` to get it.
 
 
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 ## Copyright/License
 Copyright 2019 [Robin Radic](https://github.com/RobinRadic) - [MIT Licensed](LICENSE.md)
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->

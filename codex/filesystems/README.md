@@ -92,7 +92,7 @@ php artisan codex:addons:enable codex/filesystems
 ```
 
 
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 ## Copyright/License
 Copyright 2019 [Robin Radic](https://github.com/RobinRadic) - [MIT Licensed](LICENSE.md)
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->

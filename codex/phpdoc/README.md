@@ -77,7 +77,7 @@ Revisions with phpdoc enabled allows users to browse the [Api Viewer](#codex:php
 |    [](#codex:phpdoc['Codex\Codex']:type:popover:drawer) |    [](#codex:phpdoc['Codex\Contracts\Codex']:type:popover:drawer) |    [](#codex:phpdoc['Codex\Concerns\Bootable']:type:popover:drawer) | `[](#codex:phpdoc(<name>):type:popover:drawer)` |
 |    [](#codex:phpdoc['Codex\Codex']:type)                |    [](#codex:phpdoc['Codex\Contracts\Codex']:type)                |    [](#codex:phpdoc['Codex\Concerns\Bootable']:type)                | `[](#codex:phpdoc(<name>):type:popover:drawer)` |
 
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 ## Copyright/License
 Copyright 2019 [Robin Radic](https://github.com/RobinRadic) - [MIT Licensed](LICENSE.md)
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->

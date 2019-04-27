@@ -14,13 +14,17 @@ node {
                 radic.git.checkout()
             }
 
-            stage('copy theme assets') {
+            stage('copy theme to packages') {
                 backend.copyThemeToPackages()
+            }
+
+            stage('copy docs to packages') {
+                backend.copyDocsToPackages()
             }
 
             if (env.DEPLOY_PACKAGES) {
                 stage('commit changes') {
-                    backend.commitThemeToPackages()
+                    backend.commitToPackages()
                 }
 
                 stage('deploy packages') {
