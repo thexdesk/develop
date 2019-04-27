@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-import jenkins.model.Jenkins
+
 import nl.radic.Radic
 
 def HOST = "192.168.178.59"
@@ -17,6 +17,7 @@ node {
         codex.useEnv {
             stage('checkout') {
                 radic.git.checkout()
+
             }
 
             stage('install') {
