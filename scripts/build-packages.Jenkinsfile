@@ -23,13 +23,13 @@ node {
             }
 
             if (env.DEPLOY_PACKAGES) {
-                stage('commit changes') {
+                stage('deploy packages') {
                     backend.commitToPackages()
                 }
 
-                stage('deploy packages') {
+//                stage('deploy packages') {
 //                    def buildJob = radic.build('packages.radic.ninja/deploy')
-                }
+//                }
             }
 
         }
