@@ -18,7 +18,9 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-                radic.git.checkout()
+                def scmVars = radic.git.checkout()
+                print(scmVars)
+                print(scm)
             }
 
             stage('install') {
