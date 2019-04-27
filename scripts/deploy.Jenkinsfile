@@ -2,8 +2,9 @@
 
 import nl.radic.Radic
 
-def HOST="192.168.178.59"
-def PORT=34567
+def HOST = "192.168.178.59"
+def PORT = 34567
+def URL = "http://${HOST}:${PORT}"
 
 //noinspection GroovyAssignabilityCheck
 node {
@@ -19,12 +20,13 @@ node {
 
             stage('install') {
                 backend
-                    .unlockComposer()
-                    .install()
-                    .setDotEnv("http://${HOST}:${PORT}")
+                    .composerInstall(true, false)
+                    .composerUpdate(true, true)
+                    .yarn()
+                    .setDotEnv(URL)
                     .enableAddons()
 
-                sh 'rm -rf vendor/public vendor/storage'
+                sh 'rm -rf public/vendor public/storage'
                 backend.artisan('vendor:publish --force --tag=public')
                 backend.artisan('storage:link')
             }
@@ -33,10 +35,6 @@ node {
                 backend.artisan('codex:phpdoc:generate --all')
             }, 'Optimize': {
                 backend.artisan('optimize')
-            }
-
-            stage('Run Checks') {
-                backend.composer('checks')
             }
 
             stage('Serve') {
