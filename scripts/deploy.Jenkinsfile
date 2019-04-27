@@ -31,10 +31,10 @@ node {
                 backend.artisan('storage:link')
             }
 
-            parallel 'Create PHPDoc Manifests': {
+            parallel 'Codex > PHPDoc Generate': {
                 backend.artisan('codex:phpdoc:generate --all')
-            }, 'Optimize': {
-                backend.artisan('optimize')
+            }, 'Codex > Git Sync': {
+                backend.artisan('codex:git:sync --all --force')
             }
 
             stage('Serve') {
