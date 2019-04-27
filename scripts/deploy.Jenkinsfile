@@ -13,10 +13,9 @@ node {
         def codex = radic.codex()
         def backend = codex.backend
 
-        print(scm)
-
-
         codex.useEnv {
+
+
             stage('checkout') {
                 def scmVars = radic.git.checkout()
                 print(scmVars)
