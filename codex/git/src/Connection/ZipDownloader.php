@@ -98,6 +98,14 @@ class ZipDownloader
         return $this;
     }
 
+    private function ensureDirectory(string $path)
+    {
+        if ( ! $this->fs->exists($path)) {
+            $this->fs->makeDirectory($path, 0755, true, true);
+        }
+        return $this;
+    }
+
     private function remakeDirectory(string $path)
     {
         if ($this->fs->exists($path)) {
@@ -134,6 +142,9 @@ class ZipDownloader
                 $this->fs->delete($tmpFilePath);
             }
         }
+
+        $this->ensureDirectory(path_get_directory($tmpFilePath));
+
         if ( ! $this->fs->exists($tmpFilePath)) {
             $contents = $this->driver->downloadFile($url);
             $this->fs->put($tmpFilePath, $contents);
