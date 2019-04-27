@@ -11,7 +11,6 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-
                 radic.git.checkout(false)
             }
 
