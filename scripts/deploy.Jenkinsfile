@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-
+import jenkins.model.Jenkins
 import nl.radic.Radic
 
 def HOST = "192.168.178.59"
@@ -37,7 +37,9 @@ node {
                 backend.artisan('vendor:publish --force --tag=public')
             }
 
+
             stage('Serve') {
+                radic.interruptPreviousBuilds()
                 radic.currentBuild.description = "Serves dev example at <a href='${URL}' target='_blank'>${URL}</a>"
                 radic.currentBuild.result = "SUCCESS"
                 backend.artisan("serve --host=${HOST} --port=${PORT}")
