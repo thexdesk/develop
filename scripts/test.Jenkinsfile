@@ -5,7 +5,6 @@ import nl.radic.Radic
 node {
     try {
         def radic = new Radic(this)
-        print(this)
 
         def php = radic.php
         def codex = radic.codex()
@@ -13,10 +12,8 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-
                 php.pdepend(['src'] as String[])
                 radic.git.checkout()
-                print(scm)
             }
 
             stage('install') {
