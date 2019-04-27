@@ -25,19 +25,21 @@ node {
                     .yarn()
                     .setDotEnv(URL)
                     .enableAddons()
-
-                sh 'rm -rf public/vendor public/storage'
-                backend.artisan('vendor:publish --force --tag=public')
-                backend.artisan('storage:link')
             }
 
-            parallel 'Codex > PHPDoc Generate': {
+            parallel 'link docs': {
+                backend.yarn('nps docs:link')
+            }, 'link storage': {
+                backend.artisan('storage:link')
+            }, 'generate codex phpdoc cache': {
                 backend.artisan('codex:phpdoc:generate --all')
-            }, 'Codex > Git Sync': {
-                backend.artisan('codex:git:sync --all --force')
+            }, 'publish public vendor files': {
+                backend.artisan('vendor:publish --force --tag=public')
             }
 
             stage('Serve') {
+                radic.currentBuild.description = "Serves dev example at ${URL}"
+                radic.currentBuild.result = "SUCCESS"
                 backend.artisan("serve --host=${HOST} --port=${PORT}")
             }
         }
