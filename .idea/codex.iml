@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/jenkins-shared/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scripts" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/codex/packagist/src" isTestSource="false" packagePrefix="Codex\Packagist" />
+      <sourceFolder url="file://$MODULE_DIR$/jenkins" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes" />
       <excludeFolder url="file://$MODULE_DIR$/app/Attributes/Builder" />
