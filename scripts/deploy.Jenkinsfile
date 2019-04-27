@@ -13,6 +13,9 @@ node {
         def codex = radic.codex()
         def backend = codex.backend
 
+        print(scm)
+
+
         codex.useEnv {
             stage('checkout') {
                 radic.git.checkout()
