@@ -9,7 +9,6 @@ use Codex\Attributes\Commands\BuildDefinitionSchema;
 use Codex\Attributes\Type;
 use Codex\Filesystem\Local;
 use Codex\Filesystem\Utils\Copier;
-use Codex\Git\Commands\SyncProject;
 use Codex\Git\Config\GitConfig;
 use Codex\Git\Console\CodexGitSyncCommand;
 use Http\Adapter\Guzzle6\Client as GuzzleClient;
@@ -34,9 +33,9 @@ query {
     }
 }
 EOT
-);
+        );
 
-        VarDumper::dump($data=$result->data);
+        VarDumper::dump($data = $result->data);
 
 
         $codex = codex();
@@ -47,12 +46,10 @@ EOT
         $revisions = $project->getRevisions();
         $revision  = $revisions->get('master');
         $documents = $revision->getDocuments();
-//        $document  = $documents->get('getting-started/core-concepts');
-//        $document = $documents->get('frontend/components');
-        $document = $documents->get('processors/macros');
-        $content = $document->render();
-        $p = $document->attr('processors');
-        $data     = [
+        $document  = $documents->get('addons/phpdoc');
+        $content   = $document->render();
+        $p         = $document->attr('processors');
+        $data      = [
             'project'  => $project->toArray('*'),
             'revision' => $revision->toArray('*'),
             'document' => $document->toArray('*'),
@@ -61,6 +58,7 @@ EOT
 
         $this->line($content);
     }
+
     public function handle4()
     {
         $projectKey = 'codex-git';
@@ -73,7 +71,7 @@ EOT
         CodexGitSyncCommand::attachConsoleTableListener($this);
 //        $this->dispatch(with(new SyncProject($projectKey, true)));
 
-        $document=$master->getDocument('index');
+        $document = $master->getDocument('index');
         $content  = $document->render();
 
         return;

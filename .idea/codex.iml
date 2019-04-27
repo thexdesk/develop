@@ -27,11 +27,13 @@
       <excludeFolder url="file://$MODULE_DIR$/codex/core/resources/assets" />
       <excludeFolder url="file://$MODULE_DIR$/codex/phpdoc/old" />
       <excludeFolder url="file://$MODULE_DIR$/codex/phpdoc/resources/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/jenkins-shared/old" />
       <excludeFolder url="file://$MODULE_DIR$/public/css" />
       <excludeFolder url="file://$MODULE_DIR$/public/js" />
       <excludeFolder url="file://$MODULE_DIR$/public/svg" />
       <excludeFolder url="file://$MODULE_DIR$/public/vendor" />
-      <excludeFolder url="file://$MODULE_DIR$/resources/docs/codex/master/addons" />
+      <excludeFolder url="file://$MODULE_DIR$/resources/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/resources/docs/codex/.master/addons" />
       <excludeFolder url="file://$MODULE_DIR$/storage/codex" />
       <excludeFolder url="file://$MODULE_DIR$/theme" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/algolia/algoliasearch-client-php" />

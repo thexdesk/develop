@@ -5,11 +5,11 @@ subtitle: Codex Documentation
 
 # Codex Documentation
 
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 
 > Head over to [codex-project.ninja](http://codex-project.ninja) for the full documentation (starting with this document) to get started.
 
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->
 
 
 ## Introduction
@@ -43,7 +43,7 @@ Most of it's features are provided by addons. Codex is extenable, themeable, hac
 - Much, much more!
 
 
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 ## Copyright/License
 Copyright 2019 [Robin Radic](https://github.com/RobinRadic) - [MIT Licensed](LICENSE.md)
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->

@@ -21,3 +21,10 @@ yarn-error.log
 /theme
 /.codeCoverage
 /jenkins-shared
+/github-webhook.http
+/phpDocumentor.phar_
+/plantuml.jar
+/query.graphql
+/satis.json
+/attr.puml
+/graphql.config.json
