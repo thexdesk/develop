@@ -9,7 +9,6 @@ def URL = "http://${HOST}:${PORT}"
 //noinspection GroovyAssignabilityCheck
 node {
     try {
-        print(this)
         def radic = new Radic(this)
         def codex = radic.codex()
         def backend = codex.backend
@@ -17,7 +16,6 @@ node {
         codex.useEnv {
             stage('checkout') {
                 radic.git.checkout()
-
             }
 
             stage('install') {
