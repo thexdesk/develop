@@ -6,6 +6,7 @@ use Codex\Attributes\AttributeDefinition;
 use Codex\Attributes\AttributeDefinitionRegistry;
 use Codex\Attributes\Commands\BuildDefinitionConfig;
 use Codex\Attributes\Commands\BuildDefinitionSchema;
+use Codex\Attributes\Type;
 use Codex\Filesystem\Local;
 use Codex\Filesystem\Utils\Copier;
 use Codex\Git\Commands\SyncProject;
@@ -26,6 +27,42 @@ class TestCommand extends Command
 
     public function handle()
     {
+        $result = codex()->getApi()->executeQuery(<<<EOT
+query {
+    project(key: "codex"){
+        changes @assoc
+    }
+}
+EOT
+);
+
+        VarDumper::dump($data=$result->data);
+
+
+        $codex = codex();
+
+        $projects  = $codex->getProjects();
+        $project   = $projects->get('codex');
+        $toolbar   = $project->attr('layout.toolbar');
+        $revisions = $project->getRevisions();
+        $revision  = $revisions->get('master');
+        $documents = $revision->getDocuments();
+//        $document  = $documents->get('getting-started/core-concepts');
+//        $document = $documents->get('frontend/components');
+        $document = $documents->get('processors/macros');
+        $content = $document->render();
+        $p = $document->attr('processors');
+        $data     = [
+            'project'  => $project->toArray('*'),
+            'revision' => $revision->toArray('*'),
+            'document' => $document->toArray('*'),
+        ];
+
+
+        $this->line($content);
+    }
+    public function handle4()
+    {
         $projectKey = 'codex-git';
         $project    = codex()->getProject($projectKey);
         $git        = $project->git();
@@ -34,7 +71,7 @@ class TestCommand extends Command
         $master = $project->getRevision('master');
         $v1     = $project->getRevision('v1');
         CodexGitSyncCommand::attachConsoleTableListener($this);
-        $this->dispatch(with(new SyncProject($projectKey, true)));
+//        $this->dispatch(with(new SyncProject($projectKey, true)));
 
         $document=$master->getDocument('index');
         $content  = $document->render();
