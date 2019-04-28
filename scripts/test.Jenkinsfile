@@ -12,7 +12,7 @@ node {
         codex.useEnv {
             stage('checkout') {
                 radic.git.checkout()
-                radic.php.pdepend(['src'])
+                radic.php.pdepend('src')
             }
 
             stage('install') {
