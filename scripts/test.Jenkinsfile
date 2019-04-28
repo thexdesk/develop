@@ -11,8 +11,9 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-                radic.git.checkout()
                 radic.php.pdepend('src', 'test')
+
+                radic.git.checkout()
             }
 
             stage('install') {
