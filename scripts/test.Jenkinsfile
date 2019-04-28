@@ -5,18 +5,20 @@ import nl.radic.Radic
 node {
     try {
         def radic = new Radic(this)
+//        def php = radic.php
         def codex = radic.codex()
         def backend = codex.backend
 
         codex.useEnv {
             stage('checkout') {
                 radic.git.checkout()
+//                php.pdepend(['src'] as String[])
             }
 
             stage('install') {
                 backend
                     .unlockComposer()
-                    .install(true,false)
+                    .install(true, false)
                     .setDotEnv()
                     .enableAddons()
             }

@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-import jenkins.model.Jenkins
+
 import nl.radic.Radic
 
 def HOST = "192.168.178.59"

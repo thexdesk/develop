@@ -11,7 +11,7 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-                radic.git.checkout()
+                radic.git.checkout(false)
             }
 
             stage('copy theme to packages') {
