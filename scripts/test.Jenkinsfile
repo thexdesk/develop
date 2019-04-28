@@ -11,7 +11,14 @@ node {
 
         codex.useEnv {
             stage('checkout') {
-                radic.php.pdepend('src', 'test')
+                def srcPaths = backend.packages.entrySet().collect { "${it.value.relativePath}/src".toString() }
+                def testPaths = backend.packages.entrySet().collect { "${it.value.relativePath}/tests".toString() }
+                String[] allPaths = srcPaths.plus(testPaths).toArray()
+                print(srcPaths.toArray())
+                print(testPaths.toArray())
+                print(allPaths)
+
+                radic.php.pdepend("codex/core/src")
 
                 radic.git.checkout()
             }
